@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+ATG-Product: WIND Endeca Index
+ATG-Config-Path: config/config.jar
+ATG-Class-Path: lib/classes.jar lib/resources.jar
+ATG-Required: DCS.Endeca.Index

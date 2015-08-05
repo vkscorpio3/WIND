@@ -1,0 +1,16 @@
+apply plugin: 'war'
+
+war {
+    manifest {
+        attributes("ATG-Module-Uri": "store.war","ATG-Context-Root": "wind")
+    }  
+    destinationDir = file('j2ee-apps/'+rootProject.name)     
+	archiveName = 'store.war'
+	dependsOn(':Frontend:war')
+}
+
+war << {
+    ant.zip(destfile: war.archivePath, duplicate: 'preserve', keepcompression: true, update: true) {
+        zipfileset (src: project(':Frontend').war.archivePath)
+    }
+}

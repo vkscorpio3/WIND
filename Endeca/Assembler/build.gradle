@@ -1,0 +1,10 @@
+dependencies {
+	compile files(System.getenv("ATG_ROOT")+'/DAF/Endeca/Assembler/lib/classes.jar',
+				  System.getenv("ATG_ROOT")+'/DAS/lib/classes.jar',
+				  System.getenv("ATG_ROOT")+'/DAS/lib/servlet.jar',
+				  System.getenv("ATG_ROOT")+'/DCS/lib/classes.jar',
+				  System.getenv("ATG_ROOT")+'/DPS/lib/classes.jar',
+				  System.getenv("ATG_ROOT")+'/DAF/Endeca/Assembler/lib/endeca_navigation-6.5.1.jar',
+				  System.getenv("ATG_ROOT")+'/DAF/Endeca/Assembler/lib/endeca_assembler_core-11.1.0.jar',
+				  System.getenv("ATG_ROOT")+'/DAF/Endeca/Assembler/lib/endeca_assembler_navigation-11.1.0.jar')
+}

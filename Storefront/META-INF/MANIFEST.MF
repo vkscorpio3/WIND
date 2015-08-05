@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Storefront
+Bundle-SymbolicName: WIND.Storefront
+Bundle-Version: 1.0.0.qualifier
+ATG-Class-Path: lib/classes.jar lib/resources.jar
+ATG-Required: WIND.Endeca.Assembler WIND.Endeca.Index Fulfillment
+ATG-Config-Path: config/config.jar
+ATG-Web-Module: j2ee-apps/WIND/store.war
+ATG-Product: WIND Storefront
+ATG-Client-Class-Path: lib/classes.jar lib/resources.jar
+
+Name: lib/classes.jar
+ATG-Client-Update-File: true
+
+Name: lib/classes.jar
+ATG-Assembler-Import-File: true
+
+Name: lib/resources.jar
+ATG-Client-Update-File: true
+
+Name: lib/resources.jar
+ATG-Assembler-Import-File: true

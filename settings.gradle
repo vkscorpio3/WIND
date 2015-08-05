@@ -1,0 +1,4 @@
+include ":Storefront",
+        ":Frontend",
+        ":Endeca/Assembler",
+        ":Endeca/Index"

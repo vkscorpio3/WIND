@@ -1,0 +1,97 @@
+subprojects {
+	apply plugin: "java"
+	apply plugin: 'eclipse'
+	apply plugin: 'eclipse-wtp'
+	
+	sourceCompatibility = 1.7
+	targetCompatibility = 1.7
+	version = '1.0'
+	
+	task hello << { task -> println "-====$task.project.name====-" }
+	
+	task copyRuntimeLibs(type: Copy) {
+		into "../third-party-libs"
+		from configurations.testRuntime
+	}
+	
+	task compileClasses (type: JavaCompile) {
+	    source = sourceSets.main.java.srcDirs	    
+	    classpath = sourceSets.main.compileClasspath
+	    destinationDir = sourceSets.main.output.classesDir
+	}
+	
+	task generateClassesJars(dependsOn: compileClasses, type: Jar) {	   
+	   archiveName = 'classes.jar'
+	   from('build/classes/main')
+	   destinationDir = file('lib')	   
+	}
+	
+	task generateConfigJars(type: Jar) {
+	   archiveName = 'config.jar'
+	   from('src/main/config')
+	   destinationDir = file('config')	
+	}
+	
+	task generateResourcesJars(type: Jar) {
+	   archiveName = 'resources.jar'
+	   from('src/main/resources')
+	   destinationDir = file('lib')	
+	}
+
+}
+
+task cleanEars(type: Delete) {
+    delete fileTree("build/ears").include('**/*')
+}
+
+task assembleProductionEar(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "runAssembler.bat")
+	def argsList = ["-standalone",
+					"-pack",
+					"-dynamo-env-properties","assembly/dynamo.env",
+					"-server", "WIND-production",
+	                "build/ears/WIND-production.ear",
+	                "-m",
+	                "DCS.AbandonedOrderServices",
+	                "DafEar.Admin",
+	                "DPS",
+	                "DSS",
+	                "DCS.PublishingAgent",
+	                "DCS.TextSearch.Order.Index",
+	                "DCS.Endeca.Index.SKUIndexing",
+	                "WIND.Storefront",
+	                "REST",
+	                "DCS.WebServices"]
+	args = argsList
+}
+
+task assemblePublisingEar(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "runAssembler.bat")
+	def argsList = ["-standalone",
+					"-pack",
+					"-dynamo-env-properties","assembly/dynamo.env",
+					"-server", "WIND-publishing",
+	                "build/ears/WIND-publishing.ear",
+	                "-m",
+	                "DCS-UI.Versioned",
+	                "BIZUI",
+	                "PubPortlet",
+	                "DafEar.Admin",
+	                "DCS.Versioned",
+	                "DCS.Endeca.Assembler",
+	                "DCS.TextSearch.Order.Index",
+	                "DAF.Endeca.Reader.Versioned",	                
+	                "DCS-CSR.Management",
+	                "DCS-UI.SiteAdmin.Versioned",
+	                "SiteAdmin.Versioned",
+	                "DCS.Endeca.Index.Versioned",
+	                "DAF.Endeca.Reader.Versioned",
+	                "DCS.Endeca.Index.SKUIndexing"
+	                ]
+	args = argsList
+}
+
+task assembleAllEars << {
+	assembleProductionEar.execute()
+	assemblePublisingEar.execute()
+}

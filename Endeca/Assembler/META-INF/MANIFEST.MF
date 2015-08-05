@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+ATG-Product: WIND Endeca Assembler
+ATG-Version: 11.1
+ATG-Client-Class-Path: lib/resources.jar lib/classes.jar 
+ATG-Config-Path: config/config.jar
+ATG-Version-Full: 11.1
+ATG-Class-Path: lib/resources.jar lib/classes.jar
+ATG-Required: DCS.Endeca.Assembler

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+        
+    <display-name>Magnit Web Store</display-name>    
+    <tlib-version>1.0</tlib-version>
+    <short-name>MagnitWebStore</short-name>
+    <uri>/storeTags</uri>
+
+    <tag-file>
+        <name>navbar</name>
+        <path>/WEB-INF/tags/store/navbar.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>compareButton</name>
+        <path>/WEB-INF/tags/store/compareButton.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>navbarCategory</name>
+        <path>/WEB-INF/tags/store/navbarCategory.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>navbarList</name>
+        <path>/WEB-INF/tags/store/navbarList.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>navbarMenu</name>
+        <path>/WEB-INF/tags/store/navbarMenu.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>pageContainer</name>
+        <path>/WEB-INF/tags/store/pageContainer.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>pageEnd</name>
+        <path>/WEB-INF/tags/store/pageEnd.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>pageStart</name>
+        <path>/WEB-INF/tags/store/pageStart.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>pageHeader</name>
+        <path>/WEB-INF/tags/store/pageHeader.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>pageFooter</name>
+        <path>/WEB-INF/tags/store/pageFooter.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>resultsList</name>
+        <path>/WEB-INF/tags/store/resultsList.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>resultsPagination</name>
+        <path>/WEB-INF/tags/store/resultsPagination.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>searchBox</name>
+        <path>/WEB-INF/tags/store/searchBox.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>skuAvailability</name>
+        <path>/WEB-INF/tags/store/skuAvailability.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>modalDialog</name>
+        <path>/WEB-INF/tags/store/modalDialog.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>modalTemplates</name>
+        <path>/WEB-INF/tags/store/modalTemplates.tag</path>
+    </tag-file>
+
+    <tag-file>
+        <name>headerCategories</name>
+        <path>/WEB-INF/tags/store/headerCategories.tag</path>
+    </tag-file>
+       
+    <tag-file>
+        <name>paymentForm</name>
+        <path>/WEB-INF/tags/cart/paymentForm.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>checkoutProgressLine</name>
+        <path>/WEB-INF/tags/cart/checkoutProgressLine.tag</path>
+    </tag-file>    
+
+    <tag-file>
+        <name>ordersForm</name>
+        <path>/WEB-INF/tags/account/ordersForm.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>addressModalForm</name>
+        <path>/WEB-INF/tags/account/addressModalForm.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>approvalPhoneForm</name>
+        <path>/WEB-INF/tags/account/approvalPhoneFrom.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>subscriptionForm</name>
+        <path>/WEB-INF/tags/account/subscriptionForm.tag</path>
+    </tag-file>
+    
+    <tag-file>
+        <name>addressBookForm</name>
+        <path>/WEB-INF/tags/account/addressBookForm.tag</path>                
+    </tag-file>
+    
+    <tag-file>
+        <name>addressForm</name>
+        <path>/WEB-INF/tags/account/addressForm.tag</path>                
+    </tag-file>
+    
+    <tag-file>
+        <name>wishListForm</name>
+        <path>/WEB-INF/tags/account/wishListForm.tag</path>                
+    </tag-file>
+        
+    <tag-file>
+        <name>profileMenu</name>
+        <path>/WEB-INF/tags/account/profileMenu.tag</path>
+    </tag-file>
+
+</taglib>

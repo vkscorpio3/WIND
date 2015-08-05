@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/config"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.springsource.ide.eclipse.gradle.classpathcontainer"/>
+	<classpathentry kind="var" path="ATG/DAF/Endeca/Assembler/lib/classes.jar"/>
+	<classpathentry kind="var" path="ATG/DAS/lib/classes.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://docs.oracle.com/cd/E35319_01/Platform.10-2/apidoc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="ATG/DAS/lib/servlet.jar"/>
+	<classpathentry kind="var" path="ATG/DCS/lib/classes.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://docs.oracle.com/cd/E35319_01/Platform.10-2/apidoc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="ATG/DPS/lib/classes.jar"/>
+	<classpathentry kind="var" path="ATG/DAF/Endeca/Assembler/lib/endeca_navigation-6.5.1.jar"/>
+	<classpathentry kind="var" path="ATG/DAF/Endeca/Assembler/lib/endeca_assembler_core-11.1.0.jar"/>
+	<classpathentry kind="var" path="ATG/DAF/Endeca/Assembler/lib/endeca_assembler_navigation-11.1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
