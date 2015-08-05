@@ -8,3 +8,4 @@
    Change variable value WIND_PROJECT_PATH=@YOU_PATH_TO_PROJECT@%PROJECT_NAME% create_project_sym_link.bat 	
    Run as administrator create_project_sym_link.bat
 3. Add the classpath variable ATG in Eclipse(Preferences->Java->Build Path->Classpath variables) and point to ATG_ROOT
+4. Build script tasks:

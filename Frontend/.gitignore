@@ -1,1 +1,5 @@
 /build/
+/config/
+/lib/
+/j2ee-apps/
+/.gradle/
