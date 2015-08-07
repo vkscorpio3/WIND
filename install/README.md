@@ -16,9 +16,5 @@
 	generateConfigJars
 	generateResourcesJars
 	assembleAllEars
-5. Create tables manually
-	<ATG11dir>/DAS/sql/install/database-vendor
-	<ATG11dir>/DPS/sql/install/database-vendor
-	<ATG11dir>/DPS/sql/install/database-vendor
-	<ATG11dir>/DCS/sql/install/database-vendor
+5. Create schemas in DB for Production, Publishing, Agent, Switching A, Switching B.
 
