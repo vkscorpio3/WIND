@@ -49,7 +49,7 @@ task assembleProductionEar(type: Exec) {
 	def argsList = ["-standalone",
 					"-pack",
 					"-dynamo-env-properties","assembly/dynamo.env",
-					"-server", "WIND-production",
+					"-server", "atg-production",
 	                "build/ears/WIND-production.ear",
 	                "-m",
 	                "DCS.AbandonedOrderServices",
@@ -70,7 +70,7 @@ task assemblePublisingEar(type: Exec) {
 	def argsList = ["-standalone",
 					"-pack",
 					"-dynamo-env-properties","assembly/dynamo.env",
-					"-server", "WIND-publishing",
+					"-server", "atg-publishing",
 	                "build/ears/WIND-publishing.ear",
 	                "-m",
 	                "DCS-UI.Versioned",
@@ -91,7 +91,30 @@ task assemblePublisingEar(type: Exec) {
 	args = argsList
 }
 
+task assembleAgentEar(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "runAssembler.bat")
+	def argsList = ["-standalone",
+					"-pack",
+					"-dynamo-env-properties","assembly/dynamo.env",
+					"-server", "atg-agent",
+	                "build/ears/WIND-agent.ear",
+	                "-m",
+	                "DafEar.Admin",
+					"BIZUI",
+					"Service.Ticketing",
+					"Fulfillment",
+					"DCS.AbandonedOrderServices",
+					"DCS-CSR-UI",
+					"DCS.TextSearch.Order.LiveIndex",
+					"DCS.Endeca.Index",
+					"DCS-CSR-UI.Endeca",
+					"REST"
+	                ]
+	args = argsList
+}
+
 task assembleAllEars << {
 	assembleProductionEar.execute()
 	assemblePublisingEar.execute()
+	assembleAgentEar.execute()
 }
