@@ -1,12 +1,14 @@
-subprojects {
+allprojects{
 	apply plugin: "java"
 	apply plugin: 'eclipse'
 	apply plugin: 'eclipse-wtp'
-	
+		
 	sourceCompatibility = 1.7
 	targetCompatibility = 1.7
-	version = '1.0'
-	
+	version = '1.0'	
+}
+
+subprojects {	
 	task hello << { task -> println "-====$task.project.name====-" }
 	
 	task copyRuntimeLibs(type: Copy) {
@@ -38,6 +40,10 @@ subprojects {
 	   destinationDir = file('lib')	
 	}
 
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 task cleanEars(type: Delete) {
@@ -117,4 +123,184 @@ task assembleAllEars << {
 	assembleProductionEar.execute()
 	assemblePublisingEar.execute()
 	assembleAgentEar.execute()
+}
+
+//PRODUCTION 
+task updateProductionDatabase << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: productionSchemaUser, 
+				 password: productionSchemaPassword, 
+				 dir: 'db/oracle/production',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/production_undo_last_change.sql')
+}
+
+task createProductionChangelogTable << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: productionSchemaUser,
+	        password: productionSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task undoProductionLastChange << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: productionSchemaUser,
+			password: productionSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/production_undo_last_change.sql')
+	}
+}
+
+//PUBLISHING
+task updatePublishingDatabase << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: publishingSchemaUser, 
+				 password: publishingSchemaPassword, 
+				 dir: 'db/oracle/publishing',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/publishing_undo_last_change.sql')
+}
+
+task createPublishingChangelogTable << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: publishingSchemaUser,
+	        password: publishingSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task undoPublishingLastChange << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: publishingSchemaUser,
+			password: publishingSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/publishing_undo_last_change.sql')
+	}
+}
+//SWITCHING
+task updateSwitchingDatabases << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingASchemaUser, 
+				 password: switchingASchemaPassword, 
+				 dir: 'db/oracle/switching',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/switchingA_undo_last_change.sql')
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingBSchemaUser, 
+				 password: switchingBSchemaPassword, 
+				 dir: 'db/oracle/switching',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/switchingB_undo_last_change.sql')
+}
+
+task createSwitchingChangelogTables << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: switchingASchemaUser,
+	        password: switchingASchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: switchingBSchemaUser,
+	        password: switchingBSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task undoSwitchingLastChange << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingASchemaUser,
+			password: switchingASchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/switchingA_undo_last_change.sql')
+	}
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingBSchemaUser,
+			password: switchingBSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/switchingB_undo_last_change.sql')
+	}
+}
+
+//AGENT
+task updateAgentDatabase << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: agentSchemaUser, 
+				 password: agentSchemaPassword, 
+				 dir: 'db/oracle/agent',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/agent_undo_last_change.sql')
+}
+
+task createAgentChangelogTable << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: agentSchemaUser,
+	        password: agentSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task undoAgentLastChange << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: agentSchemaUser,
+			password: agentSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/agent_undo_last_change.sql')
+	}
+}
+
+//Common
+task createChangelogTableForAllSchemas << {
+	createPublishingChangelogTable.execute()
+	createProductionChangelogTable.execute()
+	createSwitchingChangelogTables.execute()
+	createAgentChangelogTable.execute()
+}
+
+task updateDatabaseDDL << {
+	updateProductionDatabase.execute()
+	updatePublishingDatabase.execute()
+	updateSwitchingDatabases.execute()
+	updateAgentDatabase.execute()
+}
+
+task undoLastChangesInSchemas << {
+	undoProductionLastChange.execute()
+	undoPublishingLastChange.execute()
+	undoSwitchingLastChange.execute()
+	undoAgentLastChange.execute()
 }

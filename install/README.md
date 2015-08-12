@@ -29,7 +29,7 @@
 8. Copy from /install/servers directory to D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data
 9. Copy D:\_work\devlibs\ATG\ATG11.1\DAS\lib\protocol.jar to D:\Oracle\Middleware\user_projects\domains\base_domain\lib
 10. Configure weblogic server
-    Create datasources and add D:\Oracle\Middleware\user_projects\domains\base_domain\lib\protocol.jar‏ 
+    Create datasources and add D:\Oracle\Middleware\user_projects\domains\base_domain\lib\protocol.jar
     to Server Start -> Classpath area.
     Add arguments for each server:
 	
