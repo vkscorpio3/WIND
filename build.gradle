@@ -12,7 +12,7 @@ subprojects {
 	task hello << { task -> println "-====$task.project.name====-" }
 	
 	task copyRuntimeLibs(type: Copy) {
-		into "../third-party-libs"
+		into "../libs"
 		from configurations.testRuntime
 	}
 	
@@ -47,7 +47,7 @@ dependencies {
 }
 
 task cleanEars(type: Delete) {
-    delete fileTree("build/ears").include('**/*')
+    delete fileTree("build-ears").include('**/*')
 }
 
 task assembleProductionEar(type: Exec) {
@@ -56,7 +56,7 @@ task assembleProductionEar(type: Exec) {
 					"-pack",
 					"-dynamo-env-properties","assembly/dynamo.env",
 					"-server", "atg-production",
-	                "build/ears/WIND-production.ear",
+	                "build-ears/WIND-production.ear",
 	                "-m",
 	                "DCS.AbandonedOrderServices",
 	                "DafEar.Admin",
@@ -77,7 +77,7 @@ task assemblePublisingEar(type: Exec) {
 					"-pack",
 					"-dynamo-env-properties","assembly/dynamo.env",
 					"-server", "atg-publishing",
-	                "build/ears/WIND-publishing.ear",
+	                "build-ears/WIND-publishing.ear",
 	                "-m",
 	                "DCS-UI.Versioned",
 	                "BIZUI",
@@ -103,7 +103,7 @@ task assembleAgentEar(type: Exec) {
 					"-pack",
 					"-dynamo-env-properties","assembly/dynamo.env",
 					"-server", "atg-agent",
-	                "build/ears/WIND-agent.ear",
+	                "build-ears/WIND-agent.ear",
 	                "-m",
 	                "DafEar.Admin",
 					"BIZUI",
