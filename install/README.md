@@ -34,17 +34,23 @@
     Add arguments for each server:
 	
 	Production:
-	-Xms1024m -Xmx2048m -Djava.rmi.server.hostname=localhost -Datg.dynamo.data-dir=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data -Datg.dynamo.server.name=atg-production -Ddisable.atg.dynamo.log=true -Dweblogic.Stdout=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data\atg-production\logs\atg-production.out
+	-Xms1024m -Xmx2048m -Djava.rmi.server.hostname=localhost -Datg.dynamo.data-dir=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data -Datg.dynamo.server.name=atg-production -Ddisable.atg.dynamo.log=true -Dweblogic.Stdout=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data\servers\atg-production\logs\atg-production.out
 	
 	Publishing:
-	-Xms1024m -Xmx2048m -Djava.rmi.server.hostname=localhost -Datg.dynamo.data-dir=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data -Datg.dynamo.server.name=atg-publishing -Ddisable.atg.dynamo.log=true -Dweblogic.Stdout=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data\atg-publishing\logs\atg-publishing.out
+	-Xms1024m -Xmx2048m -Djava.rmi.server.hostname=localhost -Datg.dynamo.data-dir=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data -Datg.dynamo.server.name=atg-publishing -Ddisable.atg.dynamo.log=true -Dweblogic.Stdout=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data\servers\atg-publishing\logs\atg-publishing.out
      
 	Agent:	 
-	-Xms1024m -Xmx2048m -Djava.rmi.server.hostname=localhost -Datg.dynamo.data-dir=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data -Datg.dynamo.server.name=atg-agent -Ddisable.atg.dynamo.log=true -Dweblogic.Stdout=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data\atg-agent\logs\atg-agent.out
+	-Xms1024m -Xmx2048m -Djava.rmi.server.hostname=localhost -Datg.dynamo.data-dir=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data -Datg.dynamo.server.name=atg-agent -Ddisable.atg.dynamo.log=true -Dweblogic.Stdout=D:\Oracle\Middleware\user_projects\domains\base_domain\ATG-data\servers\atg-agent\logs\atg-agent.out
 
 11. Install and configure Endeca environment.
 12. Create Endeca application from wind-store-template located in WIND.Storefront module
 
 	D:\Oracle\Endeca\ToolsAndFrameworks\11.1.0\deployment_template\bin>deploy.bat --app ..\..\reference\wind-store-template\deploy.xml
+	
+13. If you have problems with login to Dynamo Administration and you are getting the exception like this: "Make sure that you have the 'bin' directory for your JDK in your PATH variable before starting ATG and that you have enough swap space." You have to put in localconfig see below:
+
+#atg\dynamo\servlet\pagecompile\ExtendedJhtmlPageProcessor.properties
+$class=atg.servlet.pagecompile.jsp11.JSPPageProcessor
+javaCompilerClassName=atg.servlet.pagecompile.SunJavaSourceCompiler
 
 
