@@ -5,7 +5,7 @@
     <import-items>
         <!-- 1 items of type siteGroup -->
 
-        <add-item item-descriptor="siteGroup" repository="/atg/multisite/SiteRepository" id="100001">
+        <add-item item-descriptor="siteGroup" repository="/atg/multisite/SiteRepository" id="mainSiteGroup">
             <set-property name="shareableTypes"><![CDATA[atg.ShoppingCart]]></set-property>
             <set-property name="displayName"><![CDATA[ATG Site Group Template]]></set-property>
             <set-property name="sites"><![CDATA[siteone,sitetwo,sitethree]]></set-property>
@@ -19,8 +19,7 @@
             <set-property name="enabled"><![CDATA[true]]></set-property>
             <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
             <set-property name="author"><![CDATA[portal-admin]]></set-property>
-            <set-property name="defaultCatalog"><![CDATA[catalog10001]]></set-property>
-            <set-property name="defaultSalePriceList"><![CDATA[plist50001]]></set-property>
+            <set-property name="defaultCatalog"><![CDATA[siteOneCatalog]]></set-property>
             <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
             <set-property name="endecaSiteId"><![CDATA[/siteone]]></set-property>
         </add-item>
@@ -31,8 +30,7 @@
             <set-property name="enabled"><![CDATA[true]]></set-property>
             <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
             <set-property name="author"><![CDATA[portal-admin]]></set-property>
-            <set-property name="defaultCatalog"><![CDATA[catalog10001]]></set-property>
-            <set-property name="defaultSalePriceList"><![CDATA[plist50001]]></set-property>
+            <set-property name="defaultCatalog"><![CDATA[siteTwoCatalog]]></set-property>
             <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
             <set-property name="endecaSiteId"><![CDATA[/sitetwo]]></set-property>
         </add-item>
@@ -43,8 +41,7 @@
             <set-property name="enabled"><![CDATA[true]]></set-property>
             <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
             <set-property name="author"><![CDATA[portal-admin]]></set-property>
-            <set-property name="defaultCatalog"><![CDATA[catalog10001]]></set-property>
-            <set-property name="defaultSalePriceList"><![CDATA[plist50001]]></set-property>
+            <set-property name="defaultCatalog"><![CDATA[siteThreeCatalog]]></set-property>
             <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
             <set-property name="endecaSiteId"><![CDATA[/sitethree]]></set-property>
         </add-item>
