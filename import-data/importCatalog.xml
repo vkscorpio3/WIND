@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
 <gsa-template>
-  <import-items>
-    <add-item item-descriptor="category" id="category1">
-	    <set-property name="displayName"><![CDATA[category1]]></set-property>
+	<import-items>
+
+		<add-item item-descriptor="catalog" id="siteOneCatalog">
+			<set-property name="rootCategories"><![CDATA[siteOneRootCategory,siteOneNonNavigableProducts]]></set-property>
+			<set-property name="displayName"><![CDATA[ATG Catalog Site One]]></set-property>
+			<set-property name="directAncestorCatalogsAndSelf"><![CDATA[siteOneCatalog]]></set-property>			
+			<set-property name="siteIds"><![CDATA[siteone]]></set-property>
+			<set-property name="rootNavigationCategory"><![CDATA[siteOneRootCategory]]></set-property>
 		</add-item>
-  </import-items>
+
+		<add-item item-descriptor="catalog" id="siteTwoCatalog">
+			<set-property name="rootCategories"><![CDATA[siteTwoRootCategory,siteTwoNonNavigableProducts]]></set-property>
+			<set-property name="displayName"><![CDATA[ATG Catalog Site One]]></set-property>
+			<set-property name="directAncestorCatalogsAndSelf"><![CDATA[siteTwoCatalog]]></set-property>			
+			<set-property name="siteIds"><![CDATA[sitetwo]]></set-property>
+			<set-property name="rootNavigationCategory"><![CDATA[siteTwoRootCategory]]></set-property>
+		</add-item>
+
+		<add-item item-descriptor="catalog" id="siteThreeCatalog">
+			<set-property name="rootCategories"><![CDATA[siteThreeRootCategory,siteThreeNonNavigableProducts]]></set-property>
+			<set-property name="displayName"><![CDATA[ATG Catalog Site Three]]></set-property>
+			<set-property name="directAncestorCatalogsAndSelf"><![CDATA[siteThreeCatalog]]></set-property>			
+			<set-property name="siteIds"><![CDATA[sitethree]]></set-property>
+			<set-property name="rootNavigationCategory"><![CDATA[siteThreeRootCategory]]></set-property>
+		</add-item>
+
+		<add-item id="siteOneRootCategory" item-descriptor="category" no-checkin="false">
+			<set-property name="longDescription"><![CDATA[ATG Site One commerce root]]></set-property>
+			<!-- export is false <set-property name="version"><![CDATA[5]]></set-property> -->
+			<set-property name="siteIds" add="false" remove="false"><![CDATA[siteone]]></set-property>
+			<set-property name="computedCatalogs" add="false" remove="false"><![CDATA[siteOneCatalog]]></set-property>
+			<set-property name="displayName"><![CDATA[Site One Commerce Root]]></set-property>	
+		</add-item>
+		
+		<add-item id="siteTwoRootCategory" item-descriptor="category" no-checkin="false">
+			<set-property name="longDescription"><![CDATA[ATG Site Two commerce root]]></set-property>
+			<set-property name="siteIds" add="false" remove="false"><![CDATA[sitetwo]]></set-property>
+			<set-property name="computedCatalogs" add="false" remove="false"><![CDATA[siteTwoCatalog]]></set-property>
+			<set-property name="displayName"><![CDATA[Site Two Commerce Root]]></set-property>	
+		</add-item>
+		
+		<add-item id="siteThreeRootCategory" item-descriptor="category" no-checkin="false">
+			<set-property name="longDescription"><![CDATA[ATG Site Three commerce root]]></set-property>
+			<set-property name="siteIds" add="false" remove="false"><![CDATA[sitethree]]></set-property>
+			<set-property name="computedCatalogs" add="false" remove="false"><![CDATA[siteThreeCatalog]]></set-property>
+			<set-property name="displayName"><![CDATA[Site Three Commerce Root]]></set-property>	
+		</add-item>
+
+		<add-item id="NonNavigableProducts" item-descriptor="category" no-checkin="false">			
+			<set-property name="description" />
+			<set-property name="longDescription"><![CDATA[ATG Store non navigable products.]]></set-property>			
+			<set-property name="siteIds" add="false" remove="false"><![CDATA[siteone,sitetwo,sitethree]]></set-property>			
+			<set-property name="computedCatalogs" add="false" remove="false"><![CDATA[siteOneCatalog,siteTwoCatalog,siteThreeCatalog]]></set-property>
+			<set-property name="displayName"><![CDATA[Non Navigable Products]]></set-property>	
+		</add-item>
+
+	</import-items>
 </gsa-template>
