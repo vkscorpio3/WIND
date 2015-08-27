@@ -1,0 +1,12 @@
+<gsa-template xml-combine="append">
+
+    <item-descriptor name="catalog">
+        <table name="wind_catalog" id-column-name="catalog_id" type="auxiliary">
+            <property name="rootNavigationCategory" item-type="category" column-name="root_nav_cat"
+                      display-name-resource="rootNavigationCategory" category-resource="categoryCategorization">
+                <attribute name="propertySortPriority" value="-10"/>
+            </property>
+        </table>
+    </item-descriptor>
+
+</gsa-template>

@@ -125,6 +125,38 @@ task assembleAllEars << {
 	assembleAgentEar.execute()
 }
 
+task startSQLImportSites(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "startSQLRepository.bat")
+	def argsList = ["-m","Publishing",
+					"-m","DCS.Versioned",							
+					"-repository", "/atg/multisite/SiteRepository",
+					"-import",System.getenv("ATG_ROOT")+"\\WIND\\import-data\\importSite.xml",			
+					"-project","GradleImport",
+					"-comment","Initial data",
+					"-user","admin"										
+	                ]
+	args = argsList
+}
+
+task startSQLImportCatalog(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "startSQLRepository.bat")
+	def argsList = ["-m","Publishing",
+					"-m","WIND.Commerce",
+					"-m","DCS.Versioned",							
+					"-repository", "/atg/commerce/catalog/ProductCatalog",
+					"-import",System.getenv("ATG_ROOT")+"\\WIND\\import-data\\importCatalog.xml",			
+					"-project","GradleImport",
+					"-comment","Initial data",
+					"-user","admin"										
+	                ]
+	args = argsList
+}
+
+task startSQLImport << {
+	startSQLImportCatalog.execute();
+	startSQLImportSites.execute();
+}
+
 //PRODUCTION 
 task updateProductionDatabase << {
 	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)

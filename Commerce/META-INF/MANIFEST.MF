@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+ATG-Product: WIND Commerce
+ATG-Version: 11.1
+ATG-Config-Path: config/config.jar
+ATG-Client-Class-Path: lib/resources.jar lib/classes.jar
+ATG-Class-Path: lib/resources.jar lib/classes.jar
+ATG-Required: DCS
+ATG-Required-If-Present: DCS.AbandonedOrderServices
+
+Name: lib/classes.jar
+ATG-Client-Update-File: true
+
+Name: lib/classes.jar
+ATG-Assembler-Import-File: true
+
+Name: lib/resources.jar
+ATG-Client-Update-File: true
+
+Name: lib/resources.jar
+ATG-Assembler-Import-File: true

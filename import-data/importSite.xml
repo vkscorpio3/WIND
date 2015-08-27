@@ -3,14 +3,6 @@
 <!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
 <gsa-template>
     <import-items>
-        <!-- 1 items of type siteGroup -->
-
-        <add-item item-descriptor="siteGroup" repository="/atg/multisite/SiteRepository" id="mainSiteGroup">
-            <set-property name="shareableTypes"><![CDATA[atg.ShoppingCart]]></set-property>
-            <set-property name="displayName"><![CDATA[ATG Site Group Template]]></set-property>
-            <set-property name="sites"><![CDATA[siteone,sitetwo,sitethree]]></set-property>
-        </add-item>
-
         <!-- 3 items of type siteConfiguration -->
 
         <add-item item-descriptor="siteConfiguration" repository="/atg/multisite/SiteRepository" id="siteone">
@@ -44,6 +36,14 @@
             <set-property name="defaultCatalog"><![CDATA[siteThreeCatalog]]></set-property>
             <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
             <set-property name="endecaSiteId"><![CDATA[/sitethree]]></set-property>
+        </add-item>
+        
+        <!-- 1 items of type siteGroup -->
+
+        <add-item item-descriptor="siteGroup" repository="/atg/multisite/SiteRepository" id="mainSiteGroup">
+            <set-property name="shareableTypes"><![CDATA[atg.ShoppingCart]]></set-property>
+            <set-property name="displayName"><![CDATA[ATG Site Group Template]]></set-property>
+            <set-property name="sites"><![CDATA[siteone,sitetwo,sitethree]]></set-property>
         </add-item>
 
     </import-items>
