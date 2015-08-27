@@ -127,7 +127,7 @@ task startSQLImportSites(type: Exec) {
 					"-m","DCS.Versioned",							
 					"-repository", "/atg/multisite/SiteRepository",
 					"-import",System.getenv("ATG_ROOT")+"\\WIND\\import-data\\importSite.xml",			
-					"-project","GradleImport",
+					"-project","Gradle Import Sites",
 					"-comment","Initial data",
 					"-user","admin"										
 	                ]
@@ -141,7 +141,7 @@ task startSQLImportCatalog(type: Exec) {
 					"-m","DCS.Versioned",							
 					"-repository", "/atg/commerce/catalog/ProductCatalog",
 					"-import",System.getenv("ATG_ROOT")+"\\WIND\\import-data\\importCatalog.xml",			
-					"-project","GradleImport",
+					"-project","Gradle Import Catalog",
 					"-comment","Initial data",
 					"-user","admin"										
 	                ]
