@@ -34,7 +34,7 @@
 		</add-item>
 
 		<add-item item-descriptor="catalog" id="siteOneCatalog" repository="/atg/commerce/catalog/ProductCatalog">
-			<set-property name="rootCategories"><![CDATA[siteOneRootCategory,siteOneNonNavigableProducts]]></set-property>
+			<set-property name="rootCategories"><![CDATA[siteOneRootCategory,NonNavigableProducts]]></set-property>
 			<set-property name="displayName"><![CDATA[ATG Catalog Site One]]></set-property>
 			<set-property name="directAncestorCatalogsAndSelf"><![CDATA[siteOneCatalog]]></set-property>			
 			<set-property name="siteIds"><![CDATA[siteone]]></set-property>
@@ -42,7 +42,7 @@
 		</add-item>
 
 		<add-item item-descriptor="catalog" id="siteTwoCatalog" repository="/atg/commerce/catalog/ProductCatalog">
-			<set-property name="rootCategories"><![CDATA[siteTwoRootCategory,siteTwoNonNavigableProducts]]></set-property>
+			<set-property name="rootCategories"><![CDATA[siteTwoRootCategory,NonNavigableProducts]]></set-property>
 			<set-property name="displayName"><![CDATA[ATG Catalog Site One]]></set-property>
 			<set-property name="directAncestorCatalogsAndSelf"><![CDATA[siteTwoCatalog]]></set-property>			
 			<set-property name="siteIds"><![CDATA[sitetwo]]></set-property>
@@ -50,7 +50,7 @@
 		</add-item>
 
 		<add-item item-descriptor="catalog" id="siteThreeCatalog" repository="/atg/commerce/catalog/ProductCatalog">
-			<set-property name="rootCategories"><![CDATA[siteThreeRootCategory,siteThreeNonNavigableProducts]]></set-property>
+			<set-property name="rootCategories"><![CDATA[siteThreeRootCategory,NonNavigableProducts]]></set-property>
 			<set-property name="displayName"><![CDATA[ATG Catalog Site Three]]></set-property>
 			<set-property name="directAncestorCatalogsAndSelf"><![CDATA[siteThreeCatalog]]></set-property>			
 			<set-property name="siteIds"><![CDATA[sitethree]]></set-property>
