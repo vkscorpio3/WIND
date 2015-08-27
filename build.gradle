@@ -46,6 +46,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
+//EARs 
 task cleanEars(type: Delete) {
     delete fileTree("build-ears").include('**/*')
 }
@@ -119,12 +120,7 @@ task assembleAgentEar(type: Exec) {
 	args = argsList
 }
 
-task assembleAllEars << {
-	assembleProductionEar.execute()
-	assemblePublisingEar.execute()
-	assembleAgentEar.execute()
-}
-
+//Import Initial Data
 task startSQLImportSites(type: Exec) {
 	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "startSQLRepository.bat")
 	def argsList = ["-m","Publishing",
@@ -150,11 +146,6 @@ task startSQLImportCatalog(type: Exec) {
 					"-user","admin"										
 	                ]
 	args = argsList
-}
-
-task startSQLImport << {
-	startSQLImportCatalog.execute();
-	startSQLImportSites.execute();
 }
 
 //PRODUCTION 
@@ -316,6 +307,12 @@ task undoAgentLastChange << {
 }
 
 //Common
+task assembleAllEars << {
+	assembleProductionEar.execute()
+	assemblePublisingEar.execute()
+	assembleAgentEar.execute()
+}
+
 task createChangelogTableForAllSchemas << {
 	createPublishingChangelogTable.execute()
 	createProductionChangelogTable.execute()
@@ -335,4 +332,9 @@ task undoLastChangesInSchemas << {
 	undoPublishingLastChange.execute()
 	undoSwitchingLastChange.execute()
 	undoAgentLastChange.execute()
+}
+
+task startSQLImport << {
+	startSQLImportCatalog.execute();
+	startSQLImportSites.execute();
 }
