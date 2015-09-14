@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<item item-descriptor-name="product">
+
+  <properties>
+    <property default-value="0" name="startDate" type="date" xml-combine="replace"/>
+    <!-- 
+      The default end date is set to 1/1/3000. This is necessary as we can only use the Endeca RangeFilter 
+      once per property. For example, it's not possible to create a RangeFilter to do the following:
+                          
+      if endDate == 0 OR endDate >= currentDate
+                             
+      Defining a fake future date allows us to only check if the endDate >= currentDate.
+    -->
+    <property default-value="32506394714894" name="endDate" type="date" xml-combine="replace"/>
+    <property name="displayName" type="string"/>
+    <property name="listPrice" text-searchable="true" xml-combine="remove"/>
+    <property name="$repositoryId" text-searchable="true" is-rollup-key="true"/>
+    <property name="brand" text-searchable="true" filter="unique" is-dimension="true" multiselect-type="multi-or" type="string"/>
+  </properties>
+  
+</item>
