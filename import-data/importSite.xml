@@ -11,7 +11,6 @@
             <set-property name="enabled"><![CDATA[true]]></set-property>
             <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
             <set-property name="author"><![CDATA[portal-admin]]></set-property>
-            <set-property name="defaultCatalog"><![CDATA[siteOneCatalog]]></set-property>
             <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
             <set-property name="endecaSiteId"><![CDATA[/siteone]]></set-property>
         </add-item>
@@ -22,7 +21,6 @@
             <set-property name="enabled"><![CDATA[true]]></set-property>
             <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
             <set-property name="author"><![CDATA[portal-admin]]></set-property>
-            <set-property name="defaultCatalog"><![CDATA[siteTwoCatalog]]></set-property>
             <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
             <set-property name="endecaSiteId"><![CDATA[/sitetwo]]></set-property>
         </add-item>
@@ -33,7 +31,6 @@
             <set-property name="enabled"><![CDATA[true]]></set-property>
             <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
             <set-property name="author"><![CDATA[portal-admin]]></set-property>
-            <set-property name="defaultCatalog"><![CDATA[siteThreeCatalog]]></set-property>
             <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
             <set-property name="endecaSiteId"><![CDATA[/sitethree]]></set-property>
         </add-item>
