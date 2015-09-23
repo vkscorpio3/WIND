@@ -2,9 +2,8 @@
     "segments": [
         {"name": "CategoryOnly"},
         {"name": "NoPriceRange"},
-        {"name": "site.homeSite"},
-        {"name": "site.StoreSiteDE"},
-        {"name": "site.storeSiteUS"}
+        {"name": "site.siteone"},
+        {"name": "site.sitetwo"}
     ],
     "ecr:type": "user-segments"
 }

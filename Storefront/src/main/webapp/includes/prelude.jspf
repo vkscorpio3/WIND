@@ -13,8 +13,8 @@
 <%-- Endeca Taglib --%>
 <%@ taglib prefix="endeca" uri="/endeca-infront-assembler/utilityTags" %>
 
-<%-- MWS Taglib --%>
-<%@ taglib prefix="mws" uri="/WEB-INF/tld/store.tld"  %>
+<%-- WIND Taglib --%>
+<%@ taglib prefix="wind" uri="/WEB-INF/tld/store.tld"  %>
 
 <dsp:page>
 	<dsp:importbean bean="/atg/dynamo/servlet/RequestLocale" var="requestLocale" />
