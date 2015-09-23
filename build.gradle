@@ -93,7 +93,8 @@ task assemblePublisingEar(type: Exec) {
 	                "SiteAdmin.Versioned",
 	                "DCS.Endeca.Index.Versioned",
 	                "DAF.Endeca.Reader.Versioned",
-	                "DCS.Endeca.Index.SKUIndexing"
+	                "DCS.Endeca.Index.SKUIndexing",
+	               	"WIND.Commerce"
 	                ]
 	args = argsList
 }
@@ -115,7 +116,8 @@ task assembleAgentEar(type: Exec) {
 					"DCS.TextSearch.Order.LiveIndex",
 					"DCS.Endeca.Index",
 					"DCS-CSR-UI.Endeca",
-					"REST"
+					"REST",
+					"WIND.Commerce"
 	                ]
 	args = argsList
 }
