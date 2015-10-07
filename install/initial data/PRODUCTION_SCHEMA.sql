@@ -1,0 +1,18097 @@
+--------------------------------------------------------
+--  File created - четверг-Сентябрь-24-2015   
+--------------------------------------------------------
+DROP TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" cascade constraints;
+DROP TABLE "PRODUCTION"."ARF_ID_GENERATOR" cascade constraints;
+DROP TABLE "PRODUCTION"."ARF_LOADER_PROG" cascade constraints;
+DROP TABLE "PRODUCTION"."ARF_LOADER_QUEUE" cascade constraints;
+DROP TABLE "PRODUCTION"."ARF_LQ_ENTRIES" cascade constraints;
+DROP TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" cascade constraints;
+DROP TABLE "PRODUCTION"."ARF_SECURE_ID_GEN" cascade constraints;
+DROP TABLE "PRODUCTION"."CAF_REGISTRY" cascade constraints;
+DROP TABLE "PRODUCTION"."CAF_REG_ASSET" cascade constraints;
+DROP TABLE "PRODUCTION"."CAF_REG_FOLDER" cascade constraints;
+DROP TABLE "PRODUCTION"."CAF_REG_PATHASSET" cascade constraints;
+DROP TABLE "PRODUCTION"."CAF_REG_REPASSET" cascade constraints;
+DROP TABLE "PRODUCTION"."CAF_REG_ROOTFOLDER" cascade constraints;
+DROP TABLE "PRODUCTION"."CHANGELOG" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_APPR_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_CI_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_CLAIM_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_GI_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_GL_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_GRANT_APPEASE" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_GRT_PROM_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_IGN_PROM_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_OMA_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_ORDERS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_ORDER_APPR_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_ORDER_COMMENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_ORDER_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_PG_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_PRICE_OVERRDE" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_RECV_RTRN_ITM" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_RETURN_ORDER" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_SCHD_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_SG_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_SPLIT_CC" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_SPLIT_SG" cascade constraints;
+DROP TABLE "PRODUCTION"."CSRT_UPDATE_ORG" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_CC_EXCH_METHOD" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_CMTS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_IPROMOS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_ITEMS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_ITEM_DISP" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_METHOD" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_METHODS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_OPROMOS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_EXCH_REASONS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_ITEM_ADJ" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_NONRETURN_ADJ" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_ORDER_CMTS" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_PROMO_ADJUST" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_RETURN_FEE" cascade constraints;
+DROP TABLE "PRODUCTION"."CSR_SC_EXCH_METHOD" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_ACCOUNT" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_ACCT_PREVPWD" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_CLUSTER_NAME" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DD_MARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPLOYMENT" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPLOY_DATA" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPLOY_MARK" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPL_DEPLDAT" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPL_ITEM_REF" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPL_OPTIONS" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPL_PROGRESS" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEPL_REPMAPS" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_DEP_FAIL_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_FILE_MARK" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_GROUP_ASSOC" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_ID_GENERATOR" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_NS_ACLS" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_NUCL_SEC" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_REP_MARK" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_SDS" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_SECURE_ID_GEN" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_SITEINDEX" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_SITEMAP" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_SYS_CONFIG" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_THREAD_BATCH" cascade constraints;
+DROP TABLE "PRODUCTION"."DAS_USAGE_METRIC" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_APPROVERIDS" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_APPRSYSMSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_APPR_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_AUTHAPPRIDS" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_CCITEM_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_CCORDER_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_CCSHIP_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_COST_CENTER" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_INVOICE_REQ" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_ORDER_CC" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_PMT_REQ" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_SCHED_CLONE" cascade constraints;
+DROP TABLE "PRODUCTION"."DBCPP_SCHED_ORDER" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_BUYER_APPROVER" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_BUYER_COSTCTR" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_BUYER_PLIST" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_BUYER_PREFVNDR" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_CONTRACT" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_CONTRACT_TERM" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_COST_CENTER" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_INVOICE" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_INV_DELIVERY" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_INV_PMT_TERMS" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_ORGANIZATION" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_ORG_APPROVER" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_ORG_CONTACT" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_ORG_COSTCTR" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_ORG_PAYMENT" cascade constraints;
+DROP TABLE "PRODUCTION"."DBC_ORG_PREFVNDR" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_AMTINFO_ADJ" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_AUTH_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_BATCH_CLAIMABLE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_BILL_ADDR" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_CC_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_CLAIMABLE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_CONFIG_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_COUPON" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_COUPON_BATCH" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_COUPON_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_CP_FOLDER" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_CREDIT_CARD" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_CRED_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_DEBIT_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_DET_PRICE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_DET_RANGE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ELE_SHIP_GRP" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_GC_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_GIFTCERT" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_GIFT_CERT" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_GIFT_INST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_HAND_INST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_HRD_SHIP_GRP" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ISP_SHIP_GRP" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ITEM_CI" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ITEM_PRICE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ITMPRICE_DET" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_NTAXSHIPITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER_ADJ" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER_INST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER_PG" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER_PRICE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORDER_SG" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_ORD_ABANDON" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_PAYITEM_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_PAYORDER_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_PAYSHIP_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_PAY_GROUP" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_PAY_INST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_PAY_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_PRICE_ADJUST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_QUOTE_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_RELATIONSHIP" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_REL_ORDERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_REL_RANGE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SCHD_ERRMSG" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SCHED_ERROR" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SCHERR_AUX" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SC_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SG_HAND_INST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SHIPITEM_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SHIPITEM_SUB" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SHIPITEM_TAX" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SHIP_ADDR" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SHIP_GROUP" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SHIP_INST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SHIP_PRICE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_STORE_CRED" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_SUBSKU_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_TAXSHIPITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCSPP_TAX_PRICE" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_CART_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_GIFTINST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_GIFTITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_GIFTLIST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_GIFTLIST_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_INVENTORY" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_INV_ATP" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_ORDER_MARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_ORD_MERGE_EVT" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_ORG_ADDRESS" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_PROMO_GRNTD" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_PROMO_RVKD" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_PROMO_ST_CPN" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_PROM_USED_EVT" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_STORECRED_CLM" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_SUBMT_ORD_EVT" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USER" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USER_ABANDONED" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USER_FAVSTORES" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USER_GIFTLIST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USER_OTHERLIST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USER_WISHLIST" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USR_PROMOSTAT" cascade constraints;
+DROP TABLE "PRODUCTION"."DCS_USR_USEDPROMO" cascade constraints;
+DROP TABLE "PRODUCTION"."DLO_LOGICAL_ORG" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_CLIENT" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_LIMBO" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_LIMBO_BODY" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_LIMBO_DELAY" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_LIMBO_MSG" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_LIMBO_PROPS" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_LIMBO_PTYPES" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_LIMBO_REPLYTO" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_MSG" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_MSG_PROPERTIES" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_QUEUE" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_QUEUE_ENTRY" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_QUEUE_RECV" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_TOPIC" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_TOPIC_ENTRY" cascade constraints;
+DROP TABLE "PRODUCTION"."DMS_TOPIC_SUB" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_CHILD_FOLDER" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_CONTACT_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_CON_REQ" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_CON_REQ_SUM" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_CREDIT_CARD" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_EMAIL_ADDRESS" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_EVENT_TYPE" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_FOLDER" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_LOG_ID" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_MAILING" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_MAIL_BATCH" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_MAIL_SERVER" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_MAIL_TRACKDATA" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_MARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_ORGANIZATION" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_ORG_CHLDORG" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_ORG_ROLE" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_OTHER_ADDR" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_PGRP_CON_SUM" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_PGRP_REQ_SUM" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_PROFILE_REALM" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_RELATIVEROLE" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_REQNAME_SUM" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_REQUEST" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_ROLE" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_ROLEFOLD_CHLD" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_SCENARIO_VALUE" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_SEG_LIST" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_SEG_LIST_FOLDER" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_SEG_LIST_NAME" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_SESSION_SUM" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_ADDRESS" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_EVENT_SUM" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_MAILING" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_ORG" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_ORG_ANC" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_PREVPWD" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_ROLES" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_SCENARIO" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_SEC_ORGS" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USER_SLOT" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USR_CREDITCARD" cascade constraints;
+DROP TABLE "PRODUCTION"."DPS_USR_MARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$K" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$N" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$R" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$K" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$N" cascade constraints;
+DROP TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$R" cascade constraints;
+DROP TABLE "PRODUCTION"."DRPT_CONV_ORDER" cascade constraints;
+DROP TABLE "PRODUCTION"."DRPT_SESSION_ORD" cascade constraints;
+DROP TABLE "PRODUCTION"."DRPT_STAGE_REACHED" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_AUDIT_TRAIL" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_COLL_SCENARIO" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_COLL_TRANS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DAS_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DAS_FORM" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DELETION" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DEL_SEG_NAME" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_ADMIN_PROP" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_ADMIN_REG" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_ADMIN_UP" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_CLICK" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_EVENT" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_INBOUND" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_PAGE_VISIT" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_PROPERTY" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_REFERRER" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_UPDATE" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_DPS_VIEW_ITEM" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_IND_SCENARIO" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_IND_TRANS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_MIGRATION" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_MIG_INFO_SEG" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_MIG_SEG_NAME" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_PROFILE_SLOT" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SCENARIO_BOOLS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SCENARIO_DATES" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SCENARIO_DBLS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SCENARIO_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SCENARIO_LONGS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SCENARIO_STRS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SCEN_MIG_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SERVER_ID" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SLOT_ITEMS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_SLOT_PRIORITY" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_TEMPLATE_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_USER_BPMARKERS" cascade constraints;
+DROP TABLE "PRODUCTION"."DSS_XREF" cascade constraints;
+DROP TABLE "PRODUCTION"."IF_INTEG_DATA" cascade constraints;
+DROP TABLE "PRODUCTION"."MEDIA_BASE" cascade constraints;
+DROP TABLE "PRODUCTION"."MEDIA_BIN" cascade constraints;
+DROP TABLE "PRODUCTION"."MEDIA_EXT" cascade constraints;
+DROP TABLE "PRODUCTION"."MEDIA_FOLDER" cascade constraints;
+DROP TABLE "PRODUCTION"."MEDIA_TXT" cascade constraints;
+DROP TABLE "PRODUCTION"."SITE_CONFIGURATION" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_CONFIG" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_CONFIG_REPO" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_END_JOB" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_END_STATE" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_ORDER_MODIFIED" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_ORDER_STAGING" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_ORDER_TOKENS" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_PROFILE_MODIFIED" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_PROFILE_STAGING" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_PROFILE_TOKENS" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_SITE_CNTNT" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_SITE_CNTNT_PRI" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" cascade constraints;
+DROP TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" cascade constraints;
+DROP TABLE "PRODUCTION"."SVCT_CALLNOTE_ACT" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_CELL_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_CONFIG_OBJCT" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_CONTENT_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_FRAMEWRK_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_FW_TAB_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_GLOBALOPT_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_GLOBALOPT_VAL" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_GLOBAL_OPT" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_PANEL_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_PSTACK_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_PS_PNL_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_RECENT_TKTS" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_SKIN_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_SPELL_DICS" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_SPELL_WORDS" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_TAB_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_TAB_PNL_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_TEMPLATE_CFG" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_USEROPT_INFO" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_USEROPT_VAL" cascade constraints;
+DROP TABLE "PRODUCTION"."SVC_USER_OPT" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACTIVITY" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_ESCAL" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_MAP" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_MESSAGE" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_OWNAGNT" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_OWNGRP" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_PCREATE" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_PSWCHANGE" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_STATC" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ACT_WORKNOTE" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_ACT_DATA" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_IN_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MESSAGES" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MMS_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MSG_ADDRS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MSG_ATTS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MSG_HDRS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_MSG_PROPS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_POP3_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_SMS_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ADS_SMTP_MSGS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ATTACHMENT" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ATTCH_LIST" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_CUST_DETAILS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_DIST_SRV_STAT" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ESC_OWN_GROUP" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_ESC_TKT_Q" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_EXTREF_LIST" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_EXT_REF" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_OWNING_GROUP" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_QUEUE" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_Q_STATS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_Q_STAT_SET" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_REASON" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_REA_CONTEXT" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_REA_CTX_LIST" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_RELATED" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_SUB_STATUS" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_TICKET" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_UPDATE_PROF" cascade constraints;
+DROP TABLE "PRODUCTION"."TKT_UPD_PROPS" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_ATTRVAL" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_ATTRVAL_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_CATTRVAL_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_FH" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_IM" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_IM2IVM_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_IV" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_IV2IVAD_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_IVATTRDEF" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_IVM" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_IVM2PVM_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_MODE" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_PV" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_PV2PVAD_REL" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_PVATTRDEF" cascade constraints;
+DROP TABLE "PRODUCTION"."VMAP_PVM" cascade constraints;
+DROP VIEW "PRODUCTION"."DRPT_ABANDON_ORD";
+DROP VIEW "PRODUCTION"."DRPT_TNS_ABNDN_ORD";
+DROP PROCEDURE "PRODUCTION"."DMS_QUEUE_FLAG";
+DROP PROCEDURE "PRODUCTION"."DMS_TOPIC_FLAG";
+--------------------------------------------------------
+--  DDL for Table AGENT_PROFILE_CMTS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" 
+   (	"COMMENT_ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"AGENT_ID" VARCHAR2(40 BYTE), 
+	"COMMENT_DATA" VARCHAR2(2500 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table ARF_ID_GENERATOR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."ARF_ID_GENERATOR" 
+   (	"ID_SPACE_NAME" VARCHAR2(60 BYTE), 
+	"SEED" NUMBER(19,0), 
+	"BATCH_SIZE" NUMBER(*,0), 
+	"PREFIX" VARCHAR2(10 BYTE), 
+	"SUFFIX" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table ARF_LOADER_PROG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."ARF_LOADER_PROG" 
+   (	"LOADER_PROGRESS_ID" VARCHAR2(40 BYTE), 
+	"FILENAME" VARCHAR2(254 BYTE), 
+	"LOADER_QUEUE_ID" VARCHAR2(40 BYTE), 
+	"START_TIMESTAMP" TIMESTAMP (6), 
+	"END_TIMESTAMP" TIMESTAMP (6), 
+	"STATUS" NUMBER(10,0), 
+	"STATUS_DETAIL" CLOB, 
+	"OWNER" VARCHAR2(254 BYTE), 
+	"RECORDS_PROCESSED" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("STATUS_DETAIL") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table ARF_LOADER_QUEUE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."ARF_LOADER_QUEUE" 
+   (	"LOADER_QUEUE_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table ARF_LQ_ENTRIES
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."ARF_LQ_ENTRIES" 
+   (	"LOADER_QUEUE_ID" VARCHAR2(40 BYTE), 
+	"QUEUE_ENTRY_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table ARF_QUEUE_ENTRY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" 
+   (	"QUEUE_ENTRY_ID" VARCHAR2(40 BYTE), 
+	"LOADER_QUEUE_ID" VARCHAR2(40 BYTE), 
+	"FILENAME" VARCHAR2(254 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table ARF_SECURE_ID_GEN
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."ARF_SECURE_ID_GEN" 
+   (	"ID_SPACE_NAME" VARCHAR2(60 BYTE), 
+	"SEED" NUMBER(19,0), 
+	"BATCH_SIZE" NUMBER(*,0), 
+	"IDS_PER_BATCH" NUMBER(*,0), 
+	"PREFIX" VARCHAR2(10 BYTE), 
+	"SUFFIX" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CAF_REGISTRY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CAF_REGISTRY" 
+   (	"REGISTRY_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(100 BYTE), 
+	"DESCRIPTION" VARCHAR2(1000 BYTE), 
+	"ASSET_TYPE" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CAF_REG_ASSET
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CAF_REG_ASSET" 
+   (	"ASSET_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(100 BYTE), 
+	"DESCRIPTION" VARCHAR2(1000 BYTE), 
+	"PARENT_FOLDER_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(10,0), 
+	"PARENT_REGISTRY_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CAF_REG_FOLDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CAF_REG_FOLDER" 
+   (	"FOLDER_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(100 BYTE), 
+	"PARENT_FOLDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CAF_REG_PATHASSET
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CAF_REG_PATHASSET" 
+   (	"ASSET_ID" VARCHAR2(40 BYTE), 
+	"ASSET_PATH" VARCHAR2(1000 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CAF_REG_REPASSET
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CAF_REG_REPASSET" 
+   (	"ASSET_ID" VARCHAR2(40 BYTE), 
+	"REPOSITORY" VARCHAR2(100 BYTE), 
+	"ITEM_TYPE" VARCHAR2(100 BYTE), 
+	"REPOSITORY_ID" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CAF_REG_ROOTFOLDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CAF_REG_ROOTFOLDER" 
+   (	"REGISTRY_ID" VARCHAR2(40 BYTE), 
+	"FOLDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CHANGELOG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CHANGELOG" 
+   (	"CHANGE_NUMBER" NUMBER(22,0), 
+	"COMPLETE_DT" TIMESTAMP (6), 
+	"APPLIED_BY" VARCHAR2(100 BYTE), 
+	"DESCRIPTION" VARCHAR2(500 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_APPR_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_APPR_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"APPROVAL_ID" VARCHAR2(40 BYTE), 
+	"UPDATE_TYPE" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_CI_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_CI_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ITEM_ID" VARCHAR2(40 BYTE), 
+	"OLD_QUANTITY" NUMBER(19,0), 
+	"NEW_QUANTITY" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_CLAIM_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_CLAIM_ITEM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CLAIMABLE_ID" VARCHAR2(40 BYTE), 
+	"CLAIMABLE_TYPE" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_GI_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_GI_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CATALOG_REF_ID" VARCHAR2(40 BYTE), 
+	"OLD_QUANTITY" NUMBER(19,0), 
+	"NEW_QUANTITY" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_GL_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_GL_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"GIFTLIST_ID" VARCHAR2(40 BYTE), 
+	"EVENT_NAME" VARCHAR2(64 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_GRANT_APPEASE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_GRANT_APPEASE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"APPEASEMENT_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_GRT_PROM_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_GRT_PROM_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"PROMO_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_IGN_PROM_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_IGN_PROM_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"PROMO_ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_OMA_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_OMA_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"MAN_ADJ_ID" VARCHAR2(40 BYTE), 
+	"ADJUSTMENT_TYPE" NUMBER(*,0), 
+	"UPDATE_TYPE" NUMBER(1,0), 
+	"REASON" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_ORDERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_ORDERS" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"TICKET_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_ORDER_APPR_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_ORDER_APPR_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_ORDER_COMMENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_ORDER_COMMENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"COMMENT_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_ORDER_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_ORDER_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_PG_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_PG_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"PAY_GROUP_ID" VARCHAR2(40 BYTE), 
+	"UPDATE_TYPE" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_PRICE_OVERRDE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_PRICE_OVERRDE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"COMPONENT_ID" VARCHAR2(40 BYTE), 
+	"COMPONENT_TYPE" VARCHAR2(40 BYTE), 
+	"OLD_PRICE" NUMBER(19,7), 
+	"NEW_PRICE" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_RECV_RTRN_ITM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_RECV_RTRN_ITM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ITEM_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_RETURN_ORDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_RETURN_ORDER" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"RET_REQ_ID" VARCHAR2(40 BYTE), 
+	"REPL_ORDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_SCHD_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_SCHD_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"SCH_ORDER_ID" VARCHAR2(40 BYTE), 
+	"UPDATE_TYPE" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_SG_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_SG_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"SHIP_GROUP_ID" VARCHAR2(40 BYTE), 
+	"UPDATE_TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_SPLIT_CC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_SPLIT_CC" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"SRC_COST_CTR_ID" VARCHAR2(40 BYTE), 
+	"DEST_COST_CTR_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_IDENT_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_SPLIT_SG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_SPLIT_SG" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"SRC_SHIP_GROUP_ID" VARCHAR2(40 BYTE), 
+	"DEST_SHIP_GROUP_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSRT_UPDATE_ORG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSRT_UPDATE_ORG" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"UPDATED_ITEM_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_CC_EXCH_METHOD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_CC_EXCH_METHOD" 
+   (	"EXCHANGE_METHOD_ID" VARCHAR2(40 BYTE), 
+	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"CREATED_DATE" TIMESTAMP (6), 
+	"STATUS" VARCHAR2(40 BYTE), 
+	"RMA" VARCHAR2(40 BYTE), 
+	"REPL_ORDER_ID" VARCHAR2(40 BYTE), 
+	"BAL_PMT_ID" VARCHAR2(40 BYTE), 
+	"SUGG_TAX_REFUND" NUMBER(19,7), 
+	"ACTL_TAX_REFUND" NUMBER(19,7), 
+	"SUGG_SHIP_REFUND" NUMBER(19,7), 
+	"ACTL_SHIP_REFUND" NUMBER(19,7), 
+	"OTHER_REFUND" NUMBER(19,7), 
+	"SC_RECIPIENT" VARCHAR2(40 BYTE), 
+	"PROC_IMMED" NUMBER(1,0), 
+	"PROCESSED" NUMBER(1,0), 
+	"ORIGIN_OF_RETURN" NUMBER(10,0), 
+	"AGENT_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_CMTS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_CMTS" 
+   (	"COMMENT_ID" VARCHAR2(40 BYTE), 
+	"RETURN_ID" VARCHAR2(40 BYTE), 
+	"AGENT_ID" VARCHAR2(40 BYTE), 
+	"COMMENT_DATA" VARCHAR2(254 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_IPROMOS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_IPROMOS" 
+   (	"EXCHANGE_ID" VARCHAR2(40 BYTE), 
+	"PROMOTION_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_ITEM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY_TO_RETURN" NUMBER(19,0), 
+	"QUANTITY_TO_REPL" NUMBER(19,0), 
+	"REASON" VARCHAR2(40 BYTE), 
+	"RET_SHIPMENT_REQ" NUMBER(1,0), 
+	"QUANTITY_RECEIVED" NUMBER(19,0), 
+	"DISPOSITION" VARCHAR2(40 BYTE), 
+	"REFUND_AMOUNT" NUMBER(19,7), 
+	"STATUS" VARCHAR2(40 BYTE), 
+	"EXCH_REF" VARCHAR2(40 BYTE), 
+	"SUGG_SHIP_REFUND" NUMBER(19,7), 
+	"ACTL_SHIP_REFUND" NUMBER(19,7), 
+	"SUGG_TAX_REFUND" NUMBER(19,7), 
+	"ACTL_TAX_REFUND" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_ITEMS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_ITEMS" 
+   (	"EXCHANGE_ID" VARCHAR2(40 BYTE), 
+	"EXCHANGE_ITEM_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_ITEM_DISP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_ITEM_DISP" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"UPD_INVENTORY" NUMBER(1,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_METHOD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_METHOD" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_METHODS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_METHODS" 
+   (	"EXCHANGE_ID" VARCHAR2(40 BYTE), 
+	"EXCHANGE_METHOD_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_OPROMOS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_OPROMOS" 
+   (	"EXCHANGE_ID" VARCHAR2(40 BYTE), 
+	"PROMOTION_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_EXCH_REASONS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_EXCH_REASONS" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_ITEM_ADJ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_ITEM_ADJ" 
+   (	"ICA_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY_ADJ" NUMBER(19,0), 
+	"AMOUNT_ADJ" NUMBER(19,7), 
+	"ODS_ADJ" NUMBER(19,7), 
+	"MAS_ADJ" NUMBER(19,7), 
+	"TAX_ADJ" NUMBER(19,7), 
+	"SHIPPING_ADJ" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_NONRETURN_ADJ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_NONRETURN_ADJ" 
+   (	"EXCHANGE_ID" VARCHAR2(40 BYTE), 
+	"ICA_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_ORDER_CMTS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_ORDER_CMTS" 
+   (	"COMMENT_ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"AGENT_ID" VARCHAR2(40 BYTE), 
+	"COMMENT_DATA" VARCHAR2(2500 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_PROMO_ADJUST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_PROMO_ADJUST" 
+   (	"EXCHANGE_ID" VARCHAR2(40 BYTE), 
+	"PROMOTION_ID" VARCHAR2(40 BYTE), 
+	"VALUE_ADJUST" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_RETURN_FEE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_RETURN_FEE" 
+   (	"EXCHANGE_ID" VARCHAR2(40 BYTE), 
+	"RETURN_FEE" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CSR_SC_EXCH_METHOD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."CSR_SC_EXCH_METHOD" 
+   (	"EXCHANGE_METHOD_ID" VARCHAR2(40 BYTE), 
+	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"SC_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_ACCOUNT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_ACCOUNT" 
+   (	"ACCOUNT_NAME" VARCHAR2(254 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"FIRST_NAME" VARCHAR2(254 BYTE), 
+	"LAST_NAME" VARCHAR2(254 BYTE), 
+	"PASSWORD" VARCHAR2(254 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"LASTPWDUPDATE" DATE, 
+	"PASSWORD_KDF" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_ACCT_PREVPWD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_ACCT_PREVPWD" 
+   (	"ACCOUNT_NAME" VARCHAR2(254 BYTE), 
+	"SEQ_NUM" NUMBER(10,0), 
+	"PREVPWD" VARCHAR2(70 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_CLUSTER_NAME
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_CLUSTER_NAME" 
+   (	"CLUSTER_NAME" VARCHAR2(255 BYTE), 
+	"SAVED_DATE" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DBSETUP_HISTORY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" 
+   (	"HISTORY_ID" VARCHAR2(40 BYTE), 
+	"MODULE_NAME" VARCHAR2(255 BYTE), 
+	"RESOURCE_NAME" VARCHAR2(1024 BYTE), 
+	"UNDO_RESOURCE_NAME" VARCHAR2(510 BYTE), 
+	"OPERATION_TYPE" VARCHAR2(40 BYTE), 
+	"REPOSITORY" VARCHAR2(255 BYTE), 
+	"JOB_ID" VARCHAR2(255 BYTE), 
+	"EXEC_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DD_MARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DD_MARKERS" 
+   (	"DEPLOY_DATA_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0), 
+	"MARKER" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPLOYMENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPLOYMENT" 
+   (	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"START_TIME" DATE, 
+	"END_TIME" DATE, 
+	"FAILURE_TIME" DATE, 
+	"STATUS" NUMBER(10,0), 
+	"PREV_STATUS" NUMBER(10,0), 
+	"STATUS_DETAIL" VARCHAR2(255 BYTE), 
+	"CURRENT_PHASE" NUMBER(10,0), 
+	"REP_HIGH_MARK" NUMBER(10,0), 
+	"REP_MARKS_AVAIL" NUMBER(10,0), 
+	"FILE_HIGH_MARK" NUMBER(10,0), 
+	"FILE_MARKS_AVAIL" NUMBER(10,0), 
+	"THREAD_BATCH_SIZE" NUMBER(10,0), 
+	"FAILURE_COUNT" NUMBER(10,0), 
+	"PURGE_DEPLOY_DATA" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPLOY_DATA
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPLOY_DATA" 
+   (	"DEPLOY_DATA_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"TYPE" NUMBER(10,0), 
+	"SOURCE" VARCHAR2(255 BYTE), 
+	"DESTINATION" VARCHAR2(255 BYTE), 
+	"DEST_SERVER" VARCHAR2(255 BYTE), 
+	"DEPLOYMENT" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPLOY_MARK
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPLOY_MARK" 
+   (	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"TYPE" NUMBER(10,0), 
+	"STATUS" NUMBER(10,0), 
+	"INDEX_NUMBER" NUMBER(10,0), 
+	"MARKER_ACTION" NUMBER(10,0), 
+	"F_SRC_DEVLINE_ID" VARCHAR2(40 BYTE), 
+	"R_SRC_DEVLINE_ID" VARCHAR2(40 BYTE), 
+	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"DEPLOYMENT_DATA" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPL_DEPLDAT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPL_DEPLDAT" 
+   (	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0), 
+	"DEPLOYMENT_DATA" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPL_ITEM_REF
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPL_ITEM_REF" 
+   (	"ITEM_REF_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"REPOSITORY" VARCHAR2(255 BYTE), 
+	"ITEM_DESC_NAME" VARCHAR2(255 BYTE), 
+	"ITEM_ID" VARCHAR2(255 BYTE), 
+	"ITEM_INDEX" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPL_OPTIONS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPL_OPTIONS" 
+   (	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(255 BYTE), 
+	"OPTIONVALUE" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPL_PROGRESS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPL_PROGRESS" 
+   (	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"WORK_COMPLETED" NUMBER(10,0), 
+	"TOTAL_WORK" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEPL_REPMAPS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEPL_REPMAPS" 
+   (	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"SOURCE" VARCHAR2(255 BYTE), 
+	"DESTINATION" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_DEP_FAIL_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_DEP_FAIL_INFO" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"DEPLOYMENT_ID" VARCHAR2(40 BYTE), 
+	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"SEVERITY" VARCHAR2(40 BYTE), 
+	"FAILURE_MESSAGE" VARCHAR2(255 BYTE), 
+	"FAILURE_TIME" TIMESTAMP (6), 
+	"ERROR_CODE" VARCHAR2(40 BYTE), 
+	"CAUSE" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("CAUSE") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DAS_FILE_MARK
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_FILE_MARK" 
+   (	"FILE_MARKER_ID" VARCHAR2(40 BYTE), 
+	"FILE_PATH" VARCHAR2(1000 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_GROUP_ASSOC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_GROUP_ASSOC" 
+   (	"ACCOUNT_NAME" VARCHAR2(254 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"GROUP_NAME" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_GSA_SUBSCRIBER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" 
+   (	"ID" NUMBER(*,0), 
+	"ADDRESS" VARCHAR2(50 BYTE), 
+	"PORT" NUMBER(*,0), 
+	"REPOSITORY" VARCHAR2(256 BYTE), 
+	"ITEMDESCRIPTOR" VARCHAR2(256 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_ID_GENERATOR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_ID_GENERATOR" 
+   (	"ID_SPACE_NAME" VARCHAR2(60 BYTE), 
+	"SEED" NUMBER(19,0), 
+	"BATCH_SIZE" NUMBER(*,0), 
+	"PREFIX" VARCHAR2(10 BYTE), 
+	"SUFFIX" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_NS_ACLS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_NS_ACLS" 
+   (	"ID" VARCHAR2(254 BYTE), 
+	"INDEX_NUM" NUMBER(10,0), 
+	"ACL" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_NUCL_SEC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_NUCL_SEC" 
+   (	"FUNC_NAME" VARCHAR2(254 BYTE), 
+	"POLICY" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_PURGE_PROGRESS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" 
+   (	"PURGE_PROGRESS_ID" VARCHAR2(40 BYTE), 
+	"ITEM_TYPE" VARCHAR2(254 BYTE), 
+	"START_TIMESTAMP" TIMESTAMP (6), 
+	"UPDATE_TIMESTAMP" TIMESTAMP (6), 
+	"END_TIMESTAMP" TIMESTAMP (6), 
+	"STATUS" NUMBER(10,0), 
+	"SUCCESS_ITEMS" NUMBER(10,0) DEFAULT 0, 
+	"SKIPPED_ITEMS" NUMBER(10,0) DEFAULT 0, 
+	"SKIPPED_ON_ERROR_ITEMS" NUMBER(10,0) DEFAULT 0, 
+	"ERROR_ITEMS" NUMBER(10,0) DEFAULT 0, 
+	"PROCESSED_ITEMS" NUMBER(10,0) DEFAULT 0, 
+	"ESTIMATED_ITEMS" NUMBER(10,0) DEFAULT 0, 
+	"TOTAL_ITEMS" NUMBER(10,0) DEFAULT 0, 
+	"OWNER" VARCHAR2(254 BYTE), 
+	"CRITERIA" VARCHAR2(4000 BYTE), 
+	"RELATED_CRITERIA" VARCHAR2(4000 BYTE), 
+	"ERROR_MESSAGE" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("ERROR_MESSAGE") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DAS_REP_MARK
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_REP_MARK" 
+   (	"REP_MARKER_ID" VARCHAR2(40 BYTE), 
+	"ITEM_DESC_NAME" VARCHAR2(255 BYTE), 
+	"ITEM_ID" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_SDS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_SDS" 
+   (	"SDS_NAME" VARCHAR2(50 BYTE), 
+	"CURR_DS_NAME" VARCHAR2(50 BYTE), 
+	"DYNAMO_SERVER" VARCHAR2(80 BYTE), 
+	"LAST_MODIFIED" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_SECURE_ID_GEN
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_SECURE_ID_GEN" 
+   (	"ID_SPACE_NAME" VARCHAR2(60 BYTE), 
+	"SEED" NUMBER(19,0), 
+	"BATCH_SIZE" NUMBER(*,0), 
+	"IDS_PER_BATCH" NUMBER(*,0), 
+	"PREFIX" VARCHAR2(10 BYTE), 
+	"SUFFIX" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_SITEINDEX
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_SITEINDEX" 
+   (	"SITEINDEX_ID" VARCHAR2(40 BYTE), 
+	"LASTMOD" DATE, 
+	"FILENAME" VARCHAR2(100 BYTE), 
+	"XML" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("XML") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DAS_SITEMAP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_SITEMAP" 
+   (	"SITEMAP_ID" VARCHAR2(40 BYTE), 
+	"LASTMOD" DATE, 
+	"FILENAME" VARCHAR2(100 BYTE), 
+	"XML" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("XML") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DAS_SYS_CONFIG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_SYS_CONFIG" 
+   (	"PARAMETER_KEY" VARCHAR2(50 BYTE), 
+	"PARAMETER_VALUE" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_THREAD_BATCH
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_THREAD_BATCH" 
+   (	"THREAD_BATCH_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"DEPLOYMENT" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(10,0), 
+	"OWNER" VARCHAR2(255 BYTE), 
+	"THREAD_NAME" VARCHAR2(255 BYTE), 
+	"LOWER_BOUND" NUMBER(10,0), 
+	"UPPER_BOUND" NUMBER(10,0), 
+	"LAST_UPDATE_TIME" TIMESTAMP (6), 
+	"RUNNING" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DAS_USAGE_METRIC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DAS_USAGE_METRIC" 
+   (	"USAGE_METRIC_ID" NUMBER(19,0), 
+	"SERVER_IDENTIFIER" VARCHAR2(100 BYTE), 
+	"USAGE_DATE" TIMESTAMP (6), 
+	"USAGE_HOUR_OF_DAY" NUMBER(3,0), 
+	"USAGE_VALUE" NUMBER(10,0) DEFAULT 0
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_APPROVERIDS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_APPROVERIDS" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"APPROVER_IDS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_APPRSYSMSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_APPRSYSMSGS" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"APPR_SYS_MSGS" VARCHAR2(254 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_APPR_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_APPR_MSGS" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"APPROVER_MSGS" VARCHAR2(254 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_AUTHAPPRIDS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_AUTHAPPRIDS" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"AUTH_APPR_IDS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_CCITEM_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_CCITEM_REL" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"COST_CENTER_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(*,0), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_CCORDER_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_CCORDER_REL" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"COST_CENTER_ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_CCSHIP_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_CCSHIP_REL" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"COST_CENTER_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_COST_CENTER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_COST_CENTER" 
+   (	"COST_CENTER_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"COSTCTR_CLASS_TYPE" VARCHAR2(40 BYTE), 
+	"IDENTIFIER" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7), 
+	"ORDER_REF" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_INVOICE_REQ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_INVOICE_REQ" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"PO_NUMBER" VARCHAR2(40 BYTE), 
+	"PREF_FORMAT" VARCHAR2(40 BYTE), 
+	"PREF_DELIVERY" VARCHAR2(40 BYTE), 
+	"DISC_PERCENT" NUMBER(19,7), 
+	"DISC_DAYS" NUMBER(*,0), 
+	"NET_DAYS" NUMBER(*,0), 
+	"PMT_DUE_DATE" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_ORDER_CC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_ORDER_CC" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"COST_CENTERS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_PMT_REQ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_PMT_REQ" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"REQ_NUMBER" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_SCHED_CLONE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_SCHED_CLONE" 
+   (	"SCHEDULED_ORDER_ID" VARCHAR2(40 BYTE), 
+	"CLONED_ORDER" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBCPP_SCHED_ORDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBCPP_SCHED_ORDER" 
+   (	"SCHEDULED_ORDER_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"NAME" VARCHAR2(32 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"CREATE_DATE" TIMESTAMP (6), 
+	"START_DATE" TIMESTAMP (6), 
+	"END_DATE" TIMESTAMP (6), 
+	"TEMPLATE_ORDER" VARCHAR2(32 BYTE), 
+	"STATE" NUMBER(*,0), 
+	"NEXT_SCHEDULED" TIMESTAMP (6), 
+	"SCHEDULE" VARCHAR2(255 BYTE), 
+	"SITE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_BUYER_APPROVER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_BUYER_APPROVER" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"APPROVER_ID" VARCHAR2(40 BYTE), 
+	"SEQ" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_BUYER_COSTCTR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_BUYER_COSTCTR" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"SEQ" NUMBER(*,0), 
+	"COST_CENTER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_BUYER_PLIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_BUYER_PLIST" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"LIST_ID" VARCHAR2(40 BYTE), 
+	"TAG" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_BUYER_PREFVNDR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_BUYER_PREFVNDR" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"VENDOR" VARCHAR2(100 BYTE), 
+	"SEQ" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_CONTRACT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_CONTRACT" 
+   (	"CONTRACT_ID" VARCHAR2(40 BYTE), 
+	"DISPLAY_NAME" VARCHAR2(254 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"START_DATE" TIMESTAMP (6), 
+	"END_DATE" TIMESTAMP (6), 
+	"CREATOR_ID" VARCHAR2(40 BYTE), 
+	"NEGOTIATOR_INFO" VARCHAR2(40 BYTE), 
+	"PRICE_LIST_ID" VARCHAR2(40 BYTE), 
+	"CATALOG_ID" VARCHAR2(40 BYTE), 
+	"TERM_ID" VARCHAR2(40 BYTE), 
+	"COMMENTS" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_CONTRACT_TERM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_CONTRACT_TERM" 
+   (	"TERMS_ID" VARCHAR2(40 BYTE), 
+	"TERMS" CLOB, 
+	"DISC_PERCENT" NUMBER(19,7), 
+	"DISC_DAYS" NUMBER(*,0), 
+	"NET_DAYS" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("TERMS") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DBC_COST_CENTER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_COST_CENTER" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"IDENTIFIER" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(64 BYTE), 
+	"USER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_INVOICE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_INVOICE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"TYPE" NUMBER(*,0), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"LAST_MOD_DATE" TIMESTAMP (6), 
+	"INVOICE_NUMBER" VARCHAR2(40 BYTE), 
+	"PO_NUMBER" VARCHAR2(40 BYTE), 
+	"REQ_NUMBER" VARCHAR2(40 BYTE), 
+	"DELIVERY_INFO" VARCHAR2(40 BYTE), 
+	"BALANCE_DUE" NUMBER(19,7), 
+	"PMT_DUE_DATE" DATE, 
+	"PMT_TERMS" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"PMT_GROUP_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_INV_DELIVERY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_INV_DELIVERY" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"TYPE" NUMBER(*,0), 
+	"PREFIX" VARCHAR2(40 BYTE), 
+	"FIRST_NAME" VARCHAR2(40 BYTE), 
+	"MIDDLE_NAME" VARCHAR2(40 BYTE), 
+	"LAST_NAME" VARCHAR2(40 BYTE), 
+	"SUFFIX" VARCHAR2(40 BYTE), 
+	"JOB_TITLE" VARCHAR2(80 BYTE), 
+	"COMPANY_NAME" VARCHAR2(40 BYTE), 
+	"ADDRESS1" VARCHAR2(80 BYTE), 
+	"ADDRESS2" VARCHAR2(80 BYTE), 
+	"ADDRESS3" VARCHAR2(80 BYTE), 
+	"CITY" VARCHAR2(40 BYTE), 
+	"COUNTY" VARCHAR2(40 BYTE), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"POSTAL_CODE" VARCHAR2(10 BYTE), 
+	"COUNTRY" VARCHAR2(40 BYTE), 
+	"PHONE_NUMBER" VARCHAR2(40 BYTE), 
+	"FAX_NUMBER" VARCHAR2(40 BYTE), 
+	"EMAIL_ADDR" VARCHAR2(255 BYTE), 
+	"FORMAT" NUMBER(*,0), 
+	"DELIVERY_MODE" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_INV_PMT_TERMS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_INV_PMT_TERMS" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"TYPE" NUMBER(*,0), 
+	"DISC_PERCENT" NUMBER(19,7), 
+	"DISC_DAYS" NUMBER(*,0), 
+	"NET_DAYS" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_ORGANIZATION
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_ORGANIZATION" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"CUST_TYPE" NUMBER(*,0), 
+	"DUNS_NUMBER" VARCHAR2(20 BYTE), 
+	"DFLT_SHIPPING_ADDR" VARCHAR2(40 BYTE), 
+	"DFLT_BILLING_ADDR" VARCHAR2(40 BYTE), 
+	"DFLT_PAYMENT_TYPE" VARCHAR2(40 BYTE), 
+	"DFLT_COST_CENTER" VARCHAR2(40 BYTE), 
+	"ORDER_PRICE_LIMIT" NUMBER(19,7), 
+	"CONTRACT_ID" VARCHAR2(40 BYTE), 
+	"APPROVAL_REQUIRED" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_ORG_APPROVER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_ORG_APPROVER" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"APPROVER_ID" VARCHAR2(40 BYTE), 
+	"SEQ" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_ORG_CONTACT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_ORG_CONTACT" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"CONTACT_ID" VARCHAR2(40 BYTE), 
+	"SEQ" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_ORG_COSTCTR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_ORG_COSTCTR" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"COST_CENTER" VARCHAR2(40 BYTE), 
+	"SEQ" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_ORG_PAYMENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_ORG_PAYMENT" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"PAYMENT_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DBC_ORG_PREFVNDR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DBC_ORG_PREFVNDR" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"VENDOR" VARCHAR2(100 BYTE), 
+	"SEQ" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_AMOUNT_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"CURRENCY_CODE" VARCHAR2(10 BYTE), 
+	"AMOUNT" NUMBER(19,7), 
+	"DISCOUNTED" NUMBER(1,0), 
+	"AMOUNT_IS_FINAL" NUMBER(1,0), 
+	"FINAL_RC" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_AMTINFO_ADJ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_AMTINFO_ADJ" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"ADJUSTMENTS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_AUTH_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_AUTH_STATUS" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"AUTH_STATUS" VARCHAR2(254 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_BATCH_CLAIMABLE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_BATCH_CLAIMABLE" 
+   (	"COUPON_ID" VARCHAR2(40 BYTE), 
+	"COUPON_BATCH" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_BILL_ADDR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_BILL_ADDR" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"PREFIX" VARCHAR2(40 BYTE), 
+	"FIRST_NAME" VARCHAR2(40 BYTE), 
+	"MIDDLE_NAME" VARCHAR2(40 BYTE), 
+	"LAST_NAME" VARCHAR2(40 BYTE), 
+	"SUFFIX" VARCHAR2(40 BYTE), 
+	"JOB_TITLE" VARCHAR2(40 BYTE), 
+	"COMPANY_NAME" VARCHAR2(40 BYTE), 
+	"ADDRESS_1" VARCHAR2(50 BYTE), 
+	"ADDRESS_2" VARCHAR2(50 BYTE), 
+	"ADDRESS_3" VARCHAR2(50 BYTE), 
+	"CITY" VARCHAR2(40 BYTE), 
+	"COUNTY" VARCHAR2(40 BYTE), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"POSTAL_CODE" VARCHAR2(10 BYTE), 
+	"COUNTRY" VARCHAR2(40 BYTE), 
+	"PHONE_NUMBER" VARCHAR2(40 BYTE), 
+	"FAX_NUMBER" VARCHAR2(40 BYTE), 
+	"EMAIL" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_CC_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_CC_STATUS" 
+   (	"STATUS_ID" VARCHAR2(40 BYTE), 
+	"AUTH_EXPIRATION" TIMESTAMP (6), 
+	"AVS_CODE" VARCHAR2(40 BYTE), 
+	"AVS_DESC_RESULT" VARCHAR2(254 BYTE), 
+	"INTEGRATION_DATA" VARCHAR2(256 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_CLAIMABLE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_CLAIMABLE" 
+   (	"CLAIMABLE_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"TYPE" NUMBER(*,0), 
+	"STATUS" NUMBER(*,0), 
+	"START_DATE" TIMESTAMP (6), 
+	"EXPIRATION_DATE" TIMESTAMP (6), 
+	"LAST_MODIFIED" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_COMMERCE_ITEM_MARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" 
+   (	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"MARKER_KEY" VARCHAR2(100 BYTE), 
+	"MARKER_VALUE" VARCHAR2(100 BYTE), 
+	"MARKER_DATA" VARCHAR2(100 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0), 
+	"MARKER_TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_CONFIG_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_CONFIG_ITEM" 
+   (	"CONFIG_ITEM_ID" VARCHAR2(40 BYTE), 
+	"RECONFIG_DATA" VARCHAR2(255 BYTE), 
+	"NOTES" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_COUPON
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_COUPON" 
+   (	"COUPON_ID" VARCHAR2(40 BYTE), 
+	"PROMOTION_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_COUPON_BATCH
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_COUPON_BATCH" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CODE_PREFIX" VARCHAR2(40 BYTE), 
+	"NUMBER_OF_COUPONS" NUMBER(10,0), 
+	"SEED_VALUE" BLOB, 
+	"CODES_GENERATED" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("SEED_VALUE") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_COUPON_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_COUPON_INFO" 
+   (	"COUPON_ID" VARCHAR2(40 BYTE), 
+	"DISPLAY_NAME" VARCHAR2(254 BYTE), 
+	"USE_PROMO_SITE" NUMBER(10,0), 
+	"PARENT_FOLDER" VARCHAR2(40 BYTE), 
+	"MAX_USES" NUMBER(10,0), 
+	"USES" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_CP_FOLDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_CP_FOLDER" 
+   (	"FOLDER_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(254 BYTE), 
+	"PARENT_FOLDER" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_CREDIT_CARD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_CREDIT_CARD" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"CREDIT_CARD_NUMBER" VARCHAR2(40 BYTE), 
+	"CREDIT_CARD_TYPE" VARCHAR2(40 BYTE), 
+	"EXPIRATION_MONTH" VARCHAR2(20 BYTE), 
+	"EXP_DAY_OF_MONTH" VARCHAR2(20 BYTE), 
+	"EXPIRATION_YEAR" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_CRED_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_CRED_STATUS" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"CREDIT_STATUS" VARCHAR2(254 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_DEBIT_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_DEBIT_STATUS" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"DEBIT_STATUS" VARCHAR2(254 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_DET_PRICE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_DET_PRICE" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"TAX" NUMBER(19,7), 
+	"ORDER_DISCOUNT" NUMBER(19,7), 
+	"ORDER_MANUAL_ADJ" NUMBER(19,7), 
+	"QUANTITY" NUMBER(19,0), 
+	"QTY_AS_QUALIFIER" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_DET_RANGE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_DET_RANGE" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"LOW_BOUND" NUMBER(*,0), 
+	"HIGH_BOUND" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ELE_SHIP_GRP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ELE_SHIP_GRP" 
+   (	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"EMAIL_ADDRESS" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_GC_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_GC_STATUS" 
+   (	"STATUS_ID" VARCHAR2(40 BYTE), 
+	"AUTH_EXPIRATION" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_GIFTCERT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_GIFTCERT" 
+   (	"GIFTCERTIFICATE_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" FLOAT(126), 
+	"AMOUNT_AUTHORIZED" FLOAT(126), 
+	"AMOUNT_REMAINING" FLOAT(126), 
+	"PURCHASER_ID" VARCHAR2(40 BYTE), 
+	"PURCHASE_DATE" TIMESTAMP (6), 
+	"LAST_USED" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_GIFT_CERT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_GIFT_CERT" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"GIFT_CERT_NUMBER" VARCHAR2(50 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_GIFT_INST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_GIFT_INST" 
+   (	"HANDLING_INST_ID" VARCHAR2(40 BYTE), 
+	"GIFTLIST_ID" VARCHAR2(40 BYTE), 
+	"GIFTLIST_ITEM_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_GWP_ITEM_MARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" 
+   (	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"MARKER_KEY" VARCHAR2(100 BYTE), 
+	"MARKER_VALUE" VARCHAR2(100 BYTE), 
+	"MARKER_DATA" VARCHAR2(100 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0), 
+	"MARKER_TYPE" NUMBER(10,0), 
+	"TARGETED_QUANTITY" NUMBER(10,0), 
+	"AUTOMATIC_QUANTITY" NUMBER(10,0), 
+	"SELECTED_QUANTITY" NUMBER(10,0), 
+	"REMAINING_QUANTITY" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_HAND_INST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_HAND_INST" 
+   (	"HANDLING_INST_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"HNDINST_CLASS_TYPE" VARCHAR2(40 BYTE), 
+	"HANDLING_METHOD" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_HRD_SHIP_GRP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_HRD_SHIP_GRP" 
+   (	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"TRACKING_NUMBER" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ISP_SHIP_GRP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ISP_SHIP_GRP" 
+   (	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"LOCATION_ID" VARCHAR2(40 BYTE), 
+	"FIRST_NAME" VARCHAR2(40 BYTE), 
+	"MIDDLE_NAME" VARCHAR2(40 BYTE), 
+	"LAST_NAME" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ITEM" 
+   (	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"ITEM_CLASS_TYPE" VARCHAR2(40 BYTE), 
+	"CATALOG_ID" VARCHAR2(40 BYTE), 
+	"CATALOG_REF_ID" VARCHAR2(40 BYTE), 
+	"CATALOG_KEY" VARCHAR2(40 BYTE), 
+	"PRODUCT_ID" VARCHAR2(40 BYTE), 
+	"SITE_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(19,0), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"STATE_DETAIL" VARCHAR2(254 BYTE), 
+	"PRICE_INFO" VARCHAR2(40 BYTE), 
+	"ORDER_REF" VARCHAR2(40 BYTE), 
+	"GWP" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ITEM_CI
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ITEM_CI" 
+   (	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEMS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ITEM_PRICE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ITEM_PRICE" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"LIST_PRICE" NUMBER(19,7), 
+	"RAW_TOTAL_PRICE" NUMBER(19,7), 
+	"SALE_PRICE" NUMBER(19,7), 
+	"ON_SALE" NUMBER(1,0), 
+	"ORDER_DISCOUNT" NUMBER(19,7), 
+	"QTY_DISCOUNTED" NUMBER(19,0), 
+	"QTY_AS_QUALIFIER" NUMBER(19,0), 
+	"PRICE_LIST" VARCHAR2(40 BYTE), 
+	"DISCOUNTABLE" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ITMPRICE_DET
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ITMPRICE_DET" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"CUR_PRICE_DETAILS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_MANUAL_ADJ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" 
+   (	"MANUAL_ADJUST_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"ADJUSTMENT_TYPE" NUMBER(*,0), 
+	"REASON" NUMBER(*,0), 
+	"AMOUNT" NUMBER(19,7), 
+	"NOTES" VARCHAR2(255 BYTE), 
+	"VERSION" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_NTAXSHIPITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_NTAXSHIPITEM" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(42 BYTE), 
+	"NON_TAX_ITEM_SUB" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"ORDER_CLASS_TYPE" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"ORGANIZATION_ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(64 BYTE), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"STATE_DETAIL" VARCHAR2(254 BYTE), 
+	"CREATED_BY_ORDER" VARCHAR2(40 BYTE), 
+	"ORIGIN_OF_ORDER" NUMBER(10,0), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"SUBMITTED_DATE" TIMESTAMP (6), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6), 
+	"COMPLETED_DATE" TIMESTAMP (6), 
+	"PRICE_INFO" VARCHAR2(40 BYTE), 
+	"TAX_PRICE_INFO" VARCHAR2(40 BYTE), 
+	"EXPLICITLY_SAVED" NUMBER(1,0), 
+	"AGENT_ID" VARCHAR2(40 BYTE), 
+	"SALES_CHANNEL" NUMBER(10,0), 
+	"CREATION_SITE_ID" VARCHAR2(40 BYTE), 
+	"SITE_ID" VARCHAR2(40 BYTE), 
+	"GWP" NUMBER(1,0), 
+	"QUOTE_INFO" VARCHAR2(40 BYTE), 
+	"ACTIVE_QUOTE_ORDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER_ADJ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER_ADJ" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"ADJUSTMENT_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER_INST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER_INST" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"SPECIAL_INST" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER_ITEM" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEMS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER_PG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER_PG" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"PAYMENT_GROUPS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER_PRICE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER_PRICE" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"RAW_SUBTOTAL" NUMBER(19,7), 
+	"TAX" NUMBER(19,7), 
+	"SHIPPING" NUMBER(19,7), 
+	"MANUAL_ADJ_TOTAL" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER_REL" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"RELATIONSHIPS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORDER_SG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORDER_SG" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUPS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_ORD_ABANDON
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_ORD_ABANDON" 
+   (	"ABANDONMENT_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"ORD_LAST_UPDATED" TIMESTAMP (6), 
+	"ABANDON_STATE" VARCHAR2(40 BYTE), 
+	"ABANDONMENT_COUNT" NUMBER(10,0), 
+	"ABANDONMENT_DATE" TIMESTAMP (6), 
+	"REANIMATION_DATE" TIMESTAMP (6), 
+	"CONVERT_DATE" TIMESTAMP (6), 
+	"LOST_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_PAYITEM_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_PAYITEM_REL" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(19,0), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_PAYORDER_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_PAYORDER_REL" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_PAYSHIP_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_PAYSHIP_REL" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_PAY_GROUP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_PAY_GROUP" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"PAYGRP_CLASS_TYPE" VARCHAR2(40 BYTE), 
+	"PAYMENT_METHOD" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7), 
+	"AMOUNT_AUTHORIZED" NUMBER(19,7), 
+	"AMOUNT_DEBITED" NUMBER(19,7), 
+	"AMOUNT_CREDITED" NUMBER(19,7), 
+	"CURRENCY_CODE" VARCHAR2(10 BYTE), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"STATE_DETAIL" VARCHAR2(254 BYTE), 
+	"SUBMITTED_DATE" TIMESTAMP (6), 
+	"ORDER_REF" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_PAY_INST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_PAY_INST" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"SPECIAL_INST" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_PAY_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_PAY_STATUS" 
+   (	"STATUS_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"TRANS_ID" VARCHAR2(50 BYTE), 
+	"AMOUNT" NUMBER(19,7), 
+	"TRANS_SUCCESS" NUMBER(1,0), 
+	"ERROR_MESSAGE" VARCHAR2(254 BYTE), 
+	"TRANS_TIMESTAMP" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_PRICE_ADJUST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_PRICE_ADJUST" 
+   (	"ADJUSTMENT_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"ADJ_DESCRIPTION" VARCHAR2(254 BYTE), 
+	"PRICING_MODEL" VARCHAR2(40 BYTE), 
+	"PRICING_MODEL_INDEX" NUMBER(10,0), 
+	"PRICING_MODEL_GROUP_INDEX" NUMBER(10,0), 
+	"MANUAL_ADJUSTMENT" VARCHAR2(40 BYTE), 
+	"COUPON_ID" VARCHAR2(40 BYTE), 
+	"ADJUSTMENT" NUMBER(19,7), 
+	"QTY_ADJUSTED" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_QUOTE_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_QUOTE_INFO" 
+   (	"QUOTE_INFO_ID" VARCHAR2(40 BYTE), 
+	"REQUEST_DATE" TIMESTAMP (6), 
+	"EXPIRATION_DATE" TIMESTAMP (6), 
+	"REJECTION_DATE" TIMESTAMP (6), 
+	"REQUESTER_NOTE" VARCHAR2(255 BYTE), 
+	"PROVIDER_NOTE" VARCHAR2(255 BYTE), 
+	"REJECTION_NOTE" VARCHAR2(255 BYTE), 
+	"EXTERNAL_ID" VARCHAR2(40 BYTE), 
+	"AGENT_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_RELATIONSHIP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_RELATIONSHIP" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"REL_CLASS_TYPE" VARCHAR2(40 BYTE), 
+	"RELATIONSHIP_TYPE" VARCHAR2(40 BYTE), 
+	"ORDER_REF" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_REL_ORDERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_REL_ORDERS" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"RELATED_ORDERS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_REL_RANGE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_REL_RANGE" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"LOW_BOUND" NUMBER(*,0), 
+	"HIGH_BOUND" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SCHD_ERRMSG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SCHD_ERRMSG" 
+   (	"SCHED_ERROR_ID" VARCHAR2(40 BYTE), 
+	"ERROR_TXT" VARCHAR2(254 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SCHED_ERROR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SCHED_ERROR" 
+   (	"SCHED_ERROR_ID" VARCHAR2(40 BYTE), 
+	"ERROR_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SCHERR_AUX
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SCHERR_AUX" 
+   (	"SCHEDULED_ORDER_ID" VARCHAR2(40 BYTE), 
+	"SCHED_ERROR_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SC_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SC_STATUS" 
+   (	"STATUS_ID" VARCHAR2(40 BYTE), 
+	"AUTH_EXPIRATION" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SG_HAND_INST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SG_HAND_INST" 
+   (	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"HANDLING_INSTRS" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SHIPITEM_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SHIPITEM_REL" 
+   (	"RELATIONSHIP_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"COMMERCE_ITEM_ID" VARCHAR2(40 BYTE), 
+	"QUANTITY" NUMBER(19,0), 
+	"RETURNED_QTY" NUMBER(19,0), 
+	"AMOUNT" NUMBER(19,7), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"STATE_DETAIL" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SHIPITEM_SUB
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SHIPITEM_SUB" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(42 BYTE), 
+	"SHIP_ITEM_SUBTOTAL" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SHIPITEM_TAX
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SHIPITEM_TAX" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(42 BYTE), 
+	"SHIP_ITEM_TAX" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SHIP_ADDR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SHIP_ADDR" 
+   (	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"PREFIX" VARCHAR2(40 BYTE), 
+	"FIRST_NAME" VARCHAR2(40 BYTE), 
+	"MIDDLE_NAME" VARCHAR2(40 BYTE), 
+	"LAST_NAME" VARCHAR2(40 BYTE), 
+	"SUFFIX" VARCHAR2(40 BYTE), 
+	"JOB_TITLE" VARCHAR2(40 BYTE), 
+	"COMPANY_NAME" VARCHAR2(40 BYTE), 
+	"ADDRESS_1" VARCHAR2(50 BYTE), 
+	"ADDRESS_2" VARCHAR2(50 BYTE), 
+	"ADDRESS_3" VARCHAR2(50 BYTE), 
+	"CITY" VARCHAR2(40 BYTE), 
+	"COUNTY" VARCHAR2(40 BYTE), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"POSTAL_CODE" VARCHAR2(10 BYTE), 
+	"COUNTRY" VARCHAR2(40 BYTE), 
+	"PHONE_NUMBER" VARCHAR2(40 BYTE), 
+	"FAX_NUMBER" VARCHAR2(40 BYTE), 
+	"EMAIL" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SHIP_GROUP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SHIP_GROUP" 
+   (	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"SHIPGRP_CLASS_TYPE" VARCHAR2(40 BYTE), 
+	"SHIPPING_METHOD" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(64 BYTE), 
+	"SHIP_ON_DATE" TIMESTAMP (6), 
+	"ACTUAL_SHIP_DATE" TIMESTAMP (6), 
+	"STATE" VARCHAR2(40 BYTE), 
+	"STATE_DETAIL" VARCHAR2(254 BYTE), 
+	"SUBMITTED_DATE" TIMESTAMP (6), 
+	"PRICE_INFO" VARCHAR2(40 BYTE), 
+	"ORDER_REF" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SHIP_INST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SHIP_INST" 
+   (	"SHIPPING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"SPECIAL_INST" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SHIP_PRICE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SHIP_PRICE" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"RAW_SHIPPING" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_STORE_CRED
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_STORE_CRED" 
+   (	"PAYMENT_GROUP_ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"STORE_CRED_NUMBER" VARCHAR2(50 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_SUBSKU_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_SUBSKU_ITEM" 
+   (	"SUBSKU_ITEM_ID" VARCHAR2(40 BYTE), 
+	"IND_QUANTITY" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_TAXSHIPITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_TAXSHIPITEM" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_GROUP_ID" VARCHAR2(42 BYTE), 
+	"TAX_SHIP_ITEM_SUB" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCSPP_TAX_PRICE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCSPP_TAX_PRICE" 
+   (	"AMOUNT_INFO_ID" VARCHAR2(40 BYTE), 
+	"CITY_TAX" NUMBER(19,7), 
+	"COUNTY_TAX" NUMBER(19,7), 
+	"STATE_TAX" NUMBER(19,7), 
+	"COUNTRY_TAX" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_CART_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_CART_EVENT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"TIMESTAMP" TIMESTAMP (6), 
+	"ORDERID" VARCHAR2(40 BYTE), 
+	"ITEMID" VARCHAR2(40 BYTE), 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"QUANTITY" NUMBER(*,0), 
+	"AMOUNT" NUMBER(19,7), 
+	"PROFILEID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_GIFTINST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_GIFTINST" 
+   (	"GIFTLIST_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"SPECIAL_INST" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_GIFTITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_GIFTITEM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CATALOG_REF_ID" VARCHAR2(40 BYTE), 
+	"PRODUCT_ID" VARCHAR2(40 BYTE), 
+	"SITE_ID" VARCHAR2(40 BYTE), 
+	"DISPLAY_NAME" VARCHAR2(254 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"QUANTITY_DESIRED" NUMBER(*,0), 
+	"QUANTITY_PURCHASED" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_GIFTLIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_GIFTLIST" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"OWNER_ID" VARCHAR2(40 BYTE), 
+	"SITE_ID" VARCHAR2(40 BYTE), 
+	"IS_PUBLIC" NUMBER(1,0), 
+	"IS_PUBLISHED" NUMBER(1,0), 
+	"EVENT_NAME" VARCHAR2(64 BYTE), 
+	"EVENT_TYPE" NUMBER(*,0), 
+	"EVENT_DATE" TIMESTAMP (6), 
+	"COMMENTS" VARCHAR2(254 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"INSTRUCTIONS" VARCHAR2(254 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6), 
+	"SHIPPING_ADDR_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_GIFTLIST_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_GIFTLIST_ITEM" 
+   (	"GIFTLIST_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"GIFTITEM_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_GWP_ORDER_MARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" 
+   (	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"MARKER_KEY" VARCHAR2(100 BYTE), 
+	"MARKER_VALUE" VARCHAR2(100 BYTE), 
+	"MARKER_DATA" VARCHAR2(100 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0), 
+	"MARKER_TYPE" NUMBER(10,0), 
+	"GIFT_TYPE" VARCHAR2(100 BYTE), 
+	"GIFT_DETAIL" CLOB, 
+	"AUTO_REMOVE" NUMBER(3,0), 
+	"QUANTITY" NUMBER(10,0), 
+	"TARGETED_QUANTITY" NUMBER(10,0), 
+	"AUTOMATIC_QUANTITY" NUMBER(10,0), 
+	"SELECTED_QUANTITY" NUMBER(10,0), 
+	"REMOVED_QUANTITY" NUMBER(10,0), 
+	"FAILED_QUANTITY" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("GIFT_DETAIL") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DCS_INVENTORY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_INVENTORY" 
+   (	"INVENTORY_ID" VARCHAR2(40 BYTE), 
+	"LOCATION_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"INVENTORY_LOCK" VARCHAR2(20 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"START_DATE" TIMESTAMP (6), 
+	"END_DATE" TIMESTAMP (6), 
+	"DISPLAY_NAME" VARCHAR2(254 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"CATALOG_REF_ID" VARCHAR2(40 BYTE), 
+	"AVAIL_STATUS" NUMBER(*,0), 
+	"AVAILABILITY_DATE" TIMESTAMP (6), 
+	"STOCK_LEVEL" NUMBER(*,0), 
+	"BACKORDER_LEVEL" NUMBER(*,0), 
+	"PREORDER_LEVEL" NUMBER(*,0), 
+	"STOCK_THRESH" NUMBER(*,0), 
+	"BACKORDER_THRESH" NUMBER(*,0), 
+	"PREORDER_THRESH" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_INV_ATP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_INV_ATP" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(10,0), 
+	"INVENTORY_ID" VARCHAR2(40 BYTE), 
+	"AVAILABLE_DATE" DATE, 
+	"QUANTITY" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_ORDER_MARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_ORDER_MARKERS" 
+   (	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"MARKER_KEY" VARCHAR2(100 BYTE), 
+	"MARKER_VALUE" VARCHAR2(100 BYTE), 
+	"MARKER_DATA" VARCHAR2(100 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0), 
+	"MARKER_TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_ORD_MERGE_EVT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_ORD_MERGE_EVT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CLOCKTIME" TIMESTAMP (6), 
+	"SOURCEORDERID" VARCHAR2(40 BYTE), 
+	"DESTORDERID" VARCHAR2(40 BYTE), 
+	"PROFILEID" VARCHAR2(40 BYTE), 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"SOURCEREMOVED" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_ORG_ADDRESS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_ORG_ADDRESS" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"ADDR_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_PROMO_GRNTD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_PROMO_GRNTD" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"TIME_STAMP" TIMESTAMP (6), 
+	"PROMOTIONID" VARCHAR2(254 BYTE), 
+	"PROFILEID" VARCHAR2(254 BYTE), 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_PROMO_RVKD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_PROMO_RVKD" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"TIME_STAMP" TIMESTAMP (6), 
+	"PROMOTIONID" VARCHAR2(254 BYTE), 
+	"PROFILEID" VARCHAR2(254 BYTE), 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_PROMO_ST_CPN
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_PROMO_ST_CPN" 
+   (	"STATUS_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"COUPON_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_PROM_USED_EVT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_PROM_USED_EVT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CLOCKTIME" TIMESTAMP (6), 
+	"ORDERID" VARCHAR2(40 BYTE), 
+	"PROFILEID" VARCHAR2(40 BYTE), 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"PROMOTIONID" VARCHAR2(40 BYTE), 
+	"ORDER_AMOUNT" NUMBER(26,7), 
+	"DISCOUNT" NUMBER(26,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_STORECRED_CLM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_STORECRED_CLM" 
+   (	"STORE_CREDIT_ID" VARCHAR2(40 BYTE), 
+	"AMOUNT" NUMBER(19,7), 
+	"AMOUNT_AUTHORIZED" NUMBER(19,7), 
+	"AMOUNT_REMAINING" NUMBER(19,7), 
+	"OWNER_ID" VARCHAR2(40 BYTE), 
+	"ISSUE_DATE" TIMESTAMP (6), 
+	"EXPIRATION_DATE" TIMESTAMP (6), 
+	"LAST_USED" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_SUBMT_ORD_EVT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_SUBMT_ORD_EVT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CLOCKTIME" TIMESTAMP (6), 
+	"ORDERID" VARCHAR2(40 BYTE), 
+	"PROFILEID" VARCHAR2(40 BYTE), 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USER" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"ALLOW_PARTIAL_SHIP" NUMBER(1,0), 
+	"DEFAULT_CREDITCARD" VARCHAR2(40 BYTE), 
+	"DAYTIME_PHONE_NUM" VARCHAR2(30 BYTE), 
+	"EXPRESS_CHECKOUT" NUMBER(1,0), 
+	"DEFAULT_CARRIER" VARCHAR2(256 BYTE), 
+	"PRICE_LIST" VARCHAR2(40 BYTE), 
+	"USER_CATALOG" VARCHAR2(40 BYTE), 
+	"SALE_PRICE_LIST" VARCHAR2(40 BYTE), 
+	"DFLT_COST_CENTER" VARCHAR2(40 BYTE), 
+	"ORDER_PRICE_LIMIT" NUMBER(19,7), 
+	"APPROVAL_REQUIRED" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USER_ABANDONED
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USER_ABANDONED" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USER_FAVSTORES
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USER_FAVSTORES" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"SEQ" NUMBER(10,0), 
+	"LOCATION_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USER_GIFTLIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USER_GIFTLIST" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"GIFTLIST_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USER_OTHERLIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USER_OTHERLIST" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"GIFTLIST_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USER_WISHLIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USER_WISHLIST" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"GIFTLIST_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USR_ACTVPROMO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"PROMO_STATUS_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USR_PROMOSTAT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USR_PROMOSTAT" 
+   (	"STATUS_ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"PROMOTION" VARCHAR2(40 BYTE), 
+	"NUM_USES" NUMBER(*,0), 
+	"EXPIRATIONDATE" TIMESTAMP (6), 
+	"GRANTED_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DCS_USR_USEDPROMO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DCS_USR_USEDPROMO" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"PROMOTION_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DLO_LOGICAL_ORG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DLO_LOGICAL_ORG" 
+   (	"LOGICAL_ORG_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(10,0), 
+	"PHYS_ORG_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(254 BYTE), 
+	"PHYS_ORG_NAME" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_CLIENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_CLIENT" 
+   (	"CLIENT_NAME" VARCHAR2(250 BYTE), 
+	"CLIENT_ID" NUMBER(19,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_LIMBO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_LIMBO" 
+   (	"LIMBO_NAME" VARCHAR2(250 BYTE), 
+	"LIMBO_ID" NUMBER(19,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_LIMBO_BODY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_LIMBO_BODY" 
+   (	"MSG_ID" NUMBER(19,0), 
+	"MSG_BODY" BLOB
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("MSG_BODY") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+--------------------------------------------------------
+--  DDL for Table DMS_LIMBO_DELAY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_LIMBO_DELAY" 
+   (	"MSG_ID" NUMBER(19,0), 
+	"DELAY" NUMBER(19,0), 
+	"MAX_ATTEMPTS" NUMBER(2,0), 
+	"FAILURE_PORT" VARCHAR2(250 BYTE), 
+	"JMS_TIMESTAMP" NUMBER(19,0), 
+	"JMS_DELIVERYMODE" NUMBER(10,0), 
+	"JMS_PRIORITY" NUMBER(10,0), 
+	"JMS_MESSAGEID" VARCHAR2(250 BYTE), 
+	"JMS_REDELIVERED" NUMBER(1,0), 
+	"JMS_DESTINATION" BLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("JMS_DESTINATION") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DMS_LIMBO_MSG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_LIMBO_MSG" 
+   (	"MSG_ID" NUMBER(19,0), 
+	"LIMBO_ID" NUMBER(19,0), 
+	"DELIVERY_DATE" NUMBER(19,0), 
+	"DELIVERY_COUNT" NUMBER(2,0), 
+	"MSG_SRC_NAME" VARCHAR2(250 BYTE), 
+	"PORT_NAME" VARCHAR2(250 BYTE), 
+	"MSG_CLASS" VARCHAR2(250 BYTE), 
+	"MSG_CLASS_TYPE" NUMBER(1,0), 
+	"JMS_TYPE" VARCHAR2(250 BYTE), 
+	"JMS_EXPIRATION" NUMBER(19,0), 
+	"JMS_CORRELATIONID" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_LIMBO_PROPS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_LIMBO_PROPS" 
+   (	"MSG_ID" NUMBER(19,0), 
+	"PROP_NAME" VARCHAR2(250 BYTE), 
+	"PROP_VALUE" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_LIMBO_PTYPES
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_LIMBO_PTYPES" 
+   (	"MSG_ID" NUMBER(19,0), 
+	"PROP_NAME" VARCHAR2(250 BYTE), 
+	"PROP_TYPE" NUMBER(1,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_LIMBO_REPLYTO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_LIMBO_REPLYTO" 
+   (	"MSG_ID" NUMBER(19,0), 
+	"JMS_REPLYTO" BLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("JMS_REPLYTO") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DMS_MSG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_MSG" 
+   (	"MSG_CLASS" VARCHAR2(250 BYTE), 
+	"HAS_PROPERTIES" NUMBER(1,0), 
+	"REFERENCE_COUNT" NUMBER(10,0), 
+	"MSG_ID" NUMBER(19,0), 
+	"TIMESTAMP" NUMBER(19,0), 
+	"CORRELATION_ID" VARCHAR2(250 BYTE), 
+	"REPLY_TO" NUMBER(19,0), 
+	"DESTINATION" NUMBER(19,0), 
+	"DELIVERY_MODE" NUMBER(1,0), 
+	"REDELIVERED" NUMBER(1,0), 
+	"TYPE" VARCHAR2(250 BYTE), 
+	"EXPIRATION" NUMBER(19,0), 
+	"PRIORITY" NUMBER(1,0), 
+	"SMALL_BODY" BLOB, 
+	"LARGE_BODY" BLOB
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("SMALL_BODY") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) 
+ LOB ("LARGE_BODY") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+--------------------------------------------------------
+--  DDL for Table DMS_MSG_PROPERTIES
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_MSG_PROPERTIES" 
+   (	"MSG_ID" NUMBER(19,0), 
+	"DATA_TYPE" NUMBER(1,0), 
+	"NAME" VARCHAR2(250 BYTE), 
+	"VALUE" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_QUEUE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_QUEUE" 
+   (	"QUEUE_NAME" VARCHAR2(250 BYTE), 
+	"QUEUE_ID" NUMBER(19,0), 
+	"TEMP_ID" NUMBER(19,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_QUEUE_ENTRY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_QUEUE_ENTRY" 
+   (	"QUEUE_ID" NUMBER(19,0), 
+	"MSG_ID" NUMBER(19,0), 
+	"DELIVERY_DATE" NUMBER(19,0), 
+	"HANDLING_CLIENT_ID" NUMBER(19,0), 
+	"READ_STATE" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_QUEUE_RECV
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_QUEUE_RECV" 
+   (	"CLIENT_ID" NUMBER(19,0), 
+	"RECEIVER_ID" NUMBER(19,0), 
+	"QUEUE_ID" NUMBER(19,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_TOPIC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_TOPIC" 
+   (	"TOPIC_NAME" VARCHAR2(250 BYTE), 
+	"TOPIC_ID" NUMBER(19,0), 
+	"TEMP_ID" NUMBER(19,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_TOPIC_ENTRY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_TOPIC_ENTRY" 
+   (	"SUBSCRIBER_ID" NUMBER(19,0), 
+	"MSG_ID" NUMBER(19,0), 
+	"DELIVERY_DATE" NUMBER(19,0), 
+	"READ_STATE" NUMBER(19,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DMS_TOPIC_SUB
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DMS_TOPIC_SUB" 
+   (	"CLIENT_ID" NUMBER(19,0), 
+	"SUBSCRIBER_NAME" VARCHAR2(250 BYTE), 
+	"SUBSCRIBER_ID" NUMBER(19,0), 
+	"TOPIC_ID" NUMBER(19,0), 
+	"DURABLE" NUMBER(1,0), 
+	"ACTIVE" NUMBER(1,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_CHILD_FOLDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_CHILD_FOLDER" 
+   (	"FOLDER_ID" VARCHAR2(40 BYTE), 
+	"CHILD_FOLDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_CONTACT_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_CONTACT_INFO" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"USER_ID" VARCHAR2(40 BYTE), 
+	"PREFIX" VARCHAR2(40 BYTE), 
+	"FIRST_NAME" VARCHAR2(100 BYTE), 
+	"MIDDLE_NAME" VARCHAR2(100 BYTE), 
+	"LAST_NAME" VARCHAR2(100 BYTE), 
+	"SUFFIX" VARCHAR2(40 BYTE), 
+	"JOB_TITLE" VARCHAR2(100 BYTE), 
+	"COMPANY_NAME" VARCHAR2(40 BYTE), 
+	"ADDRESS1" VARCHAR2(50 BYTE), 
+	"ADDRESS2" VARCHAR2(50 BYTE), 
+	"ADDRESS3" VARCHAR2(50 BYTE), 
+	"CITY" VARCHAR2(30 BYTE), 
+	"STATE" VARCHAR2(20 BYTE), 
+	"POSTAL_CODE" VARCHAR2(10 BYTE), 
+	"COUNTY" VARCHAR2(40 BYTE), 
+	"COUNTRY" VARCHAR2(40 BYTE), 
+	"PHONE_NUMBER" VARCHAR2(30 BYTE), 
+	"FAX_NUMBER" VARCHAR2(30 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_CON_REQ
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_CON_REQ" 
+   (	"ID" NUMBER(19,0), 
+	"TIMESTAMP" DATE, 
+	"REQUESTID" NUMBER(19,0), 
+	"CONTENTID" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_CON_REQ_SUM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_CON_REQ_SUM" 
+   (	"CONTENTID" VARCHAR2(255 BYTE), 
+	"MEMBER" NUMBER(1,0) DEFAULT 0, 
+	"SUMMARYCOUNT" NUMBER(*,0), 
+	"FROMTIME" DATE, 
+	"TOTIME" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_CREDIT_CARD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_CREDIT_CARD" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CREDIT_CARD_NUMBER" VARCHAR2(80 BYTE), 
+	"CREDIT_CARD_TYPE" VARCHAR2(40 BYTE), 
+	"EXPIRATION_MONTH" VARCHAR2(20 BYTE), 
+	"EXP_DAY_OF_MONTH" VARCHAR2(20 BYTE), 
+	"EXPIRATION_YEAR" VARCHAR2(20 BYTE), 
+	"BILLING_ADDR" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_EMAIL_ADDRESS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_EMAIL_ADDRESS" 
+   (	"MAILING_ID" VARCHAR2(40 BYTE), 
+	"EMAIL_ADDRESS" VARCHAR2(255 BYTE), 
+	"IDX" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_EVENT_TYPE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_EVENT_TYPE" 
+   (	"ID" NUMBER(*,0), 
+	"NAME" VARCHAR2(32 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_FOLDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_FOLDER" 
+   (	"FOLDER_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"NAME" VARCHAR2(254 BYTE), 
+	"PARENT" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_LOG_ID
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_LOG_ID" 
+   (	"TABLENAME" VARCHAR2(30 BYTE), 
+	"NEXTID" NUMBER(19,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_MAILING
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_MAILING" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"SUBJECT" VARCHAR2(80 BYTE), 
+	"UNIQ_SERVER_ID" VARCHAR2(255 BYTE), 
+	"FROM_ADDRESS" VARCHAR2(255 BYTE), 
+	"REPLYTO" VARCHAR2(255 BYTE), 
+	"TEMPLATE_URL" VARCHAR2(255 BYTE), 
+	"ALT_TEMPLATE_URL" VARCHAR2(255 BYTE), 
+	"BATCH_EXEC_ID" VARCHAR2(40 BYTE), 
+	"CC" VARCHAR2(4000 BYTE), 
+	"BCC" VARCHAR2(4000 BYTE), 
+	"SEND_AS_HTML" NUMBER(*,0), 
+	"SEND_AS_TEXT" NUMBER(*,0), 
+	"PARAMS" BLOB, 
+	"START_TIME" TIMESTAMP (6), 
+	"END_TIME" TIMESTAMP (6), 
+	"STATUS" NUMBER(*,0), 
+	"NUM_PROFILES" NUMBER(*,0), 
+	"NUM_SENT" NUMBER(*,0), 
+	"NUM_BOUNCES" NUMBER(*,0), 
+	"NUM_SOFT_BOUNCES" NUMBER(*,0), 
+	"NUM_ERRORS" NUMBER(*,0), 
+	"NUM_SKIPPED" NUMBER(10,0), 
+	"FILL_FROM_TEMPL" NUMBER(1,0), 
+	"IS_BATCHED" NUMBER(1,0), 
+	"IGNORE_FATIGUE" NUMBER(1,0), 
+	"BATCH_SIZE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("PARAMS") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DPS_MAIL_BATCH
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_MAIL_BATCH" 
+   (	"MAILING_ID" VARCHAR2(40 BYTE), 
+	"START_IDX" NUMBER(10,0), 
+	"UNIQ_SERVER_ID" VARCHAR2(254 BYTE), 
+	"START_TIME" TIMESTAMP (6), 
+	"END_TIME" TIMESTAMP (6), 
+	"STATUS" NUMBER(10,0), 
+	"NUM_PROFILES" NUMBER(10,0), 
+	"NUM_SENT" NUMBER(10,0), 
+	"NUM_BOUNCES" NUMBER(10,0), 
+	"NUM_ERRORS" NUMBER(10,0), 
+	"NUM_SKIPPED" NUMBER(10,0), 
+	"IS_SUMMARIZED" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_MAIL_SERVER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_MAIL_SERVER" 
+   (	"UNIQ_SERVER_ID" VARCHAR2(254 BYTE), 
+	"LAST_UPDATED" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_MAIL_TRACKDATA
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_MAIL_TRACKDATA" 
+   (	"MAILING_ID" VARCHAR2(40 BYTE), 
+	"MAP_KEY" VARCHAR2(254 BYTE), 
+	"MAP_VALUE" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_MARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_MARKERS" 
+   (	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"MARKER_KEY" VARCHAR2(100 BYTE), 
+	"MARKER_VALUE" VARCHAR2(100 BYTE), 
+	"MARKER_DATA" VARCHAR2(100 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0), 
+	"MARKER_TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_ORGANIZATION
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_ORGANIZATION" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(254 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"PARENT_ORG" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_ORG_ANCESTORS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"ANC_ORG" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_ORG_CHLDORG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_ORG_CHLDORG" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"CHILD_ORG_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_ORG_ROLE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_ORG_ROLE" 
+   (	"ORG_ID" VARCHAR2(40 BYTE), 
+	"ATG_ROLE" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_OTHER_ADDR
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_OTHER_ADDR" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"ADDRESS_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_PGRP_CON_SUM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_PGRP_CON_SUM" 
+   (	"GROUPNAME" VARCHAR2(64 BYTE), 
+	"CONTENTNAME" VARCHAR2(64 BYTE), 
+	"SUMMARYCOUNT" NUMBER(*,0), 
+	"FROMTIME" DATE, 
+	"TOTIME" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_PGRP_REQ_SUM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_PGRP_REQ_SUM" 
+   (	"GROUPNAME" VARCHAR2(64 BYTE), 
+	"CONTENTNAME" VARCHAR2(255 BYTE), 
+	"SUMMARYCOUNT" NUMBER(*,0), 
+	"FROMTIME" DATE, 
+	"TOTIME" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_PROFILE_REALM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_PROFILE_REALM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"DESCRIPTION" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_RELATIVEROLE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_RELATIVEROLE" 
+   (	"ROLE_ID" VARCHAR2(40 BYTE), 
+	"DPS_FUNCTION" VARCHAR2(40 BYTE), 
+	"RELATIVE_TO" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_REQNAME_SUM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_REQNAME_SUM" 
+   (	"NAME" VARCHAR2(255 BYTE), 
+	"MEMBER" NUMBER(1,0) DEFAULT 0, 
+	"SUMMARYCOUNT" NUMBER(*,0), 
+	"FROMTIME" DATE, 
+	"TOTIME" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_REQUEST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_REQUEST" 
+   (	"ID" NUMBER(19,0), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"NAME" VARCHAR2(255 BYTE), 
+	"MEMBER" NUMBER(1,0) DEFAULT 0
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_ROLE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_ROLE" 
+   (	"ROLE_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(*,0), 
+	"VERSION" NUMBER(*,0), 
+	"NAME" VARCHAR2(254 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_ROLEFOLD_CHLD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_ROLEFOLD_CHLD" 
+   (	"ROLEFOLD_ID" VARCHAR2(40 BYTE), 
+	"ROLE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_ROLE_REL_ORG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" 
+   (	"ORGANIZATION" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"ROLE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_SCENARIO_VALUE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_SCENARIO_VALUE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"SCENARIO_VALUE" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_SEG_LIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_SEG_LIST" 
+   (	"SEGMENT_LIST_ID" VARCHAR2(40 BYTE), 
+	"DISPLAY_NAME" VARCHAR2(256 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"FOLDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_SEG_LIST_FOLDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_SEG_LIST_FOLDER" 
+   (	"FOLDER_ID" VARCHAR2(40 BYTE), 
+	"DISPLAY_NAME" VARCHAR2(256 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"PARENT_FOLDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_SEG_LIST_NAME
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_SEG_LIST_NAME" 
+   (	"SEGMENT_LIST_ID" VARCHAR2(40 BYTE), 
+	"SEQ" NUMBER(10,0), 
+	"GROUP_NAME" VARCHAR2(256 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_SESSION_SUM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_SESSION_SUM" 
+   (	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"MEMBER" NUMBER(1,0) DEFAULT 0, 
+	"SUMMARYCOUNT" NUMBER(*,0), 
+	"FROMTIME" DATE, 
+	"TOTIME" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"LOGIN" VARCHAR2(40 BYTE), 
+	"AUTO_LOGIN" NUMBER(1,0), 
+	"PASSWORD" VARCHAR2(70 BYTE), 
+	"PASSWORD_SALT" VARCHAR2(250 BYTE), 
+	"PASSWORD_KDF" VARCHAR2(40 BYTE), 
+	"REALM_ID" VARCHAR2(40 BYTE), 
+	"MEMBER" NUMBER(1,0), 
+	"FIRST_NAME" VARCHAR2(40 BYTE), 
+	"MIDDLE_NAME" VARCHAR2(40 BYTE), 
+	"LAST_NAME" VARCHAR2(40 BYTE), 
+	"USER_TYPE" NUMBER(*,0), 
+	"LOCALE" NUMBER(*,0), 
+	"LASTACTIVITY_DATE" TIMESTAMP (6), 
+	"LASTPWDUPDATE" TIMESTAMP (6), 
+	"GENERATEDPWD" NUMBER(1,0), 
+	"REGISTRATION_DATE" TIMESTAMP (6), 
+	"EMAIL" VARCHAR2(255 BYTE), 
+	"EMAIL_STATUS" NUMBER(*,0), 
+	"RECEIVE_EMAIL" NUMBER(*,0), 
+	"LAST_EMAILED" TIMESTAMP (6), 
+	"GENDER" NUMBER(*,0), 
+	"DATE_OF_BIRTH" DATE, 
+	"SECURITYSTATUS" NUMBER(*,0), 
+	"DESCRIPTION" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_ADDRESS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_ADDRESS" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"HOME_ADDR_ID" VARCHAR2(40 BYTE), 
+	"BILLING_ADDR_ID" VARCHAR2(40 BYTE), 
+	"SHIPPING_ADDR_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_EVENT" 
+   (	"ID" NUMBER(19,0), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"EVENTTYPE" NUMBER(*,0), 
+	"PROFILEID" VARCHAR2(25 BYTE), 
+	"MEMBER" NUMBER(1,0) DEFAULT 0
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_EVENT_SUM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_EVENT_SUM" 
+   (	"EVENTTYPE" NUMBER(*,0), 
+	"SUMMARYCOUNT" NUMBER(*,0), 
+	"FROMTIME" DATE, 
+	"TOTIME" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_MAILING
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_MAILING" 
+   (	"MAILING_ID" VARCHAR2(40 BYTE), 
+	"USER_ID" VARCHAR2(40 BYTE), 
+	"IDX" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_ORG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_ORG" 
+   (	"ORGANIZATION" VARCHAR2(40 BYTE), 
+	"USER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_ORG_ANC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_ORG_ANC" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(*,0), 
+	"ANC_ORG" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_PREVPWD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_PREVPWD" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"SEQ_NUM" NUMBER(10,0), 
+	"PREVPWD" VARCHAR2(70 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_ROLES
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_ROLES" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"ATG_ROLE" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_SCENARIO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_SCENARIO" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"IND_SCENARIO_ID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_SEC_ORGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_SEC_ORGS" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"SECONDARY_ORG_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USER_SLOT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USER_SLOT" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"PROFILE_SLOT_ID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USR_CREDITCARD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USR_CREDITCARD" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"TAG" VARCHAR2(42 BYTE), 
+	"CREDIT_CARD_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DPS_USR_MARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DPS_USR_MARKERS" 
+   (	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_ORDER_IDX$I
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" 
+   (	"TOKEN_TEXT" VARCHAR2(64 BYTE), 
+	"TOKEN_TYPE" NUMBER(10,0), 
+	"TOKEN_FIRST" NUMBER(10,0), 
+	"TOKEN_LAST" NUMBER(10,0), 
+	"TOKEN_COUNT" NUMBER(10,0), 
+	"TOKEN_INFO" BLOB
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("TOKEN_INFO") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) 
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_ORDER_IDX$K
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$K" 
+   (	"DOCID" NUMBER(38,0), 
+	"TEXTKEY" ROWID, 
+	 PRIMARY KEY ("TEXTKEY") ENABLE
+   ) ORGANIZATION INDEX NOCOMPRESS PCTFREE 10 INITRANS 2 MAXTRANS 255 LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ PCTTHRESHOLD 50
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_ORDER_IDX$N
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$N" 
+   (	"NLT_DOCID" NUMBER(38,0), 
+	"NLT_MARK" CHAR(1 BYTE), 
+	 PRIMARY KEY ("NLT_DOCID") ENABLE
+   ) ORGANIZATION INDEX NOCOMPRESS PCTFREE 10 INITRANS 2 MAXTRANS 255 LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ PCTTHRESHOLD 50
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_ORDER_IDX$R
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$R" 
+   (	"ROW_NO" NUMBER(3,0), 
+	"DATA" BLOB
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("DATA") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  CACHE  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) 
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_PROFILE_IDX$I
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" 
+   (	"TOKEN_TEXT" VARCHAR2(64 BYTE), 
+	"TOKEN_TYPE" NUMBER(10,0), 
+	"TOKEN_FIRST" NUMBER(10,0), 
+	"TOKEN_LAST" NUMBER(10,0), 
+	"TOKEN_COUNT" NUMBER(10,0), 
+	"TOKEN_INFO" BLOB
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("TOKEN_INFO") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) 
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_PROFILE_IDX$K
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$K" 
+   (	"DOCID" NUMBER(38,0), 
+	"TEXTKEY" ROWID, 
+	 PRIMARY KEY ("TEXTKEY") ENABLE
+   ) ORGANIZATION INDEX NOCOMPRESS PCTFREE 10 INITRANS 2 MAXTRANS 255 LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ PCTTHRESHOLD 50
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_PROFILE_IDX$N
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$N" 
+   (	"NLT_DOCID" NUMBER(38,0), 
+	"NLT_MARK" CHAR(1 BYTE), 
+	 PRIMARY KEY ("NLT_DOCID") ENABLE
+   ) ORGANIZATION INDEX NOCOMPRESS PCTFREE 10 INITRANS 2 MAXTRANS 255 LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ PCTTHRESHOLD 50
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DR$SRCH_SEARCH_PROFILE_IDX$R
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$R" 
+   (	"ROW_NO" NUMBER(3,0), 
+	"DATA" BLOB
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("DATA") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  CACHE  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) 
+  MONITORING ;
+--------------------------------------------------------
+--  DDL for Table DRPT_CONV_ORDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DRPT_CONV_ORDER" 
+   (	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"CONVERTED_DATE" TIMESTAMP (6), 
+	"AMOUNT" NUMBER(19,7), 
+	"PROMO_COUNT" NUMBER(10,0), 
+	"PROMO_VALUE" NUMBER(19,7)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DRPT_SESSION_ORD
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DRPT_SESSION_ORD" 
+   (	"DATASET_ID" VARCHAR2(40 BYTE), 
+	"ORDER_ID" VARCHAR2(40 BYTE), 
+	"DATE_TIME" TIMESTAMP (6), 
+	"AMOUNT" NUMBER(19,7), 
+	"SUBMITTED" NUMBER(10,0), 
+	"ORDER_PERSISTENT" NUMBER(1,0), 
+	"SESSION_ID" VARCHAR2(40 BYTE), 
+	"PARENT_SESSION_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DRPT_STAGE_REACHED
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DRPT_STAGE_REACHED" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"OWNER_ID" VARCHAR2(40 BYTE), 
+	"PROCESS_START_TIME" DATE, 
+	"EVENT_TIME" DATE, 
+	"BP_NAME" VARCHAR2(255 BYTE), 
+	"BP_STAGE" VARCHAR2(255 BYTE), 
+	"IS_TRANSIENT" NUMBER(1,0), 
+	"BP_STAGE_SEQUENCE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_AUDIT_TRAIL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_AUDIT_TRAIL" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"LABEL" VARCHAR2(255 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE), 
+	"SEGMENTNAME" VARCHAR2(254 BYTE), 
+	"PROCESSNAME" VARCHAR2(254 BYTE), 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_COLL_SCENARIO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_COLL_SCENARIO" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"MODIFICATION_TIME" NUMBER(19,0), 
+	"SEGMENT_NAME" VARCHAR2(255 BYTE), 
+	"CREATOR_ID" VARCHAR2(25 BYTE), 
+	"STATE" VARCHAR2(16 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_COLL_TRANS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_COLL_TRANS" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"MODIFICATION_TIME" NUMBER(19,0), 
+	"SERVER_ID" VARCHAR2(80 BYTE), 
+	"MESSAGE_BEAN" BLOB, 
+	"EVENT_TYPE" VARCHAR2(255 BYTE), 
+	"SEGMENT_NAME" VARCHAR2(255 BYTE), 
+	"STATE" VARCHAR2(16 BYTE), 
+	"COLL_SCENARIO_ID" VARCHAR2(25 BYTE), 
+	"STEP" NUMBER(*,0), 
+	"CURRENT_COUNT" NUMBER(*,0), 
+	"LAST_QUERY_ID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("MESSAGE_BEAN") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DSS_DAS_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DAS_EVENT" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DAS_FORM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DAS_FORM" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"CLOCKTIME" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"FORMNAME" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DELETION
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DELETION" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"MODIFICATION_TIME" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DEL_SEG_NAME
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DEL_SEG_NAME" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"IDX" NUMBER(*,0), 
+	"SEGMENT_NAME" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_ADMIN_PROP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_ADMIN_PROP" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"CLOCKTIME" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"PROPERTYPATH" VARCHAR2(254 BYTE), 
+	"OLDVALUE" VARCHAR2(254 BYTE), 
+	"NEWVALUE" VARCHAR2(254 BYTE), 
+	"CHANGESIGN" VARCHAR2(16 BYTE), 
+	"CHANGEAMOUNT" NUMBER(19,7), 
+	"CHANGEPERCENTAGE" NUMBER(19,7), 
+	"ELEMENTSADDED" VARCHAR2(254 BYTE), 
+	"ELEMENTSREMOVED" VARCHAR2(254 BYTE), 
+	"ADMINPROFILEID" VARCHAR2(25 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_ADMIN_REG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_ADMIN_REG" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"CLOCKTIME" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"ADMINPROFILEID" VARCHAR2(25 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_ADMIN_UP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_ADMIN_UP" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"CLOCKTIME" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"CHANGEDPROPERTIES" VARCHAR2(4000 BYTE), 
+	"OLDVALUES" VARCHAR2(4000 BYTE), 
+	"NEWVALUES" VARCHAR2(4000 BYTE), 
+	"ADMINPROFILEID" VARCHAR2(25 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_CLICK
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_CLICK" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"DESTINATIONPATH" VARCHAR2(255 BYTE), 
+	"SOURCENAMES" VARCHAR2(255 BYTE), 
+	"SOURCEPATH" VARCHAR2(255 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_EVENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_EVENT" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE), 
+	"SCENARIOPATHINFO" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_INBOUND
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_INBOUND" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"MESSAGESUBJECT" VARCHAR2(255 BYTE), 
+	"ORIGINALSUBJECT" VARCHAR2(255 BYTE), 
+	"MESSAGEFROM" VARCHAR2(64 BYTE), 
+	"MESSAGETO" VARCHAR2(255 BYTE), 
+	"MESSAGECC" VARCHAR2(255 BYTE), 
+	"MESSAGEREPLYTO" VARCHAR2(64 BYTE), 
+	"RECEIVEDDATE" NUMBER(19,0), 
+	"BOUNCED" VARCHAR2(6 BYTE), 
+	"BOUNCEEMAILADDR" VARCHAR2(255 BYTE), 
+	"BOUNCEREPLYCODE" VARCHAR2(10 BYTE), 
+	"BOUNCEERRORMESS" VARCHAR2(255 BYTE), 
+	"BOUNCESTATUSCODE" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_PAGE_VISIT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_PAGE_VISIT" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"PATH" VARCHAR2(255 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_PROPERTY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_PROPERTY" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"CLOCKTIME" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"PROPERTYPATH" VARCHAR2(254 BYTE), 
+	"OLDVALUE" VARCHAR2(254 BYTE), 
+	"NEWVALUE" VARCHAR2(254 BYTE), 
+	"CHANGESIGN" VARCHAR2(16 BYTE), 
+	"CHANGEAMOUNT" NUMBER(19,7), 
+	"CHANGEPERCENTAGE" NUMBER(19,7), 
+	"ELEMENTSADDED" VARCHAR2(254 BYTE), 
+	"ELEMENTSREMOVED" VARCHAR2(254 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_REFERRER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_REFERRER" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"REFERRERPATH" VARCHAR2(255 BYTE), 
+	"REFERRERSITE" VARCHAR2(255 BYTE), 
+	"REFERRERPAGE" VARCHAR2(255 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_UPDATE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_UPDATE" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"CLOCKTIME" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"CHANGEDPROPERTIES" VARCHAR2(4000 BYTE), 
+	"OLDVALUES" VARCHAR2(4000 BYTE), 
+	"NEWVALUES" VARCHAR2(4000 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_DPS_VIEW_ITEM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_DPS_VIEW_ITEM" 
+   (	"ID" VARCHAR2(32 BYTE), 
+	"TIMESTAMP" DATE, 
+	"SESSIONID" VARCHAR2(100 BYTE), 
+	"PARENTSESSIONID" VARCHAR2(100 BYTE), 
+	"REPOSITORYNAME" VARCHAR2(255 BYTE), 
+	"FOLDER" VARCHAR2(255 BYTE), 
+	"ITEMTYPE" VARCHAR2(255 BYTE), 
+	"REPOSITORYID" VARCHAR2(255 BYTE), 
+	"ITEMDESCRIPTOR" VARCHAR2(255 BYTE), 
+	"PAGE" VARCHAR2(255 BYTE), 
+	"PROFILEID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_IND_SCENARIO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_IND_SCENARIO" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"MODIFICATION_TIME" NUMBER(19,0), 
+	"SEGMENT_NAME" VARCHAR2(255 BYTE), 
+	"CREATOR_ID" VARCHAR2(25 BYTE), 
+	"STATE" VARCHAR2(16 BYTE), 
+	"USER_ID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_IND_TRANS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_IND_TRANS" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"MODIFICATION_TIME" NUMBER(19,0), 
+	"SERVER_ID" VARCHAR2(80 BYTE), 
+	"MESSAGE_BEAN" BLOB, 
+	"EVENT_TYPE" VARCHAR2(255 BYTE), 
+	"SEGMENT_NAME" VARCHAR2(255 BYTE), 
+	"STATE" VARCHAR2(16 BYTE), 
+	"LAST_QUERY_ID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("MESSAGE_BEAN") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DSS_MIGRATION
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_MIGRATION" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"OLD_MOD_TIME" NUMBER(19,0), 
+	"NEW_MOD_TIME" NUMBER(19,0), 
+	"MIGRATION_INFO_ID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_MIG_INFO_SEG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_MIG_INFO_SEG" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"IDX" NUMBER(*,0), 
+	"SEGMENT_NAME" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_MIG_SEG_NAME
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_MIG_SEG_NAME" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"IDX" NUMBER(10,0), 
+	"SEGMENT_NAME" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_PROFILE_SLOT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_PROFILE_SLOT" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SLOT_NAME" VARCHAR2(255 BYTE), 
+	"ITEM_OFFSET" NUMBER(19,0), 
+	"USER_ID" VARCHAR2(25 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SCENARIO_BOOLS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SCENARIO_BOOLS" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"TAG" VARCHAR2(25 BYTE), 
+	"CONTEXT_BOOL" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SCENARIO_DATES
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SCENARIO_DATES" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"TAG" VARCHAR2(25 BYTE), 
+	"CONTEXT_DATE" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SCENARIO_DBLS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SCENARIO_DBLS" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"TAG" VARCHAR2(25 BYTE), 
+	"CONTEXT_DBL" NUMBER(15,4)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SCENARIO_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SCENARIO_INFO" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"SCENARIO_STATUS" NUMBER(*,0), 
+	"MODIFICATION_TIME" NUMBER(19,0), 
+	"CREATION_TIME" NUMBER(19,0), 
+	"AUTHOR" VARCHAR2(254 BYTE), 
+	"LAST_MODIFIED_BY" VARCHAR2(254 BYTE), 
+	"SDL" BLOB, 
+	"PSM_VERSION" NUMBER(10,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("SDL") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+--------------------------------------------------------
+--  DDL for Table DSS_SCENARIO_LONGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SCENARIO_LONGS" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"TAG" VARCHAR2(25 BYTE), 
+	"CONTEXT_LONG" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SCENARIO_STRS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SCENARIO_STRS" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"TAG" VARCHAR2(25 BYTE), 
+	"CONTEXT_STR" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SCEN_MIG_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SCEN_MIG_INFO" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_INFO_ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"MODIFICATION_TIME" NUMBER(19,0), 
+	"PSM_VERSION" NUMBER(10,0), 
+	"SDL" BLOB, 
+	"MIGRATION_STATUS" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("SDL") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table DSS_SERVER_ID
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SERVER_ID" 
+   (	"SERVER_ID" VARCHAR2(80 BYTE), 
+	"SERVER_TYPE" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SLOT_ITEMS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SLOT_ITEMS" 
+   (	"SLOT_ID" VARCHAR2(25 BYTE), 
+	"ITEM_ID" VARCHAR2(255 BYTE), 
+	"IDX" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_SLOT_PRIORITY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_SLOT_PRIORITY" 
+   (	"SLOT_ID" VARCHAR2(25 BYTE), 
+	"IDX" NUMBER(*,0), 
+	"PRIORITY" NUMBER(19,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_TEMPLATE_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_TEMPLATE_INFO" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"TEMPLATE_NAME" VARCHAR2(255 BYTE), 
+	"MODIFICATION_TIME" NUMBER(19,0), 
+	"CREATION_TIME" NUMBER(19,0), 
+	"AUTHOR" VARCHAR2(254 BYTE), 
+	"LAST_MODIFIED_BY" VARCHAR2(254 BYTE), 
+	"SDL" BLOB
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("SDL") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+--------------------------------------------------------
+--  DDL for Table DSS_USER_BPMARKERS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_USER_BPMARKERS" 
+   (	"MARKER_ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE), 
+	"MARKER_KEY" VARCHAR2(100 BYTE), 
+	"MARKER_VALUE" VARCHAR2(100 BYTE), 
+	"MARKER_DATA" VARCHAR2(100 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"VERSION" NUMBER(10,0), 
+	"MARKER_TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table DSS_XREF
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."DSS_XREF" 
+   (	"ID" VARCHAR2(25 BYTE), 
+	"SCENARIO_NAME" VARCHAR2(255 BYTE), 
+	"REFERENCE_TYPE" VARCHAR2(30 BYTE), 
+	"REFERENCE_TARGET" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table IF_INTEG_DATA
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."IF_INTEG_DATA" 
+   (	"ITEM_ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTOR" VARCHAR2(64 BYTE), 
+	"REPOSITORY" VARCHAR2(255 BYTE), 
+	"STATE" NUMBER(10,0), 
+	"LAST_IMPORT" DATE, 
+	"VERSION" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table MEDIA_BASE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."MEDIA_BASE" 
+   (	"MEDIA_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"CREATION_DATE" DATE, 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"NAME" VARCHAR2(254 BYTE), 
+	"PATH" VARCHAR2(254 BYTE), 
+	"PARENT_FOLDER_ID" VARCHAR2(40 BYTE), 
+	"MEDIA_TYPE" NUMBER(*,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table MEDIA_BIN
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."MEDIA_BIN" 
+   (	"MEDIA_ID" VARCHAR2(40 BYTE), 
+	"LENGTH" NUMBER(*,0), 
+	"LAST_MODIFIED" DATE, 
+	"DATA" BLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("DATA") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table MEDIA_EXT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."MEDIA_EXT" 
+   (	"MEDIA_ID" VARCHAR2(40 BYTE), 
+	"URL" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table MEDIA_FOLDER
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."MEDIA_FOLDER" 
+   (	"FOLDER_ID" VARCHAR2(40 BYTE), 
+	"VERSION" NUMBER(*,0), 
+	"CREATION_DATE" DATE, 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"NAME" VARCHAR2(254 BYTE), 
+	"PATH" VARCHAR2(254 BYTE), 
+	"PARENT_FOLDER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table MEDIA_TXT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."MEDIA_TXT" 
+   (	"MEDIA_ID" VARCHAR2(40 BYTE), 
+	"LENGTH" NUMBER(*,0), 
+	"LAST_MODIFIED" DATE, 
+	"DATA" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("DATA") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table SITE_CONFIGURATION
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SITE_CONFIGURATION" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"REALM_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_CONFIG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_CONFIG" 
+   (	"CONFIG_PATH" VARCHAR2(254 BYTE), 
+	"CONTENT_ID" VARCHAR2(40 BYTE), 
+	"GENERATION" NUMBER(10,0), 
+	"CLAIMED_GENERATION" NUMBER(10,0), 
+	"NXT_INC_GENERATION" NUMBER(10,0), 
+	"UNIQ_SERVER_ID" VARCHAR2(254 BYTE), 
+	"LAST_ACTIVITY" TIMESTAMP (6), 
+	"LAST_FULL_INDEX" TIMESTAMP (6), 
+	"LAST_INCR_INDEX" TIMESTAMP (6)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_CONFIG_REPO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_CONFIG_REPO" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CONFIG_PATH" VARCHAR2(254 BYTE), 
+	"CONTENT_ID" VARCHAR2(40 BYTE), 
+	"REPOSITORY_PATH" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_END_JOB
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_END_JOB" 
+   (	"REPOSITORY_ID" VARCHAR2(254 BYTE), 
+	"CONFIG_PATH" VARCHAR2(254 BYTE), 
+	"SERVER_ID" VARCHAR2(254 BYTE), 
+	"STATUS" NUMBER(10,0), 
+	"START_TIME" TIMESTAMP (6), 
+	"END_TIME" TIMESTAMP (6), 
+	"SUCCESS" NUMBER(1,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_END_STATE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_END_STATE" 
+   (	"CONFIG_PATH" VARCHAR2(254 BYTE), 
+	"SCHEDULE" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_ORDER_MODIFIED
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_ORDER_MODIFIED" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_ORDER_STAGING
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_ORDER_STAGING" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6), 
+	"TOKENS" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("TOKENS") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table SRCH_ORDER_TOKENS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_ORDER_TOKENS" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6), 
+	"TOKENS" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("TOKENS") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table SRCH_PROFILE_MODIFIED
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_PROFILE_MODIFIED" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_PROFILE_STAGING
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_PROFILE_STAGING" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6), 
+	"TOKENS" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("TOKENS") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table SRCH_PROFILE_TOKENS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_PROFILE_TOKENS" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CREATION_DATE" TIMESTAMP (6), 
+	"LAST_MODIFIED_DATE" TIMESTAMP (6), 
+	"TOKENS" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("TOKENS") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table SRCH_SITE_CNTNT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_SITE_CNTNT" 
+   (	"CNTN_ID" VARCHAR2(40 BYTE), 
+	"SITE_ID" VARCHAR2(40 BYTE), 
+	"CONTENT_LABEL" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_SITE_CNTNT_PRI
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_SITE_CNTNT_PRI" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CONTENT_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_UPDATE_QUEUE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" 
+   (	"REPOSITORY_ID" VARCHAR2(254 BYTE), 
+	"CONFIG_REPO_ID" VARCHAR2(40 BYTE), 
+	"GENERATION" NUMBER(10,0), 
+	"ITEM_DESC_NAME" VARCHAR2(64 BYTE), 
+	"CHANGE_TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SRCH_UPDATE_VQUEUE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"CONFIG_PATH" VARCHAR2(254 BYTE), 
+	"GENERATION" NUMBER(10,0), 
+	"REPOSITORY_PATH" VARCHAR2(254 BYTE), 
+	"ITEM_DESC_NAME" VARCHAR2(64 BYTE), 
+	"REPOSITORY_ID" VARCHAR2(254 BYTE), 
+	"CHANGE_TYPE" NUMBER(10,0), 
+	"DEV_LINE_ID" VARCHAR2(40 BYTE), 
+	"ASSET_VERSION" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVCT_CALLNOTE_ACT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVCT_CALLNOTE_ACT" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"INBOUND" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_CELL_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_CELL_CFG" 
+   (	"CELL_CFG_ID" VARCHAR2(40 BYTE), 
+	"CELL_ID" VARCHAR2(80 BYTE), 
+	"CELL_OPEN_YN" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_CONFIG_OBJCT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_CONFIG_OBJCT" 
+   (	"CONFIG_OBJECT_ID" VARCHAR2(40 BYTE), 
+	"CONFIG_TYPE" NUMBER(10,0), 
+	"USER_ID" VARCHAR2(40 BYTE), 
+	"ENABLED_YN" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_CONTENT_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_CONTENT_CFG" 
+   (	"CONTENT_CFG_ID" VARCHAR2(40 BYTE), 
+	"CONTENT_ID" VARCHAR2(80 BYTE), 
+	"MIME_TYPE" VARCHAR2(80 BYTE), 
+	"BODY_TEXT" CLOB, 
+	"URL" VARCHAR2(1024 BYTE), 
+	"URL_YN" NUMBER(1,0), 
+	"OTHER_CONTEXT" VARCHAR2(128 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("BODY_TEXT") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table SVC_FRAMEWRK_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_FRAMEWRK_CFG" 
+   (	"FRMWK_CFG_ID" VARCHAR2(40 BYTE), 
+	"FRAMEWORK_ID" VARCHAR2(80 BYTE), 
+	"CURRENT_TAB_ID" VARCHAR2(80 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_FW_TAB_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_FW_TAB_CFG" 
+   (	"FRMWK_CFG_ID" VARCHAR2(40 BYTE), 
+	"TAB_ID" VARCHAR2(80 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_GLOBALOPT_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_GLOBALOPT_INFO" 
+   (	"OPTION_ID" VARCHAR2(40 BYTE), 
+	"INFO_KEY" VARCHAR2(40 BYTE), 
+	"INFO_VALUE" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_GLOBALOPT_VAL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_GLOBALOPT_VAL" 
+   (	"OPTION_ID" VARCHAR2(40 BYTE), 
+	"OPTION_VALUE" VARCHAR2(255 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_GLOBAL_OPT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_GLOBAL_OPT" 
+   (	"OPTION_ID" VARCHAR2(40 BYTE), 
+	"OPTION_NAME" VARCHAR2(80 BYTE), 
+	"OPTION_VALUE" CLOB, 
+	"OPTION_DEFAULT" CLOB, 
+	"OPTION_RIGHT" VARCHAR2(80 BYTE), 
+	"OPTION_DATA_TYPE" NUMBER(10,0), 
+	"IS_MULTIVAL" NUMBER(1,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("OPTION_VALUE") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) 
+ LOB ("OPTION_DEFAULT") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+--------------------------------------------------------
+--  DDL for Table SVC_PANEL_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_PANEL_CFG" 
+   (	"PANEL_CFG_ID" VARCHAR2(40 BYTE), 
+	"PANEL_ID" VARCHAR2(80 BYTE), 
+	"VISIBLE_YN" NUMBER(1,0), 
+	"PANEL_OPEN_YN" NUMBER(1,0), 
+	"AVAILABLE_YN" NUMBER(1,0), 
+	"CONTENT_OPEN_YN" NUMBER(1,0), 
+	"TABBED_YN" NUMBER(1,0), 
+	"CURRENT_PANEL_ID" VARCHAR2(80 BYTE), 
+	"TAB_SCROLL_INDEX" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_PSTACK_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_PSTACK_CFG" 
+   (	"PSTACK_CFG_ID" VARCHAR2(40 BYTE), 
+	"PANEL_STACK_ID" VARCHAR2(80 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_PS_PNL_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_PS_PNL_CFG" 
+   (	"PSTACK_CFG_ID" VARCHAR2(40 BYTE), 
+	"PANEL_ID" VARCHAR2(80 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_RECENT_TKTS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_RECENT_TKTS" 
+   (	"RECENT_TICKET_ID" VARCHAR2(40 BYTE), 
+	"USER_ID" VARCHAR2(40 BYTE), 
+	"TICKET_ID" VARCHAR2(40 BYTE), 
+	"TICKET_ACCESS_TYPE" VARCHAR2(40 BYTE), 
+	"LAST_UPDATED_TIMESTAMP" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_SKIN_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_SKIN_CFG" 
+   (	"SKIN_CFG_ID" VARCHAR2(40 BYTE), 
+	"SKIN_ID" VARCHAR2(80 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_SPELL_DICS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_SPELL_DICS" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"LANGUAGE" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_SPELL_WORDS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_SPELL_WORDS" 
+   (	"DIC_ID" VARCHAR2(40 BYTE), 
+	"WORD" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_TAB_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_TAB_CFG" 
+   (	"TAB_CFG_ID" VARCHAR2(40 BYTE), 
+	"TAB_ID" VARCHAR2(80 BYTE), 
+	"VISIBLE_YN" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_TAB_PNL_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_TAB_PNL_CFG" 
+   (	"PANEL_CFG_ID" VARCHAR2(40 BYTE), 
+	"TABBED_PANEL_ID" VARCHAR2(80 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_TEMPLATE_CFG
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_TEMPLATE_CFG" 
+   (	"TEMPLATE_CFG_ID" VARCHAR2(40 BYTE), 
+	"TEMPLATE_ID" VARCHAR2(80 BYTE), 
+	"URL" VARCHAR2(1024 BYTE), 
+	"OTHER_CONTEXT" VARCHAR2(128 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_USEROPT_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_USEROPT_INFO" 
+   (	"OPTION_ID" VARCHAR2(40 BYTE), 
+	"INFO_KEY" VARCHAR2(40 BYTE), 
+	"INFO_VALUE" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_USEROPT_VAL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_USEROPT_VAL" 
+   (	"OPTION_ID" VARCHAR2(40 BYTE), 
+	"OPTION_VALUE" VARCHAR2(255 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table SVC_USER_OPT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."SVC_USER_OPT" 
+   (	"USER_ID" VARCHAR2(40 BYTE), 
+	"OPTION_ID" VARCHAR2(40 BYTE), 
+	"OPTION_NAME" VARCHAR2(80 BYTE), 
+	"OPTION_VALUE" VARCHAR2(1666 BYTE), 
+	"OPTION_DEFAULT" VARCHAR2(1666 BYTE), 
+	"OPTION_RIGHT" VARCHAR2(80 BYTE), 
+	"OPTION_DATA_TYPE" NUMBER(10,0), 
+	"IS_MULTIVAL" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACTIVITY
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACTIVITY" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"TICKET_ID" VARCHAR2(40 BYTE), 
+	"TYPE" NUMBER(10,0), 
+	"CREATION_TIME" TIMESTAMP (6), 
+	"AGENT_PROFILE_ID" VARCHAR2(40 BYTE), 
+	"APPLICATION" NUMBER(10,0), 
+	"HEADING" VARCHAR2(254 BYTE), 
+	"ABSTRACT" VARCHAR2(4000 BYTE), 
+	"REASON_ID" NUMBER(10,0), 
+	"IN_PROGRESS" NUMBER(1,0), 
+	"ACT_DATA_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_ESCAL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_ESCAL" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"PREV_ESC_LEVEL" NUMBER(10,0), 
+	"NEW_ESC_LEVEL" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_MAP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_MAP" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"KEY_NAME" VARCHAR2(254 BYTE), 
+	"VALUE_TEXT" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_MESSAGE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_MESSAGE" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"CHANNEL" NUMBER(10,0), 
+	"FROM_ADDRESS" VARCHAR2(254 BYTE), 
+	"HAS_ATTACHMENTS" NUMBER(1,0), 
+	"TO_ADDRESS" VARCHAR2(254 BYTE), 
+	"CC_ADDRESS" VARCHAR2(254 BYTE), 
+	"BCC_ADDRESS" VARCHAR2(254 BYTE), 
+	"REPLY_TO_ADDR" VARCHAR2(254 BYTE), 
+	"SUBJECT" VARCHAR2(254 BYTE), 
+	"BODY_TEXT" CLOB, 
+	"DUE_TIME" TIMESTAMP (6), 
+	"CHAR_ENCODING" VARCHAR2(20 BYTE), 
+	"IS_TEXT_ONLY" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("BODY_TEXT") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_OWNAGNT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_OWNAGNT" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"OWNING_AGENT_ID" VARCHAR2(40 BYTE), 
+	"COMPLETION_TIME" TIMESTAMP (6), 
+	"IS_PUSH" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_OWNGRP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_OWNGRP" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"OWNING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"SLA_MINUTES" NUMBER(10,0), 
+	"COMPLETION_TIME" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_PCREATE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_PCREATE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_PSWCHANGE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_PSWCHANGE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"PROFILE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_STATC
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_STATC" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"PREV_SUB_STATUS" NUMBER(10,0), 
+	"NEW_SUB_STATUS" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ACT_WORKNOTE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ACT_WORKNOTE" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"TEXT_CONTENT" VARCHAR2(4000 BYTE), 
+	"IS_PUBLIC" NUMBER(1,0), 
+	"USER_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_ACT_DATA
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_ACT_DATA" 
+   (	"ACT_DATA_ID" VARCHAR2(40 BYTE), 
+	"CREATION_TIME" TIMESTAMP (6), 
+	"TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_IN_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_IN_MSGS" 
+   (	"MSG_ID" VARCHAR2(40 BYTE), 
+	"CLASSIFICATION" CLOB, 
+	"RAW_MSG_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("CLASSIFICATION") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MESSAGES
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MESSAGES" 
+   (	"MSG_ID" VARCHAR2(40 BYTE), 
+	"CHANNEL_ID" NUMBER(10,0), 
+	"TRANS_COMP_PATH" VARCHAR2(254 BYTE), 
+	"ENCODING" VARCHAR2(40 BYTE), 
+	"SUBJECT" VARCHAR2(512 BYTE), 
+	"TEXT_BODY" CLOB, 
+	"HTML_BODY" CLOB, 
+	"XML_BODY" CLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("TEXT_BODY") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) 
+ LOB ("HTML_BODY") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) 
+ LOB ("XML_BODY") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MMS_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MMS_MSGS" 
+   (	"RAW_MSG_ID" VARCHAR2(40 BYTE), 
+	"TOOLKIT" VARCHAR2(254 BYTE), 
+	"MMSC" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MSGADDLIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" 
+   (	"MSG_ID" VARCHAR2(40 BYTE), 
+	"IDX" NUMBER(10,0), 
+	"ADDR_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MSGATTLIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" 
+   (	"MSG_ID" VARCHAR2(40 BYTE), 
+	"IDX" NUMBER(10,0), 
+	"ATT_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MSG_ADDRS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MSG_ADDRS" 
+   (	"ADDR_ID" VARCHAR2(40 BYTE), 
+	"TYPE" VARCHAR2(40 BYTE), 
+	"PERSONAL_NAME" VARCHAR2(254 BYTE), 
+	"ADDR_VALUE" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MSG_ATTS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MSG_ATTS" 
+   (	"ATT_ID" VARCHAR2(40 BYTE), 
+	"CONTENT_ID" VARCHAR2(40 BYTE), 
+	"CONTENT" BLOB, 
+	"FILENAME" VARCHAR2(254 BYTE), 
+	"TYPE" NUMBER(10,0), 
+	"CONTENT_ID_HDR" VARCHAR2(40 BYTE), 
+	"ATT_SIZE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("CONTENT") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MSG_HDRS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MSG_HDRS" 
+   (	"MSG_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(40 BYTE), 
+	"HDR_VALUE" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_MSG_PROPS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_MSG_PROPS" 
+   (	"MSG_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(40 BYTE), 
+	"PROP_VALUE" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_OUT_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" 
+   (	"MSG_ID" VARCHAR2(40 BYTE), 
+	"SEND_FORMAT" NUMBER(10,0), 
+	"RESPONSE_TYPE" NUMBER(10,0), 
+	"LAST_MODIFIED_TIME" TIMESTAMP (6), 
+	"STATUS" NUMBER(10,0), 
+	"REASON_TEXT" VARCHAR2(254 BYTE), 
+	"CLAIM_OWNER" VARCHAR2(254 BYTE), 
+	"CLAIM_DATE" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_POP3_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_POP3_MSGS" 
+   (	"RAW_MSG_ID" VARCHAR2(40 BYTE), 
+	"ACCOUNT_NAME" VARCHAR2(254 BYTE), 
+	"IP_ADDRESS" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_RAW_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" 
+   (	"RAW_MSG_ID" VARCHAR2(40 BYTE), 
+	"CHANNEL_ID" NUMBER(10,0), 
+	"TRANS_COMP_PATH" VARCHAR2(254 BYTE), 
+	"CONTENT" BLOB, 
+	"STATUS" NUMBER(10,0), 
+	"CREATION_TIME" TIMESTAMP (6), 
+	"RETRY_COUNT" NUMBER(10,0), 
+	"TYPE" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("CONTENT") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_SMS_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_SMS_MSGS" 
+   (	"RAW_MSG_ID" VARCHAR2(40 BYTE), 
+	"TOOLKIT" VARCHAR2(254 BYTE), 
+	"SMSC" VARCHAR2(254 BYTE), 
+	"SOURCE_ADDRESS" VARCHAR2(40 BYTE), 
+	"SOURCE_TON" NUMBER(10,0), 
+	"SOURCE_NPI" NUMBER(10,0), 
+	"DEST_ADDRESS" VARCHAR2(40 BYTE), 
+	"DESTINATION_TON" NUMBER(10,0), 
+	"DESTINATION_NPI" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ADS_SMTP_MSGS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ADS_SMTP_MSGS" 
+   (	"RAW_MSG_ID" VARCHAR2(40 BYTE), 
+	"RCPT_TO" VARCHAR2(254 BYTE), 
+	"IP_ADDRESS" VARCHAR2(254 BYTE), 
+	"FROM_ADDRESS" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ATTACHMENT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ATTACHMENT" 
+   (	"ATTACHMENT_ID" VARCHAR2(40 BYTE), 
+	"FILENAME" VARCHAR2(254 BYTE), 
+	"MIME_TYPE" VARCHAR2(254 BYTE), 
+	"ENCODING" VARCHAR2(254 BYTE), 
+	"ENCODED_CONTENT" BLOB
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("ENCODED_CONTENT") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table TKT_ATTCH_LIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ATTCH_LIST" 
+   (	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"IDX" NUMBER(10,0), 
+	"ATTACHMENT_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_CUST_DETAILS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_CUST_DETAILS" 
+   (	"CUST_DETAILS_ID" VARCHAR2(40 BYTE), 
+	"FIRST_NAME" VARCHAR2(40 BYTE), 
+	"LAST_NAME" VARCHAR2(40 BYTE), 
+	"FULL_NAME" VARCHAR2(80 BYTE), 
+	"EMAIL_ADDRESS" VARCHAR2(254 BYTE), 
+	"PHONE_NUMBERS" VARCHAR2(254 BYTE), 
+	"MOBILE" VARCHAR2(254 BYTE), 
+	"ADDRESS" VARCHAR2(254 BYTE), 
+	"CITY" VARCHAR2(254 BYTE), 
+	"STATE_CODE" VARCHAR2(254 BYTE), 
+	"COUNTRY" VARCHAR2(254 BYTE), 
+	"POSTAL_CODE" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_DIST_SRV_STAT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_DIST_SRV_STAT" 
+   (	"SERVER_STATS_ID" NUMBER(10,0), 
+	"SERVER_ID" VARCHAR2(40 BYTE), 
+	"UPDATE_DURATION" NUMBER(19,0), 
+	"LAST_UPDATED" TIMESTAMP (6)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ESC_OWN_GROUP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ESC_OWN_GROUP" 
+   (	"LOGICAL_ORG_ID" VARCHAR2(40 BYTE), 
+	"ESCALATION_OWN_GRP" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_ESC_TKT_Q
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_ESC_TKT_Q" 
+   (	"LOGICAL_ORG_ID" VARCHAR2(40 BYTE), 
+	"ESCALATION_TKT_Q" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_EXTREF_LIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_EXTREF_LIST" 
+   (	"TICKET_ID" VARCHAR2(40 BYTE), 
+	"IDX" NUMBER(10,0), 
+	"EXTERNAL_REF_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_EXT_REF
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_EXT_REF" 
+   (	"EXTERNAL_REF_ID" VARCHAR2(40 BYTE), 
+	"EXTERN_REF" VARCHAR2(254 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"LAST_USED_TIME" TIMESTAMP (6), 
+	"ACTIVITY_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_OWNING_GROUP
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_OWNING_GROUP" 
+   (	"LOGICAL_ORG_ID" VARCHAR2(40 BYTE), 
+	"EMAIL" VARCHAR2(254 BYTE), 
+	"DEALLOCATION_MINS" NUMBER(10,0), 
+	"INACTIVITY_MINS" NUMBER(10,0), 
+	"AVAILABILITY_MINS" NUMBER(10,0), 
+	"SLA_MINS" NUMBER(10,0), 
+	"DEF_ESC_OWN_GRP" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_QUEUE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_QUEUE" 
+   (	"LOGICAL_ORG_ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"ACCEPTING" NUMBER(1,0), 
+	"DEALLOCATION_MS" NUMBER(10,0), 
+	"INACTIVITY_MS" NUMBER(10,0), 
+	"AVAILABILITY_MS" NUMBER(10,0), 
+	"SLA_MS" NUMBER(10,0), 
+	"DEF_ESC_TKT_Q" VARCHAR2(40 BYTE), 
+	"C_REQ_TMOUT" NUMBER(10,0), 
+	"C_OFFER_TMOUT" NUMBER(10,0), 
+	"C_REJECT_TMOUT" NUMBER(10,0), 
+	"C_DISP_POL" NUMBER(10,0), 
+	"C_OVERFLOW_POL" NUMBER(10,0), 
+	"EMAIL" VARCHAR2(254 BYTE), 
+	"EMAIL_FR_NAME" VARCHAR2(254 BYTE), 
+	"SMS" VARCHAR2(254 BYTE), 
+	"SMS_TYPE" VARCHAR2(254 BYTE), 
+	"MMS" VARCHAR2(254 BYTE), 
+	"MMS_TYPE" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_Q_STATS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_Q_STATS" 
+   (	"TKT_Q_STATS_ID" NUMBER(10,0), 
+	"TKT_Q_ID" VARCHAR2(40 BYTE), 
+	"REQUEST_COUNT" NUMBER(10,0), 
+	"HIT_COUNT" NUMBER(10,0), 
+	"MISS_COUNT" NUMBER(10,0), 
+	"RELEASE_COUNT" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_Q_STAT_SET
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_Q_STAT_SET" 
+   (	"SERVER_STATS_ID" NUMBER(10,0), 
+	"TKT_Q_STATS_ID" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_REASON
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_REASON" 
+   (	"REASON_ID" NUMBER(10,0), 
+	"REASON_NAME" VARCHAR2(80 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_REA_CONTEXT
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_REA_CONTEXT" 
+   (	"REA_CONTEXT_ID" NUMBER(10,0), 
+	"CONTEXT_NAME" VARCHAR2(80 BYTE), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"DEFAULT_REASON_ID" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_REA_CTX_LIST
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_REA_CTX_LIST" 
+   (	"REASON_ID" NUMBER(10,0), 
+	"IDX" NUMBER(10,0), 
+	"REA_CONTEXT_ID" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_RELATED
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_RELATED" 
+   (	"TICKET_ID" VARCHAR2(40 BYTE), 
+	"RELATED_TICKET_ID" VARCHAR2(40 BYTE), 
+	"IDX" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_SUB_STATUS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_SUB_STATUS" 
+   (	"SUB_STATUS_ID" NUMBER(10,0), 
+	"SUB_STATUS_NAME" VARCHAR2(80 BYTE), 
+	"PARENT_STATUS" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_TICKET
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_TICKET" 
+   (	"TICKET_ID" VARCHAR2(40 BYTE), 
+	"CREATION_TIME" TIMESTAMP (6), 
+	"LAST_MOD_TIME" TIMESTAMP (6), 
+	"DESCRIPTION" VARCHAR2(254 BYTE), 
+	"EXTERN_TICKET_ID" VARCHAR2(254 BYTE), 
+	"EXTERNAL_SYSTEM" VARCHAR2(40 BYTE), 
+	"INBOUND_CHAN_ADDR" VARCHAR2(254 BYTE), 
+	"APPLICATION" NUMBER(10,0), 
+	"IS_MERGEABLE" NUMBER(1,0), 
+	"CREATION_CHANNEL" NUMBER(10,0), 
+	"DEFAULT_OUT_CHAN" VARCHAR2(40 BYTE), 
+	"SUB_STATUS_ID" NUMBER(10,0), 
+	"ESCALATION_LEVEL" NUMBER(10,0), 
+	"ESCALATION_COUNT" NUMBER(10,0), 
+	"HAS_PENDING_OWNER" NUMBER(1,0), 
+	"PENDING_TIME" TIMESTAMP (6), 
+	"RELEASE_TIME" TIMESTAMP (6), 
+	"PRIORITY" NUMBER(10,0), 
+	"USER_ID" VARCHAR2(40 BYTE), 
+	"CUST_DETAILS_ID" VARCHAR2(40 BYTE), 
+	"DUE_TIME" TIMESTAMP (6), 
+	"OWNING_GROUP_ID" VARCHAR2(40 BYTE), 
+	"GROUP_ASSN_ACT_ID" VARCHAR2(40 BYTE), 
+	"OWNING_AGENT_ID" VARCHAR2(40 BYTE), 
+	"AGENT_ASSN_ACT_ID" VARCHAR2(40 BYTE), 
+	"ORIG_TICKET_ID" VARCHAR2(40 BYTE), 
+	"DUP_OF_TICKET_ID" VARCHAR2(40 BYTE), 
+	"WORK_IN_PROGRESS" BLOB, 
+	"IN_PROGRESS_ACT_ID" VARCHAR2(40 BYTE), 
+	"SLA_BASE_TIMESTAMP" TIMESTAMP (6), 
+	"PUSHABLE" NUMBER(1,0) DEFAULT 0, 
+	"LOADED" NUMBER(1,0), 
+	"LOADED_TIMESTAMP" TIMESTAMP (6), 
+	"SITE_ID" VARCHAR2(40 BYTE), 
+	"REALM_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" 
+ LOB ("WORK_IN_PROGRESS") STORE AS SECUREFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES ) ;
+--------------------------------------------------------
+--  DDL for Table TKT_UPDATE_PROF
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_UPDATE_PROF" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"UPDATED_ITEM_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table TKT_UPD_PROPS
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."TKT_UPD_PROPS" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"UPDATE_TYPE" NUMBER(10,0), 
+	"ACTIVITY_ID" VARCHAR2(40 BYTE), 
+	"PROPERTY_NAME" VARCHAR2(100 BYTE), 
+	"OLD_VALUE" VARCHAR2(255 BYTE), 
+	"NEW_VALUE" VARCHAR2(255 BYTE), 
+	"VERSION" NUMBER(10,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_ATTRVAL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_ATTRVAL" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"ATTR_VALUE" VARCHAR2(2048 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_ATTRVAL_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_ATTRVAL_REL" 
+   (	"MAPPER_ID" VARCHAR2(40 BYTE), 
+	"ATTRIBUTE_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_CATTRVAL_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_CATTRVAL_REL" 
+   (	"MAPPER_ID" VARCHAR2(40 BYTE), 
+	"ATTRIBUTE_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_FH
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_FH" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE), 
+	"DESCRIPTION" VARCHAR2(2048 BYTE), 
+	"COMPONENT_PATH" VARCHAR2(1024 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_IM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_IM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"ITEM_PATH" VARCHAR2(255 BYTE), 
+	"ITEM_NAME" VARCHAR2(64 BYTE), 
+	"IS_READONLY" NUMBER(1,0), 
+	"FORM_HANDLER" VARCHAR2(40 BYTE), 
+	"MODE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_IM2IVM_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_IM2IVM_REL" 
+   (	"ITEM_ID" VARCHAR2(40 BYTE), 
+	"SEQUENCE_NUM" NUMBER(10,0), 
+	"VIEW_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_IV
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_IV" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"URI" VARCHAR2(255 BYTE), 
+	"VIEW_COMPONENT" VARCHAR2(255 BYTE), 
+	"APP_NAME" VARCHAR2(255 BYTE), 
+	"MODE_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_IV2IVAD_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_IV2IVAD_REL" 
+   (	"VIEW_ID" VARCHAR2(40 BYTE), 
+	"ATTR_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_IVATTRDEF
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_IVATTRDEF" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"DEFAULT_VALUE" VARCHAR2(1024 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_IVM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_IVM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE), 
+	"DISPLAY_NAME" VARCHAR2(64 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"VIEW_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_IVM2PVM_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_IVM2PVM_REL" 
+   (	"IVM_ID" VARCHAR2(40 BYTE), 
+	"PVM_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_MODE
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_MODE" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"FALLBACK_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_PV
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_PV" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE), 
+	"TYPE" VARCHAR2(128 BYTE), 
+	"COMPONENT_TYPE" VARCHAR2(128 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"URI" VARCHAR2(255 BYTE), 
+	"VIEW_COMPONENT" VARCHAR2(255 BYTE), 
+	"APP_NAME" VARCHAR2(255 BYTE), 
+	"MODE_ID" VARCHAR2(40 BYTE), 
+	"CONTAINER_FAMILY" VARCHAR2(128 BYTE), 
+	"IS_DEFAULT" NUMBER(1,0), 
+	"IS_READONLY" NUMBER(1,0), 
+	"IS_COMPONENT" NUMBER(1,0)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_PV2PVAD_REL
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_PV2PVAD_REL" 
+   (	"VIEW_ID" VARCHAR2(40 BYTE), 
+	"ATTR_ID" VARCHAR2(40 BYTE), 
+	"NAME" VARCHAR2(64 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_PVATTRDEF
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_PVATTRDEF" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"DEFAULT_VALUE" VARCHAR2(1024 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table VMAP_PVM
+--------------------------------------------------------
+
+  CREATE TABLE "PRODUCTION"."VMAP_PVM" 
+   (	"ID" VARCHAR2(40 BYTE), 
+	"DESCRIPTION" VARCHAR2(1024 BYTE), 
+	"PVIEW_ID" VARCHAR2(40 BYTE), 
+	"CPVIEW_ID" VARCHAR2(40 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for View DRPT_ABANDON_ORD
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "PRODUCTION"."DRPT_ABANDON_ORD" ("ABANDONMENT_DATE", "AMOUNT", "CONVERTED") AS 
+  select oa.abandonment_date as abandonment_date, ai.amount as amount, decode(oa.abandon_state, 'CONVERTED', 100, 0) as converted from dcspp_order o, dcspp_ord_abandon oa, dcspp_amount_info ai where oa.order_id=o.order_id and o.price_info=ai.amount_info_id;
+--------------------------------------------------------
+--  DDL for View DRPT_TNS_ABNDN_ORD
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "PRODUCTION"."DRPT_TNS_ABNDN_ORD" ("ABANDONMENT_DATE", "AMOUNT") AS 
+  select date_time as abandonment_date, amount as amount from drpt_session_ord where submitted=0;
+REM INSERTING into PRODUCTION.AGENT_PROFILE_CMTS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.ARF_ID_GENERATOR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.ARF_LOADER_PROG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.ARF_LOADER_QUEUE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.ARF_LQ_ENTRIES
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.ARF_QUEUE_ENTRY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.ARF_SECURE_ID_GEN
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CAF_REGISTRY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CAF_REG_ASSET
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CAF_REG_FOLDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CAF_REG_PATHASSET
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CAF_REG_REPASSET
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CAF_REG_ROOTFOLDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CHANGELOG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_APPR_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_CI_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_CLAIM_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_GI_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_GL_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_GRANT_APPEASE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_GRT_PROM_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_IGN_PROM_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_OMA_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_ORDERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_ORDER_APPR_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_ORDER_COMMENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_ORDER_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_PG_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_PRICE_OVERRDE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_RECV_RTRN_ITM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_RETURN_ORDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_SCHD_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_SG_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_SPLIT_CC
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_SPLIT_SG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSRT_UPDATE_ORG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_CC_EXCH_METHOD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_CMTS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_IPROMOS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_ITEMS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_ITEM_DISP
+SET DEFINE OFF;
+Insert into PRODUCTION.CSR_EXCH_ITEM_DISP (ID,DESCRIPTION,UPD_INVENTORY) values ('incorrectItem','incorrectItem',0);
+Insert into PRODUCTION.CSR_EXCH_ITEM_DISP (ID,DESCRIPTION,UPD_INVENTORY) values ('incorrectSize','incorrectSize',0);
+Insert into PRODUCTION.CSR_EXCH_ITEM_DISP (ID,DESCRIPTION,UPD_INVENTORY) values ('didNotLike','didNotLike',0);
+Insert into PRODUCTION.CSR_EXCH_ITEM_DISP (ID,DESCRIPTION,UPD_INVENTORY) values ('defective','defective',0);
+Insert into PRODUCTION.CSR_EXCH_ITEM_DISP (ID,DESCRIPTION,UPD_INVENTORY) values ('incorrectColor','incorrectColor',0);
+Insert into PRODUCTION.CSR_EXCH_ITEM_DISP (ID,DESCRIPTION,UPD_INVENTORY) values ('didNotMeetExpectation','didNotMeetExpectations',0);
+REM INSERTING into PRODUCTION.CSR_EXCH_METHOD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_METHODS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_OPROMOS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_EXCH_REASONS
+SET DEFINE OFF;
+Insert into PRODUCTION.CSR_EXCH_REASONS (ID,DESCRIPTION) values ('incorrectItem','incorrectItem');
+Insert into PRODUCTION.CSR_EXCH_REASONS (ID,DESCRIPTION) values ('incorrectSize','incorrectSize');
+Insert into PRODUCTION.CSR_EXCH_REASONS (ID,DESCRIPTION) values ('didNotLike','didNotLike');
+Insert into PRODUCTION.CSR_EXCH_REASONS (ID,DESCRIPTION) values ('defective','defective');
+Insert into PRODUCTION.CSR_EXCH_REASONS (ID,DESCRIPTION) values ('incorrectColor','incorrectColor');
+Insert into PRODUCTION.CSR_EXCH_REASONS (ID,DESCRIPTION) values ('didNotMeetExpectations','didNotMeetExpectations');
+REM INSERTING into PRODUCTION.CSR_ITEM_ADJ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_NONRETURN_ADJ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_ORDER_CMTS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_PROMO_ADJUST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_RETURN_FEE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.CSR_SC_EXCH_METHOD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_ACCOUNT
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('pages-privilege',4,null,null,null,'Pages and Components: Pages',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('analysis-datasets-privilege',4,null,null,null,'Analysis: Datasets',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('tools-server-activity-privilege',4,null,null,null,'Tools: Server Activity',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('support-knowledge-base-privilege',4,null,null,null,'Support: Knowledge Base',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('admin-users-privilege',4,null,null,null,'User Admin: Users',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('support-cases-privilege',4,null,null,null,'Tools: Submit a Support Request',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('server-shutdown-privilege',4,null,null,null,'Server Shutdown',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('tools-integrations-privilege',4,null,null,null,'Tools: Integrations',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('components-path-privilege',4,null,null,null,'Pages and Components: Components By Path',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('scenarios-templates-privilege',4,null,null,null,'Scenarios: Scenario Templates',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('analysis-chart-templates-privilege',4,null,null,null,'Analysis: Chart Templates',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('content-repositories-user-group',2,null,null,null,'Content Repositories User',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('scenarios-slots-privilege',4,null,null,null,'Scenarios: Slots',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('developers-group',2,null,null,null,'Developers',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('analysis-charts-privilege',4,null,null,null,'Analysis: Charts',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('targeting-preview-privilege',4,null,null,null,'Targeting: Preview',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('components-module-privilege',4,null,null,null,'Pages and Components: Components By Module',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('designers-group',2,null,null,null,'Designers',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('marketing-group',2,null,null,null,'Marketing People',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('administrators-group',2,null,null,null,'System Administrators',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('everyone-group',2,null,null,null,'All Users',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('commerce-repositories-user-group',2,null,null,null,'Commerce Repositories User',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('tools-j2ee-deploy-privilege',4,null,null,null,'Tools: J2EE Deploy',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('targeting-tracking-sensors-privilege',4,null,null,null,'Targeting: Tracking Sensors',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('tools-pipeline-editor-privilege',4,null,null,null,'Tools: Pipeline Editor',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('admin-roles-privilege',4,null,null,null,'User Admin: Groups',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('targeting-groups-privilege',4,null,null,null,'Targeting: Profile and Content Groups',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('server-restart-privilege',4,null,null,null,'Server Restart',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('scenarios-privilege',4,null,null,null,'Scenarios: Scenarios',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('admin',1,'Andy','Administrator','2b7b1f41d6ddb810d48096c266d3bd092d7e5da5',null,to_date('21-SEP-15','DD-MON-RR'),'5');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('managers-group',2,null,null,null,'Managers',to_date('07-DEC-11','DD-MON-RR'),'0');
+Insert into PRODUCTION.DAS_ACCOUNT (ACCOUNT_NAME,TYPE,FIRST_NAME,LAST_NAME,PASSWORD,DESCRIPTION,LASTPWDUPDATE,PASSWORD_KDF) values ('targeting-targeted-content-privilege',4,null,null,null,'Targeting: Content Targeters',to_date('07-DEC-11','DD-MON-RR'),'0');
+REM INSERTING into PRODUCTION.DAS_ACCT_PREVPWD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_CLUSTER_NAME
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DBSETUP_HISTORY
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000098','DAS','sql/db_components/oracle/id_generator.sql','sql/uninstall/oracle/drop_id_generator.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.141000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000099','DAS','sql/db_components/oracle/dms_limbo_ddl.sql','sql/uninstall/oracle/drop_dms_limbo_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.250000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000100','DAS','sql/db_components/oracle/cluster_name_ddl.sql','sql/uninstall/oracle/drop_cluster_name_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.261000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000101','DAS','sql/db_components/oracle/create_sql_jms_ddl.sql','sql/uninstall/oracle/drop_sql_jms_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.412000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000102','DAS','sql/db_components/oracle/create_gsa_subscribers_ddl.sql','sql/uninstall/oracle/drop_gsa_subscribers_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.433000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000103','DAS','sql/db_components/oracle/create_sds.sql','sql/uninstall/oracle/drop_sds.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.445000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000104','DAS','sql/db_components/oracle/integration_data_ddl.sql','sql/uninstall/oracle/drop_integration_data_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.462000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000105','DAS','sql/db_components/oracle/nucleus_security_ddl.sql','sql/uninstall/oracle/drop_nucleus_security_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.485000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000106','DAS','sql/db_components/oracle/media_ddl.sql','sql/uninstall/oracle/drop_media.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.590000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000107','DAS','sql/db_components/oracle/deployment_ddl.sql','sql/uninstall/oracle/drop_deployment_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.808000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000108','DAS','sql/db_components/oracle/sitemap_ddl.sql','sql/uninstall/oracle/drop_sitemap_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.837000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000109','DAS','sql/db_components/oracle/purge_ddl.sql','sql/uninstall/oracle/drop_purge_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.862000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000110','DAS','sql/db_components/oracle/usage_tracking_ddl.sql','sql/uninstall/oracle/drop_usage_tracking_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.876000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000111','DAS','sql/db_components/oracle/create_staff_ddl.sql','sql/uninstall/oracle/drop_staff_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.918000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000112','DAS','sql/db_components/oracle/create_system_config.sql','sql/uninstall/oracle/drop_create_system_config.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.28.931000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000113','ARF.base','sql/db_components/oracle/arf_loader_ddl.sql','sql/uninstall/oracle/drop_arf_loader_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.028000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000114','ARF.base','sql/db_components/oracle/arf_id_generator.sql','sql/uninstall/oracle/drop_arf_id_generator.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.057000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000115','DAF.Search.Index','sql/db_components/oracle/search_ddl.sql','sql/uninstall/oracle/drop_search_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.209000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000116','DAF.Endeca.Index','../../Search/Index/sql/db_components/oracle/search_ddl.sql','../../Search/Index/sql/uninstall/oracle/drop_search_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.263000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000117','DAF.Endeca.Index','../../Search/Base/sql/db_components/oracle/search_site_ddl.sql','../../Search/Base/sql/uninstall/oracle/drop_search_site_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.311000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000118','DAF.Endeca.Index','../../Endeca/Index/sql/db_components/oracle/endeca_ddl.sql','../../Endeca/Index/sql/uninstall/oracle/drop_endeca_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.369000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000119','DAF.TextSearch.Index','sql/install/oracle/search_pre_install.sql','sql/uninstall/oracle/search_post_uninstall.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.679000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000120','DAF.TextSearch.Index','sql/install/oracle/search_ddl.sql','sql/uninstall/oracle/drop_search_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.29.798000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000121','DAF.TextSearch.Index','sql/install/oracle/search_post_install.sql','sql/uninstall/oracle/search_pre_uninstall.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.31.696000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000122','DPS','sql/db_components/oracle/user_ddl.sql','sql/uninstall/oracle/drop_user.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.380000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000123','DPS','sql/db_components/oracle/logging_ddl.sql','sql/uninstall/oracle/drop_logging.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.575000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000124','DPS','sql/db_components/oracle/logging_init.sql',null,'sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.597000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000125','DPS','sql/db_components/oracle/personalization_ddl.sql','sql/uninstall/oracle/drop_personalization.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.660000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000126','DPS.LogicalOrganizations','sql/db_components/oracle/logical_org_ddl.sql','sql/uninstall/oracle/drop_logical_org_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.696000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000127','DSS','sql/db_components/oracle/business_process_rpt_ddl.sql','sql/uninstall/oracle/drop_business_process_rpt_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.714000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000128','DSS','sql/db_components/oracle/das_mappers.sql','sql/uninstall/oracle/drop_das_mappers.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.733000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000129','DSS','sql/db_components/oracle/dps_mappers.sql','sql/uninstall/oracle/drop_dps_mappers.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.851000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000130','DSS','sql/db_components/oracle/dss_mappers.sql','sql/uninstall/oracle/drop_dss_mappers.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.859000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000131','DSS','sql/db_components/oracle/markers_ddl.sql','sql/uninstall/oracle/drop_markers_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.896000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000132','DSS','sql/db_components/oracle/profile_bp_markers_ddl.sql','sql/uninstall/oracle/drop_profile_bp_markers_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.32.913000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000133','DSS','sql/db_components/oracle/scenario_ddl.sql','sql/uninstall/oracle/drop_scenario_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.33.517000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000134','CAF','sql/db_components/oracle/assetregistry_ddl.sql','sql/uninstall/oracle/drop_assetregistry_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.33.615000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000135','WebUI','sql/db_components/oracle/viewmapping_ddl.sql','sql/uninstall/oracle/drop_viewmapping_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.33.824000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000136','Ticketing','sql/db_components/oracle/owning_group_ddl.sql','sql/uninstall/oracle/drop_owning_group_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.33.937000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000137','Ticketing','sql/db_components/oracle/ticket_ddl.sql','sql/uninstall/oracle/drop_ticket_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.34.431000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000138','Agent','sql/db_components/oracle/agent_profile_ddl.sql','sql/uninstall/oracle/drop_agent_profile_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.34.456000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000139','Service.Framework','../sql/db_components/oracle/unversioned_option_ddl.sql','../sql/uninstall/oracle/drop_unversioned_option_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.34.541000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000140','Service.Framework','../sql/db_components/oracle/unversioned_svc_framework_ddl.sql','../sql/uninstall/oracle/drop_unversioned_svc_framework_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.34.809000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000141','Service.Framework','../sql/db_components/oracle/useroption_ddl.sql','../sql/uninstall/oracle/drop_useroption_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.34.858000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000142','Service.Framework','../sql/db_components/oracle/svc_framework_shared_ddl.sql','../sql/uninstall/oracle/drop_svc_framework_shared_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.34.873000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000143','Service.Framework','../sql/db_components/oracle/svc_framework_ticket_ddl.sql','../sql/uninstall/oracle/drop_svc_framework_ticket_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.34.889000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000144','Service.Framework','../sql/db_components/oracle/svc_response_ddl.sql','../sql/uninstall/oracle/drop_svc_response_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.35.156000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000145','Service.Framework','../sql/db_components/oracle/svc_util_ddl.sql','../sql/uninstall/oracle/drop_svc_util_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.35.182000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000146','DCS','sql/db_components/oracle/claimable_ddl.sql','sql/uninstall/oracle/drop_claimable_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.35.360000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000147','DCS','sql/db_components/oracle/commerce_user.sql','sql/uninstall/oracle/drop_commerce_user.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.35.530000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000148','DCS','sql/db_components/oracle/dcs_mappers.sql','sql/uninstall/oracle/drop_dcs_mappers.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.35.586000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000149','DCS','sql/db_components/oracle/inventory_ddl.sql','sql/uninstall/oracle/drop_inventory_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.35.632000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000150','DCS','sql/db_components/oracle/order_ddl.sql','sql/uninstall/oracle/drop_order_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.36.969000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000151','DCS','sql/db_components/oracle/contracts_ddl.sql','sql/uninstall/oracle/drop_contracts_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.36.995000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000152','DCS','sql/db_components/oracle/organization_ddl.sql','sql/uninstall/oracle/drop_organization_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.37.151000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000153','DCS','sql/db_components/oracle/order_markers_ddl.sql','sql/uninstall/oracle/drop_order_markers_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.37.256000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000154','DCS','sql/db_components/oracle/user_giftlist_ddl.sql','sql/uninstall/oracle/drop_user_giftlist_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.37.431000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000155','DCS','sql/db_components/oracle/user_promotion_ddl.sql','sql/uninstall/oracle/drop_user_promotion_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.37.513000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000156','DCS','sql/db_components/oracle/invoice_ddl.sql','sql/uninstall/oracle/drop_invoice_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.37.607000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000157','DCS','sql/db_components/oracle/order_returns_ddl.sql','sql/uninstall/oracle/drop_order_returns_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.38.327000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000158','DCS-CSR','sql/db_components/oracle/DCS-CSR_ddl.sql','sql/uninstall/oracle/drop_DCS-CSR_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.38.346000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000159','DCS-CSR','sql/db_components/oracle/DCS-CSR_ticketing_ddl.sql','sql/uninstall/oracle/drop_DCS-CSR_ticketing_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.38.648000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000160','DCS-CSR','sql/db_components/oracle/DCS-CSR_indexing_mirroring_ddl.sql','sql/uninstall/oracle/drop_DCS-CSR_indexing_mirroring_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.38.660000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000161','DCS.AbandonedOrderServices','sql/db_components/oracle/abandoned_order_ddl.sql','sql/uninstall/oracle/drop_abandoned_order_ddl.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.38.753000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000162','DCS.AbandonedOrderServices','sql/db_components/oracle/abandoned_order_views.sql','sql/uninstall/oracle/drop_abandoned_order_views.sql','sql',null,'1442846188024',to_timestamp('21-SEP-15 05.36.38.858000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000163','DAS','/DAS/install/data/dynAdminRepo.xml',null,'template','/atg/dynamo/security/AdminSqlRepository','1442846207914',to_timestamp('21-SEP-15 05.36.47.915000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000164','WebUI','/WebUI/install/data/external_profile.xml',null,'template','/atg/userprofiling/ProfileAdapterRepository','1442846207938',to_timestamp('21-SEP-15 05.36.47.939000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000165','Service.Framework','/Service11.1/Service/Framework/data/initial/svc_option_data.xml',null,'template','/atg/svc/option/OptionRepository','1442846215390',to_timestamp('21-SEP-15 05.36.55.391000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+Insert into PRODUCTION.DAS_DBSETUP_HISTORY (HISTORY_ID,MODULE_NAME,RESOURCE_NAME,UNDO_RESOURCE_NAME,OPERATION_TYPE,REPOSITORY,JOB_ID,EXEC_DATE) values ('11.1_1000166','DCS-CSR','/CSC11.1/DCS-CSR/install/data/csrOptions.xml',null,'template','/atg/svc/option/OptionRepository','1442846222676',to_timestamp('21-SEP-15 05.37.02.678000000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+REM INSERTING into PRODUCTION.DAS_DD_MARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPLOYMENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPLOY_DATA
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPLOY_MARK
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPL_DEPLDAT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPL_ITEM_REF
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPL_OPTIONS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPL_PROGRESS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEPL_REPMAPS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_DEP_FAIL_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_FILE_MARK
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_GROUP_ASSOC
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',0,'support-cases-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',1,'server-restart-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',2,'tools-pipeline-editor-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',3,'tools-server-activity-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',4,'components-path-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',5,'support-knowledge-base-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',6,'components-module-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('developers-group',7,'tools-j2ee-deploy-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('designers-group',0,'support-knowledge-base-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('designers-group',1,'support-cases-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('designers-group',2,'pages-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',0,'targeting-preview-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',1,'scenarios-slots-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',2,'scenarios-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',3,'analysis-datasets-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',4,'targeting-groups-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',5,'analysis-charts-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',6,'scenarios-templates-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',7,'analysis-chart-templates-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('marketing-group',8,'targeting-targeted-content-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',0,'scenarios-slots-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',1,'pages-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',2,'tools-pipeline-editor-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',3,'analysis-datasets-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',4,'tools-server-activity-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',5,'admin-roles-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',6,'support-knowledge-base-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',7,'targeting-groups-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',8,'analysis-charts-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',9,'targeting-preview-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',10,'admin-users-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',11,'support-cases-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',12,'server-restart-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',13,'server-shutdown-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',14,'scenarios-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',15,'components-path-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',16,'scenarios-templates-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',17,'components-module-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',18,'tools-j2ee-deploy-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',19,'analysis-chart-templates-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('administrators-group',20,'targeting-targeted-content-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('admin',0,'everyone-group');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('admin',1,'commerce-repositories-user-group');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('admin',2,'administrators-group');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('admin',3,'content-repositories-user-group');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('managers-group',0,'support-knowledge-base-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('managers-group',1,'support-cases-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('managers-group',2,'admin-roles-privilege');
+Insert into PRODUCTION.DAS_GROUP_ASSOC (ACCOUNT_NAME,SEQUENCE_NUM,GROUP_NAME) values ('managers-group',3,'admin-users-privilege');
+REM INSERTING into PRODUCTION.DAS_GSA_SUBSCRIBER
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3200006,'192.168.142.1',65382,'/atg/dynamo/service/jdbc/SQLRepository','das_gsa_subscriber');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300008,'192.168.142.1',49492,'/atg/dynamo/service/jdbc/SQLRepository','das_gsa_subscriber');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300002,'192.168.142.1',49492,'/atg/userprofiling/ProfileAdapterRepository','role');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300003,'192.168.142.1',49492,'/atg/userprofiling/ProfileAdapterRepository','organizationalRole');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300004,'192.168.142.1',49492,'/atg/userprofiling/ProfileAdapterRepository','genericFolder');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300005,'192.168.142.1',49492,'/atg/userprofiling/ProfileAdapterRepository','roleFolder');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300010,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','returnItemDisposition');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300009,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','returnReasons');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300011,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','returnRequest');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300012,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','returnItem');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300013,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','refundMethod');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300014,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','storeCredit');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300015,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','creditCard');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3300016,'192.168.142.1',49492,'/atg/commerce/custsvc/CsrRepository','returnComment');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3200002,'192.168.142.1',65382,'/atg/userprofiling/ProfileAdapterRepository','role');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3200003,'192.168.142.1',65382,'/atg/userprofiling/ProfileAdapterRepository','organizationalRole');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3200004,'192.168.142.1',65382,'/atg/userprofiling/ProfileAdapterRepository','genericFolder');
+Insert into PRODUCTION.DAS_GSA_SUBSCRIBER (ID,ADDRESS,PORT,REPOSITORY,ITEMDESCRIPTOR) values (3200005,'192.168.142.1',65382,'/atg/userprofiling/ProfileAdapterRepository','roleFolder');
+REM INSERTING into PRODUCTION.DAS_ID_GENERATOR
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('dps_user_event',0,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('address',100000,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('scenarioInfo',1000001,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('deletion',1,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalOrganization',1,10000,'iorg',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalMailServer',1,10000,'imsrv',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentCollectiveScenario',1,1000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentIndividualTransition',1,1000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentOrganization',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentScenarioDeletion',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentXref',1,1000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentPersonalizedPage',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('deploymentProgress',1000,100,'dprg',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('fileMarker',1,100000,'fm',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('mediaContent',1,10000,'m',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('paymentGroup',1,10000,'pg',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('relationship',1,10000,'r',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('complexPrice',1,10000,'cxp',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('product',1,10000,'prod',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('product-info',1,10000,'prdi',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('promotion',1,10000,'promo',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('wish-list',1,10000,'wl',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('folder',1,10000,'fld',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('costCenter',1,10000,'cctr',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('paymentTerms',1,1000,'pt',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('bcc_workbench_report',1,10000,'wr',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('project',10000,1000,'prj',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('developmentLine',10000,100,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('viewmapping',100000,10,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('refundMethod',1,10000,'rm',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('dmsLimbo',100001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('xref',100001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('dmsLimboMessage',100001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('configAndRepository',200001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('__default__',1500001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('contactInfo',200000,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('mailing',100000,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('scenarioMigration',1,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('workflowMessage',1,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalRole',1,10000,'irole',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalFolder',1,10000,'ifold',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentCollectiveTransition',1,1000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentMailing',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentOrganizationalRole',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentScenarioMigration',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentUser',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentAgent',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('threadBatch',1000,100,'tb',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('failureInfo',1,10000,'fi',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('tag',1,10000,'t',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('paymentStatus',1,10000,'ps',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('amountInfo',1,10000,'ai',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('priceLevel',1,10000,'plvl',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('sku',1,10000,'sku',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('sku-info',1,10000,'skui',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('package',1,10000,'pack',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('wish-list-item',1,10000,'wli',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('gift-item',1,10000,'gi',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('scheduledOrder',1,10000,'sco',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('invoiceNumber',1,1000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('bcc_workbench_report_item',1,10000,'wri',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('targetDef',10,10,'tar',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('processData',1,10000,'pd',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('returnReasons',1,10000,'rr',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('returnComment',1,10000,'rc',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('dps_content_request',0,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('scenarioMigrationInfo',1,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalOrganizationalRole',1,10000,'iorole',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentContactInfo',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentProfileSlot',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentPersonalizedRegion',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('deploymentData',1,1000,'dd',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('RLModuleJobIdSpace',0,100,'RLJob',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('contentFolder',1,100,'fldr',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('commerceItem',1,1000000,'ci',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('pricingAdjustment',1,10000,'pa',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('catalog',1,10000,'catalog',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('configurableProperty',1,10000,'cp',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('sku-link',1,10000,'skul',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('selection-set',1,10000,'sel',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('promotionStatus',1,10000,'pst',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('gift-list',100001,10000,'gl',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('invoice',1,1000,'invc',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('cost-center',1,10000,'ctcr',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('bcc_workbench_report_message',1,10000,'wrm',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('history',10000,1000,'hst',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('publishingJSPConfigurationCreator',28800,1,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('returnItemDisposition',1,10000,'rid',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('das_gsa_subscriber',3300001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('jms_msg_ids',10000,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('dps_request',0,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('individualScenario',1,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('collectiveTransition',1,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalUser',1,10000,'iuser',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalContactInfo',1,10000,'ici',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('ticket',1000,100,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentFolder',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentMailBatch',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentRole',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentScenarioMigrationInfo',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentPersonalizedPageFolder',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentAccessRight',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('marker',1,100000,'mark',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('order',1,10000,'o',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('priceList',1,10000,'plist',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('configurationOption',1,10000,'co',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('inventory',1,10000,'inv',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('foreignCatalog',1,10000,'fc',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('quoteInfo',1,10000,'qi',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('fileFolder',100000,10,'ff',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('returnRequest',1,10000,'ret',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('usageMetric',1000001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('layer',0,100,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('user',200000,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('collectiveScenario',1000001,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('individualTransition',1,1000000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalAccessRight',1,10000,'iar',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('internalMailing',1,10000,'imail',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('activityData',1000,100,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentIndividualScenario',1,1000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentMailServer',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentScenarioInfo',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentTemplateInfo',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentPersonalizedCommunity',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('agentStatusAccessRight',1,1000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('deployment',1000,100,'depl',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('repositoryMarker',1,100000,'rm',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('article',1,10000,'a',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('shippingGroup',1,10000,'sg',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('handlingInstruction',1,10000,'hi',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('price',1,10000,'p',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('category',1,10000,'cat',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('category-info',1,10000,'cati',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('media',1,10000,'m',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('credit-card',1,10000,'usercc',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('claimable',1,10000,'clm',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('commerceMessage',1,10000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('deliveryInfo',1,1000,'di',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('bcc_workbench_tile',1,10000,'wt',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('process',10000,1000,'prc',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('fileAsset',100000,10,'fa',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('repositoryLoaderWkspName',1,10000,'RepLoader-',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('returnItem',1,10000,'ri',null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('templateInfo',100001,100000,null,null);
+Insert into PRODUCTION.DAS_ID_GENERATOR (ID_SPACE_NAME,SEED,BATCH_SIZE,PREFIX,SUFFIX) values ('endecaIndexJob',1200001,100000,null,null);
+REM INSERTING into PRODUCTION.DAS_NS_ACLS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_NUCL_SEC
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_PURGE_PROGRESS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_REP_MARK
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_SDS
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_SDS (SDS_NAME,CURR_DS_NAME,DYNAMO_SERVER,LAST_MODIFIED) values ('SwitchingDataSource','DataSourceA','Alexander-PC:8850',to_date('23-SEP-15','DD-MON-RR'));
+REM INSERTING into PRODUCTION.DAS_SECURE_ID_GEN
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_SECURE_ID_GEN (ID_SPACE_NAME,SEED,BATCH_SIZE,IDS_PER_BATCH,PREFIX,SUFFIX) values ('__claimable__',0,100000,997,null,null);
+REM INSERTING into PRODUCTION.DAS_SITEINDEX
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_SITEMAP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_SYS_CONFIG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_THREAD_BATCH
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DAS_USAGE_METRIC
+SET DEFINE OFF;
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (300001,'Alexander-PC:8850',to_timestamp('23-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),12,46);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (900001,'Alexander-PC:8850',to_timestamp('24-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),11,11);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (900002,'Alexander-PC:8850',to_timestamp('24-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),12,38);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (400001,'Alexander-PC:8850',to_timestamp('23-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),14,52);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (500001,'Alexander-PC:8850',to_timestamp('23-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),15,27);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (600001,'Alexander-PC:8850',to_timestamp('23-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),16,70);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (800001,'Alexander-PC:8850',to_timestamp('23-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),18,33);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (800002,'Alexander-PC:8850',to_timestamp('24-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),10,15);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (100001,'Alexander-PC:8850',to_timestamp('21-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),18,14);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (1000001,'Alexander-PC:8850',to_timestamp('24-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),15,4);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (1000002,'Alexander-PC:8850',to_timestamp('24-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),16,30);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (200001,'Alexander-PC:8850',to_timestamp('22-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),16,27);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (200002,'Alexander-PC:8850',to_timestamp('22-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),17,6);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (200003,'Alexander-PC:8850',to_timestamp('22-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),19,23);
+Insert into PRODUCTION.DAS_USAGE_METRIC (USAGE_METRIC_ID,SERVER_IDENTIFIER,USAGE_DATE,USAGE_HOUR_OF_DAY,USAGE_VALUE) values (700001,'Alexander-PC:8850',to_timestamp('23-SEP-15 12.00.00.000000000 AM','DD-MON-RR HH.MI.SS.FF AM'),17,50);
+REM INSERTING into PRODUCTION.DBCPP_APPROVERIDS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_APPRSYSMSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_APPR_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_AUTHAPPRIDS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_CCITEM_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_CCORDER_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_CCSHIP_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_COST_CENTER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_INVOICE_REQ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_ORDER_CC
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_PMT_REQ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_SCHED_CLONE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBCPP_SCHED_ORDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_BUYER_APPROVER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_BUYER_COSTCTR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_BUYER_PLIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_BUYER_PREFVNDR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_CONTRACT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_CONTRACT_TERM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_COST_CENTER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_INVOICE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_INV_DELIVERY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_INV_PMT_TERMS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_ORGANIZATION
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_ORG_APPROVER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_ORG_CONTACT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_ORG_COSTCTR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_ORG_PAYMENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DBC_ORG_PREFVNDR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_AMOUNT_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_AMTINFO_ADJ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_AUTH_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_BATCH_CLAIMABLE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_BILL_ADDR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_CC_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_CLAIMABLE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_COMMERCE_ITEM_MARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_CONFIG_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_COUPON
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_COUPON_BATCH
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_COUPON_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_CP_FOLDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_CREDIT_CARD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_CRED_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_DEBIT_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_DET_PRICE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_DET_RANGE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ELE_SHIP_GRP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_GC_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_GIFTCERT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_GIFT_CERT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_GIFT_INST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_GWP_ITEM_MARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_HAND_INST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_HRD_SHIP_GRP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ISP_SHIP_GRP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ITEM_CI
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ITEM_PRICE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ITMPRICE_DET
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_MANUAL_ADJ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_NTAXSHIPITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER_ADJ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER_INST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER_PG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER_PRICE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORDER_SG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_ORD_ABANDON
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_PAYITEM_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_PAYORDER_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_PAYSHIP_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_PAY_GROUP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_PAY_INST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_PAY_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_PRICE_ADJUST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_QUOTE_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_RELATIONSHIP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_REL_ORDERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_REL_RANGE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SCHD_ERRMSG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SCHED_ERROR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SCHERR_AUX
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SC_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SG_HAND_INST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SHIPITEM_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SHIPITEM_SUB
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SHIPITEM_TAX
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SHIP_ADDR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SHIP_GROUP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SHIP_INST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SHIP_PRICE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_STORE_CRED
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_SUBSKU_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_TAXSHIPITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCSPP_TAX_PRICE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_CART_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_GIFTINST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_GIFTITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_GIFTLIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_GIFTLIST_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_GWP_ORDER_MARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_INVENTORY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_INV_ATP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_ORDER_MARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_ORD_MERGE_EVT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_ORG_ADDRESS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_PROMO_GRNTD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_PROMO_RVKD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_PROMO_ST_CPN
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_PROM_USED_EVT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_STORECRED_CLM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_SUBMT_ORD_EVT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USER_ABANDONED
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USER_FAVSTORES
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USER_GIFTLIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USER_OTHERLIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USER_WISHLIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USR_ACTVPROMO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USR_PROMOSTAT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DCS_USR_USEDPROMO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DLO_LOGICAL_ORG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_CLIENT
+SET DEFINE OFF;
+Insert into PRODUCTION.DMS_CLIENT (CLIENT_NAME,CLIENT_ID) values ('Alexander-PC:8850',100001);
+REM INSERTING into PRODUCTION.DMS_LIMBO
+SET DEFINE OFF;
+Insert into PRODUCTION.DMS_LIMBO (LIMBO_NAME,LIMBO_ID) values ('Alexander-PC:8850',100001);
+REM INSERTING into PRODUCTION.DMS_LIMBO_BODY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_LIMBO_DELAY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_LIMBO_MSG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_LIMBO_PROPS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_LIMBO_PTYPES
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_LIMBO_REPLYTO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_MSG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_MSG_PROPERTIES
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_QUEUE
+SET DEFINE OFF;
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('sqldms/MessageImporter/CollectiveEvents',100002,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('sqldms/DPSQueue/InboundEmailEvents',100003,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('sqldms/DPSQueue/OutboundEmailEvents',100004,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('sqldms/DSSQueue/IndividualTimerEvents',100005,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('sqldms/DSSQueue/CollectiveTimerEvents',100006,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('sqldms/DSSQueue/BatchTimerEvents',100007,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('sqldms/DSSQueue/ScenarioEndEvents',100008,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('DSSQueue/Inventory/Scenarios',100009,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('Approval/ApprovalUpdate',100010,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('Fulfillment/ErrorNotification',100011,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('Fulfillment/DeadMessageQueue',100012,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('Fulfillment/UpdateInventoryErrorNotification',100013,0);
+Insert into PRODUCTION.DMS_QUEUE (QUEUE_NAME,QUEUE_ID,TEMP_ID) values ('Fulfillment/UpdateInventoryDeadMessageQueue',100014,0);
+REM INSERTING into PRODUCTION.DMS_QUEUE_ENTRY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_QUEUE_RECV
+SET DEFINE OFF;
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500002,100005);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500003,100006);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500004,100007);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500005,100003);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500006,100008);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500009,100002);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500010,100009);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500011,100010);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500012,100011);
+Insert into PRODUCTION.DMS_QUEUE_RECV (CLIENT_ID,RECEIVER_ID,QUEUE_ID) values (100001,1500013,100013);
+REM INSERTING into PRODUCTION.DMS_TOPIC
+SET DEFINE OFF;
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/IntegrationRepository/RemoteDataEvents',100015,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DASTopic/DropletCacheInvalidator',100016,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DASTopic/GSAInvalidator',100017,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DSSTopic/ScenarioUpdateEvents',100018,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DSSTopic/ScenarioMigrationUpdateEvents',100019,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DSSTopic/IndividualTimerEvents',100020,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DSSTopic/CollectiveTimerEvents',100021,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DSSTopic/BatchTimerEvents',100022,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DSSTopic/SegmentStartTimerEvents',100023,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('sqldms/DSSTopic/DisableScenarioEvents',100024,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/ModifyOrder',100025,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/ModifyOrderNotification',100026,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/Scenarios',100027,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/SubmitOrder',100028,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/UpdateInventory',100029,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Inventory/Scenarios',100030,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/HardGoods',100031,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/SoftGoods',100032,0);
+Insert into PRODUCTION.DMS_TOPIC (TOPIC_NAME,TOPIC_ID,TEMP_ID) values ('Fulfillment/InStorePickup',100033,0);
+REM INSERTING into PRODUCTION.DMS_TOPIC_ENTRY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DMS_TOPIC_SUB
+SET DEFINE OFF;
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'ND-1500001',1500001,100016,0,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'ND-1500007',1500007,100017,0,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'ND-1500008',1500008,100015,0,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'ND-1500014',1500014,100032,0,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'GSAInvalidateDurableSubscriber',100034,100017,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'scenarioMigrationUpdates',100036,100019,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'segmentStartTimers',100038,100023,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'fulfillmentScenarios',100040,100027,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'scenarioUpdatesGlobalScenarioServer',100041,100018,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'disableScenarioEvents',100049,100024,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'OrderChangeHandler-ModifyOrderNotification',100053,100026,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'OrderFulfiller-ModifyOrderNotification',100054,100026,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'OrderFulfiller-SubmitOrder',100055,100028,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'OrderFulfiller-ModifyOrder',100056,100025,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'HardgoodFulfiller-HardGoods',100057,100031,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'HardgoodFulfiller-UpdateInventory',100058,100029,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'InStorePickupFulfiller-Fulfiller-InStorePickup',100060,100033,1,1);
+Insert into PRODUCTION.DMS_TOPIC_SUB (CLIENT_ID,SUBSCRIBER_NAME,SUBSCRIBER_ID,TOPIC_ID,DURABLE,ACTIVE) values (100001,'InStorePickupFulfiller-UpdateInventory',100061,100029,1,1);
+REM INSERTING into PRODUCTION.DPS_CHILD_FOLDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_CONTACT_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_CON_REQ
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_CON_REQ_SUM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_CREDIT_CARD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_EMAIL_ADDRESS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_EVENT_TYPE
+SET DEFINE OFF;
+Insert into PRODUCTION.DPS_EVENT_TYPE (ID,NAME) values (2,'login');
+Insert into PRODUCTION.DPS_EVENT_TYPE (ID,NAME) values (4,'logout');
+Insert into PRODUCTION.DPS_EVENT_TYPE (ID,NAME) values (0,'newsession');
+Insert into PRODUCTION.DPS_EVENT_TYPE (ID,NAME) values (3,'registration');
+Insert into PRODUCTION.DPS_EVENT_TYPE (ID,NAME) values (1,'sessionexpiration');
+REM INSERTING into PRODUCTION.DPS_FOLDER
+SET DEFINE OFF;
+Insert into PRODUCTION.DPS_FOLDER (FOLDER_ID,TYPE,NAME,PARENT,DESCRIPTION) values ('root',2001,'rootFolder',null,'folder : rootFolder');
+REM INSERTING into PRODUCTION.DPS_LOG_ID
+SET DEFINE OFF;
+Insert into PRODUCTION.DPS_LOG_ID (TABLENAME,NEXTID) values ('dps_user_event',0);
+Insert into PRODUCTION.DPS_LOG_ID (TABLENAME,NEXTID) values ('dps_request',0);
+Insert into PRODUCTION.DPS_LOG_ID (TABLENAME,NEXTID) values ('dps_con_req',0);
+REM INSERTING into PRODUCTION.DPS_MAILING
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_MAIL_BATCH
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_MAIL_SERVER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_MAIL_TRACKDATA
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_MARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_ORGANIZATION
+SET DEFINE OFF;
+Insert into PRODUCTION.DPS_ORGANIZATION (ORG_ID,NAME,DESCRIPTION,PARENT_ORG) values ('root','Root Organization',null,null);
+REM INSERTING into PRODUCTION.DPS_ORG_ANCESTORS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_ORG_CHLDORG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_ORG_ROLE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_OTHER_ADDR
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_PGRP_CON_SUM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_PGRP_REQ_SUM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_PROFILE_REALM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_RELATIVEROLE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_REQNAME_SUM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_REQUEST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_ROLE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_ROLEFOLD_CHLD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_ROLE_REL_ORG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_SCENARIO_VALUE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_SEG_LIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_SEG_LIST_FOLDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_SEG_LIST_NAME
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_SESSION_SUM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_ADDRESS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_EVENT_SUM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_MAILING
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_ORG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_ORG_ANC
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_PREVPWD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_ROLES
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_SCENARIO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_SEC_ORGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USER_SLOT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USR_CREDITCARD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DPS_USR_MARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_ORDER_IDX$I
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_ORDER_IDX$K
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_ORDER_IDX$N
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_ORDER_IDX$R
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_PROFILE_IDX$I
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_PROFILE_IDX$K
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_PROFILE_IDX$N
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DR$SRCH_SEARCH_PROFILE_IDX$R
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DRPT_CONV_ORDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DRPT_SESSION_ORD
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DRPT_STAGE_REACHED
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_AUDIT_TRAIL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_COLL_SCENARIO
+SET DEFINE OFF;
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000001','/AbandonedOrders/AbandonedOrders.sdl',1070642429772,'ItemAddedToOrder',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000002','/AbandonedOrders/AbandonedOrders.sdl',1070642429772,'ItemQuantityChanged',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000003','/AbandonedOrders/AbandonedOrders.sdl',1070642429772,'ItemRemovedFromOrder',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000004','/AbandonedOrders/AbandonedOrders.sdl',1070642429772,'OrderSubmitted',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000005','/AbandonedOrders/AbandonedOrders.sdl',1070642429772,'OrdersMerged',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000006','/AbandonedOrders/AbandonedOrders.sdl',1070642429772,'OrderConverted',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000007','/AbandonedOrders/TransientOrderRecorder.sdl',1083777361747,'Transient Order Recorder',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000008','/DSS/TrackActivity.sdl',996093707761,'Registration Sensor',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000009','/DSS/TrackActivity.sdl',996093707761,'Registration by Administrator',null,'2');
+Insert into PRODUCTION.DSS_COLL_SCENARIO (ID,SCENARIO_NAME,MODIFICATION_TIME,SEGMENT_NAME,CREATOR_ID,STATE) values ('1000010','/DSS/TrackActivity.sdl',996093707761,'Login Sensor',null,'2');
+REM INSERTING into PRODUCTION.DSS_COLL_TRANS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DAS_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DAS_FORM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DELETION
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DEL_SEG_NAME
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_ADMIN_PROP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_ADMIN_REG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_ADMIN_UP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_CLICK
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_EVENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_INBOUND
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_PAGE_VISIT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_PROPERTY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_REFERRER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_UPDATE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_DPS_VIEW_ITEM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_IND_SCENARIO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_IND_TRANS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_MIGRATION
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_MIG_INFO_SEG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_MIG_SEG_NAME
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_PROFILE_SLOT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SCENARIO_BOOLS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SCENARIO_DATES
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SCENARIO_DBLS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SCENARIO_INFO
+SET DEFINE OFF;
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000008','/recorders/adminprofileupdate.sdl',1,997306245771,997306216309,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000009','/recorders/dps.sdl',1,955071601000,955071601000,'admin',null,5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000010','/recorders/viewitem.sdl',1,964040379145,955071601000,'admin',null,5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000011','/recorders/inboundemail.sdl',1,988233926402,988233852556,'admin',null,5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000012','/recorders/profileupdate.sdl',1,997306205744,997306154891,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000013','/recorders/dcs-analytics.sdl',1,1049744608083,1049381795814,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000014','/recorders/pagevisit.sdl',1,958403105275,955071601000,'admin',null,5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000015','/recorders/adminprofilepropertyupdate.sdl',1,997211863076,997211834896,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000016','/recorders/shoppingprocess.sdl',1,1084559259889,1084559224627,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000017','/recorders/formsubmission.sdl',1,997211649588,997211598935,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000018','/recorders/adminregister.sdl',1,997211685349,997211663167,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000019','/recorders/profilepropertyupdate.sdl',1,997211868153,997211699580,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000020','/recorders/das.sdl',1,955660109913,955071601000,'admin',null,5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000021','/recorders/clickthrough.sdl',1,988233912622,988215772495,'admin',null,5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000022','/DSS/TrackActivity.sdl',2,996093707761,959060700000,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000001','/DCS/Fulfillment.sdl',1,995494621342,-1,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000002','/DCS/RelatedItemsSlot.sdl',1,1277821818499,1028261804509,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000003','/DCS/ReceiveOrder.sdl',1,995494616164,-1,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000004','/AbandonedOrders/AbandonedOrders.sdl',2,1070642429772,1065022295155,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000005','/AbandonedOrders/TransientOrderRecorder.sdl',2,1083777361747,1083776891369,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000006','/recorders/referrer.sdl',1,1028071150082,1028070968862,'admin','admin',5);
+Insert into PRODUCTION.DSS_SCENARIO_INFO (ID,SCENARIO_NAME,SCENARIO_STATUS,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY,PSM_VERSION) values ('1000007','/recorders/dcs.sdl',1,963252213103,955071601000,'admin',null,5);
+REM INSERTING into PRODUCTION.DSS_SCENARIO_LONGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SCENARIO_STRS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SCEN_MIG_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SERVER_ID
+SET DEFINE OFF;
+Insert into PRODUCTION.DSS_SERVER_ID (SERVER_ID,SERVER_TYPE) values ('Alexander-PC:8850',0);
+REM INSERTING into PRODUCTION.DSS_SLOT_ITEMS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_SLOT_PRIORITY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_TEMPLATE_INFO
+SET DEFINE OFF;
+Insert into PRODUCTION.DSS_TEMPLATE_INFO (ID,TEMPLATE_NAME,MODIFICATION_TIME,CREATION_TIME,AUTHOR,LAST_MODIFIED_BY) values ('100001','/CrossSellProductsSlot.sdt',1029524638579,1029523572286,'admin','admin');
+REM INSERTING into PRODUCTION.DSS_USER_BPMARKERS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.DSS_XREF
+SET DEFINE OFF;
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100103','/recorders/profileupdate.sdl','event','atg.dps.ProfileUpdate');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100104','/recorders/dcs-analytics.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100105','/recorders/dcs-analytics.sdl','creationDate','1049381795814');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100106','/recorders/dcs-analytics.sdl','lastModifiedDate','1049744608083');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100107','/recorders/dcs-analytics.sdl','recordEvent','/submitorderevent.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100108','/recorders/dcs-analytics.sdl','recordEvent','/promotionusedevent.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100109','/recorders/dcs-analytics.sdl','recordEvent','/ordersmergedevent.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100110','/recorders/dcs-analytics.sdl','recordEvent','/itemquantitychanged.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100111','/recorders/dcs-analytics.sdl','recordEvent','/promotiongranted.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100112','/recorders/dcs-analytics.sdl','recordEvent','/promotionrevoked.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100113','/recorders/dcs-analytics.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100114','/recorders/dcs-analytics.sdl','event','atg.commerce.fulfillment.SubmitOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100115','/recorders/dcs-analytics.sdl','event','atg.commerce.promotion.PromotionUsed');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100116','/recorders/dcs-analytics.sdl','event','atg.commerce.order.OrdersMerged');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100117','/recorders/dcs-analytics.sdl','event','atg.commerce.order.ItemQuantityChanged');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100118','/recorders/dcs-analytics.sdl','event','atg.commerce.promotion.PromotionGranted');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100119','/recorders/dcs-analytics.sdl','event','atg.commerce.promotion.PromotionRevoked');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100120','/recorders/pagevisit.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100121','/recorders/pagevisit.sdl','creationDate','955071601000');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100122','/recorders/pagevisit.sdl','lastModifiedDate','958403105275');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100123','/recorders/pagevisit.sdl','recordEvent','/pagevisit.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100124','/recorders/pagevisit.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100125','/recorders/pagevisit.sdl','event','atg.dps.PageVisit');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100126','/recorders/adminprofilepropertyupdate.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100127','/recorders/adminprofilepropertyupdate.sdl','creationDate','997211834896');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100128','/recorders/adminprofilepropertyupdate.sdl','lastModifiedDate','997211863076');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100129','/recorders/adminprofilepropertyupdate.sdl','recordEvent','/adminprofilepropertyupdate.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100130','/recorders/adminprofilepropertyupdate.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100131','/recorders/adminprofilepropertyupdate.sdl','event','atg.dps.AdminProfilePropertyUpdate');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100132','/recorders/shoppingprocess.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100133','/recorders/shoppingprocess.sdl','creationDate','1084559224627');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100134','/recorders/shoppingprocess.sdl','lastModifiedDate','1084559259889');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100135','/recorders/shoppingprocess.sdl','recordEvent','/shoppingprocess.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100136','/recorders/shoppingprocess.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100137','/recorders/shoppingprocess.sdl','event','atg.business.process.stage.reached');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100138','/recorders/formsubmission.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100139','/recorders/formsubmission.sdl','creationDate','997211598935');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100140','/recorders/formsubmission.sdl','lastModifiedDate','997211649588');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100141','/recorders/formsubmission.sdl','recordEvent','/formsubmission.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100142','/recorders/formsubmission.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100143','/recorders/formsubmission.sdl','event','atg.das.FormSubmission');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100144','/recorders/adminregister.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100145','/recorders/adminregister.sdl','creationDate','997211663167');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100146','/recorders/adminregister.sdl','lastModifiedDate','997211685349');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100147','/recorders/adminregister.sdl','recordEvent','/adminregister.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100148','/recorders/adminregister.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100149','/recorders/adminregister.sdl','event','atg.dps.AdminRegister');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100150','/recorders/profilepropertyupdate.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100151','/recorders/profilepropertyupdate.sdl','creationDate','997211699580');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100152','/recorders/profilepropertyupdate.sdl','lastModifiedDate','997211868153');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100153','/recorders/profilepropertyupdate.sdl','recordEvent','/profilepropertyupdate.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100154','/recorders/profilepropertyupdate.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100155','/recorders/profilepropertyupdate.sdl','event','atg.dps.ProfilePropertyUpdate');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100156','/recorders/das.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100157','/recorders/das.sdl','creationDate','955071601000');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100158','/recorders/das.sdl','lastModifiedDate','955660109913');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100159','/recorders/das.sdl','recordEvent','/dasstartup.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100160','/recorders/das.sdl','recordEvent','/dasshutdown.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100161','/recorders/das.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100162','/recorders/das.sdl','event','atg.das.Startup');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100163','/recorders/das.sdl','event','atg.das.Shutdown');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100164','/recorders/clickthrough.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100165','/recorders/clickthrough.sdl','creationDate','988215772495');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100166','/recorders/clickthrough.sdl','lastModifiedDate','988233912622');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100167','/recorders/clickthrough.sdl','recordEvent','/clickthrough.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100168','/recorders/clickthrough.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100169','/recorders/clickthrough.sdl','event','atg.dps.ClickThrough');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100170','/DSS/TrackActivity.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100171','/DSS/TrackActivity.sdl','creationDate','959060700000');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100172','/DSS/TrackActivity.sdl','lastModifiedDate','996093707761');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100173','/DSS/TrackActivity.sdl','profileAttribute','registrationDate');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100174','/DSS/TrackActivity.sdl','profileAttribute','lastActivity');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100175','/DSS/TrackActivity.sdl','action','modify');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100176','/DSS/TrackActivity.sdl','event','atg.dps.Register');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100177','/DSS/TrackActivity.sdl','event','atg.dps.AdminRegister');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100178','/DSS/TrackActivity.sdl','event','atg.dps.Login');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100001','/DCS/Fulfillment.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100002','/DCS/Fulfillment.sdl','lastModifiedDate','995494621342');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100003','/DCS/Fulfillment.sdl','emailTemplate','/Dynamo/commerce/en/email_templates/OrderFinished.jhtml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100004','/DCS/Fulfillment.sdl','emailTemplate','/Dynamo/commerce/en/email_templates/ShippingGroupShipped.jhtml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100005','/DCS/Fulfillment.sdl','emailTemplate','/Dynamo/commerce/en/email_templates/OrderHasUnavailableItems.jhtml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100006','/DCS/Fulfillment.sdl','emailTemplate','/Dynamo/commerce/en/email_templates/OrderCancelled.jhtml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100007','/DCS/Fulfillment.sdl','emailTemplate','/Dynamo/commerce/en/email_templates/ItemRemovedFromOrder.jhtml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100008','/DCS/Fulfillment.sdl','emailTemplate','/Dynamo/commerce/en/email_templates/PaymentGroupChanged.jhtml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100009','/DCS/Fulfillment.sdl','action','sendEmail');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100010','/DCS/Fulfillment.sdl','event','atg.commerce.fulfillment.scenario.OrderModified');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100011','/DCS/Fulfillment.sdl','event','atg.commerce.fulfillment.scenario.ShippingGroupModified');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100012','/DCS/Fulfillment.sdl','event','atg.commerce.order.ItemRemovedFromOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100013','/DCS/Fulfillment.sdl','event','atg.commerce.fulfillment.scenario.PaymentGroupModified');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100014','/DCS/RelatedItemsSlot.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100015','/DCS/RelatedItemsSlot.sdl','creationDate','1028261804509');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100016','/DCS/RelatedItemsSlot.sdl','lastModifiedDate','1277821818499');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100017','/DCS/RelatedItemsSlot.sdl','slot','/atg/registry/Slots/RelatedItemsOfCart');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100018','/DCS/RelatedItemsSlot.sdl','action','emptySlot');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100019','/DCS/RelatedItemsSlot.sdl','action','fillRelatedItemsSlotAction');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100020','/DCS/RelatedItemsSlot.sdl','event','atg.commerce.order.ItemAddedToOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100021','/DCS/RelatedItemsSlot.sdl','event','atg.commerce.order.ItemRemovedFromOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100022','/DCS/RelatedItemsSlot.sdl','event','atg.dss.SlotItemRequest');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100023','/DCS/RelatedItemsSlot.sdl','event','atg.commerce.order.OrderSaved');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100024','/DCS/RelatedItemsSlot.sdl','event','atg.commerce.order.SwitchOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100025','/DCS/RelatedItemsSlot.sdl','event','atg.multisite.SiteChanged');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100026','/DCS/ReceiveOrder.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100027','/DCS/ReceiveOrder.sdl','lastModifiedDate','995494616164');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100028','/DCS/ReceiveOrder.sdl','emailTemplate','/Dynamo/commerce/en/email_templates/SubmitOrderReceived.jhtml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100029','/DCS/ReceiveOrder.sdl','action','sendEmail');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100030','/DCS/ReceiveOrder.sdl','event','atg.commerce.fulfillment.SubmitOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100031','/AbandonedOrders/AbandonedOrders.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100032','/AbandonedOrders/AbandonedOrders.sdl','creationDate','1065022295155');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100033','/AbandonedOrders/AbandonedOrders.sdl','lastModifiedDate','1070642429772');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100034','/AbandonedOrders/AbandonedOrders.sdl','action','Set Last Updated');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100035','/AbandonedOrders/AbandonedOrders.sdl','action','Reanimate Abandoned Order');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100036','/AbandonedOrders/AbandonedOrders.sdl','action','Convert Abandoned Order');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100037','/AbandonedOrders/AbandonedOrders.sdl','action','Log Promotion Information');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100038','/AbandonedOrders/AbandonedOrders.sdl','event','atg.commerce.order.ItemAddedToOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100039','/AbandonedOrders/AbandonedOrders.sdl','event','atg.commerce.order.ItemQuantityChanged');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100040','/AbandonedOrders/AbandonedOrders.sdl','event','atg.commerce.order.ItemRemovedFromOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100041','/AbandonedOrders/AbandonedOrders.sdl','event','atg.commerce.fulfillment.SubmitOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100042','/AbandonedOrders/AbandonedOrders.sdl','event','atg.commerce.order.OrdersMerged');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100043','/AbandonedOrders/AbandonedOrders.sdl','event','atg.commerce.order.abandoned.OrderConverted');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100044','/AbandonedOrders/TransientOrderRecorder.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100045','/AbandonedOrders/TransientOrderRecorder.sdl','creationDate','1083776891369');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100046','/AbandonedOrders/TransientOrderRecorder.sdl','lastModifiedDate','1083777361747');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100047','/AbandonedOrders/TransientOrderRecorder.sdl','recordEvent','/transient_order_dataset.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100048','/AbandonedOrders/TransientOrderRecorder.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100049','/AbandonedOrders/TransientOrderRecorder.sdl','event','atg.commerce.order.abandoned.TransientOrderEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100050','/recorders/referrer.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100051','/recorders/referrer.sdl','creationDate','1028070968862');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100052','/recorders/referrer.sdl','lastModifiedDate','1028071150082');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100053','/recorders/referrer.sdl','recordEvent','/referrer.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100054','/recorders/referrer.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100055','/recorders/referrer.sdl','event','atg.dps.Referrer');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100056','/recorders/dcs.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100057','/recorders/dcs.sdl','creationDate','955071601000');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100058','/recorders/dcs.sdl','lastModifiedDate','963252213103');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100059','/recorders/dcs.sdl','recordEvent','/itemaddedtoorder.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100060','/recorders/dcs.sdl','recordEvent','/itemremovedfromorder.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100061','/recorders/dcs.sdl','recordEvent','/scenarioaddeditemtoorder.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100062','/recorders/dcs.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100063','/recorders/dcs.sdl','event','atg.commerce.order.ItemAddedToOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100064','/recorders/dcs.sdl','event','atg.commerce.order.ItemRemovedFromOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100065','/recorders/dcs.sdl','event','atg.commerce.promotion.ScenarioAddedItemToOrder');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100066','/recorders/adminprofileupdate.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100067','/recorders/adminprofileupdate.sdl','creationDate','997306216309');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100068','/recorders/adminprofileupdate.sdl','lastModifiedDate','997306245771');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100069','/recorders/adminprofileupdate.sdl','recordEvent','/adminprofileupdate.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100070','/recorders/adminprofileupdate.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100071','/recorders/adminprofileupdate.sdl','event','atg.dps.AdminProfileUpdate');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100072','/recorders/dps.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100073','/recorders/dps.sdl','creationDate','955071601000');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100074','/recorders/dps.sdl','lastModifiedDate','955071601000');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100075','/recorders/dps.sdl','recordEvent','/login.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100076','/recorders/dps.sdl','recordEvent','/logout.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100077','/recorders/dps.sdl','recordEvent','/register.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100078','/recorders/dps.sdl','recordEvent','/sessionstart.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100079','/recorders/dps.sdl','recordEvent','/sessionend.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100080','/recorders/dps.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100081','/recorders/dps.sdl','event','atg.dps.Login');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100082','/recorders/dps.sdl','event','atg.dps.Logout');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100083','/recorders/dps.sdl','event','atg.dps.Register');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100084','/recorders/dps.sdl','event','atg.dps.StartSession');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100085','/recorders/dps.sdl','event','atg.dps.EndSession');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100086','/recorders/viewitem.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100087','/recorders/viewitem.sdl','creationDate','955071601000');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100088','/recorders/viewitem.sdl','lastModifiedDate','964040379145');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100089','/recorders/viewitem.sdl','recordEvent','/viewitem.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100090','/recorders/viewitem.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100091','/recorders/viewitem.sdl','event','atg.dps.ViewItem');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100092','/recorders/inboundemail.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100093','/recorders/inboundemail.sdl','creationDate','988233852556');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100094','/recorders/inboundemail.sdl','lastModifiedDate','988233926402');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100095','/recorders/inboundemail.sdl','recordEvent','/inboundemail.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100096','/recorders/inboundemail.sdl','action','recordEvent');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100097','/recorders/inboundemail.sdl','event','atg.dps.InboundEmail');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100098','/recorders/profileupdate.sdl','author','admin');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100099','/recorders/profileupdate.sdl','creationDate','997306154891');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100100','/recorders/profileupdate.sdl','lastModifiedDate','997306205744');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100101','/recorders/profileupdate.sdl','recordEvent','/profileupdate.xml');
+Insert into PRODUCTION.DSS_XREF (ID,SCENARIO_NAME,REFERENCE_TYPE,REFERENCE_TARGET) values ('100102','/recorders/profileupdate.sdl','action','recordEvent');
+REM INSERTING into PRODUCTION.IF_INTEG_DATA
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.MEDIA_BASE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.MEDIA_BIN
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.MEDIA_EXT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.MEDIA_FOLDER
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.MEDIA_TXT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SITE_CONFIGURATION
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_CONFIG
+SET DEFINE OFF;
+Insert into PRODUCTION.SRCH_CONFIG (CONFIG_PATH,CONTENT_ID,GENERATION,CLAIMED_GENERATION,NXT_INC_GENERATION,UNIQ_SERVER_ID,LAST_ACTIVITY,LAST_FULL_INDEX,LAST_INCR_INDEX) values ('/atg/commerce/search/ProductCatalogOutputConfig','DEFAULT',28,null,28,'__NULL__',to_timestamp('24-SEP-15 03.03.15.228000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('24-SEP-15 03.03.25.288000000 PM','DD-MON-RR HH.MI.SS.FF AM'),null);
+Insert into PRODUCTION.SRCH_CONFIG (CONFIG_PATH,CONTENT_ID,GENERATION,CLAIMED_GENERATION,NXT_INC_GENERATION,UNIQ_SERVER_ID,LAST_ACTIVITY,LAST_FULL_INDEX,LAST_INCR_INDEX) values ('/atg/content/search/ArticleOutputConfig','DEFAULT',0,null,0,null,null,null,null);
+Insert into PRODUCTION.SRCH_CONFIG (CONFIG_PATH,CONTENT_ID,GENERATION,CLAIMED_GENERATION,NXT_INC_GENERATION,UNIQ_SERVER_ID,LAST_ACTIVITY,LAST_FULL_INDEX,LAST_INCR_INDEX) values ('/atg/content/search/MediaContentOutputConfig','DEFAULT',0,null,0,null,null,null,null);
+Insert into PRODUCTION.SRCH_CONFIG (CONFIG_PATH,CONTENT_ID,GENERATION,CLAIMED_GENERATION,NXT_INC_GENERATION,UNIQ_SERVER_ID,LAST_ACTIVITY,LAST_FULL_INDEX,LAST_INCR_INDEX) values ('/atg/commerce/endeca/index/CategoryToDimensionOutputConfig','DEFAULT',29,null,29,'__NULL__',to_timestamp('24-SEP-15 03.03.15.226000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('24-SEP-15 03.03.25.239000000 PM','DD-MON-RR HH.MI.SS.FF AM'),null);
+REM INSERTING into PRODUCTION.SRCH_CONFIG_REPO
+SET DEFINE OFF;
+Insert into PRODUCTION.SRCH_CONFIG_REPO (ID,CONFIG_PATH,CONTENT_ID,REPOSITORY_PATH) values ('200001','/atg/commerce/endeca/index/CategoryToDimensionOutputConfig','DEFAULT','/atg/commerce/catalog/ProductCatalog');
+Insert into PRODUCTION.SRCH_CONFIG_REPO (ID,CONFIG_PATH,CONTENT_ID,REPOSITORY_PATH) values ('200002','/atg/commerce/search/ProductCatalogOutputConfig','DEFAULT','/atg/commerce/catalog/ProductCatalog');
+Insert into PRODUCTION.SRCH_CONFIG_REPO (ID,CONFIG_PATH,CONTENT_ID,REPOSITORY_PATH) values ('100001','/atg/commerce/search/ProductCatalogOutputConfig','DEFAULT','/atg/commerce/catalog/ProductCatalog_production');
+Insert into PRODUCTION.SRCH_CONFIG_REPO (ID,CONFIG_PATH,CONTENT_ID,REPOSITORY_PATH) values ('100002','/atg/commerce/endeca/index/CategoryToDimensionOutputConfig','DEFAULT','/atg/commerce/catalog/ProductCatalog_production');
+REM INSERTING into PRODUCTION.SRCH_END_JOB
+SET DEFINE OFF;
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('400001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-publishing',5,to_timestamp('23-SEP-15 12.06.51.852000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 12.06.51.971000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('700001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 02.54.11.767000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 02.54.46.366000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('700003','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 03.10.08.788000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 03.11.30.833000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900007','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.20.45.585000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.21.07.741000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900011','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.25.41.319000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.27.02.212000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('300001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-publishing',5,to_timestamp('22-SEP-15 07.31.25.353000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('22-SEP-15 07.31.52.271000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('600001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 12.49.47.914000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 12.50.10.981000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900005','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.04.40.900000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.05.57.107000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900009','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.23.32.722000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.23.48.645000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('1200002','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('24-SEP-15 03.03.15.194000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('24-SEP-15 03.04.48.418000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('200001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('22-SEP-15 04.55.04.544000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('22-SEP-15 04.56.01.258000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('300002','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-publishing',5,to_timestamp('22-SEP-15 07.32.43.487000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('22-SEP-15 07.34.41.261000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('600003','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 01.01.20.863000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 01.01.43.026000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('700002','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 03.01.53.813000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 03.02.17.903000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('800001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-publishing',5,to_timestamp('23-SEP-15 03.06.48.233000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 03.08.16.026000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900002','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 04.58.41.286000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 04.59.08.975000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900003','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.00.18.193000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.00.41.816000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('1000002','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-publishing',5,to_timestamp('23-SEP-15 05.23.04.169000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.24.21.916000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900010','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.23.51.564000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.24.06.889000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('1100001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.55.29.947000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.56.51.681000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('200002','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('22-SEP-15 07.33.56.678000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('22-SEP-15 07.34.14.290000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('500001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 12.08.12.694000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 12.09.55.733000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 04.41.46.125000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 04.43.16.143000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('1000001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-publishing',5,to_timestamp('23-SEP-15 05.03.25.579000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.04.40.458000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900006','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.20.12.954000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.20.36.219000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('100001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-publishing',6,to_timestamp('22-SEP-15 04.20.31.780000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('22-SEP-15 04.20.44.908000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('600002','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 12.50.26.557000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 12.50.50.423000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900004','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.04.19.524000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.04.35.251000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('900008','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('23-SEP-15 05.21.15.338000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('23-SEP-15 05.21.37.879000000 PM','DD-MON-RR HH.MI.SS.FF AM'),0);
+Insert into PRODUCTION.SRCH_END_JOB (REPOSITORY_ID,CONFIG_PATH,SERVER_ID,STATUS,START_TIME,END_TIME,SUCCESS) values ('1200001','/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin','Alexander-PC+atg-production',5,to_timestamp('24-SEP-15 12.10.50.739000000 PM','DD-MON-RR HH.MI.SS.FF AM'),to_timestamp('24-SEP-15 12.12.25.008000000 PM','DD-MON-RR HH.MI.SS.FF AM'),1);
+REM INSERTING into PRODUCTION.SRCH_END_STATE
+SET DEFINE OFF;
+Insert into PRODUCTION.SRCH_END_STATE (CONFIG_PATH,SCHEDULE) values ('/atg/commerce/endeca/index/ProductCatalogSimpleIndexingAdmin',null);
+REM INSERTING into PRODUCTION.SRCH_ORDER_MODIFIED
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_ORDER_STAGING
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_ORDER_TOKENS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_PROFILE_MODIFIED
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_PROFILE_STAGING
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_PROFILE_TOKENS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_SITE_CNTNT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_SITE_CNTNT_PRI
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_UPDATE_QUEUE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SRCH_UPDATE_VQUEUE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVCT_CALLNOTE_ACT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_CELL_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_CONFIG_OBJCT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_CONTENT_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_FRAMEWRK_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_FW_TAB_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_GLOBALOPT_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_GLOBALOPT_VAL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_GLOBAL_OPT
+SET DEFINE OFF;
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('CallCenterMode','CallCenterMode','serviceAdminDefaultRight',10022,null);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('RecentTicketsMaximum','RecentTicketsMaximum','serviceAdminDefaultRight',null,null);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('NewCallTab','NewCallTab','serviceAdminDefaultRight',null,null);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('NewCallPanelStack','NewCallPanelStack','serviceAdminDefaultRight',null,null);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('AgentUserDefaultHomeTab','AgentUserDefaultHomeTab','serviceAdminDefaultRight',null,null);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('DisableUserPreferences','DisableUserPreferences','serviceAdminDefaultRight',10022,null);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('TrylogOut','TrylogOut','serviceAdminDefaultRight',10022,null);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('QuickAccessCatalogs','QuickAccessCatalogs','serviceAdminDefaultRight',10012,1);
+Insert into PRODUCTION.SVC_GLOBAL_OPT (OPTION_ID,OPTION_NAME,OPTION_RIGHT,OPTION_DATA_TYPE,IS_MULTIVAL) values ('QuickAccessPriceLists','QuickAccessPriceLists','serviceAdminDefaultRight',10012,1);
+REM INSERTING into PRODUCTION.SVC_PANEL_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_PSTACK_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_PS_PNL_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_RECENT_TKTS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_SKIN_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_SPELL_DICS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_SPELL_WORDS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_TAB_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_TAB_PNL_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_TEMPLATE_CFG
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_USEROPT_INFO
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_USEROPT_VAL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.SVC_USER_OPT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACTIVITY
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_ESCAL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_MAP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_MESSAGE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_OWNAGNT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_OWNGRP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_PCREATE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_PSWCHANGE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_STATC
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ACT_WORKNOTE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_ACT_DATA
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_IN_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MESSAGES
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MMS_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MSGADDLIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MSGATTLIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MSG_ADDRS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MSG_ATTS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MSG_HDRS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_MSG_PROPS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_OUT_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_POP3_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_RAW_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_SMS_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ADS_SMTP_MSGS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ATTACHMENT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ATTCH_LIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_CUST_DETAILS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_DIST_SRV_STAT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ESC_OWN_GROUP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_ESC_TKT_Q
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_EXTREF_LIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_EXT_REF
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_OWNING_GROUP
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_QUEUE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_Q_STATS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_Q_STAT_SET
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_REASON
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_REA_CONTEXT
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_REA_CTX_LIST
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_RELATED
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_SUB_STATUS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_TICKET
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_UPDATE_PROF
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.TKT_UPD_PROPS
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_ATTRVAL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_ATTRVAL_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_CATTRVAL_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_FH
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_IM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_IM2IVM_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_IV
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_IV2IVAD_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_IVATTRDEF
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_IVM
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_IVM2PVM_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_MODE
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_PV
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_PV2PVAD_REL
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_PVATTRDEF
+SET DEFINE OFF;
+REM INSERTING into PRODUCTION.VMAP_PVM
+SET DEFINE OFF;
+--------------------------------------------------------
+--  DDL for Index SRCH_SEARCH_PROFILE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_SEARCH_PROFILE_IDX" ON "PRODUCTION"."SRCH_PROFILE_TOKENS" ("TOKENS") 
+   INDEXTYPE IS "CTXSYS"."CONTEXT"  PARAMETERS ('SYNC (ON COMMIT) LEXER ATGSEARCHLEXER');
+--------------------------------------------------------
+--  DDL for Index SRCH_SEARCH_ORDER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_SEARCH_ORDER_IDX" ON "PRODUCTION"."SRCH_ORDER_TOKENS" ("TOKENS") 
+   INDEXTYPE IS "CTXSYS"."CONTEXT"  PARAMETERS ('SYNC (ON COMMIT) LEXER ATGSEARCHLEXER');
+--------------------------------------------------------
+--  DDL for Index DPS_SCENARIO_VAL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_SCENARIO_VAL_P" ON "PRODUCTION"."DPS_SCENARIO_VALUE" ("ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_SEG_LIST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_SEG_LIST_P" ON "PRODUCTION"."DPS_SEG_LIST" ("SEGMENT_LIST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_S_L_F_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_S_L_F_P" ON "PRODUCTION"."DPS_SEG_LIST_FOLDER" ("FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_S_L_N_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_S_L_N_P" ON "PRODUCTION"."DPS_SEG_LIST_NAME" ("SEGMENT_LIST_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_ADDRESS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_ADDRESS_P" ON "PRODUCTION"."DPS_USER_ADDRESS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_EVENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_EVENT_P" ON "PRODUCTION"."DPS_USER_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_MAILING_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_MAILING_P" ON "PRODUCTION"."DPS_USER_MAILING" ("MAILING_ID", "USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_ORG_ANC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_ORG_ANC_P" ON "PRODUCTION"."DPS_USER_ORG_ANC" ("USER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_ORG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_ORG_P" ON "PRODUCTION"."DPS_USER_ORG" ("ORGANIZATION", "USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_P" ON "PRODUCTION"."DPS_USER" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_ROLES_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_ROLES_P" ON "PRODUCTION"."DPS_USER_ROLES" ("USER_ID", "ATG_ROLE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_SCENARI_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_SCENARI_P" ON "PRODUCTION"."DPS_USER_SCENARIO" ("IND_SCENARIO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_SLOT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_SLOT_P" ON "PRODUCTION"."DPS_USER_SLOT" ("ID", "PROFILE_SLOT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_CREDITCA_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USR_CREDITCA_P" ON "PRODUCTION"."DPS_USR_CREDITCARD" ("USER_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_MARKERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USR_MARKERS_P" ON "PRODUCTION"."DPS_USR_MARKERS" ("PROFILE_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_SEC_ORGS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USR_SEC_ORGS_P" ON "PRODUCTION"."DPS_USER_SEC_ORGS" ("USER_ID", "SECONDARY_ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DRC$SRCH_SEARCH_ORDER_IDX$R
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DRC$SRCH_SEARCH_ORDER_IDX$R" ON "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$R" ("ROW_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DRC$SRCH_SEARCH_PROFILE_IDX$R
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DRC$SRCH_SEARCH_PROFILE_IDX$R" ON "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$R" ("ROW_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DRPT_CONV_ORDER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DRPT_CONV_ORDER_P" ON "PRODUCTION"."DRPT_CONV_ORDER" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DRPT_SESSION_ORD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DRPT_SESSION_ORD_P" ON "PRODUCTION"."DRPT_SESSION_ORD" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSSPROFILEBP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSSPROFILEBP_P" ON "PRODUCTION"."DSS_USER_BPMARKERS" ("MARKER_ID", "PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_COLL_SCENARI_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_COLL_SCENARI_P" ON "PRODUCTION"."DSS_COLL_SCENARIO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_COLL_TRANS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_COLL_TRANS_P" ON "PRODUCTION"."DSS_COLL_TRANS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_DELETION_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_DELETION_P" ON "PRODUCTION"."DSS_DELETION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_DEL_SEG_NAME_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_DEL_SEG_NAME_P" ON "PRODUCTION"."DSS_DEL_SEG_NAME" ("ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_PVATDEF_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_PVATDEF_PK" ON "PRODUCTION"."VMAP_PVATTRDEF" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_PVM_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_PVM_PK" ON "PRODUCTION"."VMAP_PVM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_PV_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_PV_PK" ON "PRODUCTION"."VMAP_PV" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_USAGE_METRIC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_USAGE_METRIC_P" ON "PRODUCTION"."DAS_USAGE_METRIC" ("USAGE_METRIC_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_APPROVERID_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_APPROVERID_P" ON "PRODUCTION"."DBCPP_APPROVERIDS" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_APPRSYSMSG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_APPRSYSMSG_P" ON "PRODUCTION"."DBCPP_APPRSYSMSGS" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_APPR_MSGS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_APPR_MSGS_P" ON "PRODUCTION"."DBCPP_APPR_MSGS" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_AUTHAPPRID_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_AUTHAPPRID_P" ON "PRODUCTION"."DBCPP_AUTHAPPRIDS" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_CCITEM_REL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_CCITEM_REL_P" ON "PRODUCTION"."DBCPP_CCITEM_REL" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_CCORDER_RE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_CCORDER_RE_P" ON "PRODUCTION"."DBCPP_CCORDER_REL" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_CCSHIP_REL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_CCSHIP_REL_P" ON "PRODUCTION"."DBCPP_CCSHIP_REL" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_COST_CENTE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_COST_CENTE_P" ON "PRODUCTION"."DBCPP_COST_CENTER" ("COST_CENTER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_INVOICE_RE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_INVOICE_RE_P" ON "PRODUCTION"."DBCPP_INVOICE_REQ" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_ORDER_CC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_ORDER_CC_P" ON "PRODUCTION"."DBCPP_ORDER_CC" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_PMT_REQ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_PMT_REQ_P" ON "PRODUCTION"."DBCPP_PMT_REQ" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_SCHED_CLON_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_SCHED_CLON_P" ON "PRODUCTION"."DBCPP_SCHED_CLONE" ("SCHEDULED_ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBCPP_SCHED_ORDE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBCPP_SCHED_ORDE_P" ON "PRODUCTION"."DBCPP_SCHED_ORDER" ("SCHEDULED_ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_BUYER_APPROV_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_BUYER_APPROV_P" ON "PRODUCTION"."DBC_BUYER_APPROVER" ("USER_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_BUYER_COSTCT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_BUYER_COSTCT_P" ON "PRODUCTION"."DBC_BUYER_COSTCTR" ("USER_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_BUYER_PLIST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_BUYER_PLIST_P" ON "PRODUCTION"."DBC_BUYER_PLIST" ("USER_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_BUYER_PREFVN_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_BUYER_PREFVN_P" ON "PRODUCTION"."DBC_BUYER_PREFVNDR" ("USER_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_CONTRACT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_CONTRACT_P" ON "PRODUCTION"."DBC_CONTRACT" ("CONTRACT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_CONTRACT_TER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_CONTRACT_TER_P" ON "PRODUCTION"."DBC_CONTRACT_TERM" ("TERMS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_COST_CENTER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_COST_CENTER_P" ON "PRODUCTION"."DBC_COST_CENTER" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_INVOICE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_INVOICE_P" ON "PRODUCTION"."DBC_INVOICE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_INV_DELIVERY_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_INV_DELIVERY_P" ON "PRODUCTION"."DBC_INV_DELIVERY" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_INV_PMT_TERM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_INV_PMT_TERM_P" ON "PRODUCTION"."DBC_INV_PMT_TERMS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORGANIZATION_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_ORGANIZATION_P" ON "PRODUCTION"."DBC_ORGANIZATION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_APPROVER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_ORG_APPROVER_P" ON "PRODUCTION"."DBC_ORG_APPROVER" ("ORG_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_CONTACT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_ORG_CONTACT_P" ON "PRODUCTION"."DBC_ORG_CONTACT" ("ORG_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_COSTCTR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_ORG_COSTCTR_P" ON "PRODUCTION"."DBC_ORG_COSTCTR" ("ORG_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_PAYMENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_ORG_PAYMENT_P" ON "PRODUCTION"."DBC_ORG_PAYMENT" ("ORG_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_PREFVNDR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DBC_ORG_PREFVNDR_P" ON "PRODUCTION"."DBC_ORG_PREFVNDR" ("ORG_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSCITEMMARKERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSCITEMMARKERS_P" ON "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" ("MARKER_ID", "COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSGWPIMARKERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSGWPIMARKERS_P" ON "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" ("MARKER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSGWPOMARKERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSGWPOMARKERS_P" ON "PRODUCTION"."DCS_GWP_ORDER_MARKERS" ("MARKER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSORDERMARKERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSORDERMARKERS_P" ON "PRODUCTION"."DCS_ORDER_MARKERS" ("MARKER_ID", "ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_AMOUNT_INF_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_AMOUNT_INF_P" ON "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_AMTINFO_AD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_AMTINFO_AD_P" ON "PRODUCTION"."DCSPP_AMTINFO_ADJ" ("AMOUNT_INFO_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_AUTH_STATU_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_AUTH_STATU_P" ON "PRODUCTION"."DCSPP_AUTH_STATUS" ("PAYMENT_GROUP_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_BATCH_CP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_BATCH_CP_PK" ON "PRODUCTION"."DCSPP_COUPON_BATCH" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_BILL_ADDR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_BILL_ADDR_P" ON "PRODUCTION"."DCSPP_BILL_ADDR" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_CC_STATUS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_CC_STATUS_P" ON "PRODUCTION"."DCSPP_CC_STATUS" ("STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_CLAIMABLE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_CLAIMABLE_P" ON "PRODUCTION"."DCSPP_CLAIMABLE" ("CLAIMABLE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_CONFIG_ITE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_CONFIG_ITE_P" ON "PRODUCTION"."DCSPP_CONFIG_ITEM" ("CONFIG_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_COPNINFO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_COPNINFO_P" ON "PRODUCTION"."DCSPP_COUPON_INFO" ("COUPON_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_COUPON_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_COUPON_P" ON "PRODUCTION"."DCSPP_COUPON" ("COUPON_ID", "PROMOTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_CP_FOLDER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_CP_FOLDER_P" ON "PRODUCTION"."DCSPP_CP_FOLDER" ("FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_CREDIT_CAR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_CREDIT_CAR_P" ON "PRODUCTION"."DCSPP_CREDIT_CARD" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_CRED_STATU_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_CRED_STATU_P" ON "PRODUCTION"."DCSPP_CRED_STATUS" ("PAYMENT_GROUP_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_DEBIT_STAT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_DEBIT_STAT_P" ON "PRODUCTION"."DCSPP_DEBIT_STATUS" ("PAYMENT_GROUP_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_DET_PRICE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_DET_PRICE_P" ON "PRODUCTION"."DCSPP_DET_PRICE" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_DET_RANGE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_DET_RANGE_P" ON "PRODUCTION"."DCSPP_DET_RANGE" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ELE_SHIP_G_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ELE_SHIP_G_P" ON "PRODUCTION"."DCSPP_ELE_SHIP_GRP" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_GC_STATUS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_GC_STATUS_P" ON "PRODUCTION"."DCSPP_GC_STATUS" ("STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_GIFTCERT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_GIFTCERT_P" ON "PRODUCTION"."DCSPP_GIFTCERT" ("GIFTCERTIFICATE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_GIFT_CERT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_GIFT_CERT_P" ON "PRODUCTION"."DCSPP_GIFT_CERT" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_GIFT_INST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_GIFT_INST_P" ON "PRODUCTION"."DCSPP_GIFT_INST" ("HANDLING_INST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_HAND_INST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_HAND_INST_P" ON "PRODUCTION"."DCSPP_HAND_INST" ("HANDLING_INST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_HRD_SHIP_G_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_HRD_SHIP_G_P" ON "PRODUCTION"."DCSPP_HRD_SHIP_GRP" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ISP_SHIP_G_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ISP_SHIP_G_P" ON "PRODUCTION"."DCSPP_ISP_SHIP_GRP" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ITEM_CI_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ITEM_CI_P" ON "PRODUCTION"."DCSPP_ITEM_CI" ("COMMERCE_ITEM_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ITEM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ITEM_P" ON "PRODUCTION"."DCSPP_ITEM" ("COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ITEM_PRICE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ITEM_PRICE_P" ON "PRODUCTION"."DCSPP_ITEM_PRICE" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ITMPRICE_D_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ITMPRICE_D_P" ON "PRODUCTION"."DCSPP_ITMPRICE_DET" ("AMOUNT_INFO_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_MANUAL_ADJ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_MANUAL_ADJ_P" ON "PRODUCTION"."DCSPP_MANUAL_ADJ" ("MANUAL_ADJUST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_NTAXSHIPIT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_NTAXSHIPIT_P" ON "PRODUCTION"."DCSPP_NTAXSHIPITEM" ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_ADJ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_ADJ_P" ON "PRODUCTION"."DCSPP_ORDER_ADJ" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_INST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_INST_P" ON "PRODUCTION"."DCSPP_ORDER_INST" ("ORDER_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_ITEM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_ITEM_P" ON "PRODUCTION"."DCSPP_ORDER_ITEM" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_P" ON "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_PG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_PG_P" ON "PRODUCTION"."DCSPP_ORDER_PG" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_PRIC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_PRIC_P" ON "PRODUCTION"."DCSPP_ORDER_PRICE" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_REL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_REL_P" ON "PRODUCTION"."DCSPP_ORDER_REL" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDER_SG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORDER_SG_P" ON "PRODUCTION"."DCSPP_ORDER_SG" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORD_ABNDN_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_ORD_ABNDN_P" ON "PRODUCTION"."DCSPP_ORD_ABANDON" ("ABANDONMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_CEL_CFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_CEL_CFG_P" ON "PRODUCTION"."SVC_CELL_CFG" ("CELL_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_CNTNTCFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_CNTNTCFG_P" ON "PRODUCTION"."SVC_CONTENT_CFG" ("CONTENT_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_GLOBALOPT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_GLOBALOPT_P" ON "PRODUCTION"."SVC_GLOBAL_OPT" ("OPTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_RCNT_TKTS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_RCNT_TKTS_P" ON "PRODUCTION"."SVC_RECENT_TKTS" ("RECENT_TICKET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_SKIN_CFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_SKIN_CFG_P" ON "PRODUCTION"."SVC_SKIN_CFG" ("SKIN_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_SPELL_DICS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_SPELL_DICS_P" ON "PRODUCTION"."SVC_SPELL_DICS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_SPELL_WORDS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_SPELL_WORDS_P" ON "PRODUCTION"."SVC_SPELL_WORDS" ("DIC_ID", "WORD") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_TAB_CFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_TAB_CFG_P" ON "PRODUCTION"."SVC_TAB_CFG" ("TAB_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVC_TEMPLT_CFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVC_TEMPLT_CFG_P" ON "PRODUCTION"."SVC_TEMPLATE_CFG" ("TEMPLATE_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACTIVITY_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ACTIVITY_P" ON "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_ESC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ACT_ESC_P" ON "PRODUCTION"."TKT_ACT_ESCAL" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_MESS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ACT_MESS_P" ON "PRODUCTION"."TKT_ACT_MESSAGE" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_OWNAGNT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ACT_OWNAGNT_P" ON "PRODUCTION"."TKT_ACT_OWNAGNT" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_OWNGRP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ACT_OWNGRP_P" ON "PRODUCTION"."TKT_ACT_OWNGRP" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_STATC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ACT_STATC_P" ON "PRODUCTION"."TKT_ACT_STATC" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_WRKNT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ACT_WRKNT_P" ON "PRODUCTION"."TKT_ACT_WORKNOTE" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_ACT_DATA_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_ACT_DATA_P" ON "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_ADDRL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_ADDRL_P" ON "PRODUCTION"."TKT_ADS_MSGADDLIST" ("MSG_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_ATTCHL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_ATTCHL_P" ON "PRODUCTION"."TKT_ADS_MSGATTLIST" ("MSG_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_IN_MSGS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_IN_MSGS_P" ON "PRODUCTION"."TKT_ADS_IN_MSGS" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_MESSAGES_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_MESSAGES_P" ON "PRODUCTION"."TKT_ADS_MESSAGES" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_MMS_MSGS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_MMS_MSGS_P" ON "PRODUCTION"."TKT_ADS_MMS_MSGS" ("RAW_MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_MSG_ADDS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_MSG_ADDS_P" ON "PRODUCTION"."TKT_ADS_MSG_ADDRS" ("ADDR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_MSG_ATTS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_MSG_ATTS_P" ON "PRODUCTION"."TKT_ADS_MSG_ATTS" ("ATT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_OUT_MSGS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_OUT_MSGS_P" ON "PRODUCTION"."TKT_ADS_OUT_MSGS" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_POP3_MSG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_POP3_MSG_P" ON "PRODUCTION"."TKT_ADS_POP3_MSGS" ("RAW_MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_RAW_MSGS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_RAW_MSGS_P" ON "PRODUCTION"."TKT_ADS_RAW_MSGS" ("RAW_MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_SMS_MSGS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_SMS_MSGS_P" ON "PRODUCTION"."TKT_ADS_SMS_MSGS" ("RAW_MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_SMTP_MSG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ADS_SMTP_MSG_P" ON "PRODUCTION"."TKT_ADS_SMTP_MSGS" ("RAW_MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ATTACH_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ATTACH_P" ON "PRODUCTION"."TKT_ATTACHMENT" ("ATTACHMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ATTCHL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ATTCHL_P" ON "PRODUCTION"."TKT_ATTCH_LIST" ("ACTIVITY_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_CUSTOMER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_CUSTOMER_P" ON "PRODUCTION"."TKT_CUST_DETAILS" ("CUST_DETAILS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ESC_OWN_GRP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_ESC_OWN_GRP_P" ON "PRODUCTION"."TKT_ESC_OWN_GROUP" ("LOGICAL_ORG_ID", "ESCALATION_OWN_GRP") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_EXTRL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_EXTRL_P" ON "PRODUCTION"."TKT_EXTREF_LIST" ("TICKET_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_EXT_REF_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_EXT_REF_P" ON "PRODUCTION"."TKT_EXT_REF" ("EXTERNAL_REF_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_OWN_GRP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_OWN_GRP_P" ON "PRODUCTION"."TKT_OWNING_GROUP" ("LOGICAL_ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_Q_ESCTKTQ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_Q_ESCTKTQ_P" ON "PRODUCTION"."TKT_ESC_TKT_Q" ("LOGICAL_ORG_ID", "ESCALATION_TKT_Q") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_Q_STATS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_Q_STATS_P" ON "PRODUCTION"."TKT_Q_STATS" ("TKT_Q_STATS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_REACTXL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_REACTXL_P" ON "PRODUCTION"."TKT_REA_CTX_LIST" ("REA_CONTEXT_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_REASON_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_REASON_P" ON "PRODUCTION"."TKT_REASON" ("REASON_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_REA_CONTEXT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_REA_CONTEXT_P" ON "PRODUCTION"."TKT_REA_CONTEXT" ("REA_CONTEXT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_RELATED_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_RELATED_P" ON "PRODUCTION"."TKT_RELATED" ("TICKET_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_SUB_STATUS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_SUB_STATUS_P" ON "PRODUCTION"."TKT_SUB_STATUS" ("SUB_STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_TICKET_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_TICKET_P" ON "PRODUCTION"."TKT_TICKET" ("TICKET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_TKT_Q_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."TKT_TKT_Q_P" ON "PRODUCTION"."TKT_QUEUE" ("LOGICAL_ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USEROPTINFO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."USEROPTINFO_P" ON "PRODUCTION"."SVC_USEROPT_INFO" ("OPTION_ID", "INFO_KEY") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USEROPTVAL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."USEROPTVAL_P" ON "PRODUCTION"."SVC_USEROPT_VAL" ("OPTION_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_ATTRVAL_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_ATTRVAL_PK" ON "PRODUCTION"."VMAP_ATTRVAL" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_ATTVL_REL_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_ATTVL_REL_PK" ON "PRODUCTION"."VMAP_ATTRVAL_REL" ("MAPPER_ID", "ATTRIBUTE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_CTVL_REL_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_CTVL_REL_PK" ON "PRODUCTION"."VMAP_CATTRVAL_REL" ("MAPPER_ID", "ATTRIBUTE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_FH_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_FH_PK" ON "PRODUCTION"."VMAP_FH" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_IM2IVM_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_IM2IVM_PK" ON "PRODUCTION"."VMAP_IM2IVM_REL" ("ITEM_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_IM_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_IM_PK" ON "PRODUCTION"."VMAP_IM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_IV2IVA_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_IV2IVA_PK" ON "PRODUCTION"."VMAP_IV2IVAD_REL" ("VIEW_ID", "NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_IVATDEF_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_IVATDEF_PK" ON "PRODUCTION"."VMAP_IVATTRDEF" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_IVM_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_IVM_PK" ON "PRODUCTION"."VMAP_IVM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_IV_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."VMAP_IV_PK" ON "PRODUCTION"."VMAP_IV" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_QUEUE_ENTRY_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_QUEUE_ENTRY_P" ON "PRODUCTION"."DMS_QUEUE_ENTRY" ("QUEUE_ID", "MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_QUEUE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_QUEUE_P" ON "PRODUCTION"."DMS_QUEUE" ("QUEUE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_QUEUE_RECV_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_QUEUE_RECV_P" ON "PRODUCTION"."DMS_QUEUE_RECV" ("RECEIVER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_TOPIC_ENTRY_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_TOPIC_ENTRY_P" ON "PRODUCTION"."DMS_TOPIC_ENTRY" ("SUBSCRIBER_ID", "MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_TOPIC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_TOPIC_P" ON "PRODUCTION"."DMS_TOPIC" ("TOPIC_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_TOPIC_SUB_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_TOPIC_SUB_P" ON "PRODUCTION"."DMS_TOPIC_SUB" ("SUBSCRIBER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CHILD_FOLDER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_CHILD_FOLDER_P" ON "PRODUCTION"."DPS_CHILD_FOLDER" ("FOLDER_ID", "CHILD_FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CONTACT_INFO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_CONTACT_INFO_P" ON "PRODUCTION"."DPS_CONTACT_INFO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CON_REQ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_CON_REQ_P" ON "PRODUCTION"."DPS_CON_REQ" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CREDIT_CARD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_CREDIT_CARD_P" ON "PRODUCTION"."DPS_CREDIT_CARD" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_EMAIL_ADDRES_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_EMAIL_ADDRES_P" ON "PRODUCTION"."DPS_EMAIL_ADDRESS" ("MAILING_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_EVENT_TYPE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_EVENT_TYPE_P" ON "PRODUCTION"."DPS_EVENT_TYPE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_EVENT_TYPE_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_EVENT_TYPE_U" ON "PRODUCTION"."DPS_EVENT_TYPE" ("NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_FOLDER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_FOLDER_P" ON "PRODUCTION"."DPS_FOLDER" ("FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_LOG_ID_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_LOG_ID_P" ON "PRODUCTION"."DPS_LOG_ID" ("TABLENAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_MAILING_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_MAILING_P" ON "PRODUCTION"."DPS_MAILING" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_MAIL_BATCH_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_MAIL_BATCH_P" ON "PRODUCTION"."DPS_MAIL_BATCH" ("MAILING_ID", "START_IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_MAIL_SERVER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_MAIL_SERVER_P" ON "PRODUCTION"."DPS_MAIL_SERVER" ("UNIQ_SERVER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_MAIL_TRACKD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_MAIL_TRACKD_P" ON "PRODUCTION"."DPS_MAIL_TRACKDATA" ("MAILING_ID", "MAP_KEY") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_MARKERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_MARKERS_P" ON "PRODUCTION"."DPS_MARKERS" ("MARKER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORGANIZATION_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_ORGANIZATION_P" ON "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORG_ANCESTOR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_ORG_ANCESTOR_P" ON "PRODUCTION"."DPS_ORG_ANCESTORS" ("ORG_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORG_CHLDORG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_ORG_CHLDORG_P" ON "PRODUCTION"."DPS_ORG_CHLDORG" ("ORG_ID", "CHILD_ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORG_ROLE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_ORG_ROLE_P" ON "PRODUCTION"."DPS_ORG_ROLE" ("ORG_ID", "ATG_ROLE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_OTHER_ADDR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_OTHER_ADDR_P" ON "PRODUCTION"."DPS_OTHER_ADDR" ("USER_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_PREVPWD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_PREVPWD_P" ON "PRODUCTION"."DPS_USER_PREVPWD" ("ID", "SEQ_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_PRFL_RLM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_PRFL_RLM_P" ON "PRODUCTION"."DPS_PROFILE_REALM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_RELATIVEROLE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_RELATIVEROLE_P" ON "PRODUCTION"."DPS_RELATIVEROLE" ("ROLE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_REQUEST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_REQUEST_P" ON "PRODUCTION"."DPS_REQUEST" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ROLEFOLD_CHL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_ROLEFOLD_CHL_P" ON "PRODUCTION"."DPS_ROLEFOLD_CHLD" ("ROLEFOLD_ID", "ROLE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ROLE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_ROLE_P" ON "PRODUCTION"."DPS_ROLE" ("ROLE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ROLE_REL_ORG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_ROLE_REL_ORG_P" ON "PRODUCTION"."DPS_ROLE_REL_ORG" ("ORGANIZATION", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MEDIA_BIN_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."MEDIA_BIN_P" ON "PRODUCTION"."MEDIA_BIN" ("MEDIA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MEDIA_EXT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."MEDIA_EXT_P" ON "PRODUCTION"."MEDIA_EXT" ("MEDIA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MEDIA_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."MEDIA_P" ON "PRODUCTION"."MEDIA_BASE" ("MEDIA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MEDIA_TXT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."MEDIA_TXT_P" ON "PRODUCTION"."MEDIA_TXT" ("MEDIA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PKCHANGELOG
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."PKCHANGELOG" ON "PRODUCTION"."CHANGELOG" ("CHANGE_NUMBER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index REP_MARKER_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."REP_MARKER_PK" ON "PRODUCTION"."DAS_REP_MARK" ("REP_MARKER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SERVER_STATS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SERVER_STATS_P" ON "PRODUCTION"."TKT_DIST_SRV_STAT" ("SERVER_STATS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SITEINDEX_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SITEINDEX_PK" ON "PRODUCTION"."DAS_SITEINDEX" ("SITEINDEX_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SITEMAP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SITEMAP_PK" ON "PRODUCTION"."DAS_SITEMAP" ("SITEMAP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SITE_CONFIGURAT1_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SITE_CONFIGURAT1_P" ON "PRODUCTION"."SITE_CONFIGURATION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCHE_STATE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCHE_STATE_P" ON "PRODUCTION"."SRCH_END_STATE" ("CONFIG_PATH") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_CONFIG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_CONFIG_P" ON "PRODUCTION"."SRCH_CONFIG" ("CONFIG_PATH", "CONTENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_CONFIG_REPO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_CONFIG_REPO_P" ON "PRODUCTION"."SRCH_CONFIG_REPO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_ORDER_MODIFIED_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_ORDER_MODIFIED_P" ON "PRODUCTION"."SRCH_ORDER_MODIFIED" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_ORDER_STAGING_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_ORDER_STAGING_P" ON "PRODUCTION"."SRCH_ORDER_STAGING" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_ORDER_TOKENS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_ORDER_TOKENS_P" ON "PRODUCTION"."SRCH_ORDER_TOKENS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_PROFILE_MODIFIED_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_PROFILE_MODIFIED_P" ON "PRODUCTION"."SRCH_PROFILE_MODIFIED" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_PROFILE_STAGING_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_PROFILE_STAGING_P" ON "PRODUCTION"."SRCH_PROFILE_STAGING" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_PROFILE_TOKENS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_PROFILE_TOKENS_P" ON "PRODUCTION"."SRCH_PROFILE_TOKENS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_SITE_CNTNT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_SITE_CNTNT_P" ON "PRODUCTION"."SRCH_SITE_CNTNT" ("CNTN_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_SITE_CNTNT_PP
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_SITE_CNTNT_PP" ON "PRODUCTION"."SRCH_SITE_CNTNT_PRI" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_STATE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_STATE_P" ON "PRODUCTION"."SRCH_END_JOB" ("REPOSITORY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_UP_QUEUE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_UP_QUEUE_P" ON "PRODUCTION"."SRCH_UPDATE_QUEUE" ("REPOSITORY_ID", "CONFIG_REPO_ID", "GENERATION", "ITEM_DESC_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_UP_VQUEUE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRCH_UP_VQUEUE_P" ON "PRODUCTION"."SRCH_UPDATE_VQUEUE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRV_TKT_Q_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SRV_TKT_Q_P" ON "PRODUCTION"."TKT_Q_STAT_SET" ("SERVER_STATS_ID", "TKT_Q_STATS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCCFGOBJ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCCFGOBJ_P" ON "PRODUCTION"."SVC_CONFIG_OBJCT" ("CONFIG_OBJECT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCFWCFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCFWCFG_P" ON "PRODUCTION"."SVC_FRAMEWRK_CFG" ("FRMWK_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCFWTABCFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCFWTABCFG_P" ON "PRODUCTION"."SVC_FW_TAB_CFG" ("FRMWK_CFG_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCPANELCFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCPANELCFG_P" ON "PRODUCTION"."SVC_PANEL_CFG" ("PANEL_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCPSPNLCFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCPSPNLCFG_P" ON "PRODUCTION"."SVC_PS_PNL_CFG" ("PSTACK_CFG_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCPSTACKCFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCPSTACKCFG_P" ON "PRODUCTION"."SVC_PSTACK_CFG" ("PSTACK_CFG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCTBPNLCFG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCTBPNLCFG_P" ON "PRODUCTION"."SVC_TAB_PNL_CFG" ("PANEL_CFG_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCT_CALLNOTE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCT_CALLNOTE_P" ON "PRODUCTION"."SVCT_CALLNOTE_ACT" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCUSEROPT1_UN
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCUSEROPT1_UN" ON "PRODUCTION"."SVC_USER_OPT" ("USER_ID", "OPTION_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCUSEROPT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."SVCUSEROPT_P" ON "PRODUCTION"."SVC_USER_OPT" ("OPTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_SECURE_ID_GE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."ARF_SECURE_ID_GE_P" ON "PRODUCTION"."ARF_SECURE_ID_GEN" ("ID_SPACE_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CAF_REGISTRY_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CAF_REGISTRY_P" ON "PRODUCTION"."CAF_REGISTRY" ("REGISTRY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CAF_REG_ASSET_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CAF_REG_ASSET_P" ON "PRODUCTION"."CAF_REG_ASSET" ("ASSET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CAF_REG_FOLDER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CAF_REG_FOLDER_P" ON "PRODUCTION"."CAF_REG_FOLDER" ("FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CAF_REG_PATH_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CAF_REG_PATH_P" ON "PRODUCTION"."CAF_REG_PATHASSET" ("ASSET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CAF_REG_REPASSET_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CAF_REG_REPASSET_P" ON "PRODUCTION"."CAF_REG_REPASSET" ("ASSET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CAF_REG_ROOTF_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CAF_REG_ROOTF_P" ON "PRODUCTION"."CAF_REG_ROOTFOLDER" ("REGISTRY_ID", "FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CODE_PREFIX_IDX
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CODE_PREFIX_IDX" ON "PRODUCTION"."DCSPP_COUPON_BATCH" ("CODE_PREFIX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSREXCHCMMT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSREXCHCMMT_P" ON "PRODUCTION"."CSR_EXCH_CMTS" ("COMMENT_ID", "RETURN_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSREXCHIPROMOS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSREXCHIPROMOS_P" ON "PRODUCTION"."CSR_EXCH_IPROMOS" ("EXCHANGE_ID", "PROMOTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSREXCHOPROMOS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSREXCHOPROMOS_P" ON "PRODUCTION"."CSR_EXCH_OPROMOS" ("EXCHANGE_ID", "PROMOTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRITEMADJ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRITEMADJ_P" ON "PRODUCTION"."CSR_ITEM_ADJ" ("ICA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRORDERCMMT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRORDERCMMT_P" ON "PRODUCTION"."CSR_ORDER_CMTS" ("COMMENT_ID", "ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRPROMOADJUST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRPROMOADJUST_P" ON "PRODUCTION"."CSR_PROMO_ADJUST" ("EXCHANGE_ID", "PROMOTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRTORDAPPREVT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRTORDAPPREVT_P" ON "PRODUCTION"."CSRT_ORDER_APPR_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_APPR_EVENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_APPR_EVENT_P" ON "PRODUCTION"."CSRT_APPR_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_CLAIM_ITEM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_CLAIM_ITEM_P" ON "PRODUCTION"."CSRT_CLAIM_ITEM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_COMM_ITEM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_COMM_ITEM_P" ON "PRODUCTION"."CSRT_CI_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_GI_EVENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_GI_EVENT_P" ON "PRODUCTION"."CSRT_GI_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_GL_EVENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_GL_EVENT_P" ON "PRODUCTION"."CSRT_GL_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_GRNT_APPS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_GRNT_APPS_P" ON "PRODUCTION"."CSRT_GRANT_APPEASE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_GRPRM_EV_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_GRPRM_EV_P" ON "PRODUCTION"."CSRT_GRT_PROM_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_IGPRM_EV_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_IGPRM_EV_P" ON "PRODUCTION"."CSRT_IGN_PROM_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_OMA_EVENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_OMA_EVENT_P" ON "PRODUCTION"."CSRT_OMA_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_ORDERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_ORDERS_P" ON "PRODUCTION"."CSRT_ORDERS" ("ORDER_ID", "TICKET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_ORD_CMNT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_ORD_CMNT_P" ON "PRODUCTION"."CSRT_ORDER_COMMENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_ORD_EV_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_ORD_EV_P" ON "PRODUCTION"."CSRT_ORDER_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_PAY_GRP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_PAY_GRP_P" ON "PRODUCTION"."CSRT_PG_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_PRC_OVRRD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_PRC_OVRRD_P" ON "PRODUCTION"."CSRT_PRICE_OVERRDE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_RCV_RT_IT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_RCV_RT_IT_P" ON "PRODUCTION"."CSRT_RECV_RTRN_ITM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_RET_ORD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_RET_ORD_P" ON "PRODUCTION"."CSRT_RETURN_ORDER" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_SCHD_EVENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_SCHD_EVENT_P" ON "PRODUCTION"."CSRT_SCHD_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_SG_EVNT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_SG_EVNT_P" ON "PRODUCTION"."CSRT_SG_EVENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_SPLT_CC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_SPLT_CC_P" ON "PRODUCTION"."CSRT_SPLIT_CC" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_SPLT_SG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_SPLT_SG_P" ON "PRODUCTION"."CSRT_SPLIT_SG" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_UPD_ORG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_UPD_ORG_P" ON "PRODUCTION"."CSRT_UPDATE_ORG" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSRT_UPD_PROF_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSRT_UPD_PROF_P" ON "PRODUCTION"."TKT_UPD_PROPS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_CC_EXCH_MTHD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_CC_EXCH_MTHD_P" ON "PRODUCTION"."CSR_CC_EXCH_METHOD" ("EXCHANGE_METHOD_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCHITEM_DIS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_EXCHITEM_DIS_P" ON "PRODUCTION"."CSR_EXCH_ITEM_DISP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_ITEMS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_EXCH_ITEMS_P" ON "PRODUCTION"."CSR_EXCH_ITEMS" ("EXCHANGE_ID", "EXCHANGE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_ITEM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_EXCH_ITEM_P" ON "PRODUCTION"."CSR_EXCH_ITEM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_METHODS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_EXCH_METHODS_P" ON "PRODUCTION"."CSR_EXCH_METHODS" ("EXCHANGE_ID", "EXCHANGE_METHOD_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_METHOD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_EXCH_METHOD_P" ON "PRODUCTION"."CSR_EXCH_METHOD" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_EXCH_P" ON "PRODUCTION"."CSR_EXCH" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_REASONS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_EXCH_REASONS_P" ON "PRODUCTION"."CSR_EXCH_REASONS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_NR_ADJ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_NR_ADJ_P" ON "PRODUCTION"."CSR_NONRETURN_ADJ" ("EXCHANGE_ID", "ICA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_RETURN_FEE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_RETURN_FEE_P" ON "PRODUCTION"."CSR_RETURN_FEE" ("EXCHANGE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_SC_EXCH_MTHD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."CSR_SC_EXCH_MTHD_P" ON "PRODUCTION"."CSR_SC_EXCH_METHOD" ("EXCHANGE_METHOD_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAF_DEPL_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAF_DEPL_PK" ON "PRODUCTION"."DAS_DEPLOYMENT" ("DEPLOYMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAF_DEPL_PRG_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAF_DEPL_PRG_PK" ON "PRODUCTION"."DAS_DEPL_PROGRESS" ("DEPLOYMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_ACCOUNT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_ACCOUNT_P" ON "PRODUCTION"."DAS_ACCOUNT" ("ACCOUNT_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DBSETUP_HISTORY1_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DBSETUP_HISTORY1_P" ON "PRODUCTION"."DAS_DBSETUP_HISTORY" ("HISTORY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_DD_MRK_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DPL_DD_MRK_PK" ON "PRODUCTION"."DAS_DD_MARKERS" ("DEPLOY_DATA_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_DEPDAT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DPL_DEPDAT_PK" ON "PRODUCTION"."DAS_DEPL_DEPLDAT" ("DEPLOYMENT_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_DEPOPT_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DPL_DEPOPT_PK" ON "PRODUCTION"."DAS_DEPL_OPTIONS" ("DEPLOYMENT_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_ITMREF_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DPL_ITMREF_PK" ON "PRODUCTION"."DAS_DEPL_ITEM_REF" ("ITEM_REF_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_REPMAP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DPL_REPMAP_PK" ON "PRODUCTION"."DAS_DEPL_REPMAPS" ("DEPLOYMENT_ID", "SOURCE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_TB_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DPL_TB_PK" ON "PRODUCTION"."DAS_THREAD_BATCH" ("THREAD_BATCH_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DP_FL_INF_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_DP_FL_INF_PK" ON "PRODUCTION"."DAS_DEP_FAIL_INFO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_GRP_ASC_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_GRP_ASC_P" ON "PRODUCTION"."DAS_GROUP_ASSOC" ("ACCOUNT_NAME", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_GSA_SUBSCRIB_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_GSA_SUBSCRIB_P" ON "PRODUCTION"."DAS_GSA_SUBSCRIBER" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_ID_GENERATOR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_ID_GENERATOR_P" ON "PRODUCTION"."DAS_ID_GENERATOR" ("ID_SPACE_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_PREVPWD_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_PREVPWD_P" ON "PRODUCTION"."DAS_ACCT_PREVPWD" ("ACCOUNT_NAME", "SEQ_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_PURGE_PR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_PURGE_PR_P" ON "PRODUCTION"."DAS_PURGE_PROGRESS" ("PURGE_PROGRESS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_SDS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_SDS_P" ON "PRODUCTION"."DAS_SDS" ("SDS_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_SECURE_ID_GE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_SECURE_ID_GE_P" ON "PRODUCTION"."DAS_SECURE_ID_GEN" ("ID_SPACE_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_SYS_CONFIG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DAS_SYS_CONFIG_P" ON "PRODUCTION"."DAS_SYS_CONFIG" ("PARAMETER_KEY") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PAYITEM_RE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_PAYITEM_RE_P" ON "PRODUCTION"."DCSPP_PAYITEM_REL" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PAYORDER_R_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_PAYORDER_R_P" ON "PRODUCTION"."DCSPP_PAYORDER_REL" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PAYSHIP_RE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_PAYSHIP_RE_P" ON "PRODUCTION"."DCSPP_PAYSHIP_REL" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PAY_GROUP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_PAY_GROUP_P" ON "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PAY_INST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_PAY_INST_P" ON "PRODUCTION"."DCSPP_PAY_INST" ("PAYMENT_GROUP_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PAY_STATUS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_PAY_STATUS_P" ON "PRODUCTION"."DCSPP_PAY_STATUS" ("STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PRICE_ADJU_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_PRICE_ADJU_P" ON "PRODUCTION"."DCSPP_PRICE_ADJUST" ("ADJUSTMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_QUOTE_INFO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_QUOTE_INFO_P" ON "PRODUCTION"."DCSPP_QUOTE_INFO" ("QUOTE_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_RELATIONSH_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_RELATIONSH_P" ON "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_REL_ORDERS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_REL_ORDERS_P" ON "PRODUCTION"."DCSPP_REL_ORDERS" ("ORDER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_REL_RANGE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_REL_RANGE_P" ON "PRODUCTION"."DCSPP_REL_RANGE" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SCHD_ERRS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SCHD_ERRS_P" ON "PRODUCTION"."DCSPP_SCHD_ERRMSG" ("SCHED_ERROR_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SCHED_ERR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SCHED_ERR_P" ON "PRODUCTION"."DCSPP_SCHED_ERROR" ("SCHED_ERROR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SCHERR_AUX_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SCHERR_AUX_P" ON "PRODUCTION"."DCSPP_SCHERR_AUX" ("SCHEDULED_ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SC_STATUS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SC_STATUS_P" ON "PRODUCTION"."DCSPP_SC_STATUS" ("STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SG_HAND_IN_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SG_HAND_IN_P" ON "PRODUCTION"."DCSPP_SG_HAND_INST" ("SHIPPING_GROUP_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SHIPITEM_R_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SHIPITEM_R_P" ON "PRODUCTION"."DCSPP_SHIPITEM_REL" ("RELATIONSHIP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SHIPITEM_S_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SHIPITEM_S_P" ON "PRODUCTION"."DCSPP_SHIPITEM_SUB" ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SHIPITEM_T_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SHIPITEM_T_P" ON "PRODUCTION"."DCSPP_SHIPITEM_TAX" ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SHIP_ADDR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SHIP_ADDR_P" ON "PRODUCTION"."DCSPP_SHIP_ADDR" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SHIP_GROUP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SHIP_GROUP_P" ON "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SHIP_INST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SHIP_INST_P" ON "PRODUCTION"."DCSPP_SHIP_INST" ("SHIPPING_GROUP_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SHIP_PRICE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SHIP_PRICE_P" ON "PRODUCTION"."DCSPP_SHIP_PRICE" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_STORE_CRED_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_STORE_CRED_P" ON "PRODUCTION"."DCSPP_STORE_CRED" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_SUBSKU_ITE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_SUBSKU_ITE_P" ON "PRODUCTION"."DCSPP_SUBSKU_ITEM" ("SUBSKU_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_TAXSHIPITE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_TAXSHIPITE_P" ON "PRODUCTION"."DCSPP_TAXSHIPITEM" ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_TAX_PRICE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCSPP_TAX_PRICE_P" ON "PRODUCTION"."DCSPP_TAX_PRICE" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_BATCH_CLAIM_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_BATCH_CLAIM_PK" ON "PRODUCTION"."DCSPP_BATCH_CLAIMABLE" ("COUPON_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_GIFTINST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_GIFTINST_P" ON "PRODUCTION"."DCS_GIFTINST" ("GIFTLIST_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_GIFTITEM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_GIFTITEM_P" ON "PRODUCTION"."DCS_GIFTITEM" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_GIFTLIST_ITE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_GIFTLIST_ITE_P" ON "PRODUCTION"."DCS_GIFTLIST_ITEM" ("GIFTLIST_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_GIFTLIST_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_GIFTLIST_P" ON "PRODUCTION"."DCS_GIFTLIST" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_INVENTORY_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_INVENTORY_P" ON "PRODUCTION"."DCS_INVENTORY" ("INVENTORY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_INV_ATP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_INV_ATP_P" ON "PRODUCTION"."DCS_INV_ATP" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_ORG_ADDR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_ORG_ADDR_P" ON "PRODUCTION"."DCS_ORG_ADDRESS" ("ORG_ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_PROMO_ST_CPN_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_PROMO_ST_CPN_P" ON "PRODUCTION"."DCS_PROMO_ST_CPN" ("STATUS_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_STORECRED_CL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_STORECRED_CL_P" ON "PRODUCTION"."DCS_STORECRED_CLM" ("STORE_CREDIT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USER_FVSTORE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USER_FVSTORE_P" ON "PRODUCTION"."DCS_USER_FAVSTORES" ("USER_ID", "SEQ") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USER_GIFTLIS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USER_GIFTLIS_P" ON "PRODUCTION"."DCS_USER_GIFTLIST" ("USER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USER_OTHERLI_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USER_OTHERLI_P" ON "PRODUCTION"."DCS_USER_OTHERLIST" ("USER_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USER_P" ON "PRODUCTION"."DCS_USER" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USER_WISHLIS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USER_WISHLIS_P" ON "PRODUCTION"."DCS_USER_WISHLIST" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USR_ABNDND_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USR_ABNDND_P" ON "PRODUCTION"."DCS_USER_ABANDONED" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USR_ACTVPROM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USR_ACTVPROM_P" ON "PRODUCTION"."DCS_USR_ACTVPROMO" ("ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USR_PROMOSTA_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USR_PROMOSTA_P" ON "PRODUCTION"."DCS_USR_PROMOSTAT" ("STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USR_USEDPROM_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DCS_USR_USEDPROM_P" ON "PRODUCTION"."DCS_USR_USEDPROMO" ("ID", "PROMOTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DEPLOY_DATA_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DEPLOY_DATA_PK" ON "PRODUCTION"."DAS_DEPLOY_DATA" ("DEPLOY_DATA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DLO_LOGICAL_ORG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DLO_LOGICAL_ORG_P" ON "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_CLIENT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_CLIENT_P" ON "PRODUCTION"."DMS_CLIENT" ("CLIENT_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_LIMBO_PTYPES_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_LIMBO_PTYPES_P" ON "PRODUCTION"."DMS_LIMBO_PTYPES" ("MSG_ID", "PROP_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_MSG_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_MSG_P" ON "PRODUCTION"."DMS_MSG" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_MSG_PROPERTI_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DMS_MSG_PROPERTI_P" ON "PRODUCTION"."DMS_MSG_PROPERTIES" ("MSG_ID", "NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AGTPROFILECMMT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."AGTPROFILECMMT_P" ON "PRODUCTION"."AGENT_PROFILE_CMTS" ("COMMENT_ID", "PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_ID_GENERATOR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."ARF_ID_GENERATOR_P" ON "PRODUCTION"."ARF_ID_GENERATOR" ("ID_SPACE_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_LP_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."ARF_LP_P" ON "PRODUCTION"."ARF_LOADER_PROG" ("LOADER_PROGRESS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_LQ_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."ARF_LQ_P" ON "PRODUCTION"."ARF_LOADER_QUEUE" ("LOADER_QUEUE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_QE_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."ARF_QE_P" ON "PRODUCTION"."ARF_QUEUE_ENTRY" ("QUEUE_ENTRY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_IND_SCENARIO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_IND_SCENARIO_P" ON "PRODUCTION"."DSS_IND_SCENARIO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_IND_TRANS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_IND_TRANS_P" ON "PRODUCTION"."DSS_IND_TRANS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_MIGRATION_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_MIGRATION_PK" ON "PRODUCTION"."DSS_MIGRATION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_MIG_INFOSEG_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_MIG_INFOSEG_PK" ON "PRODUCTION"."DSS_MIG_INFO_SEG" ("ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_MIG_SEGNAME_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_MIG_SEGNAME_PK" ON "PRODUCTION"."DSS_MIG_SEG_NAME" ("ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_PROFILE_SLOT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_PROFILE_SLOT_P" ON "PRODUCTION"."DSS_PROFILE_SLOT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENARIO_BOO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENARIO_BOO_P" ON "PRODUCTION"."DSS_SCENARIO_BOOLS" ("ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENARIO_DAT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENARIO_DAT_P" ON "PRODUCTION"."DSS_SCENARIO_DATES" ("ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENARIO_DBL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENARIO_DBL_P" ON "PRODUCTION"."DSS_SCENARIO_DBLS" ("ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENARIO_INF_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENARIO_INF_P" ON "PRODUCTION"."DSS_SCENARIO_INFO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENARIO_LON_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENARIO_LON_P" ON "PRODUCTION"."DSS_SCENARIO_LONGS" ("ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENARIO_STR_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENARIO_STR_P" ON "PRODUCTION"."DSS_SCENARIO_STRS" ("ID", "TAG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENMIGINFO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENMIGINFO_PK" ON "PRODUCTION"."DSS_SCEN_MIG_INFO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SERVER_ID_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SERVER_ID_P" ON "PRODUCTION"."DSS_SERVER_ID" ("SERVER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SLOT_ITEMS_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SLOT_ITEMS_P" ON "PRODUCTION"."DSS_SLOT_ITEMS" ("SLOT_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SLOT_PRIORIT_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SLOT_PRIORIT_P" ON "PRODUCTION"."DSS_SLOT_PRIORITY" ("SLOT_ID", "IDX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_TEMPLATE_INF_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_TEMPLATE_INF_P" ON "PRODUCTION"."DSS_TEMPLATE_INFO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_XREF_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_XREF_P" ON "PRODUCTION"."DSS_XREF" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index FILE_MARKER_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."FILE_MARKER_PK" ON "PRODUCTION"."DAS_FILE_MARK" ("FILE_MARKER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index FUNC_NAME_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."FUNC_NAME_PK" ON "PRODUCTION"."DAS_NUCL_SEC" ("FUNC_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GLOBALOPTINFO_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."GLOBALOPTINFO_P" ON "PRODUCTION"."SVC_GLOBALOPT_INFO" ("OPTION_ID", "INFO_KEY") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GLOBALOPTVAL_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."GLOBALOPTVAL_P" ON "PRODUCTION"."SVC_GLOBALOPT_VAL" ("OPTION_ID", "SEQUENCE_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ID_INDEX_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."ID_INDEX_PK" ON "PRODUCTION"."DAS_NS_ACLS" ("ID", "INDEX_NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index IF_INT_DATA_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."IF_INT_DATA_P" ON "PRODUCTION"."IF_INTEG_DATA" ("ITEM_ID", "DESCRIPTOR", "REPOSITORY") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index LIMBO_BODY_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."LIMBO_BODY_PK" ON "PRODUCTION"."DMS_LIMBO_BODY" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index LIMBO_DELAY_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."LIMBO_DELAY_PK" ON "PRODUCTION"."DMS_LIMBO_DELAY" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index LIMBO_MSG_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."LIMBO_MSG_PK" ON "PRODUCTION"."DMS_LIMBO_MSG" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index LIMBO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."LIMBO_PK" ON "PRODUCTION"."DMS_LIMBO" ("LIMBO_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index LIMBO_PROPS_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."LIMBO_PROPS_PK" ON "PRODUCTION"."DMS_LIMBO_PROPS" ("MSG_ID", "PROP_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index LIMBO_REPLYTO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."LIMBO_REPLYTO_PK" ON "PRODUCTION"."DMS_LIMBO_REPLYTO" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MARKER_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."MARKER_PK" ON "PRODUCTION"."DAS_DEPLOY_MARK" ("MARKER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MD_FOLDER_P
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."MD_FOLDER_P" ON "PRODUCTION"."MEDIA_FOLDER" ("FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_CNTCT_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORG_CNTCT_ID" ON "PRODUCTION"."DBC_ORG_CONTACT" ("CONTACT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_USEDPRM_PI_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_USEDPRM_PI_IDX" ON "PRODUCTION"."DCS_USR_USEDPROMO" ("PROMOTION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SG_HND_INS_SGI_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SG_HND_INS_SGI_IDX" ON "PRODUCTION"."DCSPP_SG_HAND_INST" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_PRO_TOKENS_X1
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_PRO_TOKENS_X1" ON "PRODUCTION"."SRCH_PROFILE_TOKENS" ("LAST_MODIFIED_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCPSTACKCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCPSTACKCFG1_IX" ON "PRODUCTION"."SVC_PSTACK_CFG" ("PANEL_STACK_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_ITMX_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DAS_DPL_ITMX_IDX" ON "PRODUCTION"."DAS_DEPL_ITEM_REF" ("ITEM_INDEX") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_TB_THREAD_NAM
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DAS_TB_THREAD_NAM" ON "PRODUCTION"."DAS_THREAD_BATCH" ("THREAD_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index BUYER_APPROVER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."BUYER_APPROVER_IDX" ON "PRODUCTION"."DBC_BUYER_APPROVER" ("APPROVER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_TOPIC_READ_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DMS_TOPIC_READ_IDX" ON "PRODUCTION"."DMS_TOPIC_ENTRY" ("READ_STATE", "DELIVERY_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GIFTITEM_SITE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GIFTITEM_SITE_IDX" ON "PRODUCTION"."DCS_GIFTITEM" ("SITE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_OWNINGGROUP1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_OWNINGGROUP1_X" ON "PRODUCTION"."TKT_OWNING_GROUP" ("DEF_ESC_OWN_GRP") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_ORD_TOKENS_X1
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_ORD_TOKENS_X1" ON "PRODUCTION"."SRCH_ORDER_TOKENS" ("LAST_MODIFIED_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_ORGUSR_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_ORGUSR_ID" ON "PRODUCTION"."DPS_USER_ORG" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_ADJ_ORID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_ADJ_ORID_IDX" ON "PRODUCTION"."DCSPP_ORDER_ADJ" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORG_CHLDORG_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_ORG_CHLDORG_ID" ON "PRODUCTION"."DPS_ORG_CHLDORG" ("CHILD_ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORD_ACTIVEQUOTE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORD_ACTIVEQUOTE_IDX" ON "PRODUCTION"."DCSPP_ORDER" ("ACTIVE_QUOTE_ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_ATL_AT1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ADS_ATL_AT1_IX" ON "PRODUCTION"."TKT_ADS_MSGATTLIST" ("ATT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index INV_ORDER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."INV_ORDER_IDX" ON "PRODUCTION"."DBC_INVOICE" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_PG_ORDID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_PG_ORDID_IDX" ON "PRODUCTION"."DCSPP_ORDER_PG" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ITEM_SITE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ITEM_SITE_IDX" ON "PRODUCTION"."DCSPP_ITEM" ("SITE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DEP_FL_DP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DAS_DEP_FL_DP_IDX" ON "PRODUCTION"."DAS_DEP_FAIL_INFO" ("DEPLOYMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_UPDATEQUE1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_UPDATEQUE1_X" ON "PRODUCTION"."SRCH_UPDATE_QUEUE" ("CONFIG_REPO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_LQE_X1
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ARF_LQE_X1" ON "PRODUCTION"."ARF_LQ_ENTRIES" ("LOADER_QUEUE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCN_BO_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_SCN_BO_IDX" ON "PRODUCTION"."DSS_SCENARIO_BOOLS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_CSTCTR
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORG_CSTCTR" ON "PRODUCTION"."DBC_ORG_COSTCTR" ("COST_CENTER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ROLFLDCHLDROLE
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_ROLFLDCHLDROLE" ON "PRODUCTION"."DPS_ROLEFOLD_CHLD" ("ROLE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index INV_STRT_DTE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."INV_STRT_DTE_IDX" ON "PRODUCTION"."DCS_INVENTORY" ("START_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GIFTITEM_CAT_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GIFTITEM_CAT_IDX" ON "PRODUCTION"."DCS_GIFTITEM" ("CATALOG_REF_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_UCCCID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_UCCCID_IDX" ON "PRODUCTION"."DPS_USR_CREDITCARD" ("CREDIT_CARD_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_ORG_ANCANC
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_ORG_ANCANC" ON "PRODUCTION"."DPS_USER_ORG_ANC" ("ANC_ORG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PSREL_PAYGRP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."PSREL_PAYGRP_IDX" ON "PRODUCTION"."DCSPP_PAYSHIP_REL" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PSREL_SHIPGRP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."PSREL_SHIPGRP_IDX" ON "PRODUCTION"."DCSPP_PAYSHIP_REL" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_REASON_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ACT_REASON_IX" ON "PRODUCTION"."TKT_ACTIVITY" ("REASON_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_UES_FT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_UES_FT" ON "PRODUCTION"."DPS_USER_EVENT_SUM" ("FROMTIME", "TOTIME", "EVENTTYPE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_SGMLSTFLDR1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_SGMLSTFLDR1_X" ON "PRODUCTION"."DPS_SEG_LIST_FOLDER" ("PARENT_FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_MSGPROPS_A1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_MSGPROPS_A1_IX" ON "PRODUCTION"."TKT_ADS_MSG_PROPS" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index HI_ITEM_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."HI_ITEM_IDX" ON "PRODUCTION"."DCSPP_HAND_INST" ("COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index INV_CATLOC_IDX
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."INV_CATLOC_IDX" ON "PRODUCTION"."DCS_INVENTORY" ("CATALOG_REF_ID", "LOCATION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_PRS_FT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_PRS_FT" ON "PRODUCTION"."DPS_PGRP_REQ_SUM" ("FROMTIME", "TOTIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ROLE_REL_ORG
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_ROLE_REL_ORG" ON "PRODUCTION"."DPS_ROLE_REL_ORG" ("ROLE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_ADL_AD1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ADS_ADL_AD1_IX" ON "PRODUCTION"."TKT_ADS_MSGADDLIST" ("ADDR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_ADR_SHP_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_ADR_SHP_ID" ON "PRODUCTION"."DPS_USER_ADDRESS" ("SHIPPING_ADDR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_PV_UNIQUE
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."VMAP_PV_UNIQUE" ON "PRODUCTION"."VMAP_PV" ("TYPE", "NAME", "MODE_ID", "IS_COMPONENT") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SC_NUMBER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SC_NUMBER_IDX" ON "PRODUCTION"."DCSPP_STORE_CRED" ("STORE_CRED_NUMBER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_MSG1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ADS_MSG1_X" ON "PRODUCTION"."TKT_ADS_MESSAGES" ("CHANNEL_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCN_ST_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_SCN_ST_IDX" ON "PRODUCTION"."DSS_SCENARIO_STRS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_ORDABANDN1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCSPP_ORDABANDN1_X" ON "PRODUCTION"."DCSPP_ORD_ABANDON" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GFT_SITE_ID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GFT_SITE_ID_IDX" ON "PRODUCTION"."DCS_GIFTLIST" ("SITE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index STORECR_OWNER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."STORECR_OWNER_IDX" ON "PRODUCTION"."DCS_STORECRED_CLM" ("OWNER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_ORDER_MOD_X1
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_ORDER_MOD_X1" ON "PRODUCTION"."SRCH_ORDER_MODIFIED" ("LAST_MODIFIED_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_START_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DAS_DPL_START_IDX" ON "PRODUCTION"."DAS_DEPLOYMENT" ("START_TIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SCHED_SITE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SCHED_SITE_IDX" ON "PRODUCTION"."DBCPP_SCHED_ORDER" ("SITE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSREL_CSTCTR_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSREL_CSTCTR_IDX" ON "PRODUCTION"."DBCPP_CCSHIP_REL" ("COST_CENTER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_UP_VQUEUE
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_UP_VQUEUE" ON "PRODUCTION"."SRCH_UPDATE_VQUEUE" ("CONFIG_PATH", "GENERATION", "REPOSITORY_PATH", "ITEM_DESC_NAME", "REPOSITORY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DR$SRCH_SEARCH_ORDER_IDX$X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$X" ON "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" ("TOKEN_TEXT", "TOKEN_TYPE", "TOKEN_FIRST", "TOKEN_LAST", "TOKEN_COUNT") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS COMPRESS 2 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORGPARENT_ORG
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_ORGPARENT_ORG" ON "PRODUCTION"."DPS_ORGANIZATION" ("PARENT_ORG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_PYMNT_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORG_PYMNT_ID" ON "PRODUCTION"."DBC_ORG_PAYMENT" ("PAYMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORGDFLTBLIG_AD
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORGDFLTBLIG_AD" ON "PRODUCTION"."DBC_ORGANIZATION" ("DFLT_BILLING_ADDR") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GFTLST_SHPADID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GFTLST_SHPADID_IDX" ON "PRODUCTION"."DCS_GIFTLIST" ("SHIPPING_ADDR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_BLNG_AD_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_BLNG_AD_ID" ON "PRODUCTION"."DPS_USER_ADDRESS" ("BILLING_ADDR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCCNTCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCCNTCFG1_IX" ON "PRODUCTION"."SVC_CONTENT_CFG" ("CONTENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_GFTLST_GLI_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_GFTLST_GLI_IDX" ON "PRODUCTION"."DCS_USER_GIFTLIST" ("GIFTLIST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ESCOWNGROUP1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ESCOWNGROUP1_X" ON "PRODUCTION"."TKT_ESC_OWN_GROUP" ("ESCALATION_OWN_GRP") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MARKER_DATA_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."MARKER_DATA_IDX" ON "PRODUCTION"."DAS_DEPLOY_MARK" ("DEPLOYMENT_DATA") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_ITMREASON
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSR_EXCH_ITMREASON" ON "PRODUCTION"."CSR_EXCH_ITEM" ("REASON") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CHLD_FLDR_FLD
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_CHLD_FLDR_FLD" ON "PRODUCTION"."DPS_CHILD_FOLDER" ("CHILD_FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_RELATIVEROLE
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_RELATIVEROLE" ON "PRODUCTION"."DPS_RELATIVEROLE" ("RELATIVE_TO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SCHED_PROFILE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SCHED_PROFILE_IDX" ON "PRODUCTION"."DBCPP_SCHED_ORDER" ("PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_ACTVPRM_ID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_ACTVPRM_ID_IDX" ON "PRODUCTION"."DCS_USR_ACTVPROMO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_PROFILE_MOD_X1
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_PROFILE_MOD_X1" ON "PRODUCTION"."SRCH_PROFILE_MODIFIED" ("LAST_MODIFIED_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_UCCUID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_UCCUID_IDX" ON "PRODUCTION"."DPS_USR_CREDITCARD" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_REL_ORID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_REL_ORID_IDX" ON "PRODUCTION"."DCSPP_ORDER_REL" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MD_FLDR_PATH_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."MD_FLDR_PATH_IDX" ON "PRODUCTION"."MEDIA_FOLDER" ("PATH") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_TICKET_CUS4_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_TICKET_CUS4_IX" ON "PRODUCTION"."TKT_TICKET" ("ORIG_TICKET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_A_STATC_SU2_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_A_STATC_SU2_IX" ON "PRODUCTION"."TKT_ACT_STATC" ("PREV_SUB_STATUS") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_TEMPLATE_INF_X
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_TEMPLATE_INF_X" ON "PRODUCTION"."DSS_TEMPLATE_INFO" ("TEMPLATE_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPSUSRMARKERS1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPSUSRMARKERS1_IX" ON "PRODUCTION"."DPS_USR_MARKERS" ("MARKER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GIFTINST_GFLID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GIFTINST_GFLID_IDX" ON "PRODUCTION"."DCS_GIFTINST" ("GIFTLIST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORD_ORGANIZATION_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORD_ORGANIZATION_IDX" ON "PRODUCTION"."DCSPP_ORDER" ("ORGANIZATION_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DEBIT_STAT_PGI_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DEBIT_STAT_PGI_IDX" ON "PRODUCTION"."DCSPP_DEBIT_STATUS" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_ORDRMARKERS1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCS_ORDRMARKERS1_X" ON "PRODUCTION"."DCS_ORDER_MARKERS" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_SEC_ORG_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_SEC_ORG_ID" ON "PRODUCTION"."DPS_USER_SEC_ORGS" ("SECONDARY_ORG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_HOME_AD_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_HOME_AD_ID" ON "PRODUCTION"."DPS_USER_ADDRESS" ("HOME_ADDR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_INST_OID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_INST_OID_IDX" ON "PRODUCTION"."DCSPP_ORDER_INST" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CR_TS
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_CR_TS" ON "PRODUCTION"."DPS_CON_REQ" ("TIMESTAMP") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCCELCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCCELCFG1_IX" ON "PRODUCTION"."SVC_CELL_CFG" ("CELL_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index STORECR_ISSUE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."STORECR_ISSUE_IDX" ON "PRODUCTION"."DCS_STORECRED_CLM" ("ISSUE_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORGDFLT_PMTTYP
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORGDFLT_PMTTYP" ON "PRODUCTION"."DBC_ORGANIZATION" ("DFLT_PAYMENT_TYPE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCSKNCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCSKNCFG1_IX" ON "PRODUCTION"."SVC_SKIN_CFG" ("SKIN_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACTMAP_A1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ACTMAP_A1_IX" ON "PRODUCTION"."TKT_ACT_MAP" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PROMOSTAT_PROF_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."PROMOSTAT_PROF_IDX" ON "PRODUCTION"."DCS_USR_PROMOSTAT" ("PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ATTCHL_AT1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ATTCHL_AT1_IX" ON "PRODUCTION"."TKT_ATTCH_LIST" ("ATTACHMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORG_CNTRCT_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORG_CNTRCT_ID" ON "PRODUCTION"."DBC_ORGANIZATION" ("CONTRACT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_TB_OWNER
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DAS_TB_OWNER" ON "PRODUCTION"."DAS_THREAD_BATCH" ("OWNER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SIREL_ITEM_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SIREL_ITEM_IDX" ON "PRODUCTION"."DCSPP_SHIPITEM_REL" ("COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PAY_INST_PGRID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."PAY_INST_PGRID_IDX" ON "PRODUCTION"."DCSPP_PAY_INST" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_LIMBO_READ_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DMS_LIMBO_READ_IDX" ON "PRODUCTION"."DMS_LIMBO_MSG" ("LIMBO_ID", "DELIVERY_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ITMPRC_DET_AII_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ITMPRC_DET_AII_IDX" ON "PRODUCTION"."DCSPP_ITMPRICE_DET" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCTABCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCTABCFG1_IX" ON "PRODUCTION"."SVC_TAB_CFG" ("TAB_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MEDIA_PATH_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."MEDIA_PATH_IDX" ON "PRODUCTION"."MEDIA_BASE" ("PATH") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ITEM_CATREF_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ITEM_CATREF_IDX" ON "PRODUCTION"."DCSPP_ITEM" ("CATALOG_REF_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_Q_ESCLO2_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_Q_ESCLO2_X" ON "PRODUCTION"."TKT_ESC_TKT_Q" ("ESCALATION_TKT_Q") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_PENDING_TM_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_PENDING_TM_IX" ON "PRODUCTION"."TKT_TICKET" ("PENDING_TIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_TICKET_CUS6_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_TICKET_CUS6_IX" ON "PRODUCTION"."TKT_TICKET" ("SUB_STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_EXTRL_X1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_EXTRL_X1_IX" ON "PRODUCTION"."TKT_EXTREF_LIST" ("EXTERNAL_REF_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENARIO_INF_X
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DSS_SCENARIO_INF_X" ON "PRODUCTION"."DSS_SCENARIO_INFO" ("SCENARIO_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_ACTVPRM_PS_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_ACTVPRM_PS_IDX" ON "PRODUCTION"."DCS_USR_ACTVPROMO" ("PROMO_STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index HI_SHIP_GROUP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."HI_SHIP_GROUP_IDX" ON "PRODUCTION"."DCSPP_HAND_INST" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_CC_ORDID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_CC_ORDID_IDX" ON "PRODUCTION"."DBCPP_ORDER_CC" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MARKER_INDEX_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."MARKER_INDEX_IDX" ON "PRODUCTION"."DAS_DEPLOY_MARK" ("INDEX_NUMBER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index INV_PO_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."INV_PO_IDX" ON "PRODUCTION"."DBC_INVOICE" ("PO_NUMBER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCENMIGINFO_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_SCENMIGINFO_ID" ON "PRODUCTION"."DSS_SCEN_MIG_INFO" ("SCENARIO_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORG_ROLEROLE
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_ORG_ROLEROLE" ON "PRODUCTION"."DPS_ORG_ROLE" ("ATG_ROLE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_INRMSG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ADS_INRMSG1_IX" ON "PRODUCTION"."TKT_ADS_IN_MSGS" ("RAW_MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVR_TKT_Q_SRV_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVR_TKT_Q_SRV_IX" ON "PRODUCTION"."TKT_Q_STAT_SET" ("TKT_Q_STATS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_TICKET_CUS5_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_TICKET_CUS5_IX" ON "PRODUCTION"."TKT_TICKET" ("DUP_OF_TICKET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORD_SITE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORD_SITE_IDX" ON "PRODUCTION"."DCSPP_ORDER" ("SITE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_GWPIMARKERS1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCS_GWPIMARKERS1_X" ON "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" ("COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_OUT_M3_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ADS_OUT_M3_X" ON "PRODUCTION"."TKT_ADS_OUT_MSGS" ("CLAIM_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_TB_DEPLOYMENT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DAS_TB_DEPLOYMENT" ON "PRODUCTION"."DAS_THREAD_BATCH" ("DEPLOYMENT") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_RELEASE_TM_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_RELEASE_TM_IX" ON "PRODUCTION"."TKT_TICKET" ("RELEASE_TIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CRS_FT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_CRS_FT" ON "PRODUCTION"."DPS_CON_REQ_SUM" ("FROMTIME", "TOTIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_ORG_ADDR_IX1
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCS_ORG_ADDR_IX1" ON "PRODUCTION"."DCS_ORG_ADDRESS" ("ADDR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_OWN_AGENT_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_OWN_AGENT_IX" ON "PRODUCTION"."TKT_TICKET" ("OWNING_AGENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_INV_DLIVR_INFO
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_INV_DLIVR_INFO" ON "PRODUCTION"."DBC_INVOICE" ("DELIVERY_INFO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_RSS_FT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_RSS_FT" ON "PRODUCTION"."DPS_SESSION_SUM" ("FROMTIME", "TOTIME", "SESSIONID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GFTLST_ITM_GII_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GFTLST_ITM_GII_IDX" ON "PRODUCTION"."DCS_GIFTLIST_ITEM" ("GIFTITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCHORDER_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSR_EXCHORDER_ID" ON "PRODUCTION"."CSR_EXCH" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_EV_SUM_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USER_EV_SUM_IX" ON "PRODUCTION"."DPS_USER_EVENT_SUM" ("EVENTTYPE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSREXCHCMMT1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSREXCHCMMT1_X" ON "PRODUCTION"."CSR_EXCH_CMTS" ("RETURN_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_TOPIC_MSG_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DMS_TOPIC_MSG_IDX" ON "PRODUCTION"."DMS_TOPIC_ENTRY" ("MSG_ID", "SUBSCRIBER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index POREL_PAYGRP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."POREL_PAYGRP_IDX" ON "PRODUCTION"."DCSPP_PAYORDER_REL" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_FOLDERPARENT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_FOLDERPARENT" ON "PRODUCTION"."DPS_FOLDER" ("PARENT") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_CTRCID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_CTRCID_IDX" ON "PRODUCTION"."DSS_COLL_TRANS" ("COLL_SCENARIO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TAX_SHIP_ITEM_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TAX_SHIP_ITEM_IDX" ON "PRODUCTION"."DCSPP_TAXSHIPITEM" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCN_DB_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_SCN_DB_IDX" ON "PRODUCTION"."DSS_SCENARIO_DBLS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index NTAX_SHIP_ITEM_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."NTAX_SHIP_ITEM_IDX" ON "PRODUCTION"."DCSPP_NTAXSHIPITEM" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SCHED_TMPLT_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SCHED_TMPLT_IDX" ON "PRODUCTION"."DBCPP_SCHED_ORDER" ("TEMPLATE_ORDER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index INV_PMT_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."INV_PMT_IDX" ON "PRODUCTION"."DBC_INVOICE" ("PMT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_DATA_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ACT_DATA_IX" ON "PRODUCTION"."TKT_ACTIVITY" ("ACT_DATA_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_GFTLST_UID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_GFTLST_UID_IDX" ON "PRODUCTION"."DCS_USER_GIFTLIST" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SHIP_INST_SGID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SHIP_INST_SGID_IDX" ON "PRODUCTION"."DCSPP_SHIP_INST" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_SG_ORDID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_SG_ORDID_IDX" ON "PRODUCTION"."DCSPP_ORDER_SG" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ADS_OUT_M1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ADS_OUT_M1_X" ON "PRODUCTION"."TKT_ADS_OUT_MSGS" ("STATUS") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SC_PROFILE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SC_PROFILE_IDX" ON "PRODUCTION"."DCSPP_STORE_CRED" ("PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_SCENVAL_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_SCENVAL_ID" ON "PRODUCTION"."DPS_SCENARIO_VALUE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CRED_STAT_PGID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CRED_STAT_PGID_IDX" ON "PRODUCTION"."DCSPP_CRED_STATUS" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_U_MAIL_UID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_U_MAIL_UID" ON "PRODUCTION"."DPS_USER_MAILING" ("USER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_SUBMIT_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_SUBMIT_IDX" ON "PRODUCTION"."DCSPP_ORDER" ("SUBMITTED_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index INV_INV_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."INV_INV_IDX" ON "PRODUCTION"."DBC_INVOICE" ("INVOICE_NUMBER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORG_APPROVER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORG_APPROVER_IDX" ON "PRODUCTION"."DBC_ORG_APPROVER" ("APPROVER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_SLTPRFL_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_SLTPRFL_ID" ON "PRODUCTION"."DPS_USER_SLOT" ("PROFILE_SLOT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MED_MFLDRID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."MED_MFLDRID_IDX" ON "PRODUCTION"."MEDIA_BASE" ("PARENT_FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORGDFLTCST_CTR
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORGDFLTCST_CTR" ON "PRODUCTION"."DBC_ORGANIZATION" ("DFLT_COST_CENTER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCTMPLCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCTMPLCFG1_IX" ON "PRODUCTION"."SVC_TEMPLATE_CFG" ("TEMPLATE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_ACT_TICKET1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_ACT_TICKET1_IX" ON "PRODUCTION"."TKT_ACTIVITY" ("TICKET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_ITEM_OID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_ITEM_OID_IDX" ON "PRODUCTION"."DCSPP_ORDER_ITEM" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCFWCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCFWCFG1_IX" ON "PRODUCTION"."SVC_FRAMEWRK_CFG" ("FRAMEWORK_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AUTH_STAT_PGID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."AUTH_STAT_PGID_IDX" ON "PRODUCTION"."DCSPP_AUTH_STATUS" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_ITEMDISP
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSR_EXCH_ITEMDISP" ON "PRODUCTION"."CSR_EXCH_ITEM" ("DISPOSITION") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PIREL_ITEM_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."PIREL_ITEM_IDX" ON "PRODUCTION"."DCSPP_PAYITEM_REL" ("COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GFT_EVNT_NAME_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GFT_EVNT_NAME_IDX" ON "PRODUCTION"."DCS_GIFTLIST" ("EVENT_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AMTINF_ADJ_ADJ_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."AMTINF_ADJ_ADJ_IDX" ON "PRODUCTION"."DCSPP_AMTINFO_ADJ" ("ADJUSTMENTS") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GFT_EVNT_TYPE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GFT_EVNT_TYPE_IDX" ON "PRODUCTION"."DCS_GIFTLIST" ("EVENT_TYPE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_TICKET_CUS1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_TICKET_CUS1_IX" ON "PRODUCTION"."TKT_TICKET" ("CUST_DETAILS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SRCH_END_JOB_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SRCH_END_JOB_X" ON "PRODUCTION"."SRCH_END_JOB" ("CONFIG_PATH") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_DEFCSTCTR_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_DEFCSTCTR_IDX" ON "PRODUCTION"."DCS_USER" ("DFLT_COST_CENTER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GIFTITEM_PROD_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GIFTITEM_PROD_IDX" ON "PRODUCTION"."DCS_GIFTITEM" ("PRODUCT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MEDIA_TYPE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."MEDIA_TYPE_IDX" ON "PRODUCTION"."MEDIA_BASE" ("MEDIA_TYPE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index COREL_CSTCTR_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."COREL_CSTCTR_IDX" ON "PRODUCTION"."DBCPP_CCORDER_REL" ("COST_CENTER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_REACTXL_R1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_REACTXL_R1_IX" ON "PRODUCTION"."TKT_REA_CTX_LIST" ("REASON_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_INV_PMT_TERMS
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_INV_PMT_TERMS" ON "PRODUCTION"."DBC_INVOICE" ("PMT_TERMS") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DR$SRCH_SEARCH_PROFILE_IDX$X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$X" ON "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" ("TOKEN_TEXT", "TOKEN_TYPE", "TOKEN_FIRST", "TOKEN_LAST", "TOKEN_COUNT") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS COMPRESS 2 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USR_ROLES_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USR_ROLES_ID" ON "PRODUCTION"."DPS_USER_ROLES" ("ATG_ROLE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_ITEMMARKERS1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCS_ITEMMARKERS1_X" ON "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" ("COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_REACTX_REA1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_REACTX_REA1_X" ON "PRODUCTION"."TKT_REA_CONTEXT" ("DEFAULT_REASON_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_INDSCENARIO1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_INDSCENARIO1_X" ON "PRODUCTION"."DSS_IND_SCENARIO" ("MODIFICATION_TIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AMTINF_ADJ_AID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."AMTINF_ADJ_AID_IDX" ON "PRODUCTION"."DCSPP_AMTINFO_ADJ" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_U
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PRODUCTION"."DPS_USER_U" ON "PRODUCTION"."DPS_USER" ("LOGIN", "REALM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_EVENT_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USER_EVENT_IX" ON "PRODUCTION"."DPS_USER_EVENT" ("EVENTTYPE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_METHOD_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSR_EXCH_METHOD_ID" ON "PRODUCTION"."CSR_EXCH_METHODS" ("EXCHANGE_METHOD_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index FLDR_MFLDRID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."FLDR_MFLDRID_IDX" ON "PRODUCTION"."MEDIA_FOLDER" ("PARENT_FOLDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_EXCH_ITM
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSR_EXCH_EXCH_ITM" ON "PRODUCTION"."CSR_EXCH_ITEMS" ("EXCHANGE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index VMAP_IM_ITEM
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."VMAP_IM_ITEM" ON "PRODUCTION"."VMAP_IM" ("ITEM_PATH", "ITEM_NAME", "NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USCN_U_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USCN_U_IDX" ON "PRODUCTION"."DPS_USER_SCENARIO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SHIP_ITEM_SUB_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SHIP_ITEM_SUB_IDX" ON "PRODUCTION"."DCSPP_SHIPITEM_SUB" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ITEM_PRODREF_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ITEM_PRODREF_IDX" ON "PRODUCTION"."DCSPP_ITEM" ("PRODUCT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GC_PROFILE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GC_PROFILE_IDX" ON "PRODUCTION"."DCSPP_GIFT_CERT" ("PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_CRCDBA_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_CRCDBA_IDX" ON "PRODUCTION"."DPS_CREDIT_CARD" ("BILLING_ADDR") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index MARKER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."MARKER_IDX" ON "PRODUCTION"."DAS_DD_MARKERS" ("MARKER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_R_TS
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_R_TS" ON "PRODUCTION"."DPS_REQUEST" ("TIMESTAMP") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_PROFILE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_PROFILE_IDX" ON "PRODUCTION"."DCSPP_ORDER" ("PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CLAIMABLE_USER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CLAIMABLE_USER_IDX" ON "PRODUCTION"."DCSPP_GIFTCERT" ("PURCHASER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DD_DEPLOYMENT_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DD_DEPLOYMENT_IDX" ON "PRODUCTION"."DAS_DEPLOY_DATA" ("DEPLOYMENT") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_EXTR_A1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_EXTR_A1_IX" ON "PRODUCTION"."TKT_EXT_REF" ("ACTIVITY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_OTRLST_GLI_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_OTRLST_GLI_IDX" ON "PRODUCTION"."DCS_USER_OTHERLIST" ("GIFTLIST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DAS_DPL_DPLID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DAS_DPL_DPLID_IDX" ON "PRODUCTION"."DAS_DEPL_ITEM_REF" ("DEPLOYMENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_QUEUE_ENTRY1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ARF_QUEUE_ENTRY1_X" ON "PRODUCTION"."ARF_QUEUE_ENTRY" ("LOADER_QUEUE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSR_EXCH_ITMSHPGRP
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSR_EXCH_ITMSHPGRP" ON "PRODUCTION"."CSR_EXCH_ITEM" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SVCPANELCFG1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SVCPANELCFG1_IX" ON "PRODUCTION"."SVC_PANEL_CFG" ("PANEL_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_ITEM_CIT_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_ITEM_CIT_IDX" ON "PRODUCTION"."DCSPP_ORDER_ITEM" ("COMMERCE_ITEMS") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DMS_QUEUE_MSG_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DMS_QUEUE_MSG_IDX" ON "PRODUCTION"."DMS_QUEUE_ENTRY" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CIREL_ITEM_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CIREL_ITEM_IDX" ON "PRODUCTION"."DBCPP_CCITEM_REL" ("COMMERCE_ITEM_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index POREL_ORDER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."POREL_ORDER_IDX" ON "PRODUCTION"."DCSPP_PAYORDER_REL" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_UE_TS
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_UE_TS" ON "PRODUCTION"."DPS_USER_EVENT" ("TIMESTAMP") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_USER_L
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_USER_L" ON "PRODUCTION"."DPS_USER" (LOWER("EMAIL")) 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SHIP_ITEM_TAX_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SHIP_ITEM_TAX_IDX" ON "PRODUCTION"."DCSPP_SHIPITEM_TAX" ("AMOUNT_INFO_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_PCS_FT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_PCS_FT" ON "PRODUCTION"."DPS_PGRP_CON_SUM" ("FROMTIME", "TOTIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CSREL_SHIPGRP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CSREL_SHIPGRP_IDX" ON "PRODUCTION"."DBCPP_CCSHIP_REL" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_GWPOMARKERS1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCS_GWPOMARKERS1_X" ON "PRODUCTION"."DCS_GWP_ORDER_MARKERS" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_PRMSTAT_PR_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_PRMSTAT_PR_IDX" ON "PRODUCTION"."DCS_USR_PROMOSTAT" ("PROMOTION") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PIREL_PAYGRP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."PIREL_PAYGRP_IDX" ON "PRODUCTION"."DCSPP_PAYITEM_REL" ("PAYMENT_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GFT_OWNER_ID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GFT_OWNER_ID_IDX" ON "PRODUCTION"."DCS_GIFTLIST" ("OWNER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCN_LG_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_SCN_LG_IDX" ON "PRODUCTION"."DSS_SCENARIO_LONGS" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index CIREL_CSTCTR_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."CIREL_CSTCTR_IDX" ON "PRODUCTION"."DBCPP_CCITEM_REL" ("COST_CENTER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCS_USRDCC_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCS_USRDCC_IDX" ON "PRODUCTION"."DCS_USER" ("DEFAULT_CREDITCARD") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_Q_LO1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_Q_LO1_X" ON "PRODUCTION"."TKT_QUEUE" ("DEF_ESC_TKT_Q") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_RELATED_T2_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_RELATED_T2_IX" ON "PRODUCTION"."TKT_RELATED" ("RELATED_TICKET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GFTLST_ITM_GLI_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GFTLST_ITM_GLI_IDX" ON "PRODUCTION"."DCS_GIFTLIST_ITEM" ("GIFTLIST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index AGTPROFILECMMT1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."AGTPROFILECMMT1_X" ON "PRODUCTION"."AGENT_PROFILE_CMTS" ("PROFILE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_A_STATC_SU1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_A_STATC_SU1_IX" ON "PRODUCTION"."TKT_ACT_STATC" ("NEW_SUB_STATUS") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index TKT_MSGHDRS_A1_IX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."TKT_MSGHDRS_A1_IX" ON "PRODUCTION"."TKT_ADS_MSG_HDRS" ("MSG_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PMTREQ_REQ_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."PMTREQ_REQ_IDX" ON "PRODUCTION"."DBCPP_PMT_REQ" ("REQ_NUMBER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index COREL_ORDER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."COREL_ORDER_IDX" ON "PRODUCTION"."DBCPP_CCORDER_REL" ("ORDER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_PRNTFOL_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCSPP_PRNTFOL_IDX" ON "PRODUCTION"."DCSPP_CP_FOLDER" ("PARENT_FOLDER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_WSHLST_GLI_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_WSHLST_GLI_IDX" ON "PRODUCTION"."DCS_USER_WISHLIST" ("GIFTLIST_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DSS_SCN_DT_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DSS_SCN_DT_IDX" ON "PRODUCTION"."DSS_SCENARIO_DATES" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_LOADER_PROG1_X
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ARF_LOADER_PROG1_X" ON "PRODUCTION"."ARF_LOADER_PROG" ("LOADER_QUEUE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORD_CREAT_SITE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORD_CREAT_SITE_IDX" ON "PRODUCTION"."DCSPP_ORDER" ("CREATION_SITE_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SEARCH_END_JOB_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SEARCH_END_JOB_IDX" ON "PRODUCTION"."SRCH_END_JOB" ("CONFIG_PATH", "START_TIME" DESC) 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index USR_USEDPRM_ID_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."USR_USEDPRM_ID_IDX" ON "PRODUCTION"."DCS_USR_USEDPROMO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SCHED_ERROR_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SCHED_ERROR_IDX" ON "PRODUCTION"."DCSPP_SCHERR_AUX" ("SCHED_ERROR_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_BYR_COSTCTR_ID
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_BYR_COSTCTR_ID" ON "PRODUCTION"."DBC_BUYER_COSTCTR" ("COST_CENTER_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index GC_NUMBER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."GC_NUMBER_IDX" ON "PRODUCTION"."DCSPP_GIFT_CERT" ("GIFT_CERT_NUMBER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DBC_ORGDFLT_SHPADR
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DBC_ORGDFLT_SHPADR" ON "PRODUCTION"."DBC_ORGANIZATION" ("DFLT_SHIPPING_ADDR") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SIREL_SHIPGRP_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."SIREL_SHIPGRP_IDX" ON "PRODUCTION"."DCSPP_SHIPITEM_REL" ("SHIPPING_GROUP_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_ORG_ANCANC_ORG
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_ORG_ANCANC_ORG" ON "PRODUCTION"."DPS_ORG_ANCESTORS" ("ANC_ORG") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ORDER_LASTMOD_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ORDER_LASTMOD_IDX" ON "PRODUCTION"."DCSPP_ORDER" ("LAST_MODIFIED_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index INV_END_DTE_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."INV_END_DTE_IDX" ON "PRODUCTION"."DCS_INVENTORY" ("END_DATE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DCSPP_FOLDER_IDX
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DCSPP_FOLDER_IDX" ON "PRODUCTION"."DCSPP_COUPON_INFO" ("PARENT_FOLDER") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index ARF_LQE_X2
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."ARF_LQE_X2" ON "PRODUCTION"."ARF_LQ_ENTRIES" ("QUEUE_ENTRY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index DPS_RNS_FT
+--------------------------------------------------------
+
+  CREATE INDEX "PRODUCTION"."DPS_RNS_FT" ON "PRODUCTION"."DPS_REQNAME_SUM" ("FROMTIME", "TOTIME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table CSRT_OMA_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_OMA_EVENT" ADD CONSTRAINT "CSRT_OMA_EVENT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_OMA_EVENT" MODIFY ("REASON" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_OMA_EVENT" MODIFY ("UPDATE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_OMA_EVENT" MODIFY ("ADJUSTMENT_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_OMA_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_ITEMS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEMS" ADD CONSTRAINT "CSR_EXCH_ITEMS_P" PRIMARY KEY ("EXCHANGE_ID", "EXCHANGE_ITEM_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEMS" MODIFY ("EXCHANGE_ITEM_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEMS" MODIFY ("EXCHANGE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_PAYORDER_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYORDER_REL" ADD CONSTRAINT "DCSPP_PAYORDER_R_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYORDER_REL" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_SMTP_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMTP_MSGS" ADD CONSTRAINT "TKT_ADS_SMTP_MSG_P" PRIMARY KEY ("RAW_MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMTP_MSGS" MODIFY ("RAW_MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USR_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USR_MARKERS" ADD CONSTRAINT "DPS_USR_MARKERS_P" PRIMARY KEY ("PROFILE_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USR_MARKERS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USR_MARKERS" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USR_MARKERS" MODIFY ("PROFILE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MEDIA_TXT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_TXT" ADD CONSTRAINT "MEDIA_TXT_P" PRIMARY KEY ("MEDIA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."MEDIA_TXT" MODIFY ("DATA" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_TXT" MODIFY ("LAST_MODIFIED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_TXT" MODIFY ("LENGTH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_TXT" MODIFY ("MEDIA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_GWP_ITEM_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" ADD CONSTRAINT "DCSGWPIMARKERS_P" PRIMARY KEY ("MARKER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("REMAINING_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("SELECTED_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("AUTOMATIC_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("TARGETED_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("MARKER_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("COMMERCE_ITEM_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_PROFILE_IDX$K
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$K" ADD PRIMARY KEY ("TEXTKEY")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table CSR_SC_EXCH_METHOD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_SC_EXCH_METHOD" ADD CONSTRAINT "CSR_SC_EXCH_MTHD_P" PRIMARY KEY ("EXCHANGE_METHOD_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_SC_EXCH_METHOD" MODIFY ("EXCHANGE_METHOD_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER" ADD CONSTRAINT "DPS_USER_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER" ADD CONSTRAINT "DPS_USER2_C" CHECK (member in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER" ADD CONSTRAINT "DPS_USER1_C" CHECK (auto_login in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER" MODIFY ("LOGIN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_MAILING
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_MAILING" ADD CONSTRAINT "DPS_MAILING_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_MAILING" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_IV
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_IV" ADD CONSTRAINT "VMAP_IV_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_IV" MODIFY ("MODE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IV" MODIFY ("DESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IV" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IV" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_FRAMEWRK_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_FRAMEWRK_CFG" ADD CONSTRAINT "SVCFWCFG_P" PRIMARY KEY ("FRMWK_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_FRAMEWRK_CFG" MODIFY ("FRAMEWORK_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_FRAMEWRK_CFG" MODIFY ("FRMWK_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MEDIA_BASE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_BASE" ADD CONSTRAINT "MEDIA_P" PRIMARY KEY ("MEDIA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."MEDIA_BASE" MODIFY ("PARENT_FOLDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_BASE" MODIFY ("PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_BASE" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_BASE" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_BASE" MODIFY ("MEDIA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_CC_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CC_STATUS" ADD CONSTRAINT "DCSPP_CC_STATUS_P" PRIMARY KEY ("STATUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_CC_STATUS" MODIFY ("STATUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_COUPON_BATCH
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_BATCH" ADD CONSTRAINT "CODE_PREFIX_IDX" UNIQUE ("CODE_PREFIX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_BATCH" ADD CONSTRAINT "DCSPP_BATCH_CP_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_BATCH" MODIFY ("CODES_GENERATED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_BATCH" MODIFY ("CODE_PREFIX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_BATCH" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPLOY_MARK
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOY_MARK" ADD CONSTRAINT "MARKER_PK" PRIMARY KEY ("MARKER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOY_MARK" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOY_MARK" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_OWNING_GROUP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_OWNING_GROUP" ADD CONSTRAINT "TKT_OWN_GRP_P" PRIMARY KEY ("LOGICAL_ORG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_OWNING_GROUP" MODIFY ("LOGICAL_ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USER_ABANDONED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_ABANDONED" ADD CONSTRAINT "DCS_USR_ABNDND_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER_ABANDONED" MODIFY ("PROFILE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USER_ABANDONED" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USER_ABANDONED" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_USEROPT_VAL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_VAL" ADD CONSTRAINT "USEROPTVAL_P" PRIMARY KEY ("OPTION_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_VAL" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_VAL" MODIFY ("OPTION_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_VAL" MODIFY ("OPTION_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_IM2IVM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_IM2IVM_REL" ADD CONSTRAINT "VMAP_IM2IVM_PK" PRIMARY KEY ("ITEM_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_IM2IVM_REL" MODIFY ("VIEW_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IM2IVM_REL" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IM2IVM_REL" MODIFY ("ITEM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ITEM_CI
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_CI" ADD CONSTRAINT "DCSPP_ITEM_CI_P" PRIMARY KEY ("COMMERCE_ITEM_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_CI" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_CI" MODIFY ("COMMERCE_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_CI" MODIFY ("COMMERCE_ITEM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_DET_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_DET_PRICE" ADD CONSTRAINT "DCSPP_DET_PRICE_P" PRIMARY KEY ("AMOUNT_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_DET_PRICE" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_SCHD_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_SCHD_EVENT" ADD CONSTRAINT "CSRT_SCHD_EVENT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_SCHD_EVENT" MODIFY ("UPDATE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_SCHD_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DBSETUP_HISTORY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" ADD CONSTRAINT "DAS_DBSETUP_HISTORY1_P" PRIMARY KEY ("HISTORY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" MODIFY ("EXEC_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" MODIFY ("JOB_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" MODIFY ("OPERATION_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" MODIFY ("RESOURCE_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" MODIFY ("MODULE_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DBSETUP_HISTORY" MODIFY ("HISTORY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_QUEUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_QUEUE" ADD CONSTRAINT "DMS_QUEUE_P" PRIMARY KEY ("QUEUE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_QUEUE" MODIFY ("QUEUE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_ACCT_PREVPWD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_ACCT_PREVPWD" ADD CONSTRAINT "DAS_PREVPWD_P" PRIMARY KEY ("ACCOUNT_NAME", "SEQ_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_ACCT_PREVPWD" MODIFY ("SEQ_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_ACCT_PREVPWD" MODIFY ("ACCOUNT_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_GIFTITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GIFTITEM" ADD CONSTRAINT "DCS_GIFTITEM_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GIFTITEM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_UPDATE_PROF
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_UPDATE_PROF" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ADJ" ADD CONSTRAINT "DCSPP_ORDER_ADJ_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ADJ" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ADJ" MODIFY ("ADJUSTMENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ADJ" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DELETION
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DELETION" ADD CONSTRAINT "DSS_DELETION_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_DELETION" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_PSTACK_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_PSTACK_CFG" ADD CONSTRAINT "SVCPSTACKCFG_P" PRIMARY KEY ("PSTACK_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_PSTACK_CFG" MODIFY ("PANEL_STACK_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PSTACK_CFG" MODIFY ("PSTACK_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_CREDIT_CARD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_CREDIT_CARD" ADD CONSTRAINT "DPS_CREDIT_CARD_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_CREDIT_CARD" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_SMS_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMS_MSGS" ADD CONSTRAINT "TKT_ADS_SMS_MSGS_P" PRIMARY KEY ("RAW_MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMS_MSGS" MODIFY ("DEST_ADDRESS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMS_MSGS" MODIFY ("SOURCE_ADDRESS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMS_MSGS" MODIFY ("RAW_MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_SG_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_SG_EVENT" ADD CONSTRAINT "CSRT_SG_EVNT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_SG_EVENT" MODIFY ("UPDATE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_SG_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_INV_ATP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_INV_ATP" ADD CONSTRAINT "DCS_INV_ATP_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_INV_ATP" MODIFY ("QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_INV_ATP" MODIFY ("AVAILABLE_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_INV_ATP" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_INV_ATP" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER_SG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_SG" ADD CONSTRAINT "DCSPP_ORDER_SG_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_SG" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_SG" MODIFY ("SHIPPING_GROUPS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_SG" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CHANGELOG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CHANGELOG" ADD CONSTRAINT "PKCHANGELOG" PRIMARY KEY ("CHANGE_NUMBER")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CHANGELOG" MODIFY ("DESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CHANGELOG" MODIFY ("APPLIED_BY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CHANGELOG" MODIFY ("COMPLETE_DT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CHANGELOG" MODIFY ("CHANGE_NUMBER" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER" ADD CONSTRAINT "DCS_USER_P" PRIMARY KEY ("USER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER" ADD CONSTRAINT "DCS_USER2_C" CHECK (express_checkout in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER" ADD CONSTRAINT "DCS_USER1_C" CHECK (allow_partial_ship in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_ESCAL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_ESCAL" ADD CONSTRAINT "TKT_ACT_ESC_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_ESCAL" MODIFY ("NEW_ESC_LEVEL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_ESCAL" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_ADMIN_UP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_ADMIN_UP" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER" ADD CONSTRAINT "DCSPP_ORDER_P" PRIMARY KEY ("ORDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER" ADD CONSTRAINT "DCSPP_ORDER_C" CHECK (explicitly_saved IN (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_MODE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_MODE" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_MODE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_CONTRACT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_CONTRACT" ADD CONSTRAINT "DBC_CONTRACT_P" PRIMARY KEY ("CONTRACT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_CONTRACT" MODIFY ("CONTRACT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_LIMBO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO" ADD CONSTRAINT "LIMBO_PK" PRIMARY KEY ("LIMBO_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO" MODIFY ("LIMBO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO" MODIFY ("LIMBO_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_PROFILE_IDX$R
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$R" ADD CONSTRAINT "DRC$SRCH_SEARCH_PROFILE_IDX$R" PRIMARY KEY ("ROW_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table SVC_PS_PNL_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_PS_PNL_CFG" ADD CONSTRAINT "SVCPSPNLCFG_P" PRIMARY KEY ("PSTACK_CFG_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_PS_PNL_CFG" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PS_PNL_CFG" MODIFY ("PANEL_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PS_PNL_CFG" MODIFY ("PSTACK_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_LOG_ID
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_LOG_ID" ADD CONSTRAINT "DPS_LOG_ID_P" PRIMARY KEY ("TABLENAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_LOG_ID" MODIFY ("NEXTID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_LOG_ID" MODIFY ("TABLENAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_ORG_ROLE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ROLE" ADD CONSTRAINT "DPS_ORG_ROLE_P" PRIMARY KEY ("ORG_ID", "ATG_ROLE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ROLE" MODIFY ("ATG_ROLE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ROLE" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_OWNAGNT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNAGNT" ADD CONSTRAINT "TKT_ACT_OWNAGNT_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNAGNT" MODIFY ("IS_PUSH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNAGNT" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_SITE_CNTNT_PRI
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_SITE_CNTNT_PRI" ADD CONSTRAINT "SRCH_SITE_CNTNT_PP" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_SITE_CNTNT_PRI" MODIFY ("CONTENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_SITE_CNTNT_PRI" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SHIP_ADDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_ADDR" ADD CONSTRAINT "DCSPP_SHIP_ADDR_P" PRIMARY KEY ("SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_ADDR" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_SECURE_ID_GEN
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_SECURE_ID_GEN" ADD CONSTRAINT "DAS_SECURE_ID_GE_P" PRIMARY KEY ("ID_SPACE_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_SECURE_ID_GEN" MODIFY ("BATCH_SIZE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_SECURE_ID_GEN" MODIFY ("SEED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_SECURE_ID_GEN" MODIFY ("ID_SPACE_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM" ADD CONSTRAINT "DCSPP_ITEM_P" PRIMARY KEY ("COMMERCE_ITEM_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM" MODIFY ("COMMERCE_ITEM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_ORDER_IDX$K
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$K" ADD PRIMARY KEY ("TEXTKEY")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table TKT_Q_STATS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_Q_STATS" ADD CONSTRAINT "TKT_Q_STATS_P" PRIMARY KEY ("TKT_Q_STATS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_Q_STATS" MODIFY ("RELEASE_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_Q_STATS" MODIFY ("MISS_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_Q_STATS" MODIFY ("HIT_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_Q_STATS" MODIFY ("REQUEST_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_Q_STATS" MODIFY ("TKT_Q_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_Q_STATS" MODIFY ("TKT_Q_STATS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_MANUAL_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" ADD CONSTRAINT "DCSPP_MANUAL_ADJ_P" PRIMARY KEY ("MANUAL_ADJUST_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" MODIFY ("REASON" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" MODIFY ("ADJUSTMENT_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_MANUAL_ADJ" MODIFY ("MANUAL_ADJUST_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SHIPITEM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_REL" ADD CONSTRAINT "DCSPP_SHIPITEM_R_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_REL" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table ARF_LOADER_QUEUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_QUEUE" ADD CONSTRAINT "ARF_LQ_P" PRIMARY KEY ("LOADER_QUEUE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_QUEUE" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_QUEUE" MODIFY ("LOADER_QUEUE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_CON_REQ_SUM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ_SUM" ADD CONSTRAINT "DPS_CON_REQ_SUM_C" CHECK (member in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ_SUM" MODIFY ("TOTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ_SUM" MODIFY ("FROMTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ_SUM" MODIFY ("SUMMARYCOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ_SUM" MODIFY ("MEMBER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ_SUM" MODIFY ("CONTENTID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_IV2IVAD_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_IV2IVAD_REL" ADD CONSTRAINT "VMAP_IV2IVA_PK" PRIMARY KEY ("VIEW_ID", "NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_IV2IVAD_REL" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IV2IVAD_REL" MODIFY ("ATTR_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IV2IVAD_REL" MODIFY ("VIEW_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_EVENT_SUM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT_SUM" MODIFY ("TOTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT_SUM" MODIFY ("FROMTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT_SUM" MODIFY ("SUMMARYCOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT_SUM" MODIFY ("EVENTTYPE" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_PSWCHANGE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_PSWCHANGE" MODIFY ("PROFILE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_PSWCHANGE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MEDIA_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_FOLDER" ADD CONSTRAINT "MD_FOLDER_P" PRIMARY KEY ("FOLDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."MEDIA_FOLDER" MODIFY ("PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_FOLDER" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_FOLDER" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_FOLDER" MODIFY ("FOLDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MSGADDLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" ADD CONSTRAINT "TKT_ADS_ADDRL_P" PRIMARY KEY ("MSG_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" MODIFY ("ADDR_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_PROFILE_REALM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_PROFILE_REALM" ADD CONSTRAINT "DPS_PRFL_RLM_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_PROFILE_REALM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_PAGE_VISIT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_PAGE_VISIT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPL_DEPLDAT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_DEPLDAT" ADD CONSTRAINT "DAS_DPL_DEPDAT_PK" PRIMARY KEY ("DEPLOYMENT_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_DEPLDAT" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_DEPLDAT" MODIFY ("DEPLOYMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USR_ACTVPROMO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" ADD CONSTRAINT "DCS_USR_ACTVPROM_P" PRIMARY KEY ("ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" MODIFY ("PROMO_STATUS_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT" ADD CONSTRAINT "DPS_USER_EVENT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT" ADD CONSTRAINT "DPS_USER_EVENT_C" CHECK (member in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT" MODIFY ("MEMBER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT" MODIFY ("EVENTTYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT" MODIFY ("TIMESTAMP" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_MIG_INFO_SEG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_MIG_INFO_SEG" ADD CONSTRAINT "DSS_MIG_INFOSEG_PK" PRIMARY KEY ("ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_MIG_INFO_SEG" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_MIG_INFO_SEG" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_FILE_MARK
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_FILE_MARK" ADD CONSTRAINT "FILE_MARKER_PK" PRIMARY KEY ("FILE_MARKER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_FILE_MARK" MODIFY ("FILE_MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DD_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DD_MARKERS" ADD CONSTRAINT "DAS_DPL_DD_MRK_PK" PRIMARY KEY ("DEPLOY_DATA_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DD_MARKERS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DD_MARKERS" MODIFY ("DEPLOY_DATA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_GI_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_GI_EVENT" ADD CONSTRAINT "CSRT_GI_EVENT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_GI_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_ORG_ANCESTORS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" ADD CONSTRAINT "DPS_ORG_ANCESTOR_P" PRIMARY KEY ("ORG_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" MODIFY ("ANC_ORG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_ORGANIZATION
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORGANIZATION" ADD CONSTRAINT "DPS_ORGANIZATION_P" PRIMARY KEY ("ORG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ORGANIZATION" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ORGANIZATION" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_USER_OPT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_USER_OPT" ADD CONSTRAINT "SVCUSEROPT1_UN" UNIQUE ("USER_ID", "OPTION_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_USER_OPT" ADD CONSTRAINT "SVCUSEROPT_P" PRIMARY KEY ("OPTION_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_USER_OPT" MODIFY ("OPTION_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_USER_OPT" MODIFY ("OPTION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_USER_OPT" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_IVATTRDEF
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_IVATTRDEF" ADD CONSTRAINT "VMAP_IVATDEF_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_IVATTRDEF" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MEDIA_EXT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_EXT" ADD CONSTRAINT "MEDIA_EXT_P" PRIMARY KEY ("MEDIA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."MEDIA_EXT" MODIFY ("URL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_EXT" MODIFY ("MEDIA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_QUOTE_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_QUOTE_INFO" ADD CONSTRAINT "DCSPP_QUOTE_INFO_P" PRIMARY KEY ("QUOTE_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_QUOTE_INFO" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_QUOTE_INFO" MODIFY ("QUOTE_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_ROLE_REL_ORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" ADD CONSTRAINT "DPS_ROLE_REL_ORG_P" PRIMARY KEY ("ORGANIZATION", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" MODIFY ("ROLE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" MODIFY ("ORGANIZATION" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_CATTRVAL_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_CATTRVAL_REL" ADD CONSTRAINT "VMAP_CTVL_REL_PK" PRIMARY KEY ("MAPPER_ID", "ATTRIBUTE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_CATTRVAL_REL" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_CATTRVAL_REL" MODIFY ("ATTRIBUTE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_CATTRVAL_REL" MODIFY ("MAPPER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_USER_BPMARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_USER_BPMARKERS" ADD CONSTRAINT "DSSPROFILEBP_P" PRIMARY KEY ("MARKER_ID", "PROFILE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_USER_BPMARKERS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_USER_BPMARKERS" MODIFY ("MARKER_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_USER_BPMARKERS" MODIFY ("PROFILE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_USER_BPMARKERS" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_METHODS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHODS" ADD CONSTRAINT "CSR_EXCH_METHODS_P" PRIMARY KEY ("EXCHANGE_ID", "EXCHANGE_METHOD_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHODS" MODIFY ("EXCHANGE_METHOD_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHODS" MODIFY ("EXCHANGE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USR_PROMOSTAT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USR_PROMOSTAT" ADD CONSTRAINT "DCS_USR_PROMOSTA_P" PRIMARY KEY ("STATUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USR_PROMOSTAT" MODIFY ("PROMOTION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USR_PROMOSTAT" MODIFY ("PROFILE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USR_PROMOSTAT" MODIFY ("STATUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_PROFILE_TOKENS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_TOKENS" ADD CONSTRAINT "SRCH_PROFILE_TOKENS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_TOKENS" MODIFY ("TOKENS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_TOKENS" MODIFY ("CREATION_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_TOKENS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_AUTHAPPRIDS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_AUTHAPPRIDS" ADD CONSTRAINT "DBCPP_AUTHAPPRID_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_AUTHAPPRIDS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_AUTHAPPRIDS" MODIFY ("AUTH_APPR_IDS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_AUTHAPPRIDS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_PVATTRDEF
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_PVATTRDEF" ADD CONSTRAINT "VMAP_PVATDEF_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_PVATTRDEF" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_CMTS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_CMTS" ADD CONSTRAINT "CSREXCHCMMT_P" PRIMARY KEY ("COMMENT_ID", "RETURN_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_CMTS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_CMTS" MODIFY ("COMMENT_DATA" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_CMTS" MODIFY ("RETURN_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_CMTS" MODIFY ("COMMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_ORDER_IDX$R
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$R" ADD CONSTRAINT "DRC$SRCH_SEARCH_ORDER_IDX$R" PRIMARY KEY ("ROW_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table CAF_REG_PATHASSET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CAF_REG_PATHASSET" ADD CONSTRAINT "CAF_REG_PATH_P" PRIMARY KEY ("ASSET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CAF_REG_PATHASSET" MODIFY ("ASSET_PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CAF_REG_PATHASSET" MODIFY ("ASSET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_Q_STAT_SET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_Q_STAT_SET" ADD CONSTRAINT "SRV_TKT_Q_P" PRIMARY KEY ("SERVER_STATS_ID", "TKT_Q_STATS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_Q_STAT_SET" MODIFY ("TKT_Q_STATS_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_Q_STAT_SET" MODIFY ("SERVER_STATS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_BUYER_COSTCTR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_COSTCTR" ADD CONSTRAINT "DBC_BUYER_COSTCT_P" PRIMARY KEY ("USER_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_COSTCTR" MODIFY ("COST_CENTER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_COSTCTR" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_COSTCTR" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SHIPITEM_TAX
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_TAX" ADD CONSTRAINT "DCSPP_SHIPITEM_T_P" PRIMARY KEY ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_TAX" MODIFY ("SHIP_ITEM_TAX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_TAX" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_TAX" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MESSAGES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MESSAGES" ADD CONSTRAINT "TKT_ADS_MESSAGES_P" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MESSAGES" MODIFY ("CHANNEL_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MESSAGES" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_OUT_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" ADD CONSTRAINT "TKT_ADS_OUT_MSGS_P" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" MODIFY ("STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" MODIFY ("LAST_MODIFIED_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" MODIFY ("RESPONSE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" MODIFY ("SEND_FORMAT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CAF_REG_ROOTFOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CAF_REG_ROOTFOLDER" ADD CONSTRAINT "CAF_REG_ROOTF_P" PRIMARY KEY ("REGISTRY_ID", "FOLDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CAF_REG_ROOTFOLDER" MODIFY ("FOLDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CAF_REG_ROOTFOLDER" MODIFY ("REGISTRY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_ORDER_CMTS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_ORDER_CMTS" ADD CONSTRAINT "CSRORDERCMMT_P" PRIMARY KEY ("COMMENT_ID", "ORDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_ORDER_CMTS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_ORDER_CMTS" MODIFY ("COMMENT_DATA" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_ORDER_CMTS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_ORDER_CMTS" MODIFY ("COMMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_THREAD_BATCH
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_THREAD_BATCH" ADD CONSTRAINT "DAS_DPL_TB_PK" PRIMARY KEY ("THREAD_BATCH_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_THREAD_BATCH" MODIFY ("RUNNING" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_THREAD_BATCH" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_THREAD_BATCH" MODIFY ("THREAD_BATCH_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SCENARIO_DBLS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DBLS" ADD CONSTRAINT "DSS_SCENARIO_DBL_P" PRIMARY KEY ("ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DBLS" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DBLS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MSG_PROPS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_PROPS" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_PROPS" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_PROFILE_STAGING
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_STAGING" ADD CONSTRAINT "SRCH_PROFILE_STAGING_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_STAGING" MODIFY ("TOKENS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_STAGING" MODIFY ("CREATION_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_STAGING" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_BILL_ADDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_BILL_ADDR" ADD CONSTRAINT "DCSPP_BILL_ADDR_P" PRIMARY KEY ("PAYMENT_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_BILL_ADDR" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_RELATED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_RELATED" ADD CONSTRAINT "TKT_RELATED_P" PRIMARY KEY ("TICKET_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_RELATED" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_RELATED" MODIFY ("RELATED_TICKET_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_RELATED" MODIFY ("TICKET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_CLIENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_CLIENT" ADD CONSTRAINT "DMS_CLIENT_P" PRIMARY KEY ("CLIENT_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_CLIENT" MODIFY ("CLIENT_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_ACCOUNT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_ACCOUNT" ADD CONSTRAINT "DAS_ACCOUNT_P" PRIMARY KEY ("ACCOUNT_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_ACCOUNT" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_ACCOUNT" MODIFY ("ACCOUNT_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_SCHED_ORDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_ORDER" ADD CONSTRAINT "DBCPP_SCHED_ORDE_P" PRIMARY KEY ("SCHEDULED_ORDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_ORDER" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_ORDER" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_ORDER" MODIFY ("SCHEDULED_ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_INBOUND
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_INBOUND" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACTIVITY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACTIVITY" ADD CONSTRAINT "TKT_ACTIVITY_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACTIVITY" MODIFY ("CREATION_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACTIVITY" MODIFY ("TICKET_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACTIVITY" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_REQUEST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_REQUEST" ADD CONSTRAINT "DPS_REQUEST_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_REQUEST" ADD CONSTRAINT "DPS_REQUEST_C" CHECK (member in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_REQUEST" MODIFY ("MEMBER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_REQUEST" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_REQUEST" MODIFY ("TIMESTAMP" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_REQUEST" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_MIG_SEG_NAME
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_MIG_SEG_NAME" ADD CONSTRAINT "DSS_MIG_SEGNAME_PK" PRIMARY KEY ("ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_MIG_SEG_NAME" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_MIG_SEG_NAME" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_COUPON
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON" ADD CONSTRAINT "DCSPP_COUPON_P" PRIMARY KEY ("COUPON_ID", "PROMOTION_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON" MODIFY ("PROMOTION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON" MODIFY ("COUPON_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_GRT_PROM_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_GRT_PROM_EVENT" ADD CONSTRAINT "CSRT_GRPRM_EV_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_GRT_PROM_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ITEM_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_PRICE" ADD CONSTRAINT "DCSPP_ITEM_PRICE_P" PRIMARY KEY ("AMOUNT_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_PRICE" ADD CONSTRAINT "DCSPP_ITEM_PRICE_C" CHECK (on_sale IN (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_PRICE" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SITE_CONFIGURATION
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SITE_CONFIGURATION" ADD CONSTRAINT "SITE_CONFIGURAT1_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SITE_CONFIGURATION" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_SPLIT_SG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_SPLIT_SG" ADD CONSTRAINT "CSRT_SPLT_SG_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_SPLIT_SG" MODIFY ("QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_SPLIT_SG" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" ADD CONSTRAINT "CSR_EXCH_ITEM_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" ADD CONSTRAINT "CSR_EXCH_ITEM1_C" CHECK (ret_shipment_req in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("ACTL_TAX_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("SUGG_TAX_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("ACTL_SHIP_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("SUGG_SHIP_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("EXCH_REF" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("REFUND_AMOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("QUANTITY_RECEIVED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("RET_SHIPMENT_REQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("REASON" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("QUANTITY_TO_REPL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("QUANTITY_TO_RETURN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("COMMERCE_ITEM_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_ROLES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ROLES" ADD CONSTRAINT "DPS_USER_ROLES_P" PRIMARY KEY ("USER_ID", "ATG_ROLE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_ROLES" MODIFY ("ATG_ROLE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_ROLES" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_RECENT_TKTS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_RECENT_TKTS" ADD CONSTRAINT "SVC_RCNT_TKTS_P" PRIMARY KEY ("RECENT_TICKET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_RECENT_TKTS" MODIFY ("TICKET_ACCESS_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_RECENT_TKTS" MODIFY ("TICKET_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_RECENT_TKTS" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_RECENT_TKTS" MODIFY ("RECENT_TICKET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORD_ABANDON
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORD_ABANDON" ADD CONSTRAINT "DCSPP_ORD_ABNDN_P" PRIMARY KEY ("ABANDONMENT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORD_ABANDON" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORD_ABANDON" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORD_ABANDON" MODIFY ("ABANDONMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_QUEUE_RECV
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_QUEUE_RECV" ADD CONSTRAINT "DMS_QUEUE_RECV_P" PRIMARY KEY ("RECEIVER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_QUEUE_RECV" MODIFY ("RECEIVER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_AUDIT_TRAIL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_AUDIT_TRAIL" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_ADMIN_REG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_ADMIN_REG" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_COST_CENTER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_COST_CENTER" ADD CONSTRAINT "DBC_COST_CENTER_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_COST_CENTER" MODIFY ("IDENTIFIER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_COST_CENTER" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_SUBMT_ORD_EVT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_SUBMT_ORD_EVT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_APPRSYSMSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_APPRSYSMSGS" ADD CONSTRAINT "DBCPP_APPRSYSMSG_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_APPRSYSMSGS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_APPRSYSMSGS" MODIFY ("APPR_SYS_MSGS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_APPRSYSMSGS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_CON_REQ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ" ADD CONSTRAINT "DPS_CON_REQ_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ" MODIFY ("CONTENTID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ" MODIFY ("TIMESTAMP" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_CON_REQ" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_PURGE_PROGRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" ADD CONSTRAINT "DAS_PURGE_PR_P" PRIMARY KEY ("PURGE_PROGRESS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("TOTAL_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("ESTIMATED_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("PROCESSED_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("ERROR_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("SKIPPED_ON_ERROR_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("SKIPPED_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("SUCCESS_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("ITEM_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_PURGE_PROGRESS" MODIFY ("PURGE_PROGRESS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_IND_SCENARIO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_IND_SCENARIO" ADD CONSTRAINT "DSS_IND_SCENARIO_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_IND_SCENARIO" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_IND_SCENARIO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SCHERR_AUX
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHERR_AUX" ADD CONSTRAINT "DCSPP_SCHERR_AUX_P" PRIMARY KEY ("SCHEDULED_ORDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHERR_AUX" MODIFY ("SCHED_ERROR_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHERR_AUX" MODIFY ("SCHEDULED_ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_APPROVERIDS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_APPROVERIDS" ADD CONSTRAINT "DBCPP_APPROVERID_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_APPROVERIDS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_APPROVERIDS" MODIFY ("APPROVER_IDS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_APPROVERIDS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_CONTENT_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_CONTENT_CFG" ADD CONSTRAINT "SVC_CNTNTCFG_P" PRIMARY KEY ("CONTENT_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_CONTENT_CFG" MODIFY ("URL_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CONTENT_CFG" MODIFY ("MIME_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CONTENT_CFG" MODIFY ("CONTENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CONTENT_CFG" MODIFY ("CONTENT_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_TAB_PNL_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_TAB_PNL_CFG" ADD CONSTRAINT "SVCTBPNLCFG_P" PRIMARY KEY ("PANEL_CFG_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_TAB_PNL_CFG" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_TAB_PNL_CFG" MODIFY ("TABBED_PANEL_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_TAB_PNL_CFG" MODIFY ("PANEL_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_PGRP_CON_SUM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_CON_SUM" MODIFY ("TOTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_CON_SUM" MODIFY ("FROMTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_CON_SUM" MODIFY ("SUMMARYCOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_CON_SUM" MODIFY ("CONTENTNAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_CON_SUM" MODIFY ("GROUPNAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_MAIL_BATCH
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_BATCH" ADD CONSTRAINT "DPS_MAIL_BATCH_P" PRIMARY KEY ("MAILING_ID", "START_IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_BATCH" MODIFY ("START_IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_BATCH" MODIFY ("MAILING_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_SEG_LIST_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_FOLDER" ADD CONSTRAINT "DPS_S_L_F_P" PRIMARY KEY ("FOLDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_FOLDER" MODIFY ("FOLDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DLO_LOGICAL_ORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DLO_LOGICAL_ORG" ADD CONSTRAINT "DLO_LOGICAL_ORG_P" PRIMARY KEY ("LOGICAL_ORG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DLO_LOGICAL_ORG" MODIFY ("PHYS_ORG_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DLO_LOGICAL_ORG" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DLO_LOGICAL_ORG" MODIFY ("LOGICAL_ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_ORDER_CC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_ORDER_CC" ADD CONSTRAINT "DBCPP_ORDER_CC_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_ORDER_CC" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_ORDER_CC" MODIFY ("COST_CENTERS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_ORDER_CC" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_SDS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_SDS" ADD CONSTRAINT "DAS_SDS_P" PRIMARY KEY ("SDS_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_SDS" MODIFY ("SDS_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_REA_CTX_LIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_REA_CTX_LIST" ADD CONSTRAINT "TKT_REACTXL_P" PRIMARY KEY ("REA_CONTEXT_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_REA_CTX_LIST" MODIFY ("REA_CONTEXT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_REA_CTX_LIST" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_REA_CTX_LIST" MODIFY ("REASON_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DRPT_SESSION_ORD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DRPT_SESSION_ORD" ADD CONSTRAINT "DRPT_SESSION_ORD_P" PRIMARY KEY ("ORDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DRPT_SESSION_ORD" MODIFY ("SUBMITTED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_SESSION_ORD" MODIFY ("AMOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_SESSION_ORD" MODIFY ("DATE_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_SESSION_ORD" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_SESSION_ORD" MODIFY ("DATASET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPLOYMENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOYMENT" ADD CONSTRAINT "DAF_DEPL_PK" PRIMARY KEY ("DEPLOYMENT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOYMENT" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOYMENT" MODIFY ("DEPLOYMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DEL_SEG_NAME
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DEL_SEG_NAME" ADD CONSTRAINT "DSS_DEL_SEG_NAME_P" PRIMARY KEY ("ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_DEL_SEG_NAME" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_DEL_SEG_NAME" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_PROFILE_MODIFIED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_MODIFIED" ADD CONSTRAINT "SRCH_PROFILE_MODIFIED_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_MODIFIED" MODIFY ("LAST_MODIFIED_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_PROFILE_MODIFIED" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SCEN_MIG_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCEN_MIG_INFO" ADD CONSTRAINT "DSS_SCENMIGINFO_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SCEN_MIG_INFO" MODIFY ("SCENARIO_INFO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SCEN_MIG_INFO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_OPROMOS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_OPROMOS" ADD CONSTRAINT "CSREXCHOPROMOS_P" PRIMARY KEY ("EXCHANGE_ID", "PROMOTION_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_OPROMOS" MODIFY ("PROMOTION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_OPROMOS" MODIFY ("EXCHANGE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_ORD_MERGE_EVT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_ORD_MERGE_EVT" ADD CONSTRAINT "DCS_ORDMERGEEVT_CK" CHECK (sourceremoved in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_ORD_MERGE_EVT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_HAND_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_HAND_INST" ADD CONSTRAINT "DCSPP_HAND_INST_P" PRIMARY KEY ("HANDLING_INST_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_HAND_INST" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_HAND_INST" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_HAND_INST" MODIFY ("HANDLING_INST_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USR_USEDPROMO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USR_USEDPROMO" ADD CONSTRAINT "DCS_USR_USEDPROM_P" PRIMARY KEY ("ID", "PROMOTION_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USR_USEDPROMO" MODIFY ("PROMOTION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USR_USEDPROMO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPL_ITEM_REF
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_ITEM_REF" ADD CONSTRAINT "DAS_DPL_ITMREF_PK" PRIMARY KEY ("ITEM_REF_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_ITEM_REF" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_ITEM_REF" MODIFY ("ITEM_REF_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_TEMPLATE_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_TEMPLATE_CFG" ADD CONSTRAINT "SVC_TEMPLT_CFG_P" PRIMARY KEY ("TEMPLATE_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_TEMPLATE_CFG" MODIFY ("TEMPLATE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_TEMPLATE_CFG" MODIFY ("TEMPLATE_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_GROUP_ASSOC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_GROUP_ASSOC" ADD CONSTRAINT "DAS_GRP_ASC_P" PRIMARY KEY ("ACCOUNT_NAME", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_GROUP_ASSOC" MODIFY ("GROUP_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_GROUP_ASSOC" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_GROUP_ASSOC" MODIFY ("ACCOUNT_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_PROMO_ADJUST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_PROMO_ADJUST" ADD CONSTRAINT "CSRPROMOADJUST_P" PRIMARY KEY ("EXCHANGE_ID", "PROMOTION_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_PROMO_ADJUST" MODIFY ("VALUE_ADJUST" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_PROMO_ADJUST" MODIFY ("PROMOTION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_PROMO_ADJUST" MODIFY ("EXCHANGE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ESC_TKT_Q
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ESC_TKT_Q" ADD CONSTRAINT "TKT_Q_ESCTKTQ_P" PRIMARY KEY ("LOGICAL_ORG_ID", "ESCALATION_TKT_Q")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ESC_TKT_Q" MODIFY ("ESCALATION_TKT_Q" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ESC_TKT_Q" MODIFY ("LOGICAL_ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SERVER_ID
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SERVER_ID" ADD CONSTRAINT "DSS_SERVER_ID_P" PRIMARY KEY ("SERVER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SERVER_ID" MODIFY ("SERVER_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SERVER_ID" MODIFY ("SERVER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_CCITEM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_CCITEM_REL" ADD CONSTRAINT "DBCPP_CCITEM_REL_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_CCITEM_REL" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_ORDER_STAGING
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_STAGING" ADD CONSTRAINT "SRCH_ORDER_STAGING_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_STAGING" MODIFY ("TOKENS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_STAGING" MODIFY ("CREATION_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_STAGING" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_LIMBO_PTYPES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PTYPES" ADD CONSTRAINT "DMS_LIMBO_PTYPES_P" PRIMARY KEY ("MSG_ID", "PROP_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PTYPES" MODIFY ("PROP_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PTYPES" MODIFY ("PROP_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PTYPES" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_IM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_IM" ADD CONSTRAINT "VMAP_IM_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_IM" MODIFY ("MODE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IM" MODIFY ("ITEM_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IM" MODIFY ("ITEM_PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_REP_MARK
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_REP_MARK" ADD CONSTRAINT "REP_MARKER_PK" PRIMARY KEY ("REP_MARKER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_REP_MARK" MODIFY ("REP_MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SLOT_ITEMS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_ITEMS" ADD CONSTRAINT "DSS_SLOT_ITEMS_P" PRIMARY KEY ("SLOT_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_ITEMS" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_ITEMS" MODIFY ("SLOT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEP_FAIL_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEP_FAIL_INFO" ADD CONSTRAINT "DAS_DP_FL_INF_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEP_FAIL_INFO" MODIFY ("DEPLOYMENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEP_FAIL_INFO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_PMT_REQ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_PMT_REQ" ADD CONSTRAINT "DBCPP_PMT_REQ_P" PRIMARY KEY ("PAYMENT_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_PMT_REQ" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_QUEUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_QUEUE" ADD CONSTRAINT "TKT_TKT_Q_P" PRIMARY KEY ("LOGICAL_ORG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_QUEUE" MODIFY ("ACCEPTING" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_QUEUE" MODIFY ("LOGICAL_ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_INVOICE_REQ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_INVOICE_REQ" ADD CONSTRAINT "DBCPP_INVOICE_RE_P" PRIMARY KEY ("PAYMENT_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_INVOICE_REQ" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_USAGE_METRIC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_USAGE_METRIC" ADD CONSTRAINT "DAS_USAGE_METRIC_P" PRIMARY KEY ("USAGE_METRIC_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_USAGE_METRIC" MODIFY ("USAGE_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_USAGE_METRIC" MODIFY ("USAGE_HOUR_OF_DAY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_USAGE_METRIC" MODIFY ("USAGE_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_USAGE_METRIC" MODIFY ("SERVER_IDENTIFIER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_USAGE_METRIC" MODIFY ("USAGE_METRIC_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_DEBIT_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_DEBIT_STATUS" ADD CONSTRAINT "DCSPP_DEBIT_STAT_P" PRIMARY KEY ("PAYMENT_GROUP_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_DEBIT_STATUS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_DEBIT_STATUS" MODIFY ("DEBIT_STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_DEBIT_STATUS" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_IN_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_IN_MSGS" ADD CONSTRAINT "TKT_ADS_IN_MSGS_P" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_IN_MSGS" MODIFY ("RAW_MSG_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_IN_MSGS" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_CI_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_CI_EVENT" ADD CONSTRAINT "CSRT_COMM_ITEM_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_CI_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_ORDER_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_EVENT" ADD CONSTRAINT "CSRT_ORD_EV_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_SPELL_DICS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_SPELL_DICS" ADD CONSTRAINT "SVC_SPELL_DICS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_SPELL_DICS" MODIFY ("LANGUAGE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_SPELL_DICS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_CONTRACT_TERM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_CONTRACT_TERM" ADD CONSTRAINT "DBC_CONTRACT_TER_P" PRIMARY KEY ("TERMS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_CONTRACT_TERM" MODIFY ("TERMS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_CRED_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CRED_STATUS" ADD CONSTRAINT "DCSPP_CRED_STATU_P" PRIMARY KEY ("PAYMENT_GROUP_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_CRED_STATUS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_CRED_STATUS" MODIFY ("CREDIT_STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_CRED_STATUS" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_PROFILE_SLOT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_PROFILE_SLOT" ADD CONSTRAINT "DSS_PROFILE_SLOT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_PROFILE_SLOT" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_PROFILE_SLOT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SCENARIO_STRS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_STRS" ADD CONSTRAINT "DSS_SCENARIO_STR_P" PRIMARY KEY ("ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_STRS" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_STRS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_CONFIG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG" ADD CONSTRAINT "SRCH_CONFIG_P" PRIMARY KEY ("CONFIG_PATH", "CONTENT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG" MODIFY ("GENERATION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG" MODIFY ("CONTENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG" MODIFY ("CONFIG_PATH" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_ORG_ADDRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_ORG_ADDRESS" ADD CONSTRAINT "DCS_ORG_ADDR_P" PRIMARY KEY ("ORG_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_ORG_ADDRESS" MODIFY ("ADDR_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_ORG_ADDRESS" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_ORG_ADDRESS" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_CONFIG_REPO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG_REPO" ADD CONSTRAINT "SRCH_CONFIG_REPO_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG_REPO" MODIFY ("REPOSITORY_PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG_REPO" MODIFY ("CONTENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG_REPO" MODIFY ("CONFIG_PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_CONFIG_REPO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_INVOICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_INVOICE" ADD CONSTRAINT "DBC_INVOICE_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_INVOICE" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_INVOICE" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_INVOICE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_CP_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CP_FOLDER" ADD CONSTRAINT "DCSPP_CP_FOLDER_P" PRIMARY KEY ("FOLDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_CP_FOLDER" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_CP_FOLDER" MODIFY ("FOLDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_CLAIM_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_CLAIM_ITEM" ADD CONSTRAINT "CSRT_CLAIM_ITEM_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_CLAIM_ITEM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_HRD_SHIP_GRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_HRD_SHIP_GRP" ADD CONSTRAINT "DCSPP_HRD_SHIP_G_P" PRIMARY KEY ("SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_HRD_SHIP_GRP" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_EXT_REF
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_EXT_REF" ADD CONSTRAINT "TKT_EXT_REF_P" PRIMARY KEY ("EXTERNAL_REF_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_EXT_REF" MODIFY ("EXTERN_REF" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_EXT_REF" MODIFY ("EXTERNAL_REF_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_ORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG" ADD CONSTRAINT "DPS_USER_ORG_P" PRIMARY KEY ("ORGANIZATION", "USER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG" MODIFY ("ORGANIZATION" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CAF_REG_REPASSET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CAF_REG_REPASSET" ADD CONSTRAINT "CAF_REG_REPASSET_P" PRIMARY KEY ("ASSET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CAF_REG_REPASSET" MODIFY ("REPOSITORY_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CAF_REG_REPASSET" MODIFY ("ITEM_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CAF_REG_REPASSET" MODIFY ("REPOSITORY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CAF_REG_REPASSET" MODIFY ("ASSET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_SEC_ORGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_SEC_ORGS" ADD CONSTRAINT "DPS_USR_SEC_ORGS_P" PRIMARY KEY ("USER_ID", "SECONDARY_ORG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_SEC_ORGS" MODIFY ("SECONDARY_ORG_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_SEC_ORGS" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USER_GIFTLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_GIFTLIST" ADD CONSTRAINT "DCS_USER_GIFTLIS_P" PRIMARY KEY ("USER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER_GIFTLIST" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USER_GIFTLIST" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_FW_TAB_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_FW_TAB_CFG" ADD CONSTRAINT "SVCFWTABCFG_P" PRIMARY KEY ("FRMWK_CFG_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_FW_TAB_CFG" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_FW_TAB_CFG" MODIFY ("TAB_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_FW_TAB_CFG" MODIFY ("FRMWK_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_ATTRVAL_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_ATTRVAL_REL" ADD CONSTRAINT "VMAP_ATTVL_REL_PK" PRIMARY KEY ("MAPPER_ID", "ATTRIBUTE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_ATTRVAL_REL" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_ATTRVAL_REL" MODIFY ("ATTRIBUTE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_ATTRVAL_REL" MODIFY ("MAPPER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_REL" ADD CONSTRAINT "DCSPP_ORDER_REL_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_REL" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_REL" MODIFY ("RELATIONSHIPS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_REL" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_REASON
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_REASON" ADD CONSTRAINT "TKT_REASON_P" PRIMARY KEY ("REASON_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_REASON" MODIFY ("REASON_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_REASON" MODIFY ("REASON_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_ORDER_IDX$I
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" MODIFY ("TOKEN_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" MODIFY ("TOKEN_LAST" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" MODIFY ("TOKEN_FIRST" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" MODIFY ("TOKEN_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$I" MODIFY ("TOKEN_TEXT" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_ORG_PAYMENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PAYMENT" ADD CONSTRAINT "DBC_ORG_PAYMENT_P" PRIMARY KEY ("ORG_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PAYMENT" MODIFY ("PAYMENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PAYMENT" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PAYMENT" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_FH
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_FH" ADD CONSTRAINT "VMAP_FH_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_FH" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_LIMBO_PROPS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PROPS" ADD CONSTRAINT "LIMBO_PROPS_PK" PRIMARY KEY ("MSG_ID", "PROP_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PROPS" MODIFY ("PROP_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PROPS" MODIFY ("PROP_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_PROPS" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SCENARIO_BOOLS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_BOOLS" ADD CONSTRAINT "DSS_SCENARIO_BOO_P" PRIMARY KEY ("ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_BOOLS" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_BOOLS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_SITEMAP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_SITEMAP" ADD CONSTRAINT "SITEMAP_PK" PRIMARY KEY ("SITEMAP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_SITEMAP" MODIFY ("SITEMAP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_BATCH_CLAIMABLE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_BATCH_CLAIMABLE" ADD CONSTRAINT "DCS_BATCH_CLAIM_PK" PRIMARY KEY ("COUPON_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_BATCH_CLAIMABLE" MODIFY ("COUPON_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPLOY_DATA
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOY_DATA" ADD CONSTRAINT "DEPLOY_DATA_PK" PRIMARY KEY ("DEPLOY_DATA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOY_DATA" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOY_DATA" MODIFY ("DEPLOY_DATA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_TOPIC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_TOPIC" ADD CONSTRAINT "DMS_TOPIC_P" PRIMARY KEY ("TOPIC_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_TOPIC" MODIFY ("TOPIC_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_SCENARIO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_SCENARIO" ADD CONSTRAINT "DPS_USER_SCENARI_P" PRIMARY KEY ("IND_SCENARIO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_SCENARIO" MODIFY ("IND_SCENARIO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_SCENARIO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_ORGANIZATION
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORGANIZATION" ADD CONSTRAINT "DBC_ORGANIZATION_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORGANIZATION" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_CONFIG_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CONFIG_ITEM" ADD CONSTRAINT "DCSPP_CONFIG_ITE_P" PRIMARY KEY ("CONFIG_ITEM_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_CONFIG_ITEM" MODIFY ("CONFIG_ITEM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_ORG_CHLDORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORG_CHLDORG" ADD CONSTRAINT "DPS_ORG_CHLDORG_P" PRIMARY KEY ("ORG_ID", "CHILD_ORG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ORG_CHLDORG" MODIFY ("CHILD_ORG_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ORG_CHLDORG" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_CCSHIP_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_CCSHIP_REL" ADD CONSTRAINT "DBCPP_CCSHIP_REL_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_CCSHIP_REL" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_COST_CENTER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_COST_CENTER" ADD CONSTRAINT "DBCPP_COST_CENTE_P" PRIMARY KEY ("COST_CENTER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_COST_CENTER" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_COST_CENTER" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_COST_CENTER" MODIFY ("COST_CENTER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_GIFT_CERT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFT_CERT" ADD CONSTRAINT "DCSPP_GIFT_CERT_P" PRIMARY KEY ("PAYMENT_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFT_CERT" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MEDIA_BIN
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_BIN" ADD CONSTRAINT "MEDIA_BIN_P" PRIMARY KEY ("MEDIA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."MEDIA_BIN" MODIFY ("DATA" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_BIN" MODIFY ("LAST_MODIFIED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_BIN" MODIFY ("LENGTH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."MEDIA_BIN" MODIFY ("MEDIA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_CCORDER_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_CCORDER_REL" ADD CONSTRAINT "DBCPP_CCORDER_RE_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_CCORDER_REL" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_CART_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_CART_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_TOPIC_ENTRY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_TOPIC_ENTRY" ADD CONSTRAINT "DMS_TOPIC_ENTRY_P" PRIMARY KEY ("SUBSCRIBER_ID", "MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_TOPIC_ENTRY" MODIFY ("MSG_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_TOPIC_ENTRY" MODIFY ("SUBSCRIBER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SC_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SC_STATUS" ADD CONSTRAINT "DCSPP_SC_STATUS_P" PRIMARY KEY ("STATUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SC_STATUS" MODIFY ("STATUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_INV_DELIVERY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_INV_DELIVERY" ADD CONSTRAINT "DBC_INV_DELIVERY_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_INV_DELIVERY" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_INV_DELIVERY" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_INV_DELIVERY" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_MSG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_MSG" ADD CONSTRAINT "DMS_MSG_P" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_MSG" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_PREVPWD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_PREVPWD" ADD CONSTRAINT "DPS_PREVPWD_P" PRIMARY KEY ("ID", "SEQ_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_PREVPWD" MODIFY ("SEQ_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_PREVPWD" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USER_OTHERLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_OTHERLIST" ADD CONSTRAINT "DCS_USER_OTHERLI_P" PRIMARY KEY ("USER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER_OTHERLIST" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USER_OTHERLIST" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_CLAIMABLE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CLAIMABLE" ADD CONSTRAINT "DCSPP_CLAIMABLE_P" PRIMARY KEY ("CLAIMABLE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_CLAIMABLE" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_CLAIMABLE" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_CLAIMABLE" MODIFY ("CLAIMABLE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_REA_CONTEXT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_REA_CONTEXT" ADD CONSTRAINT "TKT_REA_CONTEXT_P" PRIMARY KEY ("REA_CONTEXT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_REA_CONTEXT" MODIFY ("CONTEXT_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_REA_CONTEXT" MODIFY ("REA_CONTEXT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPL_REPMAPS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_REPMAPS" ADD CONSTRAINT "DAS_DPL_REPMAP_PK" PRIMARY KEY ("DEPLOYMENT_ID", "SOURCE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_REPMAPS" MODIFY ("SOURCE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_REPMAPS" MODIFY ("DEPLOYMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_INVENTORY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_INVENTORY" ADD CONSTRAINT "DCS_INVENTORY_P" PRIMARY KEY ("INVENTORY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_INVENTORY" MODIFY ("AVAIL_STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_INVENTORY" MODIFY ("CATALOG_REF_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_INVENTORY" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_INVENTORY" MODIFY ("INVENTORY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SG_HAND_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SG_HAND_INST" ADD CONSTRAINT "DCSPP_SG_HAND_IN_P" PRIMARY KEY ("SHIPPING_GROUP_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SG_HAND_INST" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SG_HAND_INST" MODIFY ("HANDLING_INSTRS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SG_HAND_INST" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_SYS_CONFIG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_SYS_CONFIG" ADD CONSTRAINT "DAS_SYS_CONFIG_P" PRIMARY KEY ("PARAMETER_KEY")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_SYS_CONFIG" MODIFY ("PARAMETER_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_SYS_CONFIG" MODIFY ("PARAMETER_KEY" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_SCHED_CLONE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_CLONE" ADD CONSTRAINT "DBCPP_SCHED_CLON_P" PRIMARY KEY ("SCHEDULED_ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_CLONE" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_CLONE" MODIFY ("CLONED_ORDER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_CLONE" MODIFY ("SCHEDULED_ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_ADMIN_PROP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_ADMIN_PROP" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_COLL_TRANS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_COLL_TRANS" ADD CONSTRAINT "DSS_COLL_TRANS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_COLL_TRANS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_ORDER_IDX$N
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$N" ADD PRIMARY KEY ("NLT_DOCID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_ORDER_IDX$N" MODIFY ("NLT_MARK" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MSGATTLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" ADD CONSTRAINT "TKT_ADS_ATTCHL_P" PRIMARY KEY ("MSG_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" MODIFY ("ATT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table ARF_LOADER_PROG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_PROG" ADD CONSTRAINT "ARF_LP_P" PRIMARY KEY ("LOADER_PROGRESS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_PROG" MODIFY ("RECORDS_PROCESSED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_PROG" MODIFY ("STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_PROG" MODIFY ("LOADER_QUEUE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_PROG" MODIFY ("FILENAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_PROG" MODIFY ("LOADER_PROGRESS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_CREDIT_CARD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CREDIT_CARD" ADD CONSTRAINT "DCSPP_CREDIT_CAR_P" PRIMARY KEY ("PAYMENT_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_CREDIT_CARD" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_PGRP_REQ_SUM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_REQ_SUM" MODIFY ("TOTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_REQ_SUM" MODIFY ("FROMTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_REQ_SUM" MODIFY ("SUMMARYCOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_REQ_SUM" MODIFY ("CONTENTNAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_PGRP_REQ_SUM" MODIFY ("GROUPNAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_PROMO_ST_CPN
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_ST_CPN" ADD CONSTRAINT "DCS_PROMO_ST_CPN_P" PRIMARY KEY ("STATUS_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_ST_CPN" MODIFY ("COUPON_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_ST_CPN" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_ST_CPN" MODIFY ("STATUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SUBSKU_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SUBSKU_ITEM" ADD CONSTRAINT "DCSPP_SUBSKU_ITE_P" PRIMARY KEY ("SUBSKU_ITEM_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SUBSKU_ITEM" MODIFY ("SUBSKU_ITEM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_ACT_DATA
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_ACT_DATA" ADD CONSTRAINT "TKT_ADS_ACT_DATA_P" PRIMARY KEY ("ACT_DATA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_ACT_DATA" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_ACT_DATA" MODIFY ("CREATION_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_ACT_DATA" MODIFY ("ACT_DATA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_OWNGRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNGRP" ADD CONSTRAINT "TKT_ACT_OWNGRP_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNGRP" MODIFY ("SLA_MINUTES" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNGRP" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_ORDER_TOKENS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_TOKENS" ADD CONSTRAINT "SRCH_ORDER_TOKENS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_TOKENS" MODIFY ("TOKENS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_TOKENS" MODIFY ("CREATION_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_TOKENS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_REQNAME_SUM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_REQNAME_SUM" ADD CONSTRAINT "DPS_REQNAME_SUM_C" CHECK (member in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_REQNAME_SUM" MODIFY ("TOTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_REQNAME_SUM" MODIFY ("FROMTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_REQNAME_SUM" MODIFY ("SUMMARYCOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_REQNAME_SUM" MODIFY ("MEMBER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_REQNAME_SUM" MODIFY ("NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SHIP_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_INST" ADD CONSTRAINT "DCSPP_SHIP_INST_P" PRIMARY KEY ("SHIPPING_GROUP_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_INST" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_INST" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_METHOD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHOD" ADD CONSTRAINT "CSR_EXCH_METHOD_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHOD" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHOD" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MSG_HDRS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_HDRS" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_HDRS" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_WORKNOTE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_WORKNOTE" ADD CONSTRAINT "TKT_ACT_WRKNT_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_WORKNOTE" MODIFY ("IS_PUBLIC" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_WORKNOTE" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USER_WISHLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_WISHLIST" ADD CONSTRAINT "DCS_USER_WISHLIS_P" PRIMARY KEY ("USER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER_WISHLIST" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_MAILING
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_MAILING" ADD CONSTRAINT "DPS_USER_MAILING_P" PRIMARY KEY ("MAILING_ID", "USER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_MAILING" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_MAILING" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_MAILING" MODIFY ("MAILING_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPL_OPTIONS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_OPTIONS" ADD CONSTRAINT "DAS_DPL_DEPOPT_PK" PRIMARY KEY ("DEPLOYMENT_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_OPTIONS" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_OPTIONS" MODIFY ("DEPLOYMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ESC_OWN_GROUP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ESC_OWN_GROUP" ADD CONSTRAINT "TKT_ESC_OWN_GRP_P" PRIMARY KEY ("LOGICAL_ORG_ID", "ESCALATION_OWN_GRP")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ESC_OWN_GROUP" MODIFY ("ESCALATION_OWN_GRP" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ESC_OWN_GROUP" MODIFY ("LOGICAL_ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_PRICE_ADJUST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PRICE_ADJUST" ADD CONSTRAINT "DCSPP_PRICE_ADJU_P" PRIMARY KEY ("ADJUSTMENT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PRICE_ADJUST" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_PRICE_ADJUST" MODIFY ("ADJUSTMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MSG_ATTS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_ATTS" ADD CONSTRAINT "TKT_ADS_MSG_ATTS_P" PRIMARY KEY ("ATT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_ATTS" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_ATTS" MODIFY ("ATT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_PCREATE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_PCREATE" MODIFY ("PROFILE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_PCREATE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SCENARIO_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_INFO" ADD CONSTRAINT "DSS_SCENARIO_INF_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_INFO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_UPDATE_QUEUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" ADD CONSTRAINT "SRCH_UP_QUEUE_P" PRIMARY KEY ("REPOSITORY_ID", "CONFIG_REPO_ID", "GENERATION", "ITEM_DESC_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" MODIFY ("CHANGE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" MODIFY ("ITEM_DESC_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" MODIFY ("GENERATION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" MODIFY ("CONFIG_REPO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" MODIFY ("REPOSITORY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_REL_ORDERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_REL_ORDERS" ADD CONSTRAINT "DCSPP_REL_ORDERS_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_REL_ORDERS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_REL_ORDERS" MODIFY ("RELATED_ORDERS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_REL_ORDERS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_PAYITEM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYITEM_REL" ADD CONSTRAINT "DCSPP_PAYITEM_RE_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYITEM_REL" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_AMTINFO_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_AMTINFO_ADJ" ADD CONSTRAINT "DCSPP_AMTINFO_AD_P" PRIMARY KEY ("AMOUNT_INFO_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_AMTINFO_ADJ" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_AMTINFO_ADJ" MODIFY ("ADJUSTMENTS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_AMTINFO_ADJ" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_SCENARIO_VALUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SCENARIO_VALUE" ADD CONSTRAINT "DPS_SCENARIO_VAL_P" PRIMARY KEY ("ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_SCENARIO_VALUE" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_SCENARIO_VALUE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_GLOBAL_OPT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_GLOBAL_OPT" ADD CONSTRAINT "SVC_GLOBALOPT_P" PRIMARY KEY ("OPTION_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_GLOBAL_OPT" MODIFY ("OPTION_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_GLOBAL_OPT" MODIFY ("OPTION_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_EVENT_TYPE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_EVENT_TYPE" ADD CONSTRAINT "DPS_EVENT_TYPE_U" UNIQUE ("NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_EVENT_TYPE" ADD CONSTRAINT "DPS_EVENT_TYPE_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_EVENT_TYPE" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_EVENT_TYPE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_SPLIT_CC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_SPLIT_CC" ADD CONSTRAINT "CSRT_SPLT_CC_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_SPLIT_CC" MODIFY ("QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_SPLIT_CC" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_USER_FAVSTORES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_FAVSTORES" ADD CONSTRAINT "DCS_USER_FVSTORE_P" PRIMARY KEY ("USER_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER_FAVSTORES" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_USER_FAVSTORES" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_LIMBO_BODY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_BODY" ADD CONSTRAINT "LIMBO_BODY_PK" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_BODY" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CAF_REG_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CAF_REG_FOLDER" ADD CONSTRAINT "CAF_REG_FOLDER_P" PRIMARY KEY ("FOLDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CAF_REG_FOLDER" MODIFY ("FOLDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_ORDER_APPR_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_APPR_EVENT" ADD CONSTRAINT "CSRTORDAPPREVT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_APPR_EVENT" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_APPR_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_PROFILE_IDX$N
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$N" ADD PRIMARY KEY ("NLT_DOCID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$N" MODIFY ("NLT_MARK" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_AMOUNT_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" ADD CONSTRAINT "DCSPP_AMOUNT_INF_P" PRIMARY KEY ("AMOUNT_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" ADD CONSTRAINT "DCSPP_AMOUNT_IN2_C" CHECK (amount_is_final IN (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" ADD CONSTRAINT "DCSPP_AMOUNT_IN1_C" CHECK (discounted IN (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_AMOUNT_INFO" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_GWP_ORDER_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" ADD CONSTRAINT "DCSGWPOMARKERS_P" PRIMARY KEY ("MARKER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("FAILED_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("REMOVED_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("SELECTED_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("AUTOMATIC_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("TARGETED_QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("QUANTITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("AUTO_REMOVE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("GIFT_DETAIL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("GIFT_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("MARKER_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_DET_RANGE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_DET_RANGE" ADD CONSTRAINT "DCSPP_DET_RANGE_P" PRIMARY KEY ("AMOUNT_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_DET_RANGE" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SHIP_GROUP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_GROUP" ADD CONSTRAINT "DCSPP_SHIP_GROUP_P" PRIMARY KEY ("SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_GROUP" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_GROUP" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_GROUP" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_COUPON_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_INFO" ADD CONSTRAINT "DCSPP_COPNINFO_P" PRIMARY KEY ("COUPON_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_INFO" MODIFY ("COUPON_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_PV2PVAD_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_PV2PVAD_REL" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_PV2PVAD_REL" MODIFY ("ATTR_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_PV2PVAD_REL" MODIFY ("VIEW_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_MAIL_SERVER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_SERVER" ADD CONSTRAINT "DPS_MAIL_SERVER_P" PRIMARY KEY ("UNIQ_SERVER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_SERVER" MODIFY ("UNIQ_SERVER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SCENARIO_DATES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DATES" ADD CONSTRAINT "DSS_SCENARIO_DAT_P" PRIMARY KEY ("ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DATES" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DATES" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_IND_TRANS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_IND_TRANS" ADD CONSTRAINT "DSS_IND_TRANS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_IND_TRANS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_TAX_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_TAX_PRICE" ADD CONSTRAINT "DCSPP_TAX_PRICE_P" PRIMARY KEY ("AMOUNT_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_TAX_PRICE" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SCHD_ERRMSG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHD_ERRMSG" ADD CONSTRAINT "DCSPP_SCHD_ERRS_P" PRIMARY KEY ("SCHED_ERROR_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHD_ERRMSG" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHD_ERRMSG" MODIFY ("ERROR_TXT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHD_ERRMSG" MODIFY ("SCHED_ERROR_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ATTCH_LIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ATTCH_LIST" ADD CONSTRAINT "TKT_ATTCHL_P" PRIMARY KEY ("ACTIVITY_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ATTCH_LIST" MODIFY ("ATTACHMENT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ATTCH_LIST" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ATTCH_LIST" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_ADDRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ADDRESS" ADD CONSTRAINT "DPS_USER_ADDRESS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_ADDRESS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ATTACHMENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ATTACHMENT" ADD CONSTRAINT "TKT_ATTACH_P" PRIMARY KEY ("ATTACHMENT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ATTACHMENT" MODIFY ("ENCODED_CONTENT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ATTACHMENT" MODIFY ("ENCODING" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ATTACHMENT" MODIFY ("MIME_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ATTACHMENT" MODIFY ("FILENAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ATTACHMENT" MODIFY ("ATTACHMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_BUYER_PLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PLIST" ADD CONSTRAINT "DBC_BUYER_PLIST_P" PRIMARY KEY ("USER_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PLIST" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PLIST" MODIFY ("LIST_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PLIST" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_GLOBALOPT_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_INFO" ADD CONSTRAINT "GLOBALOPTINFO_P" PRIMARY KEY ("OPTION_ID", "INFO_KEY")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_INFO" MODIFY ("INFO_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_INFO" MODIFY ("INFO_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_INFO" MODIFY ("OPTION_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_CELL_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_CELL_CFG" ADD CONSTRAINT "SVC_CEL_CFG_P" PRIMARY KEY ("CELL_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_CELL_CFG" MODIFY ("CELL_OPEN_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CELL_CFG" MODIFY ("CELL_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CELL_CFG" MODIFY ("CELL_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_CC_EXCH_METHOD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_CC_EXCH_METHOD" ADD CONSTRAINT "CSR_CC_EXCH_MTHD_P" PRIMARY KEY ("EXCHANGE_METHOD_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_CC_EXCH_METHOD" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_CC_EXCH_METHOD" MODIFY ("EXCHANGE_METHOD_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_GC_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GC_STATUS" ADD CONSTRAINT "DCSPP_GC_STATUS_P" PRIMARY KEY ("STATUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_GC_STATUS" MODIFY ("STATUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_COMMERCE_ITEM_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" ADD CONSTRAINT "DCSCITEMMARKERS_P" PRIMARY KEY ("MARKER_ID", "COMMERCE_ITEM_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" MODIFY ("MARKER_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" MODIFY ("COMMERCE_ITEM_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_INV_PMT_TERMS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_INV_PMT_TERMS" ADD CONSTRAINT "DBC_INV_PMT_TERM_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_INV_PMT_TERMS" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_INV_PMT_TERMS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_INV_PMT_TERMS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_ORG_COSTCTR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_COSTCTR" ADD CONSTRAINT "DBC_ORG_COSTCTR_P" PRIMARY KEY ("ORG_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_COSTCTR" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_COSTCTR" MODIFY ("COST_CENTER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_COSTCTR" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_ORG_ANC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG_ANC" ADD CONSTRAINT "DPS_USER_ORG_ANC_P" PRIMARY KEY ("USER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG_ANC" MODIFY ("ANC_ORG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG_ANC" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG_ANC" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_PROPERTY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_PROPERTY" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_SITE_CNTNT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_SITE_CNTNT" ADD CONSTRAINT "SRCH_SITE_CNTNT_P" PRIMARY KEY ("CNTN_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_SITE_CNTNT" MODIFY ("CONTENT_LABEL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_SITE_CNTNT" MODIFY ("SITE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_SITE_CNTNT" MODIFY ("CNTN_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_EMAIL_ADDRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_EMAIL_ADDRESS" ADD CONSTRAINT "DPS_EMAIL_ADDRES_P" PRIMARY KEY ("MAILING_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_EMAIL_ADDRESS" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_EMAIL_ADDRESS" MODIFY ("EMAIL_ADDRESS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_EMAIL_ADDRESS" MODIFY ("MAILING_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SHIPITEM_SUB
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_SUB" ADD CONSTRAINT "DCSPP_SHIPITEM_S_P" PRIMARY KEY ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_SUB" MODIFY ("SHIP_ITEM_SUBTOTAL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_SUB" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_SUB" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_PAY_GROUP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_GROUP" ADD CONSTRAINT "DCSPP_PAY_GROUP_P" PRIMARY KEY ("PAYMENT_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_GROUP" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_GROUP" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_GROUP" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_FOLDER" ADD CONSTRAINT "DPS_FOLDER_P" PRIMARY KEY ("FOLDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_FOLDER" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_FOLDER" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_FOLDER" MODIFY ("FOLDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_XREF
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_XREF" ADD CONSTRAINT "DSS_XREF_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_XREF" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SCHED_ERROR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHED_ERROR" ADD CONSTRAINT "DCSPP_SCHED_ERR_P" PRIMARY KEY ("SCHED_ERROR_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHED_ERROR" MODIFY ("ERROR_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHED_ERROR" MODIFY ("SCHED_ERROR_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_PROMO_GRNTD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_GRNTD" MODIFY ("PROFILEID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_GRNTD" MODIFY ("PROMOTIONID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_GRNTD" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ELE_SHIP_GRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ELE_SHIP_GRP" ADD CONSTRAINT "DCSPP_ELE_SHIP_G_P" PRIMARY KEY ("SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ELE_SHIP_GRP" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_END_STATE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_END_STATE" ADD CONSTRAINT "SRCHE_STATE_P" PRIMARY KEY ("CONFIG_PATH")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_END_STATE" MODIFY ("CONFIG_PATH" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_CLICK
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_CLICK" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_PAYSHIP_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYSHIP_REL" ADD CONSTRAINT "DCSPP_PAYSHIP_RE_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYSHIP_REL" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DRPT_STAGE_REACHED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" ADD CONSTRAINT "DRPT_BPSTAGE_C" CHECK (is_transient in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" MODIFY ("BP_STAGE_SEQUENCE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" MODIFY ("IS_TRANSIENT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" MODIFY ("BP_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" MODIFY ("EVENT_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" MODIFY ("PROCESS_START_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" MODIFY ("OWNER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_STAGE_REACHED" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_TOPIC_SUB
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_TOPIC_SUB" ADD CONSTRAINT "DMS_TOPIC_SUB_P" PRIMARY KEY ("SUBSCRIBER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_TOPIC_SUB" MODIFY ("SUBSCRIBER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ISP_SHIP_GRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ISP_SHIP_GRP" ADD CONSTRAINT "DCSPP_ISP_SHIP_G_P" PRIMARY KEY ("SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ISP_SHIP_GRP" MODIFY ("LOCATION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ISP_SHIP_GRP" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_CLUSTER_NAME
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_CLUSTER_NAME" MODIFY ("SAVED_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_CLUSTER_NAME" MODIFY ("CLUSTER_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_ORG_CONTACT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_CONTACT" ADD CONSTRAINT "DBC_ORG_CONTACT_P" PRIMARY KEY ("ORG_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_CONTACT" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_CONTACT" MODIFY ("CONTACT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_CONTACT" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_ITEM_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_ITEM_ADJ" ADD CONSTRAINT "CSRITEMADJ_P" PRIMARY KEY ("ICA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_ITEM_ADJ" MODIFY ("QUANTITY_ADJ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_ITEM_ADJ" MODIFY ("ICA_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_GSA_SUBSCRIBER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" ADD CONSTRAINT "DAS_GSA_SUBSCRIB_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" MODIFY ("ITEMDESCRIPTOR" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" MODIFY ("REPOSITORY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" MODIFY ("PORT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" MODIFY ("ADDRESS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_GSA_SUBSCRIBER" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USER_SLOT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_SLOT" ADD CONSTRAINT "DPS_USER_SLOT_P" PRIMARY KEY ("ID", "PROFILE_SLOT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_SLOT" MODIFY ("PROFILE_SLOT_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USER_SLOT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DAS_FORM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DAS_FORM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_IVM2PVM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_IVM2PVM_REL" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IVM2PVM_REL" MODIFY ("PVM_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IVM2PVM_REL" MODIFY ("IVM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_USR_CREDITCARD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USR_CREDITCARD" ADD CONSTRAINT "DPS_USR_CREDITCA_P" PRIMARY KEY ("USER_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USR_CREDITCARD" MODIFY ("CREDIT_CARD_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USR_CREDITCARD" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_USR_CREDITCARD" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DAS_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DAS_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_GRANT_APPEASE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_GRANT_APPEASE" ADD CONSTRAINT "CSRT_GRNT_APPS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_GRANT_APPEASE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" ADD CONSTRAINT "CSR_EXCH_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" ADD CONSTRAINT "CSR_EXCH2_C" CHECK (processed in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" ADD CONSTRAINT "CSR_EXCH1_C" CHECK (proc_immed in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("ORIGIN_OF_RETURN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("PROCESSED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("PROC_IMMED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("OTHER_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("ACTL_SHIP_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("SUGG_SHIP_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("ACTL_TAX_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("SUGG_TAX_REFUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("CREATED_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_ORDERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_ORDERS" ADD CONSTRAINT "CSRT_ORDERS_P" PRIMARY KEY ("ORDER_ID", "TICKET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_ORDERS" MODIFY ("TICKET_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_ORDERS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_CONTACT_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_CONTACT_INFO" ADD CONSTRAINT "DPS_CONTACT_INFO_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_CONTACT_INFO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_STORECRED_CLM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_STORECRED_CLM" ADD CONSTRAINT "DCS_STORECRED_CL_P" PRIMARY KEY ("STORE_CREDIT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_STORECRED_CLM" MODIFY ("AMOUNT_REMAINING" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_STORECRED_CLM" MODIFY ("AMOUNT_AUTHORIZED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_STORECRED_CLM" MODIFY ("AMOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_STORECRED_CLM" MODIFY ("STORE_CREDIT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_AUTH_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_AUTH_STATUS" ADD CONSTRAINT "DCSPP_AUTH_STATU_P" PRIMARY KEY ("PAYMENT_GROUP_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_AUTH_STATUS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_AUTH_STATUS" MODIFY ("AUTH_STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_AUTH_STATUS" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_DEPL_PROGRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_PROGRESS" ADD CONSTRAINT "DAF_DEPL_PRG_PK" PRIMARY KEY ("DEPLOYMENT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_PROGRESS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_DEPL_PROGRESS" MODIFY ("DEPLOYMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_ORDER_COMMENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_COMMENT" ADD CONSTRAINT "CSRT_ORD_CMNT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_COMMENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_PAY_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_STATUS" ADD CONSTRAINT "DCSPP_PAY_STATUS_P" PRIMARY KEY ("STATUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_STATUS" ADD CONSTRAINT "DCSPP_PAY_STATUS_C" CHECK (trans_success IN (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_STATUS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_STATUS" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_STATUS" MODIFY ("STATUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_MSG_PROPERTIES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_MSG_PROPERTIES" ADD CONSTRAINT "DMS_MSG_PROPERTI_P" PRIMARY KEY ("MSG_ID", "NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_MSG_PROPERTIES" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_MSG_PROPERTIES" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_GIFTINST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GIFTINST" ADD CONSTRAINT "DCS_GIFTINST_P" PRIMARY KEY ("GIFTLIST_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GIFTINST" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GIFTINST" MODIFY ("GIFTLIST_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_IGN_PROM_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_IGN_PROM_EVENT" ADD CONSTRAINT "CSRT_IGPRM_EV_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_IGN_PROM_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_VIEW_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_VIEW_ITEM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_SUB_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_SUB_STATUS" ADD CONSTRAINT "TKT_SUB_STATUS_P" PRIMARY KEY ("SUB_STATUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_SUB_STATUS" MODIFY ("PARENT_STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_SUB_STATUS" MODIFY ("SUB_STATUS_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_SUB_STATUS" MODIFY ("SUB_STATUS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CAF_REG_ASSET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CAF_REG_ASSET" ADD CONSTRAINT "CAF_REG_ASSET_P" PRIMARY KEY ("ASSET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CAF_REG_ASSET" MODIFY ("ASSET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_EXTREF_LIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_EXTREF_LIST" ADD CONSTRAINT "TKT_EXTRL_P" PRIMARY KEY ("TICKET_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_EXTREF_LIST" MODIFY ("EXTERNAL_REF_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_EXTREF_LIST" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_EXTREF_LIST" MODIFY ("TICKET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_CHILD_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_CHILD_FOLDER" ADD CONSTRAINT "DPS_CHILD_FOLDER_P" PRIMARY KEY ("FOLDER_ID", "CHILD_FOLDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_CHILD_FOLDER" MODIFY ("CHILD_FOLDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_CHILD_FOLDER" MODIFY ("FOLDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_SKIN_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_SKIN_CFG" ADD CONSTRAINT "SVC_SKIN_CFG_P" PRIMARY KEY ("SKIN_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_SKIN_CFG" MODIFY ("SKIN_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_SKIN_CFG" MODIFY ("SKIN_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_POP3_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_POP3_MSGS" ADD CONSTRAINT "TKT_ADS_POP3_MSG_P" PRIMARY KEY ("RAW_MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_POP3_MSGS" MODIFY ("RAW_MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SLOT_PRIORITY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_PRIORITY" ADD CONSTRAINT "DSS_SLOT_PRIORIT_P" PRIMARY KEY ("SLOT_ID", "IDX")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_PRIORITY" MODIFY ("PRIORITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_PRIORITY" MODIFY ("IDX" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_PRIORITY" MODIFY ("SLOT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_MAIL_TRACKDATA
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_TRACKDATA" ADD CONSTRAINT "DPS_MAIL_TRACKD_P" PRIMARY KEY ("MAILING_ID", "MAP_KEY")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_TRACKDATA" MODIFY ("MAP_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_TRACKDATA" MODIFY ("MAILING_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_SEG_LIST_NAME
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_NAME" ADD CONSTRAINT "DPS_S_L_N_P" PRIMARY KEY ("SEGMENT_LIST_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_NAME" MODIFY ("GROUP_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_NAME" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_NAME" MODIFY ("SEGMENT_LIST_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_GL_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_GL_EVENT" ADD CONSTRAINT "CSRT_GL_EVENT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_GL_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_ROLE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ROLE" ADD CONSTRAINT "DPS_ROLE_P" PRIMARY KEY ("ROLE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ROLE" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ROLE" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ROLE" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ROLE" MODIFY ("ROLE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_STATC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_STATC" ADD CONSTRAINT "TKT_ACT_STATC_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_STATC" MODIFY ("NEW_SUB_STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_STATC" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_RETURN_FEE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_RETURN_FEE" ADD CONSTRAINT "CSR_RETURN_FEE_P" PRIMARY KEY ("EXCHANGE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_RETURN_FEE" MODIFY ("RETURN_FEE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_RETURN_FEE" MODIFY ("EXCHANGE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_RETURN_ORDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_RETURN_ORDER" ADD CONSTRAINT "CSRT_RET_ORD_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_RETURN_ORDER" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_RELATIVEROLE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_RELATIVEROLE" ADD CONSTRAINT "DPS_RELATIVEROLE_P" PRIMARY KEY ("ROLE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_RELATIVEROLE" MODIFY ("RELATIVE_TO" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_RELATIVEROLE" MODIFY ("DPS_FUNCTION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_RELATIVEROLE" MODIFY ("ROLE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_SEG_LIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST" ADD CONSTRAINT "DPS_SEG_LIST_P" PRIMARY KEY ("SEGMENT_LIST_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST" MODIFY ("SEGMENT_LIST_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_NTAXSHIPITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_NTAXSHIPITEM" ADD CONSTRAINT "DCSPP_NTAXSHIPIT_P" PRIMARY KEY ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_NTAXSHIPITEM" MODIFY ("NON_TAX_ITEM_SUB" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_NTAXSHIPITEM" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_NTAXSHIPITEM" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table AGENT_PROFILE_CMTS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" ADD CONSTRAINT "AGTPROFILECMMT_P" PRIMARY KEY ("COMMENT_ID", "PROFILE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" MODIFY ("COMMENT_DATA" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" MODIFY ("PROFILE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" MODIFY ("COMMENT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_ROLEFOLD_CHLD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ROLEFOLD_CHLD" ADD CONSTRAINT "DPS_ROLEFOLD_CHL_P" PRIMARY KEY ("ROLEFOLD_ID", "ROLE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ROLEFOLD_CHLD" MODIFY ("ROLE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_ROLEFOLD_CHLD" MODIFY ("ROLEFOLD_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_RELATIONSHIP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_RELATIONSHIP" ADD CONSTRAINT "DCSPP_RELATIONSH_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_RELATIONSHIP" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_RELATIONSHIP" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_RELATIONSHIP" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MMS_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MMS_MSGS" ADD CONSTRAINT "TKT_ADS_MMS_MSGS_P" PRIMARY KEY ("RAW_MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MMS_MSGS" MODIFY ("RAW_MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_PANEL_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" ADD CONSTRAINT "SVCPANELCFG_P" PRIMARY KEY ("PANEL_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" MODIFY ("TABBED_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" MODIFY ("CONTENT_OPEN_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" MODIFY ("AVAILABLE_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" MODIFY ("PANEL_OPEN_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" MODIFY ("VISIBLE_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" MODIFY ("PANEL_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_PANEL_CFG" MODIFY ("PANEL_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_SPELL_WORDS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_SPELL_WORDS" ADD CONSTRAINT "SVC_SPELL_WORDS_P" PRIMARY KEY ("DIC_ID", "WORD")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_SPELL_WORDS" MODIFY ("WORD" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_SPELL_WORDS" MODIFY ("DIC_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_REASONS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_REASONS" ADD CONSTRAINT "CSR_EXCH_REASONS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_REASONS" MODIFY ("DESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_REASONS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_ORDER_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_ORDER_MARKERS" ADD CONSTRAINT "DCSORDERMARKERS_P" PRIMARY KEY ("MARKER_ID", "ORDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_ORDER_MARKERS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_ORDER_MARKERS" MODIFY ("MARKER_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_ORDER_MARKERS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_ORDER_MARKERS" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_TICKET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" ADD CONSTRAINT "TKT_TICKET_P" PRIMARY KEY ("TICKET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("PUSHABLE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("PRIORITY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("HAS_PENDING_OWNER" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("ESCALATION_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("ESCALATION_LEVEL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("SUB_STATUS_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("DEFAULT_OUT_CHAN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("CREATION_CHANNEL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("IS_MERGEABLE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("CREATION_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" MODIFY ("TICKET_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_SESSION_SUM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SESSION_SUM" ADD CONSTRAINT "DPS_SESSION_SUM_C" CHECK (member in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_SESSION_SUM" MODIFY ("TOTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_SESSION_SUM" MODIFY ("FROMTIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_SESSION_SUM" MODIFY ("SUMMARYCOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_SESSION_SUM" MODIFY ("MEMBER" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CAF_REGISTRY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CAF_REGISTRY" ADD CONSTRAINT "CAF_REGISTRY_P" PRIMARY KEY ("REGISTRY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CAF_REGISTRY" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CAF_REGISTRY" MODIFY ("REGISTRY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_ID_GENERATOR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_ID_GENERATOR" ADD CONSTRAINT "DAS_ID_GENERATOR_P" PRIMARY KEY ("ID_SPACE_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_ID_GENERATOR" MODIFY ("BATCH_SIZE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_ID_GENERATOR" MODIFY ("SEED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_ID_GENERATOR" MODIFY ("ID_SPACE_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_QUEUE_ENTRY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_QUEUE_ENTRY" ADD CONSTRAINT "DMS_QUEUE_ENTRY_P" PRIMARY KEY ("QUEUE_ID", "MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_QUEUE_ENTRY" MODIFY ("MSG_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_QUEUE_ENTRY" MODIFY ("QUEUE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_REFERRER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_REFERRER" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_RAW_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" ADD CONSTRAINT "TKT_ADS_RAW_MSGS_P" PRIMARY KEY ("RAW_MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" MODIFY ("RETRY_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" MODIFY ("CREATION_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" MODIFY ("STATUS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" MODIFY ("CHANNEL_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_RAW_MSGS" MODIFY ("RAW_MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_SHIP_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_PRICE" ADD CONSTRAINT "DCSPP_SHIP_PRICE_P" PRIMARY KEY ("AMOUNT_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_PRICE" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_CONFIG_OBJCT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_CONFIG_OBJCT" ADD CONSTRAINT "SVCCFGOBJ_P" PRIMARY KEY ("CONFIG_OBJECT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_CONFIG_OBJCT" MODIFY ("ENABLED_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CONFIG_OBJCT" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CONFIG_OBJCT" MODIFY ("CONFIG_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_CONFIG_OBJCT" MODIFY ("CONFIG_OBJECT_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_PV
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_PV" ADD CONSTRAINT "VMAP_PV_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_PV" MODIFY ("MODE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_PV" MODIFY ("DESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_PV" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_PV" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_PV" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_GIFT_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFT_INST" ADD CONSTRAINT "DCSPP_GIFT_INST_P" PRIMARY KEY ("HANDLING_INST_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFT_INST" MODIFY ("HANDLING_INST_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_PROMO_RVKD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_RVKD" MODIFY ("PROFILEID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_RVKD" MODIFY ("PROMOTIONID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_PROMO_RVKD" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_RECV_RTRN_ITM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_RECV_RTRN_ITM" ADD CONSTRAINT "CSRT_RCV_RT_IT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_RECV_RTRN_ITM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_MAP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_MAP" MODIFY ("VALUE_TEXT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_MAP" MODIFY ("KEY_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ACT_MAP" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_STORE_CRED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_STORE_CRED" ADD CONSTRAINT "DCSPP_STORE_CRED_P" PRIMARY KEY ("PAYMENT_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_STORE_CRED" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_MIGRATION
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_MIGRATION" ADD CONSTRAINT "DSS_MIGRATION_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_MIGRATION" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_UPDATE_ORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_UPDATE_ORG" ADD CONSTRAINT "CSRT_UPD_ORG_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_UPDATE_ORG" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_UPDATE_VQUEUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" ADD CONSTRAINT "SRCH_UP_VQUEUE_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("ASSET_VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("DEV_LINE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("CHANGE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("REPOSITORY_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("ITEM_DESC_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("REPOSITORY_PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("GENERATION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("CONFIG_PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_VQUEUE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER_PG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PG" ADD CONSTRAINT "DCSPP_ORDER_PG_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PG" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PG" MODIFY ("PAYMENT_GROUPS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PG" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_TAB_CFG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_TAB_CFG" ADD CONSTRAINT "SVC_TAB_CFG_P" PRIMARY KEY ("TAB_CFG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_TAB_CFG" MODIFY ("VISIBLE_YN" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_TAB_CFG" MODIFY ("TAB_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_TAB_CFG" MODIFY ("TAB_CFG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_SCENARIO_LONGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_LONGS" ADD CONSTRAINT "DSS_SCENARIO_LON_P" PRIMARY KEY ("ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_LONGS" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_LONGS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_LIMBO_REPLYTO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_REPLYTO" ADD CONSTRAINT "LIMBO_REPLYTO_PK" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_REPLYTO" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_OTHER_ADDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_OTHER_ADDR" ADD CONSTRAINT "DPS_OTHER_ADDR_P" PRIMARY KEY ("USER_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_OTHER_ADDR" MODIFY ("ADDRESS_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_OTHER_ADDR" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_OTHER_ADDR" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_END_JOB
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_END_JOB" ADD CONSTRAINT "SRCH_STATE_P" PRIMARY KEY ("REPOSITORY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_END_JOB" MODIFY ("START_TIME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_END_JOB" MODIFY ("SERVER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_END_JOB" MODIFY ("CONFIG_PATH" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_END_JOB" MODIFY ("REPOSITORY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table ARF_ID_GENERATOR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_ID_GENERATOR" ADD CONSTRAINT "ARF_ID_GENERATOR_P" PRIMARY KEY ("ID_SPACE_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."ARF_ID_GENERATOR" MODIFY ("BATCH_SIZE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_ID_GENERATOR" MODIFY ("SEED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_ID_GENERATOR" MODIFY ("ID_SPACE_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_NS_ACLS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_NS_ACLS" ADD CONSTRAINT "ID_INDEX_PK" PRIMARY KEY ("ID", "INDEX_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_NS_ACLS" MODIFY ("ACL" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_NS_ACLS" MODIFY ("INDEX_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_NS_ACLS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ITMPRICE_DET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ITMPRICE_DET" ADD CONSTRAINT "DCSPP_ITMPRICE_D_P" PRIMARY KEY ("AMOUNT_INFO_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ITMPRICE_DET" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ITMPRICE_DET" MODIFY ("CUR_PRICE_DETAILS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ITMPRICE_DET" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_ORG_PREFVNDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PREFVNDR" ADD CONSTRAINT "DBC_ORG_PREFVNDR_P" PRIMARY KEY ("ORG_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PREFVNDR" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PREFVNDR" MODIFY ("VENDOR" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PREFVNDR" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_TEMPLATE_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_TEMPLATE_INFO" ADD CONSTRAINT "DSS_TEMPLATE_INF_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_TEMPLATE_INFO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_PROM_USED_EVT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_PROM_USED_EVT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVCT_CALLNOTE_ACT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVCT_CALLNOTE_ACT" ADD CONSTRAINT "SVCT_CALLNOTE_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVCT_CALLNOTE_ACT" MODIFY ("INBOUND" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVCT_CALLNOTE_ACT" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_TAXSHIPITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_TAXSHIPITEM" ADD CONSTRAINT "DCSPP_TAXSHIPITE_P" PRIMARY KEY ("AMOUNT_INFO_ID", "SHIPPING_GROUP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_TAXSHIPITEM" MODIFY ("TAX_SHIP_ITEM_SUB" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_TAXSHIPITEM" MODIFY ("SHIPPING_GROUP_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_TAXSHIPITEM" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_GIFTCERT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFTCERT" ADD CONSTRAINT "DCSPP_GIFTCERT_P" PRIMARY KEY ("GIFTCERTIFICATE_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFTCERT" MODIFY ("AMOUNT_REMAINING" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFTCERT" MODIFY ("AMOUNT_AUTHORIZED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFTCERT" MODIFY ("AMOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFTCERT" MODIFY ("GIFTCERTIFICATE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_PRICE_OVERRDE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_PRICE_OVERRDE" ADD CONSTRAINT "CSRT_PRC_OVRRD_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_PRICE_OVERRDE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table ARF_QUEUE_ENTRY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" ADD CONSTRAINT "ARF_QE_P" PRIMARY KEY ("QUEUE_ENTRY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" MODIFY ("CREATION_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" MODIFY ("FILENAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" MODIFY ("LOADER_QUEUE_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" MODIFY ("QUEUE_ENTRY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_REL_RANGE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_REL_RANGE" ADD CONSTRAINT "DCSPP_REL_RANGE_P" PRIMARY KEY ("RELATIONSHIP_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_REL_RANGE" MODIFY ("RELATIONSHIP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_NUCL_SEC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_NUCL_SEC" ADD CONSTRAINT "FUNC_NAME_PK" PRIMARY KEY ("FUNC_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_NUCL_SEC" MODIFY ("POLICY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DAS_NUCL_SEC" MODIFY ("FUNC_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_COLL_SCENARIO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_COLL_SCENARIO" ADD CONSTRAINT "DSS_COLL_SCENARI_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DSS_COLL_SCENARIO" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_IPROMOS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_IPROMOS" ADD CONSTRAINT "CSREXCHIPROMOS_P" PRIMARY KEY ("EXCHANGE_ID", "PROMOTION_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_IPROMOS" MODIFY ("PROMOTION_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_IPROMOS" MODIFY ("EXCHANGE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_LIMBO_MSG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" ADD CONSTRAINT "LIMBO_MSG_PK" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("MSG_CLASS_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("MSG_CLASS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("PORT_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("MSG_SRC_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("DELIVERY_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("DELIVERY_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("LIMBO_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_MSG" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DRPT_CONV_ORDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DRPT_CONV_ORDER" ADD CONSTRAINT "DRPT_CONV_ORDER_P" PRIMARY KEY ("ORDER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DRPT_CONV_ORDER" MODIFY ("PROMO_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_CONV_ORDER" MODIFY ("PROMO_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_CONV_ORDER" MODIFY ("AMOUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_CONV_ORDER" MODIFY ("CONVERTED_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DRPT_CONV_ORDER" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DPS_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_MARKERS" ADD CONSTRAINT "DPS_MARKERS_P" PRIMARY KEY ("MARKER_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_MARKERS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_MARKERS" MODIFY ("MARKER_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DPS_MARKERS" MODIFY ("MARKER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_EXCH_ITEM_DISP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM_DISP" ADD CONSTRAINT "CSR_EXCHITEM_DIS_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM_DISP" ADD CONSTRAINT "CSR_EXCHITEM_DIS_C" CHECK (upd_inventory in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM_DISP" MODIFY ("UPD_INVENTORY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM_DISP" MODIFY ("DESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM_DISP" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_PG_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_PG_EVENT" ADD CONSTRAINT "CSRT_PAY_GRP_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_PG_EVENT" MODIFY ("UPDATE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_PG_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_BUYER_PREFVNDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PREFVNDR" ADD CONSTRAINT "DBC_BUYER_PREFVN_P" PRIMARY KEY ("USER_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PREFVNDR" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PREFVNDR" MODIFY ("VENDOR" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PREFVNDR" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_USEROPT_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_INFO" ADD CONSTRAINT "USEROPTINFO_P" PRIMARY KEY ("OPTION_ID", "INFO_KEY")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_INFO" MODIFY ("INFO_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_INFO" MODIFY ("INFO_KEY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_INFO" MODIFY ("OPTION_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_PVM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_PVM" ADD CONSTRAINT "VMAP_PVM_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_PVM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_CUST_DETAILS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_CUST_DETAILS" ADD CONSTRAINT "TKT_CUSTOMER_P" PRIMARY KEY ("CUST_DETAILS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_CUST_DETAILS" MODIFY ("CUST_DETAILS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_PAY_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_INST" ADD CONSTRAINT "DCSPP_PAY_INST_P" PRIMARY KEY ("PAYMENT_GROUP_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_INST" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_INST" MODIFY ("PAYMENT_GROUP_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table ARF_LQ_ENTRIES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_LQ_ENTRIES" MODIFY ("QUEUE_ENTRY_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_LQ_ENTRIES" MODIFY ("LOADER_QUEUE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table ARF_SECURE_ID_GEN
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_SECURE_ID_GEN" ADD CONSTRAINT "ARF_SECURE_ID_GE_P" PRIMARY KEY ("ID_SPACE_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."ARF_SECURE_ID_GEN" MODIFY ("BATCH_SIZE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_SECURE_ID_GEN" MODIFY ("SEED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."ARF_SECURE_ID_GEN" MODIFY ("ID_SPACE_NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DSS_DPS_UPDATE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_DPS_UPDATE" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSRT_APPR_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_APPR_EVENT" ADD CONSTRAINT "CSRT_APPR_EVENT_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSRT_APPR_EVENT" MODIFY ("UPDATE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSRT_APPR_EVENT" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table IF_INTEG_DATA
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."IF_INTEG_DATA" ADD CONSTRAINT "IF_INT_DATA_P" PRIMARY KEY ("ITEM_ID", "DESCRIPTOR", "REPOSITORY")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."IF_INTEG_DATA" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."IF_INTEG_DATA" MODIFY ("STATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."IF_INTEG_DATA" MODIFY ("REPOSITORY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."IF_INTEG_DATA" MODIFY ("DESCRIPTOR" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."IF_INTEG_DATA" MODIFY ("ITEM_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ADS_MSG_ADDRS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_ADDRS" ADD CONSTRAINT "TKT_ADS_MSG_ADDS_P" PRIMARY KEY ("ADDR_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_ADDRS" MODIFY ("TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_ADDRS" MODIFY ("ADDR_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DR$SRCH_SEARCH_PROFILE_IDX$I
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" MODIFY ("TOKEN_COUNT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" MODIFY ("TOKEN_LAST" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" MODIFY ("TOKEN_FIRST" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" MODIFY ("TOKEN_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DR$SRCH_SEARCH_PROFILE_IDX$I" MODIFY ("TOKEN_TEXT" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PRICE" ADD CONSTRAINT "DCSPP_ORDER_PRIC_P" PRIMARY KEY ("AMOUNT_INFO_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PRICE" MODIFY ("AMOUNT_INFO_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_DIST_SRV_STAT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_DIST_SRV_STAT" ADD CONSTRAINT "SERVER_STATS_P" PRIMARY KEY ("SERVER_STATS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_DIST_SRV_STAT" MODIFY ("LAST_UPDATED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_DIST_SRV_STAT" MODIFY ("UPDATE_DURATION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_DIST_SRV_STAT" MODIFY ("SERVER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_DIST_SRV_STAT" MODIFY ("SERVER_STATS_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DMS_LIMBO_DELAY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_DELAY" ADD CONSTRAINT "LIMBO_DELAY_PK" PRIMARY KEY ("MSG_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_DELAY" MODIFY ("FAILURE_PORT" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_DELAY" MODIFY ("MAX_ATTEMPTS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_DELAY" MODIFY ("DELAY" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DMS_LIMBO_DELAY" MODIFY ("MSG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CSR_NONRETURN_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_NONRETURN_ADJ" ADD CONSTRAINT "CSR_NR_ADJ_P" PRIMARY KEY ("EXCHANGE_ID", "ICA_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_NONRETURN_ADJ" MODIFY ("ICA_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."CSR_NONRETURN_ADJ" MODIFY ("EXCHANGE_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_ATTRVAL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_ATTRVAL" ADD CONSTRAINT "VMAP_ATTRVAL_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_ATTRVAL" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_GIFTLIST_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST_ITEM" ADD CONSTRAINT "DCS_GIFTLIST_ITE_P" PRIMARY KEY ("GIFTLIST_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST_ITEM" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST_ITEM" MODIFY ("GIFTLIST_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_ACT_MESSAGE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_MESSAGE" ADD CONSTRAINT "TKT_ACT_MESS_P" PRIMARY KEY ("ACTIVITY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_MESSAGE" MODIFY ("ACTIVITY_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ITEM" ADD CONSTRAINT "DCSPP_ORDER_ITEM_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ITEM" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ITEM" MODIFY ("COMMERCE_ITEMS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ITEM" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SRCH_ORDER_MODIFIED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_MODIFIED" ADD CONSTRAINT "SRCH_ORDER_MODIFIED_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_MODIFIED" MODIFY ("LAST_MODIFIED_DATE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SRCH_ORDER_MODIFIED" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_BUYER_APPROVER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_APPROVER" ADD CONSTRAINT "DBC_BUYER_APPROV_P" PRIMARY KEY ("USER_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_APPROVER" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_APPROVER" MODIFY ("APPROVER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_APPROVER" MODIFY ("USER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TKT_UPD_PROPS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_UPD_PROPS" ADD CONSTRAINT "CSRT_UPD_PROF_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_UPD_PROPS" MODIFY ("VERSION" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_UPD_PROPS" MODIFY ("UPDATE_TYPE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."TKT_UPD_PROPS" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table VMAP_IVM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."VMAP_IVM" ADD CONSTRAINT "VMAP_IVM_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."VMAP_IVM" MODIFY ("DISPLAY_NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IVM" MODIFY ("NAME" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."VMAP_IVM" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBC_ORG_APPROVER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_APPROVER" ADD CONSTRAINT "DBC_ORG_APPROVER_P" PRIMARY KEY ("ORG_ID", "SEQ")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_APPROVER" MODIFY ("SEQ" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_APPROVER" MODIFY ("APPROVER_ID" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBC_ORG_APPROVER" MODIFY ("ORG_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table SVC_GLOBALOPT_VAL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_VAL" ADD CONSTRAINT "GLOBALOPTVAL_P" PRIMARY KEY ("OPTION_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_VAL" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_VAL" MODIFY ("OPTION_VALUE" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_VAL" MODIFY ("OPTION_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DBCPP_APPR_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_APPR_MSGS" ADD CONSTRAINT "DBCPP_APPR_MSGS_P" PRIMARY KEY ("ORDER_ID", "SEQUENCE_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DBCPP_APPR_MSGS" MODIFY ("SEQUENCE_NUM" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_APPR_MSGS" MODIFY ("APPROVER_MSGS" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DBCPP_APPR_MSGS" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCSPP_ORDER_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_INST" ADD CONSTRAINT "DCSPP_ORDER_INST_P" PRIMARY KEY ("ORDER_ID", "TAG")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_INST" MODIFY ("TAG" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_INST" MODIFY ("ORDER_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DAS_SITEINDEX
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_SITEINDEX" ADD CONSTRAINT "SITEINDEX_PK" PRIMARY KEY ("SITEINDEX_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DAS_SITEINDEX" MODIFY ("SITEINDEX_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table DCS_GIFTLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST" ADD CONSTRAINT "DCS_GIFTLIST_P" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST" ADD CONSTRAINT "DCS_GIFTLIST2_C" CHECK (is_published in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST" ADD CONSTRAINT "DCS_GIFTLIST1_C" CHECK (is_public in (0,1)) ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST" MODIFY ("IS_PUBLISHED" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST" MODIFY ("IS_PUBLIC" NOT NULL ENABLE);
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table AGENT_PROFILE_CMTS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."AGENT_PROFILE_CMTS" ADD CONSTRAINT "AGTPROFILECMMT_F" FOREIGN KEY ("PROFILE_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table ARF_LOADER_PROG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_LOADER_PROG" ADD CONSTRAINT "ARF_LOADER_PROG_F1" FOREIGN KEY ("LOADER_QUEUE_ID")
+	  REFERENCES "PRODUCTION"."ARF_LOADER_QUEUE" ("LOADER_QUEUE_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table ARF_LQ_ENTRIES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_LQ_ENTRIES" ADD CONSTRAINT "ARF_LQE_F1" FOREIGN KEY ("LOADER_QUEUE_ID")
+	  REFERENCES "PRODUCTION"."ARF_LOADER_QUEUE" ("LOADER_QUEUE_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."ARF_LQ_ENTRIES" ADD CONSTRAINT "ARF_LQE_F2" FOREIGN KEY ("QUEUE_ENTRY_ID")
+	  REFERENCES "PRODUCTION"."ARF_QUEUE_ENTRY" ("QUEUE_ENTRY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table ARF_QUEUE_ENTRY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."ARF_QUEUE_ENTRY" ADD CONSTRAINT "ARF_QUEUE_ENTRY_F1" FOREIGN KEY ("LOADER_QUEUE_ID")
+	  REFERENCES "PRODUCTION"."ARF_LOADER_QUEUE" ("LOADER_QUEUE_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSRT_ORDER_APPR_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSRT_ORDER_APPR_EVENT" ADD CONSTRAINT "CSRTORDAPPREVT_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."CSRT_APPR_EVENT" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_CC_EXCH_METHOD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_CC_EXCH_METHOD" ADD CONSTRAINT "CSR_CCEXCXCHNG_M_F" FOREIGN KEY ("EXCHANGE_METHOD_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH_METHOD" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_EXCH
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH" ADD CONSTRAINT "CSR_EXCHORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_EXCH_CMTS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_CMTS" ADD CONSTRAINT "CSREXCHCMMT_F" FOREIGN KEY ("RETURN_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_EXCH_IPROMOS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_IPROMOS" ADD CONSTRAINT "CSR_EX_IPROMOS_F" FOREIGN KEY ("EXCHANGE_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_EXCH_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" ADD CONSTRAINT "CSR_EXCHTMDSPSTN_F" FOREIGN KEY ("DISPOSITION")
+	  REFERENCES "PRODUCTION"."CSR_EXCH_ITEM_DISP" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" ADD CONSTRAINT "CSR_EXCHTMRESN_F" FOREIGN KEY ("REASON")
+	  REFERENCES "PRODUCTION"."CSR_EXCH_REASONS" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEM" ADD CONSTRAINT "CSR_EXCHTSHIPPNG_F" FOREIGN KEY ("SHIPPING_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_EXCH_ITEMS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEMS" ADD CONSTRAINT "CSR_EXCHTXCHNG_D_F" FOREIGN KEY ("EXCHANGE_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_ITEMS" ADD CONSTRAINT "CSR_EXCHTXCHNG_T_F" FOREIGN KEY ("EXCHANGE_ITEM_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH_ITEM" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_EXCH_METHODS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHODS" ADD CONSTRAINT "CSR_EXCHMXCHNG_D_F" FOREIGN KEY ("EXCHANGE_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_METHODS" ADD CONSTRAINT "CSR_EXCHMXCHNG_M_F" FOREIGN KEY ("EXCHANGE_METHOD_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH_METHOD" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_EXCH_OPROMOS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_EXCH_OPROMOS" ADD CONSTRAINT "CSR_EX_OPROMOS_F" FOREIGN KEY ("EXCHANGE_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_NONRETURN_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_NONRETURN_ADJ" ADD CONSTRAINT "CSR_NR_ADJ_F" FOREIGN KEY ("EXCHANGE_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_PROMO_ADJUST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_PROMO_ADJUST" ADD CONSTRAINT "CSR_PROMO_ADJ_F" FOREIGN KEY ("EXCHANGE_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_RETURN_FEE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_RETURN_FEE" ADD CONSTRAINT "CSR_RFEXCHNG_D_F" FOREIGN KEY ("EXCHANGE_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table CSR_SC_EXCH_METHOD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."CSR_SC_EXCH_METHOD" ADD CONSTRAINT "CSR_SCEXCXCHNG_M_F" FOREIGN KEY ("EXCHANGE_METHOD_ID")
+	  REFERENCES "PRODUCTION"."CSR_EXCH_METHOD" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DAS_ACCT_PREVPWD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_ACCT_PREVPWD" ADD CONSTRAINT "DAS_PRVPWD_D_F" FOREIGN KEY ("ACCOUNT_NAME")
+	  REFERENCES "PRODUCTION"."DAS_ACCOUNT" ("ACCOUNT_NAME") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DAS_DD_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DD_MARKERS" ADD CONSTRAINT "MARKER_FK" FOREIGN KEY ("MARKER")
+	  REFERENCES "PRODUCTION"."DAS_DEPLOY_MARK" ("MARKER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DAS_DEPLOY_DATA
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DAS_DEPLOY_DATA" ADD CONSTRAINT "DD_DEPLOYMENT_FK" FOREIGN KEY ("DEPLOYMENT")
+	  REFERENCES "PRODUCTION"."DAS_DEPLOYMENT" ("DEPLOYMENT_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_APPROVERIDS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_APPROVERIDS" ADD CONSTRAINT "DBCPP_APORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_APPRSYSMSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_APPRSYSMSGS" ADD CONSTRAINT "DBCPP_SYSMORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_APPR_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_APPR_MSGS" ADD CONSTRAINT "DBCPP_MSGORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_AUTHAPPRIDS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_AUTHAPPRIDS" ADD CONSTRAINT "DBCPP_ATORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_CCITEM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_CCITEM_REL" ADD CONSTRAINT "DBCPP_CCRELTNSHP_F" FOREIGN KEY ("RELATIONSHIP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_CCORDER_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_CCORDER_REL" ADD CONSTRAINT "DBCPP_ODRELTNSHP_F" FOREIGN KEY ("RELATIONSHIP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_CCSHIP_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_CCSHIP_REL" ADD CONSTRAINT "DBCPP_SHRELTNSHP_F" FOREIGN KEY ("RELATIONSHIP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_INVOICE_REQ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_INVOICE_REQ" ADD CONSTRAINT "DBCPP_INPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_ORDER_CC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_ORDER_CC" ADD CONSTRAINT "DBCPP_ORORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_PMT_REQ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_PMT_REQ" ADD CONSTRAINT "DBCPP_PMPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBCPP_SCHED_CLONE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBCPP_SCHED_CLONE" ADD CONSTRAINT "DBCPP_SCSCHEDLD__F" FOREIGN KEY ("SCHEDULED_ORDER_ID")
+	  REFERENCES "PRODUCTION"."DBCPP_SCHED_ORDER" ("SCHEDULED_ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_BUYER_APPROVER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_APPROVER" ADD CONSTRAINT "DBC_BUYRAPPRVR_D_F" FOREIGN KEY ("APPROVER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_APPROVER" ADD CONSTRAINT "DBC_BUYRUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_BUYER_COSTCTR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_COSTCTR" ADD CONSTRAINT "DBC_BUYRCOST_CNT_F" FOREIGN KEY ("COST_CENTER_ID")
+	  REFERENCES "PRODUCTION"."DBC_COST_CENTER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_BUYER_PREFVNDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_BUYER_PREFVNDR" ADD CONSTRAINT "DBC_BYRPRFNDUSRD_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_INVOICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_INVOICE" ADD CONSTRAINT "DBC_INVCDELVRY_N_F" FOREIGN KEY ("DELIVERY_INFO")
+	  REFERENCES "PRODUCTION"."DBC_INV_DELIVERY" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_INVOICE" ADD CONSTRAINT "DBC_INVCPMT_TERM_F" FOREIGN KEY ("PMT_TERMS")
+	  REFERENCES "PRODUCTION"."DBC_INV_PMT_TERMS" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_ORGANIZATION
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORGANIZATION" ADD CONSTRAINT "DBC_ORGNCONTRCT__F" FOREIGN KEY ("CONTRACT_ID")
+	  REFERENCES "PRODUCTION"."DBC_CONTRACT" ("CONTRACT_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORGANIZATION" ADD CONSTRAINT "DBC_ORGNDFLT_BIL_F" FOREIGN KEY ("DFLT_BILLING_ADDR")
+	  REFERENCES "PRODUCTION"."DPS_CONTACT_INFO" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORGANIZATION" ADD CONSTRAINT "DBC_ORGNDFLT_PAY_F" FOREIGN KEY ("DFLT_PAYMENT_TYPE")
+	  REFERENCES "PRODUCTION"."DPS_CREDIT_CARD" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORGANIZATION" ADD CONSTRAINT "DBC_ORGNDFLT_SHI_F" FOREIGN KEY ("DFLT_SHIPPING_ADDR")
+	  REFERENCES "PRODUCTION"."DPS_CONTACT_INFO" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORGANIZATION" ADD CONSTRAINT "DBC_ORGNZTNID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_ORG_APPROVER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_APPROVER" ADD CONSTRAINT "DBC_ORGPAPPRVR_D_F" FOREIGN KEY ("APPROVER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_APPROVER" ADD CONSTRAINT "DBC_ORGPORG_D_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_ORG_CONTACT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_CONTACT" ADD CONSTRAINT "DBC_ORGCCONTCT_D_F" FOREIGN KEY ("CONTACT_ID")
+	  REFERENCES "PRODUCTION"."DPS_CONTACT_INFO" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_CONTACT" ADD CONSTRAINT "DBC_ORGCORG_D_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_ORG_COSTCTR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_COSTCTR" ADD CONSTRAINT "DBC_OCSTCTRORGD_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_ORG_PAYMENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PAYMENT" ADD CONSTRAINT "DBC_ORGPPAYMNT_D_F" FOREIGN KEY ("PAYMENT_ID")
+	  REFERENCES "PRODUCTION"."DPS_CREDIT_CARD" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PAYMENT" ADD CONSTRAINT "DBC_ORGPYMNTORG_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DBC_ORG_PREFVNDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DBC_ORG_PREFVNDR" ADD CONSTRAINT "DBC_ORGPRFVNDORG_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_AMTINFO_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_AMTINFO_ADJ" ADD CONSTRAINT "DCSPP_AMAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_AUTH_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_AUTH_STATUS" ADD CONSTRAINT "DCSPP_ATPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_BILL_ADDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_BILL_ADDR" ADD CONSTRAINT "DCSPP_BIPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_CC_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CC_STATUS" ADD CONSTRAINT "DCSPP_CCSTATS_D_F" FOREIGN KEY ("STATUS_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_STATUS" ("STATUS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_COMMERCE_ITEM_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_COMMERCE_ITEM_MARKERS" ADD CONSTRAINT "DCSCITEMMARKERS_F" FOREIGN KEY ("COMMERCE_ITEM_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ITEM" ("COMMERCE_ITEM_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_CONFIG_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CONFIG_ITEM" ADD CONSTRAINT "DCSPP_COCONFG_TM_F" FOREIGN KEY ("CONFIG_ITEM_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ITEM" ("COMMERCE_ITEM_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_COUPON
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON" ADD CONSTRAINT "DCSPP_COUPON_DF" FOREIGN KEY ("COUPON_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_CLAIMABLE" ("CLAIMABLE_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_COUPON_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_INFO" ADD CONSTRAINT "DCSPP_COPNINFO_D_F" FOREIGN KEY ("COUPON_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_CLAIMABLE" ("CLAIMABLE_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DCSPP_COUPON_INFO" ADD CONSTRAINT "DCSPP_CPNIFOL_F" FOREIGN KEY ("PARENT_FOLDER")
+	  REFERENCES "PRODUCTION"."DCSPP_CP_FOLDER" ("FOLDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_CP_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CP_FOLDER" ADD CONSTRAINT "DCSPP_CP_PRNTFOL_F" FOREIGN KEY ("PARENT_FOLDER")
+	  REFERENCES "PRODUCTION"."DCSPP_CP_FOLDER" ("FOLDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_CREDIT_CARD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CREDIT_CARD" ADD CONSTRAINT "DCSPP_CRPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_CRED_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_CRED_STATUS" ADD CONSTRAINT "DCSPP_CRPAYMNTGR_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_DEBIT_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_DEBIT_STATUS" ADD CONSTRAINT "DCSPP_DEPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ELE_SHIP_GRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ELE_SHIP_GRP" ADD CONSTRAINT "DCSPP_ELSHIPPNG__F" FOREIGN KEY ("SHIPPING_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_GC_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GC_STATUS" ADD CONSTRAINT "DCSPP_GCSTATS_D_F" FOREIGN KEY ("STATUS_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_STATUS" ("STATUS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_GIFTCERT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFTCERT" ADD CONSTRAINT "DCSPP_GIGIFTCRTF_F" FOREIGN KEY ("GIFTCERTIFICATE_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_CLAIMABLE" ("CLAIMABLE_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_GIFT_CERT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFT_CERT" ADD CONSTRAINT "DCSPP_GIPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_GIFT_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GIFT_INST" ADD CONSTRAINT "DCSPP_GIHANDLNG__F" FOREIGN KEY ("HANDLING_INST_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_HAND_INST" ("HANDLING_INST_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_GWP_ITEM_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_GWP_ITEM_MARKERS" ADD CONSTRAINT "DCSGWPIMARKERS_F" FOREIGN KEY ("COMMERCE_ITEM_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ITEM" ("COMMERCE_ITEM_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_HRD_SHIP_GRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_HRD_SHIP_GRP" ADD CONSTRAINT "DCSPP_HRSHIPPNG__F" FOREIGN KEY ("SHIPPING_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ISP_SHIP_GRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ISP_SHIP_GRP" ADD CONSTRAINT "DCSPP_ISPSHIPPNG__F" FOREIGN KEY ("SHIPPING_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ITEM_CI
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_CI" ADD CONSTRAINT "DCSPP_ITCOMMRC_T_F" FOREIGN KEY ("COMMERCE_ITEM_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ITEM" ("COMMERCE_ITEM_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ITEM_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ITEM_PRICE" ADD CONSTRAINT "DCSPP_ITAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ITMPRICE_DET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ITMPRICE_DET" ADD CONSTRAINT "DCSPP_SBAMNTNFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_NTAXSHIPITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_NTAXSHIPITEM" ADD CONSTRAINT "DCSPP_NTAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ORDER_ADJ
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ADJ" ADD CONSTRAINT "DCSPP_ORADJ_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ORDER_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_INST" ADD CONSTRAINT "DCSPP_ORORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ORDER_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_ITEM" ADD CONSTRAINT "DCSPP_ORITORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ORDER_PG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PG" ADD CONSTRAINT "DCSPP_ORPGORDR_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ORDER_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_PRICE" ADD CONSTRAINT "DCSPP_ORAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ORDER_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_REL" ADD CONSTRAINT "DCSPP_ORLORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_ORDER_SG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_ORDER_SG" ADD CONSTRAINT "DCSPP_SGORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_PAYITEM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYITEM_REL" ADD CONSTRAINT "DCSPP_PARELTNSHP_F" FOREIGN KEY ("RELATIONSHIP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_PAYORDER_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYORDER_REL" ADD CONSTRAINT "DCSPP_ODRELTNSHP_F" FOREIGN KEY ("RELATIONSHIP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_PAYSHIP_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAYSHIP_REL" ADD CONSTRAINT "DCSPP_PSHRLTNSHP_F" FOREIGN KEY ("RELATIONSHIP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_PAY_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_PAY_INST" ADD CONSTRAINT "DCSPP_PAPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_REL_ORDERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_REL_ORDERS" ADD CONSTRAINT "DCSPP_REORDR_D_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SCHD_ERRMSG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SCHD_ERRMSG" ADD CONSTRAINT "DCSPP_SCH_ERRS_F" FOREIGN KEY ("SCHED_ERROR_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SCHED_ERROR" ("SCHED_ERROR_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SC_STATUS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SC_STATUS" ADD CONSTRAINT "DCSPP_SCSTATS_D_F" FOREIGN KEY ("STATUS_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_STATUS" ("STATUS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SG_HAND_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SG_HAND_INST" ADD CONSTRAINT "DCSPP_SGSHIPPNG__F" FOREIGN KEY ("SHIPPING_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SHIPITEM_REL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_REL" ADD CONSTRAINT "DCSPP_SHRELTNSHP_F" FOREIGN KEY ("RELATIONSHIP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_RELATIONSHIP" ("RELATIONSHIP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SHIPITEM_SUB
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_SUB" ADD CONSTRAINT "DCSPP_SBAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SHIPITEM_TAX
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIPITEM_TAX" ADD CONSTRAINT "DCSPP_TXAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SHIP_ADDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_ADDR" ADD CONSTRAINT "DCSPP_SHDSHIPPNG_F" FOREIGN KEY ("SHIPPING_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SHIP_INST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_INST" ADD CONSTRAINT "DCSPP_SHSHIPPNG__F" FOREIGN KEY ("SHIPPING_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_SHIP_GROUP" ("SHIPPING_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SHIP_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SHIP_PRICE" ADD CONSTRAINT "DCSPP_SHAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_STORE_CRED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_STORE_CRED" ADD CONSTRAINT "DCSPP_STPAYMNT_G_F" FOREIGN KEY ("PAYMENT_GROUP_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_PAY_GROUP" ("PAYMENT_GROUP_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_SUBSKU_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_SUBSKU_ITEM" ADD CONSTRAINT "DCSPP_SUSUBSK_TM_F" FOREIGN KEY ("SUBSKU_ITEM_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ITEM" ("COMMERCE_ITEM_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_TAXSHIPITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_TAXSHIPITEM" ADD CONSTRAINT "DCSPP_SHAMNTXNFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCSPP_TAX_PRICE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCSPP_TAX_PRICE" ADD CONSTRAINT "DCSPP_TAAMNT_NFD_F" FOREIGN KEY ("AMOUNT_INFO_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_AMOUNT_INFO" ("AMOUNT_INFO_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_GIFTINST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GIFTINST" ADD CONSTRAINT "DCS_GIFTGIFTLST__F" FOREIGN KEY ("GIFTLIST_ID")
+	  REFERENCES "PRODUCTION"."DCS_GIFTLIST" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_GIFTLIST_ITEM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST_ITEM" ADD CONSTRAINT "DCS_GFTLSTGFTLST_F" FOREIGN KEY ("GIFTLIST_ID")
+	  REFERENCES "PRODUCTION"."DCS_GIFTLIST" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_GIFTLIST_ITEM" ADD CONSTRAINT "DCS_GIFTGIFTTM_D_F" FOREIGN KEY ("GIFTITEM_ID")
+	  REFERENCES "PRODUCTION"."DCS_GIFTITEM" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_GWP_ORDER_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_GWP_ORDER_MARKERS" ADD CONSTRAINT "DCSGWPOMARKERS_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_ORDER_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_ORDER_MARKERS" ADD CONSTRAINT "DCSORDERMARKERS_F" FOREIGN KEY ("ORDER_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_ORDER" ("ORDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_ORG_ADDRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_ORG_ADDRESS" ADD CONSTRAINT "DCS_ORG_ADDR_FK1" FOREIGN KEY ("ADDR_ID")
+	  REFERENCES "PRODUCTION"."DPS_CONTACT_INFO" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_ORG_ADDRESS" ADD CONSTRAINT "DCS_ORG_ADDR_FK2" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_STORECRED_CLM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_STORECRED_CLM" ADD CONSTRAINT "DCS_STORSTOR_CRD_F" FOREIGN KEY ("STORE_CREDIT_ID")
+	  REFERENCES "PRODUCTION"."DCSPP_CLAIMABLE" ("CLAIMABLE_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_USER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER" ADD CONSTRAINT "DCS_USRDEFLT_CR_F" FOREIGN KEY ("DEFAULT_CREDITCARD")
+	  REFERENCES "PRODUCTION"."DPS_CREDIT_CARD" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USER" ADD CONSTRAINT "DCS_USRDFLT_COS_F" FOREIGN KEY ("DFLT_COST_CENTER")
+	  REFERENCES "PRODUCTION"."DBC_COST_CENTER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_USER_FAVSTORES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_FAVSTORES" ADD CONSTRAINT "DCS_FAVSTOREUSRD_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_USER_GIFTLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_GIFTLIST" ADD CONSTRAINT "DCS_USRGIFTLST__F" FOREIGN KEY ("GIFTLIST_ID")
+	  REFERENCES "PRODUCTION"."DCS_GIFTLIST" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_USER_OTHERLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_OTHERLIST" ADD CONSTRAINT "DCS_USRTGIFTLST__F" FOREIGN KEY ("GIFTLIST_ID")
+	  REFERENCES "PRODUCTION"."DCS_GIFTLIST" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_USER_WISHLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USER_WISHLIST" ADD CONSTRAINT "DCS_USRWGIFTLST__F" FOREIGN KEY ("GIFTLIST_ID")
+	  REFERENCES "PRODUCTION"."DCS_GIFTLIST" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DCS_USR_ACTVPROMO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" ADD CONSTRAINT "USR_ACTVPRM_ID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DCS_USR_ACTVPROMO" ADD CONSTRAINT "USR_ACTVPRM_STAT_F" FOREIGN KEY ("PROMO_STATUS_ID")
+	  REFERENCES "PRODUCTION"."DCS_USR_PROMOSTAT" ("STATUS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_CHILD_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_CHILD_FOLDER" ADD CONSTRAINT "DPS_CHILCHILD_FL_F" FOREIGN KEY ("CHILD_FOLDER_ID")
+	  REFERENCES "PRODUCTION"."DPS_FOLDER" ("FOLDER_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_CHILD_FOLDER" ADD CONSTRAINT "DPS_CHILFOLDR_D_F" FOREIGN KEY ("FOLDER_ID")
+	  REFERENCES "PRODUCTION"."DPS_FOLDER" ("FOLDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_EMAIL_ADDRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_EMAIL_ADDRESS" ADD CONSTRAINT "DPS_EMLDMALNG_D_F" FOREIGN KEY ("MAILING_ID")
+	  REFERENCES "PRODUCTION"."DPS_MAILING" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_FOLDER" ADD CONSTRAINT "DPS_FOLDRPARNT_F" FOREIGN KEY ("PARENT")
+	  REFERENCES "PRODUCTION"."DPS_FOLDER" ("FOLDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_MAIL_BATCH
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_BATCH" ADD CONSTRAINT "DPS_MAILBATCH_D_F" FOREIGN KEY ("MAILING_ID")
+	  REFERENCES "PRODUCTION"."DPS_MAILING" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_MAIL_TRACKDATA
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_MAIL_TRACKDATA" ADD CONSTRAINT "DPS_MAIL_TRACKD_F" FOREIGN KEY ("MAILING_ID")
+	  REFERENCES "PRODUCTION"."DPS_MAILING" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_ORGANIZATION
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORGANIZATION" ADD CONSTRAINT "DPS_ORGNPARNT_RG_F" FOREIGN KEY ("PARENT_ORG")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_ORG_ANCESTORS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" ADD CONSTRAINT "DPS_ORGNANC_RG_F" FOREIGN KEY ("ANC_ORG")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ANCESTORS" ADD CONSTRAINT "DPS_ORGNORG_D_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_ORG_CHLDORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORG_CHLDORG" ADD CONSTRAINT "DPS_ORGCCHILD_RG_F" FOREIGN KEY ("CHILD_ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ORG_CHLDORG" ADD CONSTRAINT "DPS_ORGCORG_D_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_ORG_ROLE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ROLE" ADD CONSTRAINT "DPS_ORGRLATG_RL_F" FOREIGN KEY ("ATG_ROLE")
+	  REFERENCES "PRODUCTION"."DPS_ROLE" ("ROLE_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ORG_ROLE" ADD CONSTRAINT "DPS_ORGRLORG_D_F" FOREIGN KEY ("ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_OTHER_ADDR
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_OTHER_ADDR" ADD CONSTRAINT "DPS_OTHRDDRUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_RELATIVEROLE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_RELATIVEROLE" ADD CONSTRAINT "DPS_RELTRELTV_T_F" FOREIGN KEY ("RELATIVE_TO")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_RELATIVEROLE" ADD CONSTRAINT "DPS_RELTVRLROL_D_F" FOREIGN KEY ("ROLE_ID")
+	  REFERENCES "PRODUCTION"."DPS_ROLE" ("ROLE_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_ROLEFOLD_CHLD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ROLEFOLD_CHLD" ADD CONSTRAINT "DPS_ROLFROLFLD_D_F" FOREIGN KEY ("ROLEFOLD_ID")
+	  REFERENCES "PRODUCTION"."DPS_FOLDER" ("FOLDER_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ROLEFOLD_CHLD" ADD CONSTRAINT "DPS_ROLFROL_D_F" FOREIGN KEY ("ROLE_ID")
+	  REFERENCES "PRODUCTION"."DPS_ROLE" ("ROLE_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_ROLE_REL_ORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" ADD CONSTRAINT "DPS_ROLRLRGROL_D_F" FOREIGN KEY ("ROLE_ID")
+	  REFERENCES "PRODUCTION"."DPS_ROLE" ("ROLE_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_ROLE_REL_ORG" ADD CONSTRAINT "DPS_ROLRORGNZTN_F" FOREIGN KEY ("ORGANIZATION")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_SCENARIO_VALUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SCENARIO_VALUE" ADD CONSTRAINT "DPS_SCENRVLID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_SEG_LIST_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_FOLDER" ADD CONSTRAINT "DPS_S_L_F_F1" FOREIGN KEY ("PARENT_FOLDER_ID")
+	  REFERENCES "PRODUCTION"."DPS_SEG_LIST_FOLDER" ("FOLDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_SEG_LIST_NAME
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_SEG_LIST_NAME" ADD CONSTRAINT "DPS_S_L_N_F1" FOREIGN KEY ("SEGMENT_LIST_ID")
+	  REFERENCES "PRODUCTION"."DPS_SEG_LIST" ("SEGMENT_LIST_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_ADDRESS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ADDRESS" ADD CONSTRAINT "DPS_USRDDRSSID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_EVENT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT" ADD CONSTRAINT "DPS_USRVEVNTTYP_F" FOREIGN KEY ("EVENTTYPE")
+	  REFERENCES "PRODUCTION"."DPS_EVENT_TYPE" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_EVENT_SUM
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_EVENT_SUM" ADD CONSTRAINT "DPS_USRSUEVNTTYP_F" FOREIGN KEY ("EVENTTYPE")
+	  REFERENCES "PRODUCTION"."DPS_EVENT_TYPE" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_MAILING
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_MAILING" ADD CONSTRAINT "DPS_USRMLNGUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_MAILING" ADD CONSTRAINT "DPS_USRMMALNG_D_F" FOREIGN KEY ("MAILING_ID")
+	  REFERENCES "PRODUCTION"."DPS_MAILING" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_ORG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG" ADD CONSTRAINT "DPS_USRRGORGNZTN_F" FOREIGN KEY ("ORGANIZATION")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG" ADD CONSTRAINT "DPS_USRRGUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_ORG_ANC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG_ANC" ADD CONSTRAINT "DPS_USRRANC_RG_F" FOREIGN KEY ("ANC_ORG")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_ORG_ANC" ADD CONSTRAINT "DPS_USRRGNCUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_PREVPWD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_PREVPWD" ADD CONSTRAINT "DPS_PRVPWD_D_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_ROLES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_ROLES" ADD CONSTRAINT "DPS_USRRLSATG_RL_F" FOREIGN KEY ("ATG_ROLE")
+	  REFERENCES "PRODUCTION"."DPS_ROLE" ("ROLE_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_ROLES" ADD CONSTRAINT "DPS_USRRLSUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_SCENARIO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_SCENARIO" ADD CONSTRAINT "DPS_USRSCNRID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_SCENARIO" ADD CONSTRAINT "DPS_USRSIND_SCNR_F" FOREIGN KEY ("IND_SCENARIO_ID")
+	  REFERENCES "PRODUCTION"."DSS_IND_SCENARIO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_SEC_ORGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_SEC_ORGS" ADD CONSTRAINT "DPS_USRSECORG_RL_F" FOREIGN KEY ("SECONDARY_ORG_ID")
+	  REFERENCES "PRODUCTION"."DPS_ORGANIZATION" ("ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_SEC_ORGS" ADD CONSTRAINT "DPS_USRSORGUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USER_SLOT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USER_SLOT" ADD CONSTRAINT "DPS_USRSLTID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USER_SLOT" ADD CONSTRAINT "DPS_USRSPROFL_SL_F" FOREIGN KEY ("PROFILE_SLOT_ID")
+	  REFERENCES "PRODUCTION"."DSS_PROFILE_SLOT" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USR_CREDITCARD
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USR_CREDITCARD" ADD CONSTRAINT "DPS_USRCCREDT_CR_F" FOREIGN KEY ("CREDIT_CARD_ID")
+	  REFERENCES "PRODUCTION"."DPS_CREDIT_CARD" ("ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USR_CREDITCARD" ADD CONSTRAINT "DPS_USRCUSR_D_F" FOREIGN KEY ("USER_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DPS_USR_MARKERS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DPS_USR_MARKERS" ADD CONSTRAINT "DPSUSRMARKERS_M_F" FOREIGN KEY ("MARKER_ID")
+	  REFERENCES "PRODUCTION"."DPS_MARKERS" ("MARKER_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."DPS_USR_MARKERS" ADD CONSTRAINT "DPSUSRMARKERS_U_F" FOREIGN KEY ("PROFILE_ID")
+	  REFERENCES "PRODUCTION"."DPS_USER" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_COLL_TRANS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_COLL_TRANS" ADD CONSTRAINT "DSS_COLLCOLL_SCN_F" FOREIGN KEY ("COLL_SCENARIO_ID")
+	  REFERENCES "PRODUCTION"."DSS_COLL_SCENARIO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_MIG_INFO_SEG
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_MIG_INFO_SEG" ADD CONSTRAINT "DSS_MIG_INFOSEG_FK" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DSS_SCEN_MIG_INFO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_MIG_SEG_NAME
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_MIG_SEG_NAME" ADD CONSTRAINT "DSS_MIG_SEGNAME_FK" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DSS_MIGRATION" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SCENARIO_BOOLS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_BOOLS" ADD CONSTRAINT "DSS_SCENRBLSID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DSS_IND_SCENARIO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SCENARIO_DATES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DATES" ADD CONSTRAINT "DSS_SCENRDTSID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DSS_IND_SCENARIO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SCENARIO_DBLS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_DBLS" ADD CONSTRAINT "DSS_SCENRDBLSID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DSS_IND_SCENARIO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SCENARIO_LONGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_LONGS" ADD CONSTRAINT "DSS_SCENRLNGSID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DSS_IND_SCENARIO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SCENARIO_STRS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCENARIO_STRS" ADD CONSTRAINT "DSS_SCENRSTRSID_F" FOREIGN KEY ("ID")
+	  REFERENCES "PRODUCTION"."DSS_IND_SCENARIO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SCEN_MIG_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SCEN_MIG_INFO" ADD CONSTRAINT "DSS_SCENMIGINFO_FK" FOREIGN KEY ("SCENARIO_INFO_ID")
+	  REFERENCES "PRODUCTION"."DSS_SCENARIO_INFO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SLOT_ITEMS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_ITEMS" ADD CONSTRAINT "DSS_SLOTSLOT_D_F" FOREIGN KEY ("SLOT_ID")
+	  REFERENCES "PRODUCTION"."DSS_PROFILE_SLOT" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table DSS_SLOT_PRIORITY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."DSS_SLOT_PRIORITY" ADD CONSTRAINT "DSS_SLOTPSLOT_D_F" FOREIGN KEY ("SLOT_ID")
+	  REFERENCES "PRODUCTION"."DSS_PROFILE_SLOT" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table MEDIA_BASE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_BASE" ADD CONSTRAINT "MEDPARNT_FL_F" FOREIGN KEY ("PARENT_FOLDER_ID")
+	  REFERENCES "PRODUCTION"."MEDIA_FOLDER" ("FOLDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table MEDIA_BIN
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_BIN" ADD CONSTRAINT "MEDBNMED_D_F" FOREIGN KEY ("MEDIA_ID")
+	  REFERENCES "PRODUCTION"."MEDIA_BASE" ("MEDIA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table MEDIA_EXT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_EXT" ADD CONSTRAINT "MEDXTMED_D_F" FOREIGN KEY ("MEDIA_ID")
+	  REFERENCES "PRODUCTION"."MEDIA_BASE" ("MEDIA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table MEDIA_FOLDER
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_FOLDER" ADD CONSTRAINT "MD_FOLDPARNT_FL_F" FOREIGN KEY ("PARENT_FOLDER_ID")
+	  REFERENCES "PRODUCTION"."MEDIA_FOLDER" ("FOLDER_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table MEDIA_TXT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."MEDIA_TXT" ADD CONSTRAINT "MEDTXTMED_D_F" FOREIGN KEY ("MEDIA_ID")
+	  REFERENCES "PRODUCTION"."MEDIA_BASE" ("MEDIA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SRCH_END_JOB
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_END_JOB" ADD CONSTRAINT "SRCH_JB_END_STE_F1" FOREIGN KEY ("CONFIG_PATH")
+	  REFERENCES "PRODUCTION"."SRCH_END_STATE" ("CONFIG_PATH") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SRCH_UPDATE_QUEUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SRCH_UPDATE_QUEUE" ADD CONSTRAINT "SRCH_UPQ_CFRP_F1" FOREIGN KEY ("CONFIG_REPO_ID")
+	  REFERENCES "PRODUCTION"."SRCH_CONFIG_REPO" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SVCT_CALLNOTE_ACT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVCT_CALLNOTE_ACT" ADD CONSTRAINT "SVCT_CALLNOTE_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SVC_GLOBALOPT_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_INFO" ADD CONSTRAINT "GLOBALOPTINFO_FK1" FOREIGN KEY ("OPTION_ID")
+	  REFERENCES "PRODUCTION"."SVC_GLOBAL_OPT" ("OPTION_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SVC_GLOBALOPT_VAL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_GLOBALOPT_VAL" ADD CONSTRAINT "GLOBALOPTVAL_FK1" FOREIGN KEY ("OPTION_ID")
+	  REFERENCES "PRODUCTION"."SVC_GLOBAL_OPT" ("OPTION_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SVC_SPELL_WORDS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_SPELL_WORDS" ADD CONSTRAINT "SVC_SPELLDICS_FK1" FOREIGN KEY ("DIC_ID")
+	  REFERENCES "PRODUCTION"."SVC_SPELL_DICS" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SVC_USEROPT_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_INFO" ADD CONSTRAINT "USEROPTINFO_FK1" FOREIGN KEY ("OPTION_ID")
+	  REFERENCES "PRODUCTION"."SVC_USER_OPT" ("OPTION_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SVC_USEROPT_VAL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."SVC_USEROPT_VAL" ADD CONSTRAINT "USEROPTVAL_FK1" FOREIGN KEY ("OPTION_ID")
+	  REFERENCES "PRODUCTION"."SVC_USER_OPT" ("OPTION_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACTIVITY
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACTIVITY" ADD CONSTRAINT "TKT_ACT_DATA_F" FOREIGN KEY ("ACT_DATA_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACTIVITY" ADD CONSTRAINT "TKT_ACT_REASON_F" FOREIGN KEY ("REASON_ID")
+	  REFERENCES "PRODUCTION"."TKT_REASON" ("REASON_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACTIVITY" ADD CONSTRAINT "TKT_ACT_TICKET_F" FOREIGN KEY ("TICKET_ID")
+	  REFERENCES "PRODUCTION"."TKT_TICKET" ("TICKET_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACT_ESCAL
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_ESCAL" ADD CONSTRAINT "TKT_A_ESC_ACT_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACT_MAP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_MAP" ADD CONSTRAINT "TKT_ACTMAP_A_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACT_MESSAGE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_MESSAGE" ADD CONSTRAINT "TKT_A_MESS_ACT_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACT_OWNAGNT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNAGNT" ADD CONSTRAINT "TKT_A_AGNT_ACT_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACT_OWNGRP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_OWNGRP" ADD CONSTRAINT "TKT_A_GRP_ACT_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACT_STATC
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_STATC" ADD CONSTRAINT "TKT_A_STATC_ACT_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_STATC" ADD CONSTRAINT "TKT_A_STATC_SU2_F" FOREIGN KEY ("PREV_SUB_STATUS")
+	  REFERENCES "PRODUCTION"."TKT_SUB_STATUS" ("SUB_STATUS_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ACT_STATC" ADD CONSTRAINT "TKT_A_STATC_SUB_F" FOREIGN KEY ("NEW_SUB_STATUS")
+	  REFERENCES "PRODUCTION"."TKT_SUB_STATUS" ("SUB_STATUS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ACT_WORKNOTE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ACT_WORKNOTE" ADD CONSTRAINT "TKT_A_WRKNT_ACT_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_IN_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_IN_MSGS" ADD CONSTRAINT "TKT_ADS_M_INMSGS_F" FOREIGN KEY ("MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_IN_MSGS" ADD CONSTRAINT "TKT_ADS_R_INMSGS_F" FOREIGN KEY ("RAW_MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_RAW_MSGS" ("RAW_MSG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_MESSAGES
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MESSAGES" ADD CONSTRAINT "TKT_ADS_MESSAGES_F" FOREIGN KEY ("MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_MMS_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MMS_MSGS" ADD CONSTRAINT "TKT_ADS_MMS_MSGS_F" FOREIGN KEY ("RAW_MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_RAW_MSGS" ("RAW_MSG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_MSGADDLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" ADD CONSTRAINT "TKT_ADS_ADDRL_A_F" FOREIGN KEY ("ADDR_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_MSG_ADDRS" ("ADDR_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGADDLIST" ADD CONSTRAINT "TKT_ADS_ADDRL_M_F" FOREIGN KEY ("MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_MSGATTLIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" ADD CONSTRAINT "TKT_ADS_ATTCHL_A_F" FOREIGN KEY ("ATT_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_MSG_ATTS" ("ATT_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSGATTLIST" ADD CONSTRAINT "TKT_ADS_ATTCHL_M_F" FOREIGN KEY ("MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_MSG_HDRS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_HDRS" ADD CONSTRAINT "TKT_MSGHDRS_A_F" FOREIGN KEY ("MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_MSG_PROPS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_MSG_PROPS" ADD CONSTRAINT "TKT_MSGPROPS_A_F" FOREIGN KEY ("MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_OUT_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_OUT_MSGS" ADD CONSTRAINT "TKT_ADS_OUTMSGS_F" FOREIGN KEY ("MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_ACT_DATA" ("ACT_DATA_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_POP3_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_POP3_MSGS" ADD CONSTRAINT "TKT_ADS_POP3_MSG_F" FOREIGN KEY ("RAW_MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_RAW_MSGS" ("RAW_MSG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_SMS_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMS_MSGS" ADD CONSTRAINT "TKT_ADS_SMS_MSGS_F" FOREIGN KEY ("RAW_MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_RAW_MSGS" ("RAW_MSG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ADS_SMTP_MSGS
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ADS_SMTP_MSGS" ADD CONSTRAINT "TKT_ADS_SMTP_MSG_F" FOREIGN KEY ("RAW_MSG_ID")
+	  REFERENCES "PRODUCTION"."TKT_ADS_RAW_MSGS" ("RAW_MSG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ATTCH_LIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ATTCH_LIST" ADD CONSTRAINT "TKT_ATTCHL_AT_F" FOREIGN KEY ("ATTACHMENT_ID")
+	  REFERENCES "PRODUCTION"."TKT_ATTACHMENT" ("ATTACHMENT_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ATTCH_LIST" ADD CONSTRAINT "TKT_ATTCHL_A_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ESC_OWN_GROUP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ESC_OWN_GROUP" ADD CONSTRAINT "TKT_ESCOG_OG2_F" FOREIGN KEY ("ESCALATION_OWN_GRP")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ESC_OWN_GROUP" ADD CONSTRAINT "TKT_ESCOG_OG_F" FOREIGN KEY ("LOGICAL_ORG_ID")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_ESC_TKT_Q
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_ESC_TKT_Q" ADD CONSTRAINT "TKT_Q_ESCT_LO2_F" FOREIGN KEY ("ESCALATION_TKT_Q")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_ESC_TKT_Q" ADD CONSTRAINT "TKT_Q_ESCT_LO_F" FOREIGN KEY ("LOGICAL_ORG_ID")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_EXTREF_LIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_EXTREF_LIST" ADD CONSTRAINT "TKT_EXTRL_T_F" FOREIGN KEY ("TICKET_ID")
+	  REFERENCES "PRODUCTION"."TKT_TICKET" ("TICKET_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_EXTREF_LIST" ADD CONSTRAINT "TKT_EXTRL_X_F" FOREIGN KEY ("EXTERNAL_REF_ID")
+	  REFERENCES "PRODUCTION"."TKT_EXT_REF" ("EXTERNAL_REF_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_EXT_REF
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_EXT_REF" ADD CONSTRAINT "TKT_EXTR_A_F" FOREIGN KEY ("ACTIVITY_ID")
+	  REFERENCES "PRODUCTION"."TKT_ACTIVITY" ("ACTIVITY_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_OWNING_GROUP
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_OWNING_GROUP" ADD CONSTRAINT "TKT_OWNGRP_LO_F" FOREIGN KEY ("LOGICAL_ORG_ID")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_OWNING_GROUP" ADD CONSTRAINT "TKT_OWNGRP_OG_F" FOREIGN KEY ("DEF_ESC_OWN_GRP")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_QUEUE
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_QUEUE" ADD CONSTRAINT "TKT_Q_ESC_LO_F" FOREIGN KEY ("DEF_ESC_TKT_Q")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_QUEUE" ADD CONSTRAINT "TKT_Q_LO_F" FOREIGN KEY ("LOGICAL_ORG_ID")
+	  REFERENCES "PRODUCTION"."DLO_LOGICAL_ORG" ("LOGICAL_ORG_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_Q_STAT_SET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_Q_STAT_SET" ADD CONSTRAINT "SVR_TKT_Q_F" FOREIGN KEY ("TKT_Q_STATS_ID")
+	  REFERENCES "PRODUCTION"."TKT_Q_STATS" ("TKT_Q_STATS_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_Q_STAT_SET" ADD CONSTRAINT "SVR_TKT_Q_SRV_F" FOREIGN KEY ("SERVER_STATS_ID")
+	  REFERENCES "PRODUCTION"."TKT_DIST_SRV_STAT" ("SERVER_STATS_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_REA_CONTEXT
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_REA_CONTEXT" ADD CONSTRAINT "TKT_REACTX_REA_F" FOREIGN KEY ("DEFAULT_REASON_ID")
+	  REFERENCES "PRODUCTION"."TKT_REASON" ("REASON_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_REA_CTX_LIST
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_REA_CTX_LIST" ADD CONSTRAINT "TKT_REACTXL_C_F" FOREIGN KEY ("REA_CONTEXT_ID")
+	  REFERENCES "PRODUCTION"."TKT_REA_CONTEXT" ("REA_CONTEXT_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_REA_CTX_LIST" ADD CONSTRAINT "TKT_REACTXL_R_F" FOREIGN KEY ("REASON_ID")
+	  REFERENCES "PRODUCTION"."TKT_REASON" ("REASON_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_RELATED
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_RELATED" ADD CONSTRAINT "TKT_RELATED_T2_F" FOREIGN KEY ("RELATED_TICKET_ID")
+	  REFERENCES "PRODUCTION"."TKT_TICKET" ("TICKET_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_RELATED" ADD CONSTRAINT "TKT_RELATED_T_F" FOREIGN KEY ("TICKET_ID")
+	  REFERENCES "PRODUCTION"."TKT_TICKET" ("TICKET_ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TKT_TICKET
+--------------------------------------------------------
+
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" ADD CONSTRAINT "TKT_TICKET_CUST_F" FOREIGN KEY ("CUST_DETAILS_ID")
+	  REFERENCES "PRODUCTION"."TKT_CUST_DETAILS" ("CUST_DETAILS_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" ADD CONSTRAINT "TKT_TICKET_NDUP_F" FOREIGN KEY ("DUP_OF_TICKET_ID")
+	  REFERENCES "PRODUCTION"."TKT_TICKET" ("TICKET_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" ADD CONSTRAINT "TKT_TICKET_ORIG_F" FOREIGN KEY ("ORIG_TICKET_ID")
+	  REFERENCES "PRODUCTION"."TKT_TICKET" ("TICKET_ID") ENABLE;
+  ALTER TABLE "PRODUCTION"."TKT_TICKET" ADD CONSTRAINT "TKT_TICKET_SUB_F" FOREIGN KEY ("SUB_STATUS_ID")
+	  REFERENCES "PRODUCTION"."TKT_SUB_STATUS" ("SUB_STATUS_ID") ENABLE;
+--------------------------------------------------------
+--  DDL for Procedure DMS_QUEUE_FLAG
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "PRODUCTION"."DMS_QUEUE_FLAG" 
+(Pbatch_size    IN NUMBER
+,Pread_lock     IN NUMBER
+,Pdelivery_date IN NUMBER
+,Pclient_id     IN NUMBER
+,Pqueue_id      IN NUMBER
+,Pupdate_count  OUT NUMBER)
+as
+             Begin
+    UPDATE dms_queue_entry qe
+    SET qe.handling_client_id = Pclient_id, 
+        qe.read_state = Pread_lock 
+    WHERE ROWNUM < Pbatch_size
+      AND qe.handling_client_id < 0 
+      AND qe.delivery_date < Pdelivery_date 
+      AND qe.queue_id = Pqueue_id;
+Pupdate_count := SQL%ROWCOUNT;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DMS_TOPIC_FLAG
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "PRODUCTION"."DMS_TOPIC_FLAG" 
+(Pbatch_size    IN NUMBER
+,Pread_lock     IN NUMBER
+,Pdelivery_date IN NUMBER
+,Psubscriber_id IN NUMBER
+,Pupdate_count  OUT NUMBER)
+as
+             Begin
+    UPDATE dms_topic_entry te 
+    SET te.read_state = Pread_lock 
+    WHERE ROWNUM < Pbatch_size
+      AND te.delivery_date < Pdelivery_date 
+      AND te.read_state = 0 
+      AND te.subscriber_id = Psubscriber_id;
+Pupdate_count := SQL%ROWCOUNT;
+END;
+
+/
