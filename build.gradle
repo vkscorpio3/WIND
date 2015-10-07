@@ -173,6 +173,28 @@ task createProductionChangelogTable << {
 	}
 }
 
+task initialDataToProduction << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: productionSchemaUser, 
+				 password: productionSchemaPassword, 
+				 dir: 'install/initial data/production',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/production_undo_initial_data.sql')
+}
+
+task undoProductionInitialData << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: productionSchemaUser,
+			password: productionSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/production_undo_initial_data.sql')
+	}
+}
+
 task undoProductionLastChange << {	
 	ant.sql(driver: dbDriverName,
 			url: dbURL,
@@ -204,6 +226,28 @@ task createPublishingChangelogTable << {
 	        encoding: 'UTF-8',
 	        classpath: configurations.compile.asPath) {
 		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task initialDataToPublishing << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: publishingSchemaUser, 
+				 password: publishingSchemaPassword, 
+				 dir: 'install/initial data/publishing',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/publishing_undo_initial_data.sql')
+}
+
+task undoPublishingInitialData << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: publishingSchemaUser,
+			password: publishingSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/publishing_undo_initial_data.sql')
 	}
 }
 
@@ -255,6 +299,44 @@ task createSwitchingChangelogTables << {
 	}
 }
 
+task initialDataToSwitching << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingASchemaUser, 
+				 password: switchingASchemaPassword, 
+				 dir: 'install/initial data/switching/a',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/switchingA_undo_initial_data.sql')
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingBSchemaUser, 
+				 password: switchingBSchemaPassword, 
+				 dir: 'install/initial data/switching/b',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/switchingB_undo_initial_data.sql')
+
+}
+
+task undoSwitchingInitialData << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingASchemaUser,
+			password: switchingASchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/switchingA_undo_initial_data.sql')
+	}
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingBSchemaUser,
+			password: switchingBSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/switchingB_undo_last_change.sql')
+	}
+}
+
 task undoSwitchingLastChange << {
 	ant.sql(driver: dbDriverName,
 			url: dbURL,
@@ -297,6 +379,29 @@ task createAgentChangelogTable << {
 	}
 }
 
+task initialDataToAgent << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: agentSchemaUser, 
+				 password: agentSchemaPassword, 
+				 dir: 'install/initial data/agent',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/agent_undo_initial_data.sql')
+}
+
+task undoAgentInitialData << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: agentSchemaUser,
+			password: agentSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/agent_undo_initial_data.sql')
+	}
+	
+}
+
 task undoAgentLastChange << {
 	ant.sql(driver: dbDriverName,
 			url: dbURL,
@@ -327,6 +432,20 @@ task updateDatabaseDDL << {
 	updatePublishingDatabase.execute()
 	updateSwitchingDatabases.execute()
 	updateAgentDatabase.execute()
+}
+
+task initialDataForAll << {
+	initialDataToProduction.execute()
+	initialDataToPublishing.execute()
+	initialDataToAgent.execute()
+	initialDataToSwitching.execute()
+}
+
+task undoInitialDataForAll << {
+	undoProductionInitialData.execute()
+	undoPublichingInitialData.execute()
+	undoAgentInitialData.execute()
+	undoSwitchingInitialData.execute()
 }
 
 task undoLastChangesInSchemas << {
