@@ -1,5 +1,5 @@
 #org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
-#Wed Aug 05 14:03:47 EEST 2015
-build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;Endeca/Assembler;Endeca/Index;Frontend;Storefront;
+#Thu Sep 10 13:57:01 EEST 2015
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;Commerce;Endeca/Assembler;Endeca/Index;Frontend;Storefront;
 org.springsource.ide.eclipse.gradle.linkedresources=
 org.springsource.ide.eclipse.gradle.rootprojectloc=

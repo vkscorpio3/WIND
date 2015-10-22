@@ -4,7 +4,7 @@ Bundle-Name: Storefront
 Bundle-SymbolicName: WIND.Storefront
 Bundle-Version: 1.0.0.qualifier
 ATG-Class-Path: lib/classes.jar lib/resources.jar
-ATG-Required: WIND.Endeca.Assembler WIND.Endeca.Index Fulfillment
+ATG-Required: WIND.Endeca.Assembler WIND.Endeca.Index WIND.Commerce Fulfillment
 ATG-Config-Path: config/config.jar
 ATG-Web-Module: j2ee-apps/WIND/store.war
 ATG-Product: WIND Storefront

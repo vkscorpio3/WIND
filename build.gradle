@@ -1,16 +1,18 @@
-subprojects {
+allprojects{
 	apply plugin: "java"
 	apply plugin: 'eclipse'
 	apply plugin: 'eclipse-wtp'
-	
+		
 	sourceCompatibility = 1.7
 	targetCompatibility = 1.7
-	version = '1.0'
-	
+	version = '1.0'	
+}
+
+subprojects {	
 	task hello << { task -> println "-====$task.project.name====-" }
 	
 	task copyRuntimeLibs(type: Copy) {
-		into "../third-party-libs"
+		into "../libs"
 		from configurations.testRuntime
 	}
 	
@@ -40,8 +42,13 @@ subprojects {
 
 }
 
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+//EARs 
 task cleanEars(type: Delete) {
-    delete fileTree("build/ears").include('**/*')
+    delete fileTree("build-ears").include('**/*')
 }
 
 task assembleProductionEar(type: Exec) {
@@ -49,8 +56,8 @@ task assembleProductionEar(type: Exec) {
 	def argsList = ["-standalone",
 					"-pack",
 					"-dynamo-env-properties","assembly/dynamo.env",
-					"-server", "WIND-production",
-	                "build/ears/WIND-production.ear",
+					"-server", "atg-production",
+	                "build-ears/WIND-production.ear",
 	                "-m",
 	                "DCS.AbandonedOrderServices",
 	                "DafEar.Admin",
@@ -70,8 +77,8 @@ task assemblePublisingEar(type: Exec) {
 	def argsList = ["-standalone",
 					"-pack",
 					"-dynamo-env-properties","assembly/dynamo.env",
-					"-server", "WIND-publishing",
-	                "build/ears/WIND-publishing.ear",
+					"-server", "atg-publishing",
+	                "build-ears/WIND-publishing.ear",
 	                "-m",
 	                "DCS-UI.Versioned",
 	                "BIZUI",
@@ -86,12 +93,369 @@ task assemblePublisingEar(type: Exec) {
 	                "SiteAdmin.Versioned",
 	                "DCS.Endeca.Index.Versioned",
 	                "DAF.Endeca.Reader.Versioned",
-	                "DCS.Endeca.Index.SKUIndexing"
+	                "DCS.Endeca.Index.SKUIndexing",
+	               	"WIND.Commerce"
 	                ]
 	args = argsList
 }
 
+task assembleAgentEar(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "runAssembler.bat")
+	def argsList = ["-standalone",
+					"-pack",
+					"-dynamo-env-properties","assembly/dynamo.env",
+					"-server", "atg-agent",
+	                "build-ears/WIND-agent.ear",
+	                "-m",
+	                "DafEar.Admin",
+					"BIZUI",
+					"Service.Ticketing",
+					"Fulfillment",
+					"DCS.AbandonedOrderServices",
+					"DCS-CSR-UI",
+					"DCS.TextSearch.Order.LiveIndex",
+					"DCS.Endeca.Index",
+					"DCS-CSR-UI.Endeca",
+					"REST",
+					"WIND.Commerce"
+	                ]
+	args = argsList
+}
+
+//Import Initial Data
+task startSQLImportSites(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "startSQLRepository.bat")
+	def argsList = ["-m","Publishing",
+					"-m","DCS.Versioned",							
+					"-repository", "/atg/multisite/SiteRepository",
+					"-import",System.getenv("ATG_ROOT")+"\\WIND\\import-data\\importSite.xml",			
+					"-project","Gradle Import Sites",
+					"-comment","Initial data",
+					"-user","admin"										
+	                ]
+	args = argsList
+}
+
+task startSQLImportCatalog(type: Exec) {
+	executable = new File(System.getenv("DYNAMO_HOME")+"\\bin\\", "startSQLRepository.bat")
+	def argsList = ["-m","Publishing",
+					"-m","WIND.Commerce",
+					"-m","DCS.Versioned",							
+					"-repository", "/atg/commerce/catalog/ProductCatalog",
+					"-import",System.getenv("ATG_ROOT")+"\\WIND\\import-data\\importCatalog.xml",			
+					"-project","Gradle Import Catalog",
+					"-comment","Initial data",
+					"-user","admin"										
+	                ]
+	args = argsList
+}
+
+//PRODUCTION 
+task updateProductionDatabase << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: productionSchemaUser, 
+				 password: productionSchemaPassword, 
+				 dir: 'db/oracle/production',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/production_undo_last_change.sql')
+}
+
+task createProductionChangelogTable << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: productionSchemaUser,
+	        password: productionSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task initialDataToProduction << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: productionSchemaUser, 
+				 password: productionSchemaPassword, 
+				 dir: 'install/initial data/production',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/production_undo_initial_data.sql')
+}
+
+task undoProductionInitialData << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: productionSchemaUser,
+			password: productionSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/production_undo_initial_data.sql')
+	}
+}
+
+task undoProductionLastChange << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: productionSchemaUser,
+			password: productionSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/production_undo_last_change.sql')
+	}
+}
+
+//PUBLISHING
+task updatePublishingDatabase << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: publishingSchemaUser, 
+				 password: publishingSchemaPassword, 
+				 dir: 'db/oracle/publishing',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/publishing_undo_last_change.sql')
+}
+
+task createPublishingChangelogTable << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: publishingSchemaUser,
+	        password: publishingSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task initialDataToPublishing << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: publishingSchemaUser, 
+				 password: publishingSchemaPassword, 
+				 dir: 'install/initial data/publishing',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/publishing_undo_initial_data.sql')
+}
+
+task undoPublishingInitialData << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: publishingSchemaUser,
+			password: publishingSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/publishing_undo_initial_data.sql')
+	}
+}
+
+task undoPublishingLastChange << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: publishingSchemaUser,
+			password: publishingSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/publishing_undo_last_change.sql')
+	}
+}
+//SWITCHING
+task updateSwitchingDatabases << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingASchemaUser, 
+				 password: switchingASchemaPassword, 
+				 dir: 'db/oracle/switching',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/switchingA_undo_last_change.sql')
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingBSchemaUser, 
+				 password: switchingBSchemaPassword, 
+				 dir: 'db/oracle/switching',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/switchingB_undo_last_change.sql')
+}
+
+task createSwitchingChangelogTables << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: switchingASchemaUser,
+	        password: switchingASchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: switchingBSchemaUser,
+	        password: switchingBSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task initialDataToSwitching << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingASchemaUser, 
+				 password: switchingASchemaPassword, 
+				 dir: 'install/initial data/switching/a',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/switchingA_undo_initial_data.sql')
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: switchingBSchemaUser, 
+				 password: switchingBSchemaPassword, 
+				 dir: 'install/initial data/switching/b',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/switchingB_undo_initial_data.sql')
+
+}
+
+task undoSwitchingInitialData << {	
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingASchemaUser,
+			password: switchingASchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/switchingA_undo_initial_data.sql')
+	}
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingBSchemaUser,
+			password: switchingBSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/switchingB_undo_last_change.sql')
+	}
+}
+
+task undoSwitchingLastChange << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingASchemaUser,
+			password: switchingASchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/switchingA_undo_last_change.sql')
+	}
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: switchingBSchemaUser,
+			password: switchingBSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/switchingB_undo_last_change.sql')
+	}
+}
+
+//AGENT
+task updateAgentDatabase << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: agentSchemaUser, 
+				 password: agentSchemaPassword, 
+				 dir: 'db/oracle/agent',
+				 dbms: 'ora',
+				 undooutputfile: 'db/oracle/agent_undo_last_change.sql')
+}
+
+task createAgentChangelogTable << {
+	ant.sql(driver: dbDriverName, 
+		    url: dbURL, 
+	        userid: agentSchemaUser,
+	        password: agentSchemaPassword,
+	        encoding: 'UTF-8',
+	        classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/create_changelog_table.sql')
+	}
+}
+
+task initialDataToAgent << {
+	ant.taskdef(name: 'dbdeploy',classname: 'com.dbdeploy.AntTarget',classpath: configurations.compile.asPath)
+	ant.dbdeploy(driver: dbDriverName,
+				 url: dbURL,
+				 userid: agentSchemaUser, 
+				 password: agentSchemaPassword, 
+				 dir: 'install/initial data/agent',
+				 dbms: 'ora',
+				 undooutputfile: 'install/initial data/agent_undo_initial_data.sql')
+}
+
+task undoAgentInitialData << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: agentSchemaUser,
+			password: agentSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'install/initial data/agent_undo_initial_data.sql')
+	}
+	
+}
+
+task undoAgentLastChange << {
+	ant.sql(driver: dbDriverName,
+			url: dbURL,
+			userid: agentSchemaUser,
+			password: agentSchemaPassword,
+			encoding: 'UTF-8',
+			classpath: configurations.compile.asPath) {
+		fileset(file: 'db/oracle/agent_undo_last_change.sql')
+	}
+}
+
+//Common
 task assembleAllEars << {
 	assembleProductionEar.execute()
 	assemblePublisingEar.execute()
+	assembleAgentEar.execute()
+}
+
+task createChangelogTableForAllSchemas << {
+	createPublishingChangelogTable.execute()
+	createProductionChangelogTable.execute()
+	createSwitchingChangelogTables.execute()
+	createAgentChangelogTable.execute()
+}
+
+task updateDatabaseDDL << {
+	updateProductionDatabase.execute()
+	updatePublishingDatabase.execute()
+	updateSwitchingDatabases.execute()
+	updateAgentDatabase.execute()
+}
+
+task initialDataForAll << {
+	initialDataToProduction.execute()
+	initialDataToPublishing.execute()
+	initialDataToAgent.execute()
+	initialDataToSwitching.execute()
+}
+
+task undoInitialDataForAll << {
+	undoProductionInitialData.execute()
+	undoPublichingInitialData.execute()
+	undoAgentInitialData.execute()
+	undoSwitchingInitialData.execute()
+}
+
+task undoLastChangesInSchemas << {
+	undoProductionLastChange.execute()
+	undoPublishingLastChange.execute()
+	undoSwitchingLastChange.execute()
+	undoAgentLastChange.execute()
+}
+
+task startSQLImport << {
+	startSQLImportCatalog.execute();
+	startSQLImportSites.execute();
 }

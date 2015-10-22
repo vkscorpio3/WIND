@@ -1,0 +1,7 @@
+dependencies {
+	compile files(System.getenv("ATG_ROOT")+'/DAS/lib/classes.jar',
+				  System.getenv("ATG_ROOT")+'/DAS/lib/servlet.jar',
+				  System.getenv("ATG_ROOT")+'/DCS/lib/classes.jar',
+				  System.getenv("ATG_ROOT")+'/DPS/lib/classes.jar',
+				  System.getenv("ATG_ROOT")+'/DSS/lib/classes.jar')
+}

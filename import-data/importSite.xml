@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <!-- 3 items of type siteConfiguration -->
+
+        <add-item item-descriptor="siteConfiguration" repository="/atg/multisite/SiteRepository" id="siteone">
+            <set-property name="contextRoot"><![CDATA[/wind]]></set-property>
+            <set-property name="productionURL"><![CDATA[/wind/siteone]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
+            <set-property name="author"><![CDATA[portal-admin]]></set-property>
+            <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
+            <set-property name="endecaSiteId"><![CDATA[/siteone]]></set-property>
+        </add-item>
+        
+        <add-item item-descriptor="siteConfiguration" repository="/atg/multisite/SiteRepository" id="sitetwo">
+            <set-property name="contextRoot"><![CDATA[/wind]]></set-property>
+            <set-property name="productionURL"><![CDATA[/wind/sitetwo]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
+            <set-property name="author"><![CDATA[portal-admin]]></set-property>
+            <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
+            <set-property name="endecaSiteId"><![CDATA[/sitetwo]]></set-property>
+        </add-item>
+        
+        <add-item item-descriptor="siteConfiguration" repository="/atg/multisite/SiteRepository" id="sitethree">
+            <set-property name="contextRoot"><![CDATA[/wind]]></set-property>
+            <set-property name="productionURL"><![CDATA[/wind/sitethree]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="lastModifiedBy"><![CDATA[portal-admin]]></set-property>
+            <set-property name="author"><![CDATA[portal-admin]]></set-property>
+            <set-property name="name"><![CDATA[ATG Site Template]]></set-property>
+            <set-property name="endecaSiteId"><![CDATA[/sitethree]]></set-property>
+        </add-item>
+        
+        <!-- 1 items of type siteGroup -->
+
+        <add-item item-descriptor="siteGroup" repository="/atg/multisite/SiteRepository" id="mainSiteGroup">
+            <set-property name="shareableTypes"><![CDATA[atg.ShoppingCart]]></set-property>
+            <set-property name="displayName"><![CDATA[ATG Site Group Template]]></set-property>
+            <set-property name="sites"><![CDATA[siteone,sitetwo,sitethree]]></set-property>
+        </add-item>
+
+    </import-items>
+</gsa-template>

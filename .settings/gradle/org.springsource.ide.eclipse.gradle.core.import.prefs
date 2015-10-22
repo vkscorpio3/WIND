@@ -1,9 +1,9 @@
 #org.springsource.ide.eclipse.gradle.core.preferences.GradleImportPreferences
-#Wed Aug 05 15:55:42 EEST 2015
+#Wed Sep 23 10:23:53 EEST 2015
 addResourceFilters=true
 afterTasks=afterEclipseImport;
 beforeTasks=cleanEclipse;eclipse;
 enableAfterTasks=true
 enableBeforeTasks=true
 enableDependendencyManagement=true
-projects=;Endeca/Assembler;Endeca/Index;Frontend;Storefront;
+projects=Commerce;
